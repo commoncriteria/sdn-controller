@@ -40,17 +40,18 @@ git mv input/pp-template.xml input/something.xml
 
 Protection Profile or Extended Package for QQQQ
 ===============
+[![Build Status](https://travis-ci.com/commoncriteria/sdn-controller.svg?branch=master)](https://travis-ci.com/commoncriteria/sdn-controller) [![GitHub issues Open](https://img.shields.io/github/issues/commoncriteria/sdn-controller.svg?maxAge=2592000)](https://github.com/commoncriteria/sdn-controller/issues) ![license](https://img.shields.io/badge/license-Unlicensed-blue.svg)
 
 This repository hosts the draft version of the Protection Profile for QQQQ based on the 
-[Essential Security Requirements (ESR)](https://commoncriteria.github.io/pp/QQQQ/QQQQ-esr.html) for this technology class of 
+[Essential Security Requirements (ESR)](https://commoncriteria.github.io/pp/sdn-controller/sdn-controller-esr.html) for this technology class of 
 products. This repository is used to facilitate collaboration and development on the draft document. 
 See the [release](#Release-Version) section if you are looking for the officially released version for evaluations. 
 A list of products that have passed evaluation against this Protection Profile can be found [here](QQQQ).
 
 ## Draft Version
 
-* [Protection Profile for QQQQ](https://commoncriteria.github.io/pp/QQQQ/QQQQ-release.html) (html)
-* [Protection Profile for QQQQ](https://commoncriteria.github.io/pp/QQQQ/QQQQ-release.pdf) (pdf)
+* [Protection Profile for Softare Defined Networking Controllers](https://commoncriteria.github.io/pp/application/sdn-controller-release.html) (html)
+* [Protection Profile for Software Defined Networking Controllers](https://commoncriteria.github.io/pp/application/sdn-controller-release.pdf) (pdf)
 
 ## Release Version
 * [Protection Profile for QQQQ](QQQQ)
