@@ -72,10 +72,8 @@
           <entry>
             <term><abbr title="Target of Evaluation">TOE</abbr></term>
             <description>
-	      The product under evaluation. In this case, the Operating System as described in section 
-	      <xref linkend="TOEboundary"/> and its
-              supporting documentation.
-	    </description>
+	            The product under evaluation. In this case, the SDN Controller and its supporting documentation.
+	        </description>
           </entry>
           <entry>
             <term><abbr title="TOE Security Functionality">TSF</abbr></term>
