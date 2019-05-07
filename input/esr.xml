@@ -4,165 +4,385 @@
 <ESR xmlns="http://common-criteria.rhcloud.com/ns/esr" name="Operating System Fundamentals">
   
 	<intro>
-		<esrtitle>Some PP Name</esrtitle>
-		<maintainer>NIAP and CESG</maintainer>
+		<esrtitle>Software Defined Network (SDN) Controller Essential Security Requirements</esrtitle>
+		<maintainer>National Information Assurance Partnership (NIAP)</maintainer>
 		<identifier>42</identifier>
 		<version>1.0</version>
 		<status>draft</status>
-		<issuedate>19 March 2015</issuedate>
+		<issuedate>25 April 2019</issuedate>
 		<approver/>
 		<supercedes/>
 	</intro>
 
 	<section title="Background and Purpose" id="purpose">
-		This section sets the context for not only the ESR, but what is 
-		expected of the resulting Protection Profile (PP). The intent is 
-		that the remaining sections provide succinct statements that 
-		highlight the relevant aspects to be addressed by the Technical 
-		Community (TC) constructing the PP. Here, the authors provide a 
-		narrative that introduces the reader to the problem being solved, 
-		and presents key aspects that support or guide the TC, and may
-		elaborate on subtleties not apparent in the “bulleted” high level
-		statements.
+		This document describes a core set of high-level fundamental 
+		security requirements expected of any Software Defined Networking
+		(SDN) Controller for use in an enterprise. It is intended to 
+		provide a minimal, baseline set of requirements which can be built
+		upon by future revisions to provide an overall set of security 
+		solutions for an enterprise network.
+		<p/>
+		SDN Controllers are one of many components of an SDN networking 
+		architecture. See below diagram.
+		<p/>
+	
+		<figure entity="images/sdncontroller.png" 
+			title="SDN Controller in relation to the SDN Planes"
+			id="sdn-controller"
+		/>
+		<p/>
+		An SDN Controller is a central and vital component of what 
+		constitutes an SDN system and is available as a logical or a 
+		physical device. An SDN Controller manages and distributes network
+		policies, collects routing and payload information from the Data
+		Plane, and interfaces with user applications in the Management
+		Plane. Each of the planes in an SDN system is composed of multiple
+		logical or physical components. SDN Controllers logically 
+		centralize the network intelligence and state in the Control 
+		Plane. 
+		<p/>
+		For clarity the following definitions are provided:
+		<ul>
+			<li>
+				The Control Plane is a logical entity that receives 
+				instructions or requirements from the SDN Application 
+				layer through its northbound interface and relays them to
+				the Data Plane through its southbound interface. The 
+				Controller extracts information about the network from 
+				the Data Plane and communicates back to the SDN 
+				Application Layer with an abstract view of the network,
+				including statistics and events about what is happening.
+			</li>
+			<li>
+				The Data Plane (or SDN Network Devices) controls the 
+				forwarding and data processing capabilities for the 
+				network. This includes forwarding and processing of the
+				data path.
+			</li>
+			<li>
+				The Management Plane (or SDN Applications Layer) is 
+				composed of programs that communicate behaviors and 
+				needed resources with the SDN Controller via application
+				programming interfaces (APIs). In addition, the 
+				applications can build an abstracted view of the network
+				by collecting information from the Controller for 
+				decision-making purposes. These applications could 
+				include networking management, analytics, or business
+				applications used to run large data centers. For example,
+				an analytics application might be built to recognize 
+				suspicious network activity for security purposes. The 
+				Management Plane is sometimes also referred to as the 
+				Orchestration Layer.
+			</li>
+		</ul>
 	</section>
 	<section title="Use Cases" id="usecases">
-	  This section is intended to provide the initial scope/bound of the 
-	  security problem by providing the reader with concise statements 
-	  regarding the scenarios in which the technology is being used. The 
-	  intended usage presented here should lay the groundwork for the 
-	  identifying the resources to be protected, and what threats must be
-	  considered in the drafting of the Essential Security Requirements 
-	  (ESR) and for the TC to consider when writing the PP.
+	  <ul>
+	  	<li>
+	  		SDN controller as a standalone physical device.
+	  	</li>
+	  	<li>
+	  		SDN controller as a virtual device.
+	  	</li>
+	  	<li>
+	  		SDN Controller (standalone or virtual) with management 
+	  		capabilities.
+	  	</li>
+	  	<li>
+	  		A cluster of SDN Controllers (standalone or virtual).
+	  	</li>
+	  	<li>
+	  		The intent is that an SDN Controller satisfying these 
+	  		requirements will “do no harm” on a network. Rather than 
+	  		providing any explicit security functionality, compliant 
+	  		SDN Controllers simply ensure:
+	  	</li>
+	  	<ul>
+	  		<li>
+	  			They can be remotely managed in a secure manner.
+	  		</li>
+	  		<li>
+	  			Any software/firmware updates are from a trusted source.
+	  		</li>
+	  		<li>
+	  			Any interfaces to applications, VMs, and other devices are
+	  			trusted (zone of trust).
+	  		</li>
+	  		<li>
+	  			All suspect events are reported.
+	  		</li>
+	  		<li>
+	  			Logical or physical separation of the Control and Data 
+	  			Planes.
+	  		</li>
+	  		<li>
+	  			Logical or physical separation of the Control and Management 
+	  			Planes.
+	  		</li>
+	  		<li>
+	  			Protect data collected and distributed by the Control Plane
+	  			to the Data Plane such as flow tables and configurations.
+	  		</li>
+	  		<li>
+	  			Protect data collected and distributed by the Control Plane 
+	  			to the Management Plane such as auditable events and 
+	  			traffic/packet statistics.
+	  		</li>
+	  		<li>
+	  			Protect data collected, distributed and shared within the 
+	  			Control Plane such as when multiple SDN controllers exist 
+	  			in the architecture.
+	  		</li>
+	  	</ul>
+	  </ul>
 	</section>
 
 	<section title="Resources to be protected" id="resourcesprotected">
-    	  This section is intended to provide the initial scope/bound of the 
-    	  security problem by providing the reader with concise statements
-    	  regarding the scenarios in which the technology is being used. The 
-    	  intended usage presented here should lay the groundwork for the 
-    	  identifying the resources to be protected, and what threats must be
-    	  considered in the drafting of the Essential Security Requirements 
-    	  (ESR) and for the TC to consider when writing the PP.
+    	  <ul>
+    	  	<li>
+    	  		Any network-facing management interfaces, including traffic
+    	  		to and from the SDN Controller, and any critical data 
+    	  		(e.g., audit data).
+    	  	</li>
+    	  	<li>
+    	  		SDN Controller software/firmware.
+    	  	</li>
+    	  	<li>
+    	  		Data stored locally by the SDN Controller (e.g. Policy, 
+    	  		flow control, etc.).
+    	  	</li>
+    	  	<li>
+    	  		Configuration and reboot data, including any policy made 
+    	  		part of the boot configuration.
+    	  	</li>
+    	  	<li>
+    	  		Authentication credentials such as keys and passwords.
+    	  	</li>
+    	  	<li>
+    	  		Northbound, Southbound and East/West channels/connections.
+    	  	</li>
+    	  	<li>
+    	  		Any stored updates intended for SDN Devices.
+    	  	</li>
+    	  	<li>	
+     	  		SDN switch configuration and reboot data stored in the SDN 
+     	  		Controller.
+    	  	</li>
+    	  	<li>
+    	  		Traffic/packet statistics.
+    	  	</li>
+    	  	<li>
+    	  		Audit information.
+    	  	</li>
+    	  </ul>
 	</section>
 
 	<section title="Attacker access" id="attackeraccess"> 
-	  The following assumptions are made about
-	  attackers' ability to develop attacks: 
 	  <ul>
-	    <li> An attacker has an arbitrary amount of time to analyze the behavior of the product, its
-	    interaction with its platform, and the data it transmits over the network. </li>
-	    <li> An attacker is able to acquire their own copy of the target product and study its
-	    behavior on a platform that they control. </li>
-	  </ul>
-	  <p/> The attacker is expected to engage in the following general classes of attack: <!-- added in order to allow for rather direct flow to Threats section in PP -->
-	  <ul>
-	    <li> Network eavesdropping, in which an attacker may monitor and gain access to data
-	    exchanged between the product and other endpoints. </li>
-	    <li> Network attack, in which an attacker may initiate malicious communications with the
-	    product or alter communications between the product and other endpoints. </li>
-	    <li> Local attack, in which an attacker has gained the ability to execute code on the
-	    system, which may be used to escalate privilege or access data without
-	    authorization. </li>
-	    <li> Limited physical access attack, in which an attacker may attempt to access data on
-	    the system by virtue of being physically present for a limited period of time. This
-	    limited physical access does not include attacks in which the attacker could
-	    disassemble the system to gain access to its storage media or manipulate the product's
-	    underlying hardware and firmware. Systems used for working remotely, such as laptops
-	    and tablets, for which an attacker could gain longer physical access to, should
-	    apply additional protections that are provided by products evaluated against other
-	    Protection Profiles (e.g. FDE cPP). </li>
-	    <li> Persistence, in which an attacker has already exploited the system and wishes to
-	    maintain presence on the system. </li>
+	  	<li>
+	  		An attacker can send arbitrary packets to network interfaces. 
+	  	</li>
+	  	<li> 
+	  		An attacker can intercept and arbitrarily modify or drop 
+	  		packets within existing traffic flows. 
+	  	</li>
+	  	<li>
+	  		An attacker can take over the role of the SDN Controller and
+	  		thus compromise the entire network.
+	  	</li>
+	  	<li>
+	  		An attacker can leverage the lack of an established standard 
+	  		for communication between the SDN Controller and other 
+	  		components in an SDN network and so taking advantage of 
+	  		interoperability or under-tested protocols
+	  	</li>
+	  	<li>
+	  		An attacker can leverage any automation functionality to cause
+	  		the most damage before being discovered.
+	  	</li>
+	  	<li>
+	  		An attacker can intercept and arbitrarily affect communications
+	  		between an SDN Controller and any northbound applications 
+	  		and/or components. 
+	  	</li>
+	  	<li>
+	  		An attacker can intercept and arbitrarily affect communications 
+	  		between SDN Controllers, east/west communication.
+	  	</li>
+	  	<li>
+	  		An attacker can intercept and arbitrarily affect communications 
+	  		between the SDN Controller and any switches under its control, 
+	  		southbound communication.
+	  	</li>
 	  </ul>
 	</section>
 	
+	<section title="Evaluation Boundary" id="evaluationboundary"> 
+		<ul>
+			<li>
+				In the case of a physical standalone SDN Controller device,
+				the hardware, firmware and software of the device define 
+				the evaluation boundary.  
+			</li>
+			<li> 
+				In the case of a Virtual SDN Controller, the software of 
+				the Virtual Machine (VM) defines the evaluation boundary.
+			</li>
+			<li>
+				All of the security functionality is contained and executed 
+				within the evaluation boundary of the SDN Controller. 
+			</li>
+		</ul>
+	</section>			
+	
 	<section title="Essential Security Requirements" id="requirements">
-        	This is where the authors present an initial set of English 
-        	requirements that specify security functionality, rather than 
-        	design and/or implementation characteristics. These requirements 
-        	will provide the foundation for which the detailed set of 
-        	requirements is derived. It is important that the requirements 
-        	captured here make an attempt to fully address the categories 
-        	(e.g., access control, identification and authentication, 
-        	management capabilities, roles of administration, secure 
-        	communications, and audit). That's not to say the requirements are 
-        	fully specified or detailed enough to simply translate to Common 
-        	Criteria security functional requirements. The goal is that there 
-        	is enough information contained here, as well as the other sections
-        	of this document, to provide the TC enough information to ensure 
-        	they have an understanding of what is minimally required in breath.
-
-			<!--
-			This is where the authors explicitly state english requirements
-			that this class of product must satisfy. 
-	        -->
+		The following are the essential security requirements that are 
+		expected to be implemented by an SDN Controller. Note that these
+		security requirements are conditional on that functionality being 
+		present. For example, an SDN Controller that does not include any
+		management functionality is considered to satisfy any security
+		requirements that pertain to the secure use of management features.
+		<p/>
+		Any other conditional requirements that depend on whether or not
+		the product implements a certain capability are listed in the
+		“Optional Extensions” section below.
+		<ul>
+			<li>
+				The remote administration and audit functions shall use
+				cryptography to protect communications.
+			</li>
+			<li>
+				All communications with other SDN components shall be
+				protected and authenticated.
+			</li>
+			<li>
+				The SDN Controller shall be capable of auditing 
+				administrative actions, including any configuration changes
+				and rebooting of the SDN Controller.
+			</li>
+			<li>
+				The SDN Controller shall provide an authentication mechanism
+				for local and remote administrators, as well as the 
+				device/VM itself (e.g., the device/VM maintains an 
+				authentication credential that can be used to authenticate
+				it to an administrator’s client) .
+			</li>
+			<li>
+				The SDN Controller shall provide a cryptographic means to
+				validate the source of updates to be installed on the 
+				device/VM. 
+			</li>
+			<li>
+				The SDN Controller shall require any default passwords 
+				/ other credentials to be changed upon installation.
+			</li>
+			<li>
+				The SDN Controller shall protect keys, key material, and 
+				authentication credentials from unauthorized disclosure.
+			</li>
+			<li>
+				The SDN Controller shall be robust against malformed 
+				network packets, and denial-of-service attacks.
+			</li>
+			<li>
+				The SDN Controller shall provide self-tests to ensure the
+				security functions it implements are operating correctly.
+			</li>
+			<li>
+				Updates to the SDN Controller shall be authenticated.
+			</li>
+		</ul>
 	</section>
 
 	<section title="Assumptions" id="assumptions">
-	  Simply put, this section presents the aspects of the product and 
-	  its	intended environment that can be assumed to hold true. This 
-	  will provide additional scope on the resulting PP.
-
-	  The following assumptions are made for the operating system product and its operational
-	  environment: <ul>
-			<li>The underlying platform is physically protected, to a large extent. The hardware
-				that the product manages is secured by defensive measures that make physical attacks
-				impractical for most attackers. At the same time, casual passersby might attempt to
-				trivially access the system. </li>
-			<li>The product implements some security-relevant functionality that does not require
-				evaluation (e.g., network time synchronization, process scheduling, and virtual
-				memory management including process separation). </li>
-			<li>Depending on configuration and capability, the product may or may not be: <ul>
-					<li>configuration-managed by the enterprise</li>
-					<li>bound to directory services to support multi-user login</li> </ul>
+		<ul>
+			<li>
+				The SDN Controller relies on a trustworthy computing 
+				platform for its execution and it is assumed that the 
+				platform has not been compromised prior to the installation
+				of the SDN Controller.
 			</li>
-			<li> The product runs application software developed by a third-party. The applications are
-				not intentionally developed to be malicious, but can contain inadvertent coding
-				errors. These errors introduce risk that control of an application may be seized by
-				a malicious entity. The product shall confine these applications within the originally
-				designated operating environment. </li>
-			<li>The platform is connected to a network. For purposes of sending/receiving data, to
-				include software updates, the platform is connected to other entities. Other
-				entities on the network are not inherently trustable. </li>
-			<li>Administrators are not malicious in nature.</li>
-			<li> Users are not malicious in nature, though they may inadvertently or intentionally engage in risky behavior. </li>
+			<li>
+				The administrator of the underlying platform or SDN 
+				Controller is not careless, willfully negligent or hostile,
+				and administers the software within compliance of the 
+				approved enterprise security policy. 
+			</li>
+			<li>
+				Physical security appropriate to the value of the SDN 
+				Controller and the data it contains is provided.
+			</li>
+			<li> 
+				An SDN Controller is protected from physical attacks by
+				the wider environment. 
+			</li>
 		</ul>
 	</section>
-
 
 	<section title="Optional Extensions" id="extensions"> 
-		Additional security functionality that may
-		be appropriate for some use cases, and can be expressed in extensions to this document,
-		includes: 
+		The following requirements may already be realized in some products
+		in this technology class, but the ESR is not mandating these 
+		capabilities exist in “baseline” level product:
 		<ul>
-			<li></li>
+			<li>
+				Automatic response to certain security events.
+			</li>
+			<li>
+				Validation of patches and updates intended for data plane 
+				SDN Devices - as an add-on to any validation performed in
+				the switch and not as an alternative.
+			</li>
 		</ul>
 	</section>
-
+	
+	<section title="Objective Requirements" id="objective"> 
+		Requirements specified here specify security-relevant behavior 
+		that is not expected to be realized currently in SDN Controllers, 
+		but capabilities that may be mandated in future versions of the 
+		ESR and resulting cPPs.
+		<ul>
+			<li>
+				The device shall have internal security features to make
+				the device more resilient to security breaches. 
+			</li>
+			<li>
+				The device shall provide two-factor authentication 
+				natively on the device (i.e., does not rely on a 
+				separate device to provide this capability). 
+			</li>
+		</ul>
+	</section>
+	
 	<section title="Outside the TOE's Scope" id="outsidescope">
-	  <!--
-			This is where the authors explicitly state things they do not want 
-			to be considered for inclusion in an evaluation against a 
-			resulting PP.  Items expressed here could include threats, 
-			functions or capabilities that would require assurance activities 
-			that are too subjective, or specific expertise not available in the
-			evaluation facilities expected to assess products against the PP 
-	  -->
-		The following list contains items that are explicitly out-of-scope for any evaluation
-		against the product PP <ul>
-			<li>Malicious, Highly-Privileged Administrators - Highly-privileged administrators
-				acting maliciously can disable most, if not all, security protections on the product.
-				Additionally procedural controls that are out of scope of this document should be
-				considered to help highlight administrator accounts acting suspiciously.</li>
-			<li>Zero Days - The disclosure of recently published vulnerabilities (Zero Days) should
-				not be used as a reason to fail an product undergoing evaluation.</li>
-			<li>Unofficial Versions - Non-vendor supplied install images often contain added
-				functionality and may weaken the normal operating functionality of the product</li>
-			<li>Platform - The product PP shall not address the hardware or firmware of its underlying
-				platform to include the boot sequence before control is handed off to the product. That
-				the platform itself is virtual or physical is irrelevant to any evaluations. </li>
-			<li>Applications - The product PP shall not address applications that are not delivered as
-				part of the product installation process. </li>
+	    <ul>
+			<li>
+				Specific security functionality that is not global to all 
+				SDN Controllers (e.g. firewall, load balancers) as these 
+				will be specified in other ESRs. 
+			</li>
+	    	<li>
+	    		Examination of data plane content (including Virus scanning
+	    		and email scanning).
+	    	</li>
+			<li>
+				Intrusion detection/prevention capabilities. 
+			</li>
+			<li>
+				Network Address Translation (NAT) as a security function. 
+			</li>
+			<li>
+				The hardware or firmware of the underlying platform 
+				(virtualized SDN Controller only).
+			</li>
+	    	<li>
+	    		The host operating system or runtime environment 
+	    		(virtualized SDN Controller only).
+	    	</li>
+	    	<li>
+	    		The TOE shall not address other objects belonging in the
+	    		Data Plane, even if they are delivered as part of the 
+	    		product installation process.
+	    	</li>
 		</ul>
 	</section>
 </ESR>
