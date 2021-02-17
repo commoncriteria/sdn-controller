@@ -1,6 +1,7 @@
 Protection Profile Template
 ===============
 ![Build](https://github.com/commoncriteria/sdn-controller/workflows/Build/badge.svg)
+
 Quickstart
 ----------
 
