@@ -250,8 +250,7 @@
 		“Optional Extensions” section below.
 		<ul>
 			<li>
-				The remote administration and audit functions shall use
-				cryptography to protect communications.
+				1. The remote administration and audit functions shall use cryptographic algorithms to encrypt and protect communication,following guidelines and recommendations from NIST SP 800-131A and its future updates to cryptographic standards and algorithms.   
 			</li>
 			<li>
 				All communications with other SDN components shall be
