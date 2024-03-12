@@ -270,31 +270,28 @@
 				comply with NIST SP 800-63 and ISO/IEC 27001 and SO/IEC 27002. 
 			</li>
 			<li>
-				The SDN Controller shall provide a cryptographic means to
-				validate the source of updates to be installed on the 
-				device/VM. 
+				5. The SDN Controller is required to implement an authorization system for any users/administrators, as well as the device/VM itself, 
+				employing a RBAC or ABAC model that adheres to the principle of least privilege and that comply with NIST SP 800-53 / NIST SP 800-162. 
 			</li>
 			<li>
-				The SDN Controller shall require any default passwords 
-				/ other credentials to be changed upon installation.
+				6. The SDN Controller shall provide a cryptographic means to validate the source of updates to be installed on the device/VM.    
 			</li>
 			<li>
-				The SDN Controller shall protect keys, key material, and 
-				authentication credentials from unauthorized disclosure.
+				7. The SDN Controller will enforce a policy requiring the modification of any default passwords or other credentials immediately
+				upon installation. Additionally, it will compel users to create complex passwords that comply with NIST 800 63B. Beyond password
+				complexity, the controller will also support multi-factor authentication (MFA) that comply NIST SP 800-63B. 
 			</li>
 			<li>
-				The SDN Controller shall be robust against malformed 
-				network packets, and denial-of-service attacks.
+				8. The SDN Controller shall protect keys, key material, and authentication credentials from unauthorized disclosure.  
 			</li>
 			<li>
-				The SDN Controller shall provide self-tests to ensure the
-				security functions it implements are operating correctly.
+				9. The SDN Controller requires design and construction that ensures it remains operational and effective amidst cybersecurity
+				threats ranging from but not limited to Malware, MitM, DoS, SQL injection, APTs, Fuzzing attacks, and HTTP-based vulnerabilities
+				with robustness to maintain performance under stress and resilience for rapid recovery from attacks, safeguarding network integrity
+				and minimizing disruptions. 
 			</li>
 			<li>
-				Updates to the SDN Controller shall be authenticated.
-			</li>
-			<li>
-				The SDN Controller shall provide a moving target defense mechanism (MTD) that protects the network from attacks by using dynamic network configuration.
+				10. The SDN Controller shall provide self-tests to ensure the security functions it implements are operating correctly.   
 			</li>
 		</ul>
 	</section>
