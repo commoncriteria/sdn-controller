@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/diff.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="js/tooltip/wz_tooltip.js" type="text/javascript"></script><script src="js/tooltip/tip_balloon.js" type="text/javascript"></script><script src="js/dojo/dojo.js" type="text/javascript"></script><script src="js/diff.js" type="text/javascript"></script><script>
+        htmlDiffInit();
+      </script>
+        <div class="diff-topbar">
+            <table class="diffpage-html-firstlast">
+                <tr>
+                    <td style="text-align: left;"><a class="diffpage-html-a" onclick="scrollToEvent(event)" id="first-diff" href="#added-diff-0" next="added-diff-0"><img class="diff-icon" src="images/diff-first.gif" title="Go to first change."></a><a class="diffpage-html-a" onclick="scrollToEvent(event)" href="#added-diff-0">&nbsp;first</a></td><td style="text-align: center; font-size: 140%;"><a style="font-size: 100%;" class="diffpage-html-a" href="http://code.google.com/p/daisydiff/">Daisy Diff</a> compare report.
+                        <br>
+                        <span style="font-style: italic; font-size: 70%;">Click on the changed parts for a detailed description. Use the left and right arrow keys to walk through the modifications.</span></td><td style="text-align: right;"><a class="diffpage-html-a" onclick="scrollToEvent(event)" href="#added-diff-0">
+              last&nbsp;</a><a class="diffpage-html-a" onclick="scrollToEvent(event)" id="last-diff" href="#added-diff-0" previous="added-diff-0"><img class="diff-icon" src="images/diff-last.gif" title="Go to last change."></a></td>
+                </tr>
+            </table>
+        </div>
+        <h1 class="title" style="page-break-before:auto;">Protection Profile for QQQQ</h1>
+        <h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1>
+        <div class="center">
+            <img src="images/niaplogo.png" alt="NIAP Logo">
+            <br>
+             Version: 1.0
+            <br>
+            2015-08-14
+            <br>
+            <b>National Information Assurance Partnership</b>
+            <br>
+        </div>
+        <h2 style="page-break-before:always;">Revision History</h2>
+        <table>
+            <tr class="header">
+                <th>Version</th><th>Date</th><th>Comment</th>
+            </tr>
+            <tr>
+                <td>Round 1</td><td>2015-04-23</td><td>First draft of version 1.0 for comment</td>
+            </tr>
+            <tr>
+                <td>1.0</td><td>2015-08-14</td><td>Release - first version released</td>
+            </tr>
+        </table>
+        <h3>
+            <span class="diff-html-added" id="added-diff-0" previous="first-diff" changeId="added-diff-0" next="last-diff" onclick="return tipA(constructToolTipA(this));">TDs Applied</span>
+        </h3>
+        <h2>Contents</h2>
+        <div class="toc" id="toc">
+            <a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:0px">Appendix B - <span>Strictly Optional Requirements </span></a><a href="#objective-reqs" style="text-indent:0px">Appendix C - <span>Objective Requirements </span></a><a href="#feat-based-reqs" style="text-indent:0px">Appendix D - <span>Implementation-dependent Requirements </span></a><a href="#sel-based-reqs" style="text-indent:0px">Appendix E - <span>Selection-based Requirements </span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix F - <span>Inherently Satisfied Requirements</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix G - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:0px">Appendix H - <span>Design Description</span></a><a href="#entropyjustification" style="text-indent:0px">Appendix I - <span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:0px">Appendix J - <span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:0px">Appendix K - <span>Health Testing</span></a><a href="#acronyms" style="text-indent:0px">Appendix L - <span>Acronyms</span></a><a href="#acronyms" style="text-indent:0px">Appendix M - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix N - <span>Bibliography</span></a>
+        </div>
+        <h1 id="opt-app" class="indexable" data-level="A">Appendix A - Optional Requirements</h1>
+         As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, the baseline requirements (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. This appendix contains three other types of optional requirements:
+        <br>
+        <br>
+         The first type, defined in Appendix <a href="#optional-reqs" class="dynref">Appendix B - Strictly Optional Requirements</a>, are strictly optional requirements. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> meets any of these requirements the vendor is encouraged to claim the associated <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, but doing so is not required in order to conform to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+        <br>
+        <br>
+         The second type, defined in Appendix <a href="#objective-reqs" class="dynref">Appendix C - Objective Requirements</a>, are objective requirements. These describe security functionality that is not yet widely available in commercial technology. Objective requirements are not currently mandated by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, but will be mandated in the future. Adoption by vendors is encouraged, but claiming these <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> is not required in order to conform to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+        <br>
+        <br>
+         The third type, defined in Appendix <a href="#feat-based-reqs" class="dynref">Appendix D - Implementation-dependent Requirements</a>, are Implementation-dependent requirements. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements the product features associated with the listed <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>, either the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must be claimed or the product features must be disabled in the evaluated ocnfiguration. 
+        <h2 id="optional-reqs" class="indexable" data-level="2">Appendix B - Strictly Optional Requirements </h2>
+        <p>
+            This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any Strictly Optional requirements.
+        </p>
+        <h2 id="objective-reqs" class="indexable" data-level="2">Appendix C - Objective Requirements </h2>
+        <p>
+            This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any Objective requirements.
+        </p>
+        <h2 id="feat-based-reqs" class="indexable" data-level="2">Appendix D - Implementation-dependent Requirements </h2>
+        <p>
+            This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any Implementation-dependent requirements.
+        </p>
+        <h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix E - Selection-based Requirements </h1>
+        <span class="description">
+            <p>
+                As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, the baseline requirements (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or its underlying platform) are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. There are additional requirements based on selections in the body of the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>: if certain selections are made, then additional requirements below must be included. 
+            </p>
+        </span>
+        <p>
+            This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any Selection-based requirements.
+        </p>
+        <h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix F - Inherently Satisfied Requirements</h1>
+         This appendix lists requirements that should be considered satisfied by products successfully evaluated against this Protection Profile. However, these requirements are not featured explicitly as <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> and should not be included in the . They are not included as standalone <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> because it would increase the time, cost, and complexity of evaluation. This approach is permitted by Part 1, <b>8.2 Dependencies between components</b>. 
+        <br>
+         This information benefits systems engineering activities which call for inclusion of particular security controls. Evaluation against the Protection Profile provides evidence that these controls are present and have been evaluated. Requirement Rationale for Satisfaction FIA_UAU.1 - Timing of authentication implicitly requires that the OS perform all necessary actions, including those on behalf of the user who has not been authenticated, in order to authenticate; therefore it is duplicative to include these actions as a separate assignment and test. FIA_UID.1 - Timing of identification implicitly requires that the OS perform all necessary actions, including those on behalf of the user who has not been identified, in order to authenticate; therefore it is duplicative to include these actions as a separate assignment and test. FMT_SMR.1 - Security roles specifies role-based management functions that implicitly defines user and privileged accounts; therefore, it is duplicative to include separate role requirements. FPT_STM.1 - Reliable time stamps explicitly requires that the OS associate timestamps with audit records; therefore it is duplicative to include a separate timestamp requirement. FTA_SSL.1 - <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>-initiated session locking defines requirements for managing session locking; therefore, it is duplicative to include a separate session locking requirement. FTA_SSL.2 - User-initiated locking defines requirements for user-initiated session locking; therefore, it is duplicative to include a separate session locking requirement. FAU_STG.1 - Protected audit trail storage defines a requirement to protect audit logs; therefore, it is duplicative to include a separate protection of audit trail requirements. FAU_GEN.2 - User identity association explicitly requires that the OS record any user account associated with each event; therefore, it is duplicative to include a separate requirement to associate a user account with each event. FAU_SAR.1 - Audit review requires that audit logs (and other objects) are protected from reading by unprivileged users; therefore, it is duplicative to include a separate requirement to protect only the audit information. 
+        <h1 id="entropyappendix" class="indexable" data-level="A">Appendix G - Entropy Documentation and Assessment</h1>
+         This appendix describes the required supplementary information for the entropy source used by the OS. 
+        <br>
+         The documentation of the entropy source should be detailed enough that, after reading, the evaluator will thoroughly understand the entropy source and why it can be relied upon to provide sufficient entropy. This documentation should include multiple detailed sections: design description, entropy justification, operating conditions, and health testing. This documentation is not required to be part of the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>. 
+        <h2 class="indexable" data-level="2" id="entropydesign">Appendix H - Design Description</h2>
+         Documentation shall include the design of the entropy source as a whole, including the interaction of all entropy source components. Any information that can be shared regarding the design should also be included for any third-party entropy sources that are included in the product. 
+        <br>
+         The documentation will describe the operation of the entropy source to include, how entropy is produced, and how unprocessed (raw) data can be obtained from within the entropy source for testing purposes. The documentation should walk through the entropy source design indicating where the entropy comes from, where the entropy output is passed next, any post-processing of the raw outputs (hash, XOR, etc.), if/where it is stored, and finally, how it is output from the entropy source. Any conditions placed on the process (e.g., blocking) should also be described in the entropy source design. Diagrams and examples are encouraged. 
+        <br>
+         This design must also include a description of the content of the security boundary of the entropy source and a description of how the security boundary ensures that an adversary outside the boundary cannot affect the entropy rate. 
+        <br>
+         If implemented, the design description shall include a description of how third-party applications can add entropy to the RBG. A description of any RBG state saving between power-off and power-on shall be included. 
+        <h2 class="indexable" data-level="2" id="entropyjustification">Appendix I - Entropy Justification</h2>
+         There should be a technical argument for where the unpredictability in the source comes from and why there is confidence in the entropy source delivering sufficient entropy for the uses made of the RBG output (by this particular OS). This argument will include a description of the expected min-entropy rate (i.e. the minimum entropy (in bits) per bit or byte of source data) and explain that sufficient entropy is going into the OS randomizer seeding process. This discussion will be part of a justification for why the entropy source can be relied upon to produce bits with entropy. 
+        <br>
+         The amount of information necessary to justify the expected min-entropy rate depends on the type of entropy source included in the product. 
+        <br>
+         For developer provided entropy sources, in order to justify the min-entropy rate, it is expected that a large number of raw source bits will be collected, statistical tests will be performed, and the min-entropy rate determined from the statistical tests. While no particular statistical tests are required at this time, it is expected that some testing is necessary in order to determine the amount of min-entropy in each output. 
+        <br>
+         For third-party provided entropy sources, in which the OS vendor has limited access to the design and raw entropy data of the source, the documentation will indicate an estimate of the amount of min-entropy obtained from this third-party source. It is acceptable for the vendor to &ldquo;assume&rdquo; an amount of min-entropy, however, this assumption must be clearly stated in the documentation provided. In particular, the min-entropy estimate must be specified and the assumption included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>. 
+        <br>
+         Regardless of type of entropy source, the justification will also include how the DRBG is initialized with the entropy stated in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, for example by verifying that the min-entropy rate is multiplied by the amount of source data used to seed the DRBG or that the rate of entropy expected based on the amount of source data is explicitly stated and compared to the statistical rate. If the amount of source data used to seed the DRBG is not clear or the calculated rate is not explicitly related to the seed, the documentation will not be considered complete. 
+        <br>
+         The entropy justification shall not include any data added from any third-party application or from any state saving between restarts. 
+        <h2 class="indexable" data-level="2" id="entropyoperatingconditions">Appendix J - Operating Conditions</h2>
+         The entropy rate may be affected by conditions outside the control of the entropy source itself. For example, voltage, frequency, temperature, and elapsed time after power-on are just a few of the factors that may affect the operation of the entropy source. As such, documentation will also include the range of operating conditions under which the entropy source is expected to generate random data. It will clearly describe the measures that have been taken in the system design to ensure the entropy source continues to operate under those conditions. Similarly, documentation shall describe the conditions under which the entropy source is known to malfunction or become inconsistent. Methods used to detect failure or degradation of the source shall be included. 
+        <h2 class="indexable" data-level="2" id="entropyhealthtesting">Appendix K - Health Testing</h2>
+         More specifically, all entropy source health tests and their rationale will be documented. This includes a description of the health tests, the rate and conditions under which each health test is performed (e.g., at start, continuously, or on-demand), the expected results for each health test, and rationale indicating why each test is believed to be appropriate for detecting one or more failures in the entropy source. 
+        <h1 id="acronyms" class="indexable" data-level="A">Appendix L - Acronyms</h1>
+         AES <span class="description">Advanced Encryption Standard</span> ANSI <span class="description">American National Standards Institute</span> API <span class="description">Application Programming Interface</span> ASLR <span class="description">Address Space Layout Randomization</span> CESG <span class="description">Communications-Electronics Security Group</span> CMC <span class="description">Certificate Management over CMS</span> CMS <span class="description">Cryptographic Message Syntax</span> CN <span class="description">Common Names</span> CRL <span class="description">Certificate Revocation List</span> CSA <span class="description">Computer Security Act</span> DEP <span class="description">Data Execution Prevention</span> DES <span class="description">Data Encryption Standard</span> DHE <span class="description">Diffie-Hellman Ephemeral</span> DNS <span class="description">Domain Name System</span> DRBG <span class="description">Deterministic Random Bit Generator</span> DSS <span class="description">Digital Signature Standard</span> DT <span class="description">Date/Time Vector</span> DTLS <span class="description">Datagram Transport Layer Security</span> EAP <span class="description">Extensible Authentication Protocol</span> ECDHE <span class="description">Elliptic Curve Diffie-Hellman Ephemeral</span> ECDSA <span class="description">Elliptic Curve Digital Signature Algorithm</span> EST <span class="description">Enrollment over Secure Transport</span> FIPS <span class="description">Federal Information Processing Standards</span> DSS <span class="description">Digital Signature Standard</span> HMAC <span class="description">Hash-based Message Authentication Code</span> HTTP <span class="description">Hypertext Transfer Protocol</span> HTTPS <span class="description">Hypertext Transfer Protocol Secure</span> DSS <span class="description">Digital Signature Standard</span> IETF <span class="description">Internet Engineering Task Force</span> IP <span class="description">Internet Protocol</span> ISO <span class="description">International Organization for Standardization</span> IT <span class="description">Information Technology</span> ITSEF <span class="description">Information Technology Security Evaluation Facility</span> NFC <span class="description">Near Field Communication</span> NIAP <span class="description">National Information Assurance Partnership</span> NIST <span class="description">National Institute of Standards and Technology</span> OCSP <span class="description">Online Certificate Status Protocol</span> OID <span class="description">Object Identifier</span> OMB <span class="description">Office of Management and Budget</span> OS <span class="description">Operating System</span> PII <span class="description">Personally Identifiable Information</span> PKI <span class="description">Public Key Infrastructure</span> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <span class="description">Protection Profile</span> RBG <span class="description">Random Bit Generator</span> RFC <span class="description">Request for Comment</span> RNG <span class="description">Random Number Generator</span> RNGVS <span class="description">Random Number Generator Validation System</span> SAN <span class="description">Subject Alternative Name</span> <abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr> <span class="description">Security Assurance Requirement</span> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> <span class="description">Security Functional Requirement</span> SHA <span class="description">Secure Hash Algorithm</span> S/MIME <span class="description">Secure/Multi-purpose Internet Mail Extensions</span> SIP <span class="description">Session Initiation Protocol</span> SWID <span class="description">Software Identification</span> TLS <span class="description">Transport Layer Security</span> URI <span class="description">Uniform Resource Identifier</span> URL <span class="description">Uniform Resource Locator</span> USB <span class="description">Universal Serial Bus</span> XCCDF <span class="description">eXtensible Configuration Checklist Description Format</span> XOR <span class="description">Exclusive Or</span> 
+        <h1 id="acronyms" class="indexable" data-level="A">Appendix M - Acronyms</h1>
+        <table>
+            <caption>
+                <span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">1</span></span>: Acronyms 
+            </caption>
+            <tr class="header">
+                <th>Acronym</th><th>Meaning</th>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_CEM"><abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr></span></td><td><span id="long_abbr_CEM">Common Evaluation Methodology</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_cPP" data-plural="cPPs"><abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></span></td><td><span id="long_abbr_cPP">Collaborative Protection Profile</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_EP"><abbr class="dyn-abbr"><a href="#abbr_EP">EP</a></abbr></span></td><td><span id="long_abbr_EP">Extended Package</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_FP"><abbr class="dyn-abbr"><a href="#abbr_FP">FP</a></abbr></span></td><td><span id="long_abbr_FP">Functional Package</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_OE"><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr></span></td><td><span id="long_abbr_OE">Operational Environment</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_PP" data-plural="PPs"><abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr></span></td><td><span id="long_abbr_PP">Protection Profile</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_PP-Configuration"><abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr></span></td><td><span id="long_abbr_PP-Configuration">Protection Profile Configuration</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_PP-Module"><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr></span></td><td><span id="long_abbr_PP-Module">Protection Profile Module</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_SAR" data-plural="SARs"><abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr></span></td><td><span id="long_abbr_SAR">Security Assurance Requirement</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_SFR" data-plural="SFRs"><abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr></span></td><td><span id="long_abbr_SFR">Security Functional Requirement</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_ST" data-plural="STs"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr></span></td><td><span id="long_abbr_ST">Security Target</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_TOE" data-plural="TOEs"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr></span></td><td><span id="long_abbr_TOE">Target of Evaluation</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span></td><td><span id="long_abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Security Functionality</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_TSFI" data-plural="TSFIs"><abbr class="dyn-abbr"><a href="#abbr_TSFI">TSFI</a></abbr></span></td><td><span id="long_abbr_TSFI"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> Interface</span></td>
+            </tr>
+            <tr>
+                <td><span class="term" id="abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></span></td><td><span id="long_abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Summary Specification</span></td>
+            </tr>
+        </table>
+        <h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix N - Bibliography</h1>
+        <table>
+            <caption>
+                <span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">2</span></span>: Bibliography
+            </caption>
+            <tr class="header">
+                <th>Identifier</th><th>Title</th>
+            </tr>
+            <tr>
+                <td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - 
+                        <ul>
+                            <li>
+                                <a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R4.pdf">Part 1: Introduction and General Model</a>, CCMB-2012-09-001, Version 3.1 Revision 4, September 2012.
+                            </li>
+                            <li>
+                                <a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R4.pdf">Part 2: Security Functional Components</a>, CCMB-2012-09-002, Version 3.1 Revision 4, September 2012.
+                            </li>
+                            <li>
+                                <a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R4.pdf">Part 3: Security Assurance Components</a>, CCMB-2012-09-003, Version 3.1 Revision 4, September 2012.
+                            </li>
+                        </ul>
+                    </span></td>
+            </tr>
+            <tr>
+                <td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - 
+                        <ul>
+                            <li>
+                                <a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part 1: Introduction and General Model</a>, CCMB-2017-04-001, Version 3.1 Revision 5, April 2017.
+                            </li>
+                            <li>
+                                <a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R5.pdf">Part 2: Security Functional Components</a>, CCMB-2017-04-002, Version 3.1 Revision 5, April 2017.
+                            </li>
+                            <li>
+                                <a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R5.pdf">Part 3: Security Assurance Components</a>, CCMB-2017-04-003, Version 3.1 Revision 5, April 2017.
+                            </li>
+                        </ul>
+                    </span></td>
+            </tr>
+            <tr>
+                <td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description"> <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R4.pdf">Common Evaluation Methodology for Information Technology Security - Evaluation Methodology</a>, CCMB-2012-09-004, Version 3.1, Revision 4, September 2012. </span></td>
+            </tr>
+            <tr>
+                <td><span id="bibCESG">[CESG]</span></td><td><span class="description">CESG - <a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End User Devices Security and Configuration Guidance</a></span></td>
+            </tr>
+            <tr>
+                <td><span id="bibCSA">[CSA]</span></td><td><span class="description"> <a href="http://csrc.nist.gov/groups/SMA/ispab/documents/csa_87.txt">Computer Security Act of 1987</a>, H.R. 145, June 11, 1987. </span></td>
+            </tr>
+            <tr>
+                <td><span id="bibOMB">[OMB]</span></td><td><span class="description"> <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">Reporting Incidents Involving Personally Identifiable Information and Incorporating the Cost for Security in Agency Information Technology Investments</a>, OMB M-06-19, July 12, 2006. </span></td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"></meta><meta content="utf-8" http-equiv="encoding"></meta><title>Protection Profile for QQQQ</title><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            showMathMenu: false,
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true
+            },
+            styles: {
+
+                ".MathJax_Display": {
+                "text-align": "left !important",
+                margin:       "0em 0em !important"
+            }}
+            });
+        </script><script type="text/javascript">// 
+
+// Called on page load to parse URL parameters and perform actions on them.
+function init(){
+    if(getQueryVariable("expand") == "on"){
+      expand();
+    }
+    fixAbbrs();
+}
+
+
+function fixAbbrs(){
+    var aa;
+    var brk_els = document.getElementsByClassName("dyn-abbr");
+    //
+    for(aa=0; aa!=brk_els.length; aa++){
+        var abbr = brk_els[aa].firstElementChild.getAttribute("href").substring(1);
+        var el = document.getElementById("long_"+abbr)
+        if (el==null) {
+             console.log("Could not find 'long_abbr_'"+abbr);
+             continue;
+        }
+        var abbr_def = el.textContent;
+        brk_els[aa].setAttribute("title", abbr_def);
+    }
+}
+// // 
+const AMPERSAND=String.fromCharCode(38);
+
+// Pass a URL variable to this function and it will return its value
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split(AMPERSAND);
+    for (var i=0;i!=vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+}
+
+
+//    Expands all evaluation activities
+function expand(){
+    var ap = document.getElementsByClassName('activity_pane');
+    for (var ii = 0; ii!=ap.length; ii++) {
+        ap[ii].classList.remove('hide');
+    }
+}
+
+// Function to expand and contract a given div
+function toggle(descendent) {
+    var cl = descendent.parentNode.parentNode.classList;
+    if (cl.contains('hide')){
+      cl.remove('hide');
+    }
+    else{
+      cl.add('hide');
+    }
+}
+
+// Expands targets if they are hidden
+function showTarget(id){
+    var element = document.getElementById(id);
+    while (element != document.body.rootNode ){
+	element.classList.remove("hide");
+	element = element.parentElement;
+    }
+}
+
+
+// </script><style type="text/css">
+    #toc a{
+        display: block;
+    }
+    .td-{
+        display: block;
+    }
+    svg{
+      width: 100%;
+    }
+
+    a[id^="ajq_"]{
+        color:black;
+    }
+
+    
+    body{
+       max-width: 900px;
+       margin: auto;
+    }
+    #toc span{
+       margin-left: 20px;
+    }
+    .assignable-content{
+      font-style: italic;
+    }
+    .selectable-content{
+      font-style: italic;
+    }
+    .not-selectable-content{
+      font-style: italic;
+      text-decoration: line-through;
+    }
+    .refinement{
+      font-weight: bold;
+    }
+    div.eacategory{
+      font-style: italic;
+      font-weight: bold;
+    }
+    .activity_pane .toggler::after, .activity_pane .toggler{
+       display: inline-block;
+       height: auto;
+       content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8A\
+       AAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAQOFAAEDhQGl\
+       VDz+AAAAB3RJTUUH4gIXFDM7fhmr1wAAAfRJREFUKM+dkk9I02EYxz/P+25uurWR\
+       tTkzI4NGl4jQgkq71K1DhnTQIDolRAQFQYSHTtGhU4e6eujQofBSFLOg0C4RUSjh\
+       FnmqTTdKpj/mfv/eX4cUpmRYn9vz8v3w8D7PA/AWGADCbI4QcAb4AnAF8IBJEdX+\
+       N0tEda40C4AHADviW1LFvpOX6+FwtAacVzqkGiWtwxo4F21OuPu7+yvxRNoDEhpY\
+       cpzavkQyc7D76FCk+vN7j7VU6RdR4xAsikjGGP9FKrN3sPfEpajv2i2zhckR4JUG\
+       UCr0erFavLkn2ytd2WPxcFOsZb74+SIQA0YPHBqIdB8Z6tChJv1m/N4P33OGAUsD\
+       BIFxPNcOkq07jyeSbbo1tTu2q6vHEqU7D/ddSKcz2ZQJjBSmx925b9NjwEMAafha\
+       eyQa/3Dq7O0243sCIEoRGAOA59nm5dM7OHVruzH+AkDjYEp23RrLT+U8Ub+fV0UR\
+       oVyaMfVa9fqquF5GKX3ja2FCuc6yWbMipYNP755UgEdr8o2FMf5ivVYdKRfzRkRW\
+       RfJTOc+2rWdAcUN5hdGP7x8viGgAXLvGbGFCKxW6tj74J3nOqVvP89M5V6kQ86UZ\
+       f7lWvWWMt7Sp41VKb21uSfqnB++6kWi8BLTzL4ioq7H4tgC4z3/QAZSBxEaBXygN\
+       v+jeFnAPAAAAAElFTkSuQmCC');
+       max-width: 15px;
+    }
+
+    a.defined{
+      color: inherit;
+      text-decoration: inherit;
+    }
+      
+    a {
+      text-decoration: none;
+      word-wrap: break-word;
+    }
+    a.abbr:link{
+      color:black;
+      text-decoration:none;
+    }
+    a.abbr:visited{
+      color:black;
+      text-decoration:none;
+    }
+    a.abbr:hover{
+      color:blue;
+      text-decoration:none;
+    }
+    a.abbr:hover:visited{
+      color:purple;
+      text-decoration:none;
+    }
+    a.abbr:active{
+      color:red;
+      text-decoration:none;
+    }
+    .note-header{
+      font-weight: bold;
+    }
+    .note p:first-child{
+      display: inline;
+    }
+
+    .indent{ margin-left:2em; }
+
+    /* Tooltip container */
+    .tooltipped {
+       position: relative;
+       display: inline-block;
+       border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+
+    /* Tooltip text */
+    .tooltiptext {
+       visibility: hidden;
+       width: 120px;
+       background-color: black;
+       color: #fff;
+       text-align: center;
+       padding: 5px 0;
+       border-radius: 6px;
+
+       /* Position the tooltip text - see examples below! */
+       position: absolute;
+       z-index: 1;
+   }
+
+   /* Show the tooltip text when you mouse over the tooltip container */
+   .tooltipped:hover .tooltiptext {
+       visibility: visible;
+   }
+   tr.major-row{
+       border-top-style: double;
+   }
+   tr.major-row td:first-child{
+       border-right-style: ridge;
+       background-color: white;
+   } 
+   table.mfs td{
+       text-align: center;
+   }
+   table.mfs td:first-child{
+       text-align: left;
+       white-space: nowrap;
+   }
+  .table-caption, caption{
+       text-align: center;
+       font-weight: bold;
+   }
+   table{
+       margin:auto;
+       margin-top:1em;
+       border-collapse:collapse; /*border: 1px solid black;*/
+   }
+   td{
+       text-align:left;
+       padding:8px 8px;
+   }
+   th{
+       padding:8px 8px;
+   }
+   thead tr td{
+       text-align: center;
+       font-style: oblique;
+       font-weight: bold;
+   }
+   tr.header{
+       border-bottom:3px solid gray;
+       padding:8px 8px;
+       text-align:left;
+       font-weight:bold; /*font-size: 90%; font-family: verdana, arial, helvetica, sans-serif; */
+   }
+   table tr:nth-child(2n+2){
+       background-color:#F4F4F4;
+   }
+
+   table.ecd_heir_dep{
+       width: 100%;
+   }
+   table.ecd_heir_dep tr{
+       background-color: inherit;
+   }
+       
+   table.ecd_heir_dep tr :first-child{
+       white-space: nowrap;
+   }
+   table.ecd_heir_dep tr :last-child{
+       width: 100%;
+   }
+
+       
+   .dependent{
+       border: 1px solid gray;
+       border-radius: 1px
+   }
+   .dependent-content{
+       margin-left: 25px;
+       font-style: italic;
+   }
+
+   .uc_table_or td, .uc_table_or tr {
+       vertical-align: middle;
+       border: 1px solid black;
+       background-color: white;
+   }
+
+   .uc_not, .uc_mf, .uc_sel, .uc_guide{
+       text-indent: 10px;
+   }
+   .uc_sel &gt; a{ 
+       font-style: italic;
+   }
+
+   .uc_not_sel, .uc_sel.uc_mf, uc_assign.uc_mf{
+       text-indent: 20px;
+   }
+
+
+   .uc_table_or tr td.or_cell{
+      white-space: nowrap;
+      border-radius: 0.6em 0 0 0.6em;
+      background-color: black;
+      color: white;
+   }
+
+   .uc_table_and, .uc_table_or {
+       width: 100%;
+       background-color: white;
+   }
+   .uc_guidance{
+       display: table;
+       background-color: gray;
+   }  
+   div.uc_inc_fcomp{
+       display: list-item;
+       list-style-type: disc;
+       list-style-position: inside;
+       }
+
+   div.validationguidelines_label{
+        padding-top: 10px;
+   }
+	
+   .evidence, .test-obj { font-style: normal; font-size: 90%;}
+   
+   
+	table.classic {
+    	width: 100%;
+    	background-color: white;
+    	border-collapse: collapse;
+    	border-width: 2px;
+  		border-color: gray;
+  		border-style: solid;
+  		color: black;
+		font-size: small;
+	}
+    table.classic th {
+  		background-color: lightgray;   
+	}
+    table.classic th:empty{
+	    background-color: white;
+		border-top: none;
+		border-left: none;
+	}
+	table.classic td, table.classic th {
+  		border-width: 2px;
+  		border-color: gray;
+  		border-style: solid;
+  		padding: 5px;
+	}
+
+   
+    .comp .description{
+        padding-bottom: 20px;
+        display: block;
+    }    
+   
+   
+          .figure{
+              font-weight:bold;
+          }
+          h1{
+              page-break-before:always;
+              text-align:left;
+              font-size:200%;
+              margin-top:2em;
+              margin-bottom:2em;
+              font-family:verdana, arial, helvetica, sans-serif;
+              margin-bottom:1.0em;
+          }
+          h1.title{
+              text-align:center;
+          }
+          h2{
+              font-size:125%;
+              border-bottom:solid 1px gray;
+              margin-bottom:1.0em;
+              margin-top:2em;
+              margin-bottom:0.75em;
+              font-family:verdana, arial, helvetica, sans-serif;
+          }
+          h3{
+              font-size:110%;
+              margin-bottom:0.25em;
+              font-family:verdana, arial, helvetica, sans-serif;
+          }
+          h4{
+              margin-left:0%;
+              font-size:100%;
+              margin-bottom:0.75em;
+              font-family:verdana, arial, helvetica, sans-serif;
+          }
+          h5,
+          h6{
+              margin-left:6%;
+              font-size:90%;
+              margin-bottom:0.5em;
+              font-family:verdana, arial, helvetica, sans-serif;
+          }
+          p{
+              margin-bottom:0.6em;
+              margin-top:0.2em;
+          }
+          pre{
+              margin-bottom:0.5em;
+              margin-top:0.25em;
+              margin-left:3%;
+              font-family:monospace;
+              font-size:90%;
+          }
+          ul{
+              margin-bottom:0.5em;
+              margin-top:0.25em;
+          }
+          td{
+              vertical-align:top;
+          }
+          dl{
+              margin-bottom:0.5em;
+              margin-top:0.25em;
+          }
+          dt{
+              margin-top:0.7em;
+              font-weight:bold;
+              font-family:verdana, arial, helvetica, sans-serif;
+          }
+
+          a.linkref{
+              font-family:verdana, arial, helvetica, sans-serif;
+              font-size:90%;
+          }
+
+          *.simpleText{
+              margin-left:10%;
+          }
+          *.propertyText{
+              margin-left:10%;
+              margin-top:0.2em;
+              margin-bottom:0.2em
+          }
+          *.toc{
+              background:#FFFFFF;
+          }
+          *.toc2{
+              background:#FFFFFF;
+          }
+	  .choicelabel{
+	    font-weight: bold;
+	  }
+          div.comp{
+              margin-left:8%;
+              margin-top:1em;
+              margin-bottom:1em;
+          }
+          div.element{
+              margin-bottom:1em;
+          }
+          div.appnote{
+              margin-left:0%;
+              margin-top:1em;
+          }
+          .comment{
+              background-color:beige;
+              color:green;
+          }
+
+          div.subaact{
+              margin-left:0%;
+              margin-top:1em;
+          }
+          .subaact-header{
+              font-weight: bold;
+          }
+
+          div.activity_pane_body{
+              font-style:italic;
+              margin-left:0%;
+              margin-top:1em;
+              margin-bottom:1em;
+              padding:1em;
+              border:2px solid #888888;
+              border-radius:3px;
+              display:block;
+              margin-left:0%;
+              margin-top:1em;
+              margin-bottom:1em;
+              box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+          }
+          div.optional-appendicies{
+              display:none;
+          }
+
+          div.statustag{
+              margin-left:0%;
+              margin-top:1em;
+              margin-bottom:1em;
+              padding: 0.6em;
+              border:2px solid #888888;
+              border-radius:3px;
+          }
+
+          div.toc{
+              margin-left:8%;
+              margin-bottom:4em;
+              padding-bottom:0.75em;
+              padding-top:1em;
+              padding-left:2em;
+              padding-right:2em;
+          }
+          span.SOlist{
+              font-size:90%;
+              font-family:verdana, arial, helvetica, sans-serif;
+          }
+          h2.toc{
+              border-bottom:none;
+              margin-left:0%;
+              margin-top:0em;
+          }
+          p.toc{
+              margin-left:2em;
+              margin-bottom:0.2em;
+              margin-top:0.5em;
+          }
+          p.toc2{
+              margin-left:5em;
+              margin-bottom:0.1em;
+              margin-top:0.1em;
+          }
+          div.center{
+              display:block;
+              margin-left:auto;
+              margin-right:auto;
+              text-align:center;
+              }
+          div.ea{
+	      padding-bottom:10px;
+          }
+	      
+          div.figure{
+              display:block;
+              margin-left:auto;
+              margin-right:auto;
+              text-align:center;
+              margin-top:1em;
+          }
+          div.activity_pane_header{
+              display:table-cell;
+              vertical-align:middle;
+              padding-top:10px;
+          }
+          span.activity_pane_label{
+              vertical-align:middle;
+              color:black;
+              text-decoration:none;
+              font-size:100%;
+              font-weight:bold; /*font-family: verdana, arial, helvetica, sans-serif; */
+          }
+          .dyn-abbr a, .dyn-abbr a:active, .dyn-abbr a:visited{
+              background-color: inherit;
+              color: inherit;
+              text-decoration: inherit;;
+          }
+
+          @media screen{
+              *.reqid{
+                  float:left;
+                  font-size:90%;
+                  font-family:verdana, arial, helvetica, sans-serif;
+                  margin-right:1em;
+              }
+              *.req{
+                  margin-left:0%;
+                  margin-top:1em;
+                  margin-bottom:1em;
+              }
+              *.reqdesc{
+                  margin-left:20%;
+              }
+
+              .activity_pane.hide .toggler::after, .activity_pane.hide .toggler{
+	          content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8A\
+		  AAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAQOFAAEDhQGl\
+		  VDz+AAAAB3RJTUUH4gIXFC4BR3keeQAAAfZJREFUKM+d0k1PE1EUBuB37h2nQ+30\
+		  w5YObR0FhIppqBgWuDCaSBQjiQZNTIxLfoAkBHXh2vg7xID+ABPXBl3UdAMaN1CR\
+		  j5ZijZ22DKW9d44LP1KMROvZnMU5z+KcvBzAAgADwCdV1RzXlYQ26tYhrYM6u/qX\
+		  ATwCcKodrAOYv3z9IV28OuP6/NHPAGYZ45G/QQ5AAFjNbyzdTA2NewcGx7xeI5wu\
+		  FZenQOQQuasHncN/9IJo1sn+unkpbqVFIJhgydQo13VjDKCJSnnLBJAHUPoTBoA3\
+		  uzvlfiNgDhn+KMiVCB6xYCZSoaPHz5wrba/cbuztpBWFvQLI+R2DSGZqleKNuJX2\
+		  cVVjAIExDo/uV7pPjGhSNntrleI9+n7Ox33Y549Wq/ZWTyh8rNcfjPlaZ4xzZvUM\
+		  ezrNvnJ+fXFCiL2k2rpQq2wnAqH4tYjZFyZq/Y8CKZoim51z1nIZQ4jGNIC5fZhz\
+		  7fHA4JVuj26AyIWiMDSbdTi1L/T29RO7ahdfKgqbInJLANCKZ6Kx5J24dVowztW6\
+		  Y+8WNt91FNYXc4WN988BzAL4QOT+Aj/x8GFf+MHI+UlI2cBS9kVlLZfxSFdMS9GY\
+		  V1WtKETDPShhz85emLRHx++TETBLAJ4qCov8c7ajsZMr/5PtBQB3AXSpqsbagd8A\
+		  O+HMRUtPNsQAAAAASUVORK5CYII=');
+              }
+
+              .activity_pane.hide .activity_pane_body{
+                  display:none;
+              }
+              div.statustag{
+                  box-shadow:4px 4px 3px #888888;
+              }
+          }
+
+
+          @media print{
+              *.reqid{
+                  font-size:90%;
+                  font-family:verdana, arial, helvetica, sans-serif;
+              }
+              *.req{
+                  margin-left:0%;
+                  margin-top:1em;
+                  margin-bottom:1em;
+              }
+              *.reqdesc{
+                  margin-left:20%;
+              }
+              div.activity_pane_body{
+                  padding:1em;
+                  border:2px solid #888888;
+                  border-radius:3px;
+                  display:block;
+              }
+
+	            img[src="images/collapsed.png"] { display:none;}
+
+          }
+    </style></head><body onLoad="init()"><h1 class="title" style="page-break-before:auto;">Protection Profile for QQQQ</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
+      Version: 1.0<br/>2015-08-14<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>Round 1</td><td>2015-04-23</td><td>First draft of version 1.0 for comment</td></tr>
+<tr><td>1.0</td><td>2015-08-14</td><td>Release - first version released</td></tr>
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:0px">Appendix B - <span>Strictly Optional  Requirements
+    </span></a><a href="#objective-reqs" style="text-indent:0px">Appendix C - <span>Objective  Requirements
+    </span></a><a href="#feat-based-reqs" style="text-indent:0px">Appendix D - <span>Implementation-dependent  Requirements
+    </span></a><a href="#sel-based-reqs" style="text-indent:0px">Appendix E - <span>Selection-based  Requirements
+    </span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix F - <span>Inherently Satisfied Requirements</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix G - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:0px">Appendix H - <span>Design Description</span></a><a href="#entropyjustification" style="text-indent:0px">Appendix I - <span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:0px">Appendix J - <span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:0px">Appendix K - <span>Health Testing</span></a><a href="#acronyms" style="text-indent:0px">Appendix L - <span>Acronyms</span></a><a href="#acronyms" style="text-indent:0px">Appendix M - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix N - <span>Bibliography</span></a></div><h1 id="opt-app" class="indexable" data-level="A">Appendix A -  Optional Requirements</h1>
+    As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, the baseline requirements (those that must be
+	  performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+    This appendix contains three other types of optional requirements:<br/><br/>
+
+   The first type, defined in Appendix <a href="#optional-reqs" class="dynref">Appendix B -  Strictly Optional  Requirements</a>, are strictly optional requirements.
+   If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> meets any of these requirements the vendor is encouraged to claim the associated <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>
+	  in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, but doing so is not required in order to conform to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.<br/><br/>
+
+  The second type, defined in Appendix <a href="#objective-reqs" class="dynref">Appendix C -  Objective  Requirements</a>, are objective requirements. These describe security functionality that is not yet 
+	  widely available in commercial technology. 
+   Objective requirements are not currently mandated by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, but will be mandated in
+	  the future. Adoption by vendors is encouraged, but claiming these <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> is not required in order to conform to this
+	  <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.<br/><br/>
+
+  The third type, defined in Appendix <a href="#feat-based-reqs" class="dynref">Appendix D -  Implementation-dependent  Requirements</a>, are Implementation-dependent requirements.
+	If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements the product features associated with the listed <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>, either the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must be claimed
+	or the product features must be disabled in the evaluated ocnfiguration. 
+  <h2 id="optional-reqs" class="indexable" data-level="2">Appendix B -  Strictly Optional  Requirements
+    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
+            Strictly Optional requirements.</p><h2 id="objective-reqs" class="indexable" data-level="2">Appendix C -  Objective  Requirements
+    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
+            Objective requirements.</p><h2 id="feat-based-reqs" class="indexable" data-level="2">Appendix D -  Implementation-dependent  Requirements
+    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
+            Implementation-dependent requirements.</p><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix E -  Selection-based  Requirements
+    </h1><span class="description">
+	<p>As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>,
+        the baseline requirements
+        (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or its underlying platform)
+        are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+        There are additional requirements based on selections in the body of 
+        the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
+        if certain selections are made, then additional requirements below must be included.
+ 	</p>
+		 </span><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
+            Selection-based requirements.</p><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix F -  Inherently Satisfied Requirements</h1> This
+	appendix lists requirements that should be considered satisfied by products
+	successfully evaluated against this Protection Profile.  
+	However, these requirements are not featured explicitly as <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> and should not be
+	included in the .  
+	They are not included as standalone <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> because it would
+	increase the time, cost, and complexity of evaluation.  This approach is permitted
+	by  Part 1, <b>8.2 Dependencies between components</b>.
+    <br/>
+	This information benefits systems engineering activities which call for inclusion of 
+	particular security controls.  Evaluation against the Protection Profile
+	provides evidence that these controls are present and have been evaluated.
+    
+	
+	Requirement
+	Rationale for Satisfaction
+	
+	
+	FIA_UAU.1 - Timing of authentication
+	
+	   implicitly requires that the OS perform all necessary actions, 
+	  including those on behalf of the user who has not been authenticated, 
+	  in order to authenticate;
+	  therefore it is duplicative to include these actions as a 
+	  separate assignment and test.
+	
+	
+	
+	FIA_UID.1 - Timing of identification
+	
+	   implicitly requires that the OS perform all necessary actions, 
+	  including those on behalf of the user who has not been identified, 
+	  in order to authenticate;
+	  therefore it is duplicative to include these actions as a 
+	  separate assignment and test.
+	
+	
+	
+	FMT_SMR.1 - Security roles
+	
+	   specifies role-based management functions that implicitly defines
+	  user and privileged accounts; 
+	  therefore, it is duplicative to include separate role requirements.
+	
+	
+	
+	FPT_STM.1 - Reliable time stamps
+	
+	   explicitly requires that the OS associate timestamps with audit records;
+	  therefore it is duplicative to include a separate timestamp requirement.
+	
+	
+	
+	FTA_SSL.1 - <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>-initiated session locking
+	
+	   defines requirements for managing session locking;
+	  therefore, it is duplicative to include a separate session locking requirement.
+	
+	
+	
+	FTA_SSL.2 - User-initiated locking
+	
+	   defines requirements for user-initiated session locking;
+	  therefore, it is duplicative to include a separate session locking requirement.
+	
+	
+	
+	FAU_STG.1 - Protected audit trail storage
+	
+	   defines a requirement to protect audit logs;
+	  therefore, it is duplicative to include a separate protection of audit trail requirements.
+	
+	
+	
+	FAU_GEN.2 - User identity association
+	
+	   explicitly requires that the OS record
+	  any user account associated with each event; therefore, it is duplicative
+	  to include a separate requirement to associate a user account with each
+	  event.
+	
+	
+	
+	  FAU_SAR.1 - Audit review
+	  
+	     requires that audit logs (and other objects)
+	    are protected from reading by unprivileged users; therefore, it is duplicative
+	    to include a separate requirement to protect only the audit information.
+	  
+	
+    
+
+  <h1 id="entropyappendix" class="indexable" data-level="A">Appendix G -  Entropy Documentation and Assessment</h1> This appendix
+    describes the required supplementary information for the entropy source used by the OS. <br/>
+    The documentation of the entropy source should be detailed enough that, after reading, the
+    evaluator will thoroughly understand the entropy source and why it can be relied upon to provide
+    sufficient entropy. This documentation should include multiple detailed sections: design
+    description, entropy justification, operating conditions, and health testing. This documentation
+    is not required to be part of the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>. <h2 class="indexable" data-level="2" id="entropydesign">Appendix H -  Design Description</h2>
+      Documentation shall include the design of the entropy source as a whole, including the
+      interaction of all entropy source components. Any information that can be shared regarding the
+      design should also be included for any third-party entropy sources that are included in the
+      product. <br/> The documentation will describe the operation of the entropy source to include,
+      how entropy is produced, and how unprocessed (raw) data can be obtained from within the
+      entropy source for testing purposes. The documentation should walk through the entropy source
+      design indicating where the entropy comes from, where the entropy output is passed next, any
+      post-processing of the raw outputs (hash, XOR, etc.), if/where it is stored, and finally, how
+      it is output from the entropy source. Any conditions placed on the process (e.g., blocking)
+      should also be described in the entropy source design. Diagrams and examples are encouraged.
+      <br/> This design must also include a description of the content of the security boundary of
+      the entropy source and a description of how the security boundary ensures that an adversary
+      outside the boundary cannot affect the entropy rate. <br/> If implemented, the design
+      description shall include a description of how third-party applications can add entropy to the
+      RBG. A description of any RBG state saving between power-off and power-on shall be included. 
+    <h2 class="indexable" data-level="2" id="entropyjustification">Appendix I -  Entropy Justification</h2> There should be a technical
+      argument for where the unpredictability in the source comes from and why there is confidence
+      in the entropy source delivering sufficient entropy for the uses made of the RBG output (by
+      this particular OS). This argument will include a description of the expected min-entropy
+      rate (i.e. the minimum entropy (in bits) per bit or byte of source data) and explain that
+      sufficient entropy is going into the OS randomizer seeding process. This discussion will be
+      part of a justification for why the entropy source can be relied upon to produce bits with
+      entropy. <br/> The amount of information necessary to justify the expected min-entropy rate
+      depends on the type of entropy source included in the product. <br/> For developer provided
+      entropy sources, in order to justify the min-entropy rate, it is expected that a large number
+      of raw source bits will be collected, statistical tests will be performed, and the min-entropy
+      rate determined from the statistical tests. While no particular statistical tests are required
+      at this time, it is expected that some testing is necessary in order to determine the amount
+      of min-entropy in each output. <br/> For third-party provided entropy sources, in which the
+      OS vendor has limited access to the design and raw entropy data of the source, the
+      documentation will indicate an estimate of the amount of min-entropy obtained from this
+      third-party source. It is acceptable for the vendor to “assume” an amount of min-entropy,
+      however, this assumption must be clearly stated in the documentation provided. In particular,
+      the min-entropy estimate must be specified and the assumption included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>. <br/>
+      Regardless of type of entropy source, the justification will also include how the DRBG is
+      initialized with the entropy stated in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, for example by verifying that the min-entropy
+      rate is multiplied by the amount of source data used to seed the DRBG or that the rate of
+      entropy expected based on the amount of source data is explicitly stated and compared to the
+      statistical rate. If the amount of source data used to seed the DRBG is not clear or the
+      calculated rate is not explicitly related to the seed, the documentation will not be
+      considered complete. <br/> The entropy justification shall not include any data added from any
+      third-party application or from any state saving between restarts. 
+    <h2 class="indexable" data-level="2" id="entropyoperatingconditions">Appendix J -  Operating Conditions</h2> The entropy rate may be
+      affected by conditions outside the control of the entropy source itself. For example, voltage,
+      frequency, temperature, and elapsed time after power-on are just a few of the factors that may
+      affect the operation of the entropy source. As such, documentation will also include the range
+      of operating conditions under which the entropy source is expected to generate random data. It
+      will clearly describe the measures that have been taken in the system design to ensure the
+      entropy source continues to operate under those conditions. Similarly, documentation shall
+      describe the conditions under which the entropy source is known to malfunction or become
+      inconsistent. Methods used to detect failure or degradation of the source shall be included. 
+    <h2 class="indexable" data-level="2" id="entropyhealthtesting">Appendix K -  Health Testing</h2> More specifically, all entropy source
+      health tests and their rationale will be documented. This includes a description of the health
+      tests, the rate and conditions under which each health test is performed (e.g., at start,
+      continuously, or on-demand), the expected results for each health test, and rationale
+      indicating why each test is believed to be appropriate for detecting one or more failures in
+      the entropy source. 
+  <h1 id="acronyms" class="indexable" data-level="A">Appendix L -  Acronyms</h1>
+    
+      
+        AES
+        <span class="description">Advanced Encryption Standard</span>
+      
+      
+        ANSI
+        <span class="description">American National Standards Institute</span>
+      
+      
+        API
+        <span class="description">Application Programming Interface</span>
+      
+      
+        ASLR
+        <span class="description">Address Space Layout Randomization</span>
+      
+      
+      
+      
+      
+      
+      
+        CESG
+        <span class="description">Communications-Electronics Security Group</span>
+      
+      
+        CMC
+        <span class="description">Certificate Management over CMS</span>
+      
+      
+        CMS
+        <span class="description">Cryptographic Message Syntax</span>
+      
+      
+        CN
+        <span class="description">Common Names</span>
+      
+      
+        CRL
+        <span class="description">Certificate Revocation List</span>
+      
+      
+        CSA
+        <span class="description">Computer Security Act</span>
+      
+      
+        DEP
+        <span class="description">Data Execution Prevention</span>
+      
+      
+        DES
+        <span class="description">Data Encryption Standard</span>
+      
+      
+        DHE
+        <span class="description">Diffie-Hellman Ephemeral</span>
+      
+      
+        DNS
+        <span class="description">Domain Name System</span>
+      
+      
+        DRBG
+        <span class="description">Deterministic Random Bit Generator</span>
+      
+      
+        DSS
+        <span class="description">Digital Signature Standard</span>
+      
+      
+        DT
+        <span class="description">Date/Time Vector</span>
+      
+      
+        DTLS
+        <span class="description">Datagram Transport Layer Security</span>
+      
+      
+        EAP
+        <span class="description">Extensible Authentication Protocol</span>
+      
+      
+        ECDHE
+        <span class="description">Elliptic Curve Diffie-Hellman Ephemeral</span>
+      
+      
+        ECDSA
+        <span class="description">Elliptic Curve Digital Signature Algorithm</span>
+      
+      
+        EST
+        <span class="description">Enrollment over Secure Transport</span>
+      
+      
+        FIPS
+        <span class="description">Federal Information Processing Standards</span>
+      
+      
+        DSS
+        <span class="description">Digital Signature Standard</span>
+      
+      
+        HMAC
+        <span class="description">Hash-based Message Authentication Code</span>
+      
+      
+        HTTP
+        <span class="description">Hypertext Transfer Protocol</span>
+      
+      
+        HTTPS
+        <span class="description">Hypertext Transfer Protocol Secure</span>
+      
+      
+        DSS
+        <span class="description">Digital Signature Standard</span>
+      
+      
+      
+      
+      
+      
+        IETF
+        <span class="description">Internet Engineering Task Force</span>
+      
+      
+        IP
+        <span class="description">Internet Protocol</span>
+      
+      
+        ISO
+        <span class="description">International Organization for Standardization</span>
+      
+      
+        IT
+        <span class="description">Information Technology</span>
+      
+      
+        ITSEF
+        <span class="description">Information Technology Security Evaluation Facility</span>
+      
+      
+        NFC
+        <span class="description">Near Field Communication</span>
+      
+      
+        NIAP
+        <span class="description">National Information Assurance Partnership</span>
+      
+      
+        NIST
+        <span class="description">National Institute of Standards and Technology</span>
+      
+      
+        OCSP
+        <span class="description">Online Certificate Status Protocol</span>
+      
+      
+        OID
+        <span class="description">Object Identifier</span>
+      
+      
+        OMB
+        <span class="description">Office of Management and Budget</span>
+      
+      
+        OS
+        <span class="description">Operating System</span>
+      
+      
+        PII
+        <span class="description">Personally Identifiable Information</span>
+      
+      
+        PKI
+        <span class="description">Public Key Infrastructure</span>
+      
+      
+        <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>
+        <span class="description">Protection Profile</span>
+      
+      
+        RBG
+        <span class="description">Random Bit Generator</span>
+      
+      
+        RFC
+        <span class="description">Request for Comment</span>
+      
+      
+        RNG
+        <span class="description">Random Number Generator</span>
+      
+      
+        RNGVS
+        <span class="description">Random Number Generator Validation System</span>
+      
+      
+        SAN
+        <span class="description">Subject Alternative Name</span>
+      
+      
+        <abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr>
+        <span class="description">Security Assurance Requirement</span>
+      
+      
+        <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>
+        <span class="description">Security Functional Requirement</span>
+      
+      
+        SHA
+        <span class="description">Secure Hash Algorithm</span>
+      
+      
+        S/MIME
+        <span class="description">Secure/Multi-purpose Internet Mail Extensions</span>
+      
+      
+        SIP
+        <span class="description">Session Initiation Protocol</span>
+      
+      
+        SWID
+        <span class="description">Software Identification</span>
+      
+      
+        TLS
+        <span class="description">Transport Layer Security</span>
+      
+      
+        URI
+        <span class="description">Uniform Resource Identifier</span>
+      
+      
+        URL
+        <span class="description">Uniform Resource Locator</span>
+      
+      
+        USB
+        <span class="description">Universal Serial Bus</span>
+      
+      
+        XCCDF
+        <span class="description">eXtensible Configuration Checklist Description Format</span>
+      
+      
+        XOR
+        <span class="description">Exclusive Or</span>
+      
+    
+  <h1 id="acronyms" class="indexable" data-level="A">Appendix M -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">1</span></span>: Acronyms
+		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
+<tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
+<tr><td><span class="term" id="abbr_CEM"><abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr></span></td><td><span id="long_abbr_CEM">Common Evaluation Methodology</span></td></tr>
+<tr><td><span class="term" id="abbr_cPP" data-plural="cPPs"><abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></span></td><td><span id="long_abbr_cPP">Collaborative Protection Profile</span></td></tr>
+<tr><td><span class="term" id="abbr_EP"><abbr class="dyn-abbr"><a href="#abbr_EP">EP</a></abbr></span></td><td><span id="long_abbr_EP">Extended Package</span></td></tr>
+<tr><td><span class="term" id="abbr_FP"><abbr class="dyn-abbr"><a href="#abbr_FP">FP</a></abbr></span></td><td><span id="long_abbr_FP">Functional Package</span></td></tr>
+<tr><td><span class="term" id="abbr_OE"><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr></span></td><td><span id="long_abbr_OE">Operational Environment</span></td></tr>
+<tr><td><span class="term" id="abbr_PP" data-plural="PPs"><abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr></span></td><td><span id="long_abbr_PP">Protection Profile</span></td></tr>
+<tr><td><span class="term" id="abbr_PP-Configuration"><abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr></span></td><td><span id="long_abbr_PP-Configuration">Protection Profile Configuration</span></td></tr>
+<tr><td><span class="term" id="abbr_PP-Module"><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr></span></td><td><span id="long_abbr_PP-Module">Protection Profile Module</span></td></tr>
+<tr><td><span class="term" id="abbr_SAR" data-plural="SARs"><abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr></span></td><td><span id="long_abbr_SAR">Security Assurance Requirement</span></td></tr>
+<tr><td><span class="term" id="abbr_SFR" data-plural="SFRs"><abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr></span></td><td><span id="long_abbr_SFR">Security Functional Requirement</span></td></tr>
+<tr><td><span class="term" id="abbr_ST" data-plural="STs"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr></span></td><td><span id="long_abbr_ST">Security Target</span></td></tr>
+<tr><td><span class="term" id="abbr_TOE" data-plural="TOEs"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr></span></td><td><span id="long_abbr_TOE">Target of Evaluation</span></td></tr>
+<tr><td><span class="term" id="abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span></td><td><span id="long_abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Security Functionality</span></td></tr>
+<tr><td><span class="term" id="abbr_TSFI" data-plural="TSFIs"><abbr class="dyn-abbr"><a href="#abbr_TSFI">TSFI</a></abbr></span></td><td><span id="long_abbr_TSFI"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> Interface</span></td></tr>
+<tr><td><span class="term" id="abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></span></td><td><span id="long_abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Summary Specification</span></td></tr>
+</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix N -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">2</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
+            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R4.pdf">Part
+                1: Introduction and General Model</a>, CCMB-2012-09-001, Version 3.1 Revision 4,
+              September 2012.</li>
+            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R4.pdf">Part
+                2: Security Functional Components</a>, CCMB-2012-09-002, Version 3.1 Revision 4,
+              September 2012.</li>
+            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R4.pdf">Part
+                3: Security Assurance Components</a>, CCMB-2012-09-003, Version 3.1 Revision 4,
+              September 2012.</li>
+          </ul></span></td></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
+            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part
+                1: Introduction and General Model</a>, CCMB-2017-04-001, Version 3.1 Revision 5,
+              April 2017.</li>
+            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R5.pdf">Part
+                2: Security Functional Components</a>, CCMB-2017-04-002, Version 3.1 Revision 5,
+              April 2017.</li>
+            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R5.pdf">Part
+                3: Security Assurance Components</a>, CCMB-2017-04-003, Version 3.1 Revision 5,
+              April 2017.</li>
+          </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">
+          <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R4.pdf">Common
+            Evaluation Methodology for Information Technology Security - Evaluation Methodology</a>,
+          CCMB-2012-09-004, Version 3.1, Revision 4, September 2012. </span></td></tr><tr><td><span id="bibCESG">[CESG]</span></td><td><span class="description">CESG - <a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End
+            User Devices Security and Configuration Guidance</a></span></td></tr><tr><td><span id="bibCSA">[CSA]</span></td><td><span class="description">
+          <a href="http://csrc.nist.gov/groups/SMA/ispab/documents/csa_87.txt">Computer Security Act
+            of 1987</a>, H.R. 145, June 11, 1987. </span></td></tr><tr><td><span id="bibOMB">[OMB]</span></td><td><span class="description">
+          <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">Reporting Incidents Involving Personally Identifiable Information and Incorporating the
+            Cost for Security in Agency Information Technology Investments</a>, OMB M-06-19, July
+          12, 2006. </span></td></tr></table></body></html>
