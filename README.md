@@ -1,6 +1,25 @@
-Protection Profile Template
-===============
-![Build](https://github.com/commoncriteria/sdn-controller/workflows/Build/badge.svg)
+== Protection Profile for SDN Controller
+
+[cols="1,1,1,1,1,1,1,1"]
+|===
+8+|sdn-controller 
+| https://github.com/commoncriteria/sdn-controller/tree/master[master] 
+a| https://commoncriteria.github.io/sdn-controller/master/sdn-controller-release.html[📄]
+a|[link=https://github.com/commoncriteria/sdn-controller/blob/gh-pages/master/ValidationReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/sdn-controller/gh-pages/master/validation.svg[Validation]
+a|[link=https://github.com/commoncriteria/sdn-controller/blob/gh-pages/master/SanityChecksOutput.md]
+image::https://raw.githubusercontent.com/commoncriteria/sdn-controller/gh-pages/master/warnings.svg[SanityChecks]
+a|[link=https://github.com/commoncriteria/sdn-controller/blob/gh-pages/master/SpellCheckReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/sdn-controller/gh-pages/master/spell-badge.svg[SpellCheck]
+a|[link=https://github.com/commoncriteria/sdn-controller/blob/gh-pages/master/TDValidationReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/sdn-controller/gh-pages/master/tds.svg[TDs]
+a|image::https://raw.githubusercontent.com/commoncriteria/sdn-controller/gh-pages/master/transforms.svg[transforms,150]
+a|
+https://commoncriteria.github.io/sdn-controller/master/sdn-controller-esr.html[sdn-controller-esr.html] +
+https://commoncriteria.github.io/sdn-controller/master/sdn-controller-release-linkable.html[encrypting-retransmission-release-linkable.html] +
+https://commoncriteria.github.io/sdn-controller/master/sdn-controller-release.html[encrypting-retransmission-release.html] +
+https://commoncriteria.github.io/sdn-controller/master/encrypting-retransmission.html[encrypting-retransmission.html] +
+|===
 
 Quickstart
 ----------
