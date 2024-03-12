@@ -272,23 +272,24 @@
 		“Optional Extensions” section below.
 		<ul xmlns="http://common-criteria.rhcloud.com/ns/esr">
 			<li>
-				1. The remote administration and audit functions shall use cryptographic algorithms to encrypt and protect communication,following guidelines and recommendations from NIST SP 800-131A and its future updates to cryptographic standards and algorithms.   
+				1. The remote administration and audit functions shall use cryptographic algorithms to encrypt and protect communication, 
+				following guidelines and recommendations from NIST SP 800-131A and its future updates to cryptographic standards and algorithms.
 			</li>
 			<li>
-				All communications with other SDN components shall be
-				protected and authenticated.
+				2. All communications with other SDN controllers and their components must be protected and authenticated using (but not limited to)
+				secure communication protocols [TLS 1.2 or higher, SSH], mutual authentication [Certificates and Public Key Infrastructure, Pre-shared Keys],
+				access control [RBAC], and cryptographic algorithms [NIST SP 800-131A]. 
 			</li>
 			<li>
-				The SDN Controller shall be capable of auditing 
-				administrative actions, including any configuration changes
-				and rebooting of the SDN Controller.
+				3. The SDN Controller must have the ability to continuously monitor and log activities, as well as audit administrative actions which may include
+				but not limited to CRUD (Create, Read, Update, Delete) operations on managed devices in the fabric, logical network groups
+				(including VLANs, VXLANs, and IP subnets/prefixes), routing table updates, and loss of communications to resources. The SDN controller should
+				log detailed user actions, including the methods used (API, WebUI, CLI), to provide context on changes, thereby enhancing the system's traceability
+				and security.  
 			</li>
 			<li>
-				The SDN Controller shall provide an authentication mechanism
-				for local and remote administrators, as well as the 
-				device/VM itself (e.g., the device/VM maintains an 
-				authentication credential that can be used to authenticate
-				it to an administrator’s client) .
+				4. The SDN Controller shall provide an authentication mechanism for any users/administrators, as well as the device/VM itself that
+				comply with NIST SP 800-63 and ISO/IEC 27001 and SO/IEC 27002. 
 			</li>
 			<li>
 				The SDN Controller shall provide a cryptographic means to
