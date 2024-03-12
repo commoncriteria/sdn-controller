@@ -18,7 +18,7 @@ a|
 https://commoncriteria.github.io/sdn-controller/master/sdn-controller-esr.html[sdn-controller-esr.html] +
 https://commoncriteria.github.io/sdn-controller/master/sdn-controller-release-linkable.html[sdn-controller-release-linkable.html] +
 https://commoncriteria.github.io/sdn-controller/master/sdn-controller-release.html[sdn-controller-release.html] +
-https://commoncriteria.github.io/sdn-controller/master/encrypting-retransmission.html[sdn-controller.html] +
+https://commoncriteria.github.io/sdn-controller/master/sdn-controller.html[sdn-controller.html] +
 |===
 
 Quickstart
