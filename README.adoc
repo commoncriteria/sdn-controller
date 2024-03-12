@@ -16,9 +16,9 @@ image::https://raw.githubusercontent.com/commoncriteria/sdn-controller/gh-pages/
 a|image::https://raw.githubusercontent.com/commoncriteria/sdn-controller/gh-pages/master/transforms.svg[transforms,150]
 a|
 https://commoncriteria.github.io/sdn-controller/master/sdn-controller-esr.html[sdn-controller-esr.html] +
-https://commoncriteria.github.io/sdn-controller/master/sdn-controller-release-linkable.html[encrypting-retransmission-release-linkable.html] +
-https://commoncriteria.github.io/sdn-controller/master/sdn-controller-release.html[encrypting-retransmission-release.html] +
-https://commoncriteria.github.io/sdn-controller/master/encrypting-retransmission.html[encrypting-retransmission.html] +
+https://commoncriteria.github.io/sdn-controller/master/sdn-controller-release-linkable.html[sdn-controller-release-linkable.html] +
+https://commoncriteria.github.io/sdn-controller/master/sdn-controller-release.html[sdn-controller-release.html] +
+https://commoncriteria.github.io/sdn-controller/master/encrypting-retransmission.html[sdn-controller.html] +
 |===
 
 Quickstart
