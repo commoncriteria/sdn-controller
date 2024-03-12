@@ -1,7 +1,11 @@
 output/sdn-controller-esr.html: 131A
+output/sdn-controller-esr.html: 63B
+output/sdn-controller-esr.html: ABAC
+output/sdn-controller-esr.html: APTs
 output/sdn-controller-esr.html: CLI
+output/sdn-controller-esr.html: DoS
 output/sdn-controller-esr.html: ESRs
-output/sdn-controller-esr.html: MTD
+output/sdn-controller-esr.html: MitM
 output/sdn-controller-esr.html: RBAC
 output/sdn-controller-esr.html: SDN
 output/sdn-controller-esr.html: VLANs
@@ -9,7 +13,9 @@ output/sdn-controller-esr.html: VM
 output/sdn-controller-esr.html: VMs
 output/sdn-controller-esr.html: VXLANs
 output/sdn-controller-esr.html: WebUI
+output/sdn-controller-esr.html: amidst
 output/sdn-controller-esr.html: cPPs
+output/sdn-controller-esr.html: cybersecurity
 output/sdn-controller-esr.html: natively
 output/sdn-controller-esr.html: sdn
 output/sdn-controller-esr.html: subnets
