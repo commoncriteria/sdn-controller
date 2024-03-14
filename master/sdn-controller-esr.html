@@ -272,48 +272,48 @@
 		“Optional Extensions” section below.
 		<ul xmlns="http://common-criteria.rhcloud.com/ns/esr">
 			<li>
-				1. The remote administration and audit functions shall use cryptographic algorithms to encrypt and protect communication, 
+				The remote administration and audit functions shall use cryptographic algorithms to encrypt and protect communication, 
 				following guidelines and recommendations from NIST SP 800-131A and its future updates to cryptographic standards and algorithms.
 			</li>
 			<li>
-				2. All communications with other SDN controllers and their components must be protected and authenticated using (but not limited to)
+				All communications with other SDN controllers and their components must be protected and authenticated using (but not limited to)
 				secure communication protocols [TLS 1.2 or higher, SSH], mutual authentication [Certificates and Public Key Infrastructure, Pre-shared Keys],
 				access control [RBAC], and cryptographic algorithms [NIST SP 800-131A]. 
 			</li>
 			<li>
-				3. The SDN Controller must have the ability to continuously monitor and log activities, as well as audit administrative actions which may include
+				The SDN Controller must have the ability to continuously monitor and log activities, as well as audit administrative actions which may include
 				but not limited to CRUD (Create, Read, Update, Delete) operations on managed devices in the fabric, logical network groups
 				(including VLANs, VXLANs, and IP subnets/prefixes), routing table updates, and loss of communications to resources. The SDN controller should
 				log detailed user actions, including the methods used (API, WebUI, CLI), to provide context on changes, thereby enhancing the system's traceability
 				and security.  
 			</li>
 			<li>
-				4. The SDN Controller shall provide an authentication mechanism for any users/administrators, as well as the device/VM itself that
+				The SDN Controller shall provide an authentication mechanism for any users/administrators, as well as the device/VM itself that
 				comply with NIST SP 800-63 and ISO/IEC 27001 and SO/IEC 27002. 
 			</li>
 			<li>
-				5. The SDN Controller is required to implement an authorization system for any users/administrators, as well as the device/VM itself, 
+				The SDN Controller is required to implement an authorization system for any users/administrators, as well as the device/VM itself, 
 				employing a RBAC or ABAC model that adheres to the principle of least privilege and that comply with NIST SP 800-53 / NIST SP 800-162. 
 			</li>
 			<li>
-				6. The SDN Controller shall provide a cryptographic means to validate the source of updates to be installed on the device/VM.    
+				The SDN Controller shall provide a cryptographic means to validate the source of updates to be installed on the device/VM.    
 			</li>
 			<li>
-				7. The SDN Controller will enforce a policy requiring the modification of any default passwords or other credentials immediately
+				The SDN Controller will enforce a policy requiring the modification of any default passwords or other credentials immediately
 				upon installation. Additionally, it will compel users to create complex passwords that comply with NIST 800 63B. Beyond password
 				complexity, the controller will also support multi-factor authentication (MFA) that comply NIST SP 800-63B. 
 			</li>
 			<li>
-				8. The SDN Controller shall protect keys, key material, and authentication credentials from unauthorized disclosure.  
+				The SDN Controller shall protect keys, key material, and authentication credentials from unauthorized disclosure.  
 			</li>
 			<li>
-				9. The SDN Controller requires design and construction that ensures it remains operational and effective amidst cybersecurity
+				The SDN Controller requires design and construction that ensures it remains operational and effective amidst cybersecurity
 				threats ranging from but not limited to Malware, MitM, DoS, SQL injection, APTs, Fuzzing attacks, and HTTP-based vulnerabilities
 				with robustness to maintain performance under stress and resilience for rapid recovery from attacks, safeguarding network integrity
 				and minimizing disruptions. 
 			</li>
 			<li>
-				10. The SDN Controller shall provide self-tests to ensure the security functions it implements are operating correctly.   
+				The SDN Controller shall provide self-tests to ensure the security functions it implements are operating correctly.   
 			</li>
 		</ul>
 	<div class="section" id="assumptions">Assumptions</div>
