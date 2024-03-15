@@ -315,6 +315,18 @@
 			<li>
 				The SDN Controller shall provide self-tests to ensure the security functions it implements are operating correctly.   
 			</li>
+			<li>
+				The SDN controller must have the ability to verify the integrity and authenticity of software updates, guarding
+				against unauthorized changes, malware, and a range of cybersecurity threats.    
+			</li>
+			<li>
+				SDN Controllers must comply with established security standards and implement best practices for API security, particularly emphasizing REST security principles. They are expected to follow guidelines set forth by recognized entities like OWASP, NIST, and ISO/IEC. This involves ensuring secure authentication, authorization, encryption, and coding practices, alongside
+				conducting regular security evaluations and managing vulnerabilities to protect against current and emerging cyber threats.    
+			</li>
+			<li>
+				By default, the SDN controllers shall enable only those services which are essential for functioning as a SDN
+				controller. These shall include Northbound and southbound interfaces, remote administrative services [selection: ssh &amp; https] and assign other services as specified in the security target.    
+			</li>
 		</ul>
 	<div class="section" id="assumptions">Assumptions</div>
 		<ul xmlns="http://common-criteria.rhcloud.com/ns/esr">
