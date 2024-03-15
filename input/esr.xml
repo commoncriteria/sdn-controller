@@ -303,7 +303,7 @@
 			</li>
 			<li>
 				By default, the SDN controllers shall enable only those services which are essential for functioning as a SDN
-				controller. These shall include Northbound and southbound interfaces, remote administrative services [selection: ssh & https] and assign other services as specified in the security target.    
+				controller. These shall include Northbound and southbound interfaces, remote administrative services [selection: ssh &amp; https] and assign other services as specified in the security target.    
 			</li>
 		</ul>
 	</section>
