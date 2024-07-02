@@ -320,6 +320,15 @@
 		</ul>
 	</section>
 
+	<section title="Threats" id="threats">
+		<ul>
+			<li>Attackers send unwanted input to the Application Programming Interface (API) of the SDN Controller 
+			management interface.</li>
+			<li>Compromised SDN Controller is used to cause unwanted configurations against network devices under 
+			the compromised SDN Controller's control.</li>
+		</ul>
+	</section>
+
 	<section title="Optional Extensions" id="extensions"> 
 		The following requirements may already be realized in some products
 		in this technology class, but the ESR is not mandating these 
