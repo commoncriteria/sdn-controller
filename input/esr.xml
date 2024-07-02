@@ -311,20 +311,11 @@
 	<section title="Assumptions" id="assumptions">
 		<ul>
 			<li>
-				The SDN Controller relies on a trustworthy computing platform for its execution and it is assumed that the 
-				platform has not been compromised prior to the installation of the SDN Controller. 
-				For example, the effectiveness of non-interference and strict information flow control 
-				of an SDN controller will typically depend on the effectiveness of an underlying (embedded) operating system or hypervisor to provide non-interference and controlled information flow.
+				Connections between SDN Controller and network devices under the SDN Controller's control are secure 
+				from unauthorized access.
 			</li>
 			<li>
-				The administrator of the underlying platform or SDN 
-				Controller is not careless, willfully negligent or hostile,
-				and administers the software within compliance of the 
-				approved enterprise security policy. 
-			</li>
-			<li>
-				Physical security appropriate to the value of the SDN 
-				Controller and the data it contains is provided. An SDN Controller is protected from physical attacks by the wider environment.
+				The SDN Controller will have an Application Programming Interface (API) in the management interface. 
 			</li>
 		</ul>
 	</section>
