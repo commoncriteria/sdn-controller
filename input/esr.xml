@@ -74,6 +74,18 @@
 				Management Plane is sometimes also referred to as the 
 				Orchestration Layer.
 			</li>
+			<li>
+				The Data Plane and the Control Plan are decoupled so that data traffic remains in the Data Plane, and 
+				control traffic remains in the Control Plan.
+			</li>
+			<li>
+				The SDN Controller has centralization of control so that all components of the SDN environment are 
+				under the control of the SDN Controller only.
+			</li>
+			<li>
+				The SDN Controller can scale to manage large networks, typically spread over geographically 
+				dispersed locations.
+			</li>
 		</ul>
 	</section>
 	<section title="Use Cases" id="usecases">
