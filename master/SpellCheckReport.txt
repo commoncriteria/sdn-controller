@@ -36,7 +36,6 @@ output/sdn-controller-release-linkable.html: UAU
 output/sdn-controller-release-linkable.html: UID
 output/sdn-controller-release-linkable.html: XCCDF
 output/sdn-controller-release-linkable.html: duplicative
-output/sdn-controller-release-linkable.html: ocnfiguration
 output/sdn-controller-release.html: CMS
 output/sdn-controller-release.html: EAP
 output/sdn-controller-release.html: FIA
@@ -50,7 +49,6 @@ output/sdn-controller-release.html: UAU
 output/sdn-controller-release.html: UID
 output/sdn-controller-release.html: XCCDF
 output/sdn-controller-release.html: duplicative
-output/sdn-controller-release.html: ocnfiguration
 output/sdn-controller.html: CMS
 output/sdn-controller.html: EAP
 output/sdn-controller.html: FIA
