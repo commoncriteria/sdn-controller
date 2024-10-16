@@ -1,192 +1,387 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="../transforms/pp2html.xsl"?>
 
-<PP xmlns="https://niap-ccevs.org/cc/v1" name="Protection Profile QQQQ"
-    xmlns:h="http://www.w3.org/1999/xhtml">
-  <!-- <inline-comment color='green'> Hello World QQQQ </inline-comment> -->
-  <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
-  <PPReference title="PP Reference">
+
+<Module target-product="Software Defined Networking Controller" name="PP-Module for Software Defined Networking Controller"
+    xmlns="https://niap-ccevs.org/cc/v1"
+    xmlns:sec="https://niap-ccevs.org/cc/v1/section"
+    xmlns:h="http://www.w3.org/1999/xhtml" boilerplate="yes">
+  
+ 
+  <PPReference>
     <ReferenceTable>
-      <PPTitle>Protection Profile for QQQQ</PPTitle>
       <PPVersion>1.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
-      <PPPubDate>2015-08-14</PPPubDate>
-      <PPCertificationID>unassigned</PPCertificationID>
-      <CCVersion>3.1R4</CCVersion>
-      <Keywords>QQQQ</Keywords>
-      <entry>
-        <name>Registration</name>
-        <description>National Information Assurance Partnership</description>
-      </entry>
+      <PPPubDate>2024-10-31</PPPubDate>
+      <Keywords>SDN; software defined networking</Keywords>      
     </ReferenceTable>
   </PPReference>
 
-  <RevisionHistory role="draft">
+  <RevisionHistory>
     <entry>
-      <version>Round 1</version>
-      <date>2015-04-23</date>
+      <version>1.0</version>
+      <date>2024-10-31</date>
       <subject>First draft of version 1.0 for comment</subject>
     </entry>
   </RevisionHistory>
-
-  <RevisionHistory role="final">
-    <entry>
-      <version>1.0</version>
-      <date>2015-08-14</date>
-      <subject>Release - first version released</subject>
-    </entry>
-  </RevisionHistory>
-
-  <chapter title="Introduction" id="int">
-    <section title="Overview" id="ppoverview"> The scope of this Protection Profile (PP) is to
-      describe the security functionality of operating systems in terms of <cite linkend="bibCC"/>
-      and to define functional and assurance requirements for such products.
-      An operating system is software that manages computer hardware and software
-      resources, and provides common services for application programs. The hardware
-      it manages may be physical or virtual.
-    </section>
-    <section title="Terms" id="glossary"> The following sections provide both Common Criteria and
-      technology terms used in this Protection Profile. <subsection title="Common Criteria Terms"
-        id="ccterms">
-        <glossary>
-          <entry>
-            <term><abbr title="Common Criteria">CC</abbr></term>
-            <description>Common Criteria for Information Technology Security
-              Evaluation.</description>
-          </entry>
-          <entry>
-            <term><abbr title="Common Evaluation Methodology">CEM</abbr></term>
-            <description>Common Evaluation Methodology for Information Technology Security
-              Evaluation.</description>
-          </entry>
-          <entry>
-            <term><abbr title="Protection Profile">PP</abbr></term>
-            <description>An implementation-independent set of security requirements for a category
-              of products.</description>
-          </entry>
-          <entry>
-            <term><abbr title="Security Target">ST</abbr></term>
-            <description>A set of implementation-dependent security requirements for a specific
-              product.</description>
-          </entry>
-          <entry>
-            <term><abbr title="Target of Evaluation">TOE</abbr></term>
-            <description>
-	            The product under evaluation. In this case, the SDN Controller and its supporting documentation.
-	        </description>
-          </entry>
-          <entry>
-            <term><abbr title="TOE Security Functionality">TSF</abbr></term>
-            <description>The security functionality of the product under evaluation.</description>
-          </entry>
-          <entry>
-            <term><abbr title="TOE Summary Specification">TSS</abbr></term>
-            <description>A description of how a <abbr linkend="TOE"/> satisfies the SFRs in a <abbr
-                linkend="ST"/>. </description>
-          </entry>
-          <entry>
-            <term><abbr title="Security Functional Requirement">SFR</abbr></term>
-            <description>A requirement for security enforcement by the <abbr linkend="TOE"/>.
-            </description>
-          </entry>
-          <entry>
-            <term><abbr title="Security Assurance Requirement">SAR</abbr></term>
-            <description>A requirement to assure the security of the <abbr linkend="TOE"/>.
-            </description>
-          </entry>
-        </glossary>
-      </subsection>
-      <subsection title="Technology Terms" id="techterms">
-        <glossary>
-          <entry>
-            <term><abbr title="SOMETHING"></abbr></term>
-            <description>
-	    </description>
-          </entry>
-        </glossary>
-      </subsection>
-	  </section>
-    <section title="Compliant Targets of Evaluation" id="TOEdescription">
-      <subsection title="TOE Boundary" id="TOEboundary">
-        <figure entity="images/Toe.png" title="Figure 1: General TOE " id="toe"/>
-      </subsection>
-      <subsection title="TOE Platform" id="TOEplatform">
-      </subsection>
-    </section>
-    <section title="Use Cases" id="usecases">Requirements in this Protection Profile are designed to
-      address the security problems in at least the following use cases. These use cases are intentionally
-      very broad, as many specific use cases exist for an operating system. These use cases may also
-      overlap with one another.  An operating system's functionality may even be effectively extended by
-      privileged applications installed onto it.  However, these are out of scope of this PP. <usecases>
-        <usecase title="End User Devices" id="enduserdevices">
+  
+  <pp-preferences>
+    <using-cc2022/>
+  </pp-preferences>
+  
+  <sec:Introduction>
+    <sec:Overview> 
+      <comment>Not sure if/how we want to communicate functional package guidance but this is our expectation for what claims can be made:
+         <h:br/>TLS package:<h:br/> - no restrictions, any claims can be made (FTP_ITC_EXT.1 allows for both TLS and DTLS client and server to be specified) but none are mandatory<h:br/>
+         <h:br/>SSH package:<h:br/> - no restrictions, any claims can be made (FTP_ITC_EXT.1 allows for both SSH client and server to be specified) but none are mandatory<h:br/>
+         <h:br/>X.509 package:<h:br/> - FIA_XCU_EXT.2 may be claimed because the TOE may need to assert its identity to external entities (i.e. if it implements IPsec or if it implements TLS or DTLS as a server)<h:br/>
+          - FIA_X509_EXT.3 would likely need to be claimed if FIA_XCU_EXT.1 is claimed - it's not technically mandatory but the likely use case is for the TOE to request certs from an external CA. 
+          - FIA_X509_EXT.1 must be claimed (it was mandatory in the old PP but the minimum required function is TLS, which isn't actually mandatory, so this may require further examination - right now it is valid to say the TOE implements TLS/DTLS as a server only and then it never actually has to validate a certificate, not sure if this is intended though). CRL or OCSP is expected as the only supported revocation methods. Specific additional guidance may be needed to limit the FIA_X509_EXT.1.3 selections to those values. SME input is needed as to whether any of the other selections in this component are mandatory or forbidden.<h:br/>
+          - FIA_X509_EXT.2 must be claimed (it was mandatory in the old PP<h:br/>
+      Also, right now we don't make an explicit statement in FAU_GEN.1 that the corresponding audit events from the claimed functional package SFRs must also be added to the audit table. Do we need that or is it sufficiently implied? 
+     </comment>      
+        <h:p>
+          The scope of this Protection Profile (PP) is to describe the security functionality of a Software Defined Networking (SDN) Controller use in an enterprise, and define
+          functional and assurance requirements for such products. An SDN is one of many components of an SDN networking architecture. It is intended to provide a minimal, 
+          baseline set of requirements which can be built upon by future revisions to provide an overall set of security solutions for an enterprise network. An SDN is also a 
+          central and vital component of what constitutes an SDN system and is available as a logical or a physical device. An SDN Controller manages and distributes network
+          policies, collects routing and payload information from the Data Plane and interfaces with user applications in the Management Plane. Each of the planes in an SDN 
+          system is composed of multiple logical or physical components. SDN Controllers logically centralize the network intelligence and state in the Control Plane.
+        </h:p>
+        <h:p>
+          An SDN Controller is meant to 'do no harm' on a network. Rather than providing any explicit security functionality, compliant SDN Controllers simply ensure the
+          following.
+          <h:ul>
+            <h:li>
+              They can be remotely managed in a secure manner.
+            </h:li>
+            <h:li>
+              Any software or firmware updates are from a trusted source.
+            </h:li>
+            <h:li>
+              Any interfaces to applications, VMs, and other devices are trusted (zone of trust).
+            </h:li>
+            <h:li>
+               All suspect events are reported.
+            </h:li>
+            <h:li>
+               Logical or physical separation of the Control and Data Planes.
+            </h:li>
+            <h:li>
+              Logical or physical separation of the Control and Management Planes.
+            </h:li>
+            <h:li>
+              Protect data collected and distributed by the Control Plane to the Data Plane, such as flow tables and configurations.
+            </h:li>
+            <h:li>
+              Protect data collected and distributed by the Control Plane to the Management Plane, such as auditable events and traffic or packet statistics.
+            </h:li>
+            <h:li>
+              Protect data collected that is distributed and shared within the Control Plane, such as when multiple SDN controllers exist in the architecture.
+            </h:li>       
+          </h:ul>
+        </h:p>
+    </sec:Overview>
+    <tech-terms>
+      <term abbr='ABAC' full="Attribute-Based Access Control"/>
+      <term abbr='AES' full="Advanced Encryption Standard"/>
+      <term abbr='APT' full="Advanced Persistent Threats"/>
+      <term full="Address Space Layout Randomization" abbr="ASLR">
+	       An anti-exploitation feature which loads memory mappings into unpredictable locations. ASLR makes it more difficult for an attacker to redirect control to code
+	       that they have introduced into the address space of a process.
+      </term>
+      <term full="Administrator">
+	       An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system. This administrator
+	       could be acting remotely through a management server, from which the system receives configuration policies. An administrator can enforce settings on the system 
+	       which cannot be overridden by non-administrator users.
+      </term>
+      <term full="Application" abbr="app">
+	       Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation. 
+      </term>
+      <term full="Application Programming Interface" abbr="API">
+	       A specification of routines, data structures, object classes, and variables that allows an application to make use of services provided by another software
+	       component, such as a library. APIs are often provided for a set of libraries included with the platform.
+      </term>
+      <!-- <term full="Biometric Authentication Factor" abbr="BAF" plural="BAFs"> Authentication factor, which uses -->
+      <!--   biometric sample, matched to a biometric authentication template to help establish -->
+      <!--   identity.</term> -->
+      <term abbr='CESG' full="Communications-Electronics Security Group"/>
+      <term abbr='CLI' full="Command-Line Interface"/>
+      <term abbr='CMC' full="Certificate Management over CMS"/>
+      <term abbr='CMS' full="Cryptographic Message Syntax"/>
+      <term abbr='CN' full="Common Names"/>
+      <term full="Credential">
+	       Data that establishes the identity of a user, e.g. a cryptographic key or password.
+      </term>
+      <term abbr='CRL' full="Certificate Revocation List"/>
+      <term abbr='CRUD' full="Create, Read, Update, Delete"/>
+      <term abbr='CSA' full="Computer Security Act"/>
+      <term full="Control Plane">
+          A logical entity that receives instructions or requirements from the SDN Application layer through its northbound interface and relays them to the Data Plane through
+          its southbound interface. The Controller extracts information about the network from the Data Plane and communicates back to the SDN Application Layer with an 
+          abstract view of the network, including statistics and events about what is happening. 
+      </term>
+      <term full="Critical Security Parameters" abbr="CSP">
+	       Information that is either user or system defined and is used to operate a cryptographic module in processing encryption functions including cryptographic keys and
+	       authentication data, such as passwords, the disclosure or modification of which can compromise the security of a cryptographic module or the security of the
+	       information protected by the module.
+      </term>
+      <term full="Data At Rest" abbr="DAR" />
+      <term full="DAR Protection">
+	       Countermeasures that prevent attackers, even those with physical access, from extracting data from non-volatile storage. Common techniques include data encryption
+	       and wiping.
+      </term>
+      <term full="Data Execution Prevention" abbr="DEP">
+	       An anti-exploitation feature of modern operating systems executing on modern computer hardware, which enforces a non-execute permission on pages of memory. DEP
+	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code.
+      </term>
+      <term full="Data Plane">
+        (SDN Network Devices> Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.
+      </term>
+      <term abbr='DES' full="Data Encryption Standard"/>
+      <term full="Developer">
+	       An entity that writes OS software. For the purposes of this document, vendors and developers are the same.
+      </term>
+      <term abbr='DHE' full="Diffie-Hellman Ephemeral"/>
+      <term abbr='DNS' full="Domain Name System"/>
+      <term abbr='DRBG' full="Deterministic Random Bit Generator"/>
+      <term abbr='DSS' full="Digital Signature Standard"/>
+      <term abbr='DT' full="Date/Time Vector"/>
+      <term abbr='DTLS' full="Datagram Transport Layer Security"/>
+      <term abbr='EAP' full="Extensible Authentication Protocol"/>
+      <term abbr='ECDHE' full="Elliptic Curve Diffie-Hellman Ephemeral"/>
+      <term abbr='ECDSA' full="Elliptic Curve Digital Signature Algorithm"/>
+      <term abbr='ESR' full="Equivalent Series Resistance"/>
+      <term abbr='EST' full="Enrollment over Secure Transport"/>
+      <term abbr='FIPS' full="Federal Information Processing Standards"/>
+      <term full="General Purpose Operating System">
+	       A class of OSes designed to support a wide-variety of workloads consisting of many concurrent applications or services. Typical characteristics for OSes in this 
+	       class include support for third-party applications, support for multiple users, and security separation between users and their respective resources. General 
+	       Purpose Operating Systems also lack the real-time constraint that defines Real Time Operating Systems which are typically used in routers, switches, and embedded
+	       devices.
+      </term>
+      <term full="Hybrid Authentication">
+	       A hybrid authentication factor is one where a user has to submit a combination of a cryptographic token and a PIN or password and both must pass. If either factor
+	       fails, the entire attempt fails.
+      </term>
+      <term abbr='HMAC' full="Hash-based Message Authentication Code"/>
+      <term full="Host-based Firewall">
+	       A software-based firewall implementation running on the OS for filtering inbound and outbound network traffic to and from processes running on the OS.
+      </term>
+      <term abbr='HTTP'  full="Hypertext Transfer Protocol"/>
+      <term abbr='HTTPS' full="Hypertext Transfer Protocol Secure"/>
+      <term abbr='IETF'  full="Internet Engineering Task Force"/>
+      <term abbr='IP'    full="Internet Protocol"/>
+      <term abbr='ISO'   full="International Organization for Standardization"/>
+      <term abbr='IT'    full="Information Technology"/>
+      <term abbr='ITSEF' full="Information Technology Security Evaluation Facility"/>
+      <term full="Management Plane">
+        (SDN Applications Layer) Composed of programs that communicate behaviors and needed resources with the SDN Controller via application programming interfaces (APIs).
+        In addition, the applications can build an abstracted view of the network by collecting information from the Controller for decision-making purposes. These 
+        applications could include networking management, analytics, or business applications used to run large data centers. For example, an analytics application might be
+        built to recognize suspicious network activity for security purposes. The Management Plane is sometimes also referred to as the Orchestration Layer.
+      </term>
+      <term abbr='MFA' full="Multi-Factor Authentication"/>
+      <term abbr='MITM' full="Man-in-the-Middle"/>
+      <term abbr='NAT' full="Network Address Translation"/>
+      <term abbr='NIAP' full="National Information Assurance Partnership"/>
+      <term abbr='NIST' full="National Institute of Standards and Technology"/>
+      <term abbr='OCSP' full="Online Certificate Status Protocol"/>
+      <term abbr='OID' full="Object Identifier"/>
+      <term abbr='OMB' full="Office of Management and Budget"/>
+      <term abbr="OS" full="Operating System">
+	       Software that manages physical and logical resources and provides services for applications. The terms <h:i>TOE</h:i> and <h:i>OS</h:i> are interchangeable in this
+	       document. 
+      </term>
+      <term abbr='OWASP' full="Open Worldwide Application Securtiy Project"/>
+      <term abbr="PIN" full="Personal Identification Number">
+	       An authentication factor that is comprised of a set of numeric or alphabetic characters that may be used  in addition to a cryptographic token to provide a hybrid
+	       authentication factor. At this time it  is not considered as a stand-alone authentication mechanism. A PIN is distinct from a password in that the allowed character
+	       set and required length of a PIN is typically smaller than that of a password as it is designed to be input quickly.
+      </term>
+      <term abbr='PKI' full="Public Key Infrastructure"/>
+      <term abbr='RBAC' full="Role-Based Access Control"/>
+      <term abbr='RBG' full="Random Bit Generator"/>
+      <term abbr='REST' full="Representational State Transfer"/>
+      <term abbr='RFC' full="Request for Comment"/>
+      <term abbr='RNG' full="Random Number Generator"/>
+      <!-- <term abbr='RNGVS' full="Random Number Generator Validation System"/> -->
+      <term full="Personally Identifiable Information" abbr="PII">
+	       Any information about an individual maintained by an agency, including, but not limited to, education, financial transactions, medical history, and criminal or
+	       employment history and information which can be used to distinguish or trace an individual's identity, such as their name, social security number, date and place
+	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual.<xref to="bibOMB"/>
+      </term>
+      <term abbr='SAN' full="Subject Alternative Name"/>
+      <term abbr='SDN' full="Software Defined Networking"/>
+      <term abbr='SHA' full="Secure Hash Algorithm"/>
+      <term abbr='S/MIME' full="Secure/Multi-purpose Internet Mail Extensions"/>
+      <term full="Sensitive Data">
+	       Sensitive data may include all user or enterprise data or may be specific application data such as PII, emails, messaging, documents, calendar items, and contacts.
+	       Sensitive data must minimally include credentials and keys. Sensitive data shall be identified in the OS's TSS by the ST author. 
+      </term>
+      <term abbr='SIP' full="Session Initiation Protocol"/>
+      <term abbr='SWID' full="Software Identification"/>
+      <term abbr='TLS' full="Transport Layer Security"/>
+      <term abbr='URI' full="Uniform Resource Identifier"/>
+      <term abbr='URL' full="Uniform Resource Locator"/>
+      <term abbr='USB' full="Universal Serial Bus"/>
+      <term full="User">
+	       A user is subject to configuration policies applied to the operating system by administrators.  On some systems under certain configurations, a normal user can
+	       temporarily elevate privileges to that of an administrator. At that time, such a user should be considered an administrator.
+      </term>
+      <term abbr="VM" full="Virtual Machine"/>
+      <term abbr="VPN" full="Virtual Private Network"/>
+      <term abbr='XCCDF' full="eXtensible Configuration Checklist Description Format"/>
+      <term abbr='XOR' full="Exclusive Or"/>
+    </tech-terms>
+    
+    <sec:Compliant_Targets_of_Evaluation> <!-- Need to update for SDN Controller; this is from the GPOS PP. -->
+      Compliant TOEs will implement security functionality in the following general areas:
+      <h:ul>
+        <h:li>Accountability: ensuring that information exists to discover unintentional issues with the configuration and operation of the TOE so that the root cause can be determined.</h:li>
+        <h:li>Integrity: ensuring the integrity of updates to the TOE and enforcing mechanisms that control the deployment and execution of applications running on it.</h:li>
+        <h:li>Management: providing mechanisms for configuration of the TSF and deployment of applications running on the TOE.</h:li>
+        <h:li>Protected Storage: ensuring that credentials and file system data are not subject to unauthorized disclosure.</h:li>
+        <h:li>Protected Communications: ensuring that sensitive data in transit to and from the TOE is adequately protected from unauthorized modification and disclosure.</h:li>
+      </h:ul>
+      <sec:TOE_Boundary>
+        The TOE boundary for an SDN Controller is available as a logical or a physical device. An SDN Controller manages and distributes network policies, collects routing 
+        and payload information from the Data Plane, and interfaces with user applications in the Management Plane. Each plane in an SDN system is composed of multiple 
+        logical or physical components. SDN Controllers logically centralize the network intelligence and state in the Control Plane.
+        <h:ul>
+          <h:li>In a physical standalone SDN controller device, the device's hardware, firmware, and software define the evaluation boundary.</h:li>
+          <h:li>In a virtual SDN controller, the software of the Virtual Machine (VM) defines the evaluation boundary.</h:li>
+          <h:li>All security functionality is contained and executed within the evaluation boundary of the SDN controller.</h:li>
+        </h:ul>       
+        <!-- Possibly add a figure here. -->
+      </sec:TOE_Boundary>
+      
+      <sec:TOE_Platform>
+	       <!-- Information needs to be added here. -->
+	       The TOE platform of a virtualized SDN Controller is out of scope for this evaluation. 
+      </sec:TOE_Platform>
+    
+    </sec:Compliant_Targets_of_Evaluation>
+        <!-- Information needs to be added here. -->  
+    <sec:Use_Cases>Requirements in this PP-Module are designed to address the security problems in at least the following use cases. These use cases are 
+        intentionally very broad, as many specific use cases exist for an SDN controller These use cases may also overlap with one another. An SDN controller's 
+        functionality may even be effectively extended by privileged applications installed on it. However, these are out of scope of this PP.
+      <usecases>
+        <usecase title="Standalone Physical Device" id="standalonephysdev">
+          <description>	          
+            <!-- Add description here. -->            
+          </description>
+        </usecase>
+        <usecase title="Virtual Device" id="virtualdev">
           <description>
+            <!-- Add description here. -->
+          </description>
+        </usecase>
+        <usecase title="Standalone or Virtual with Management Capabilities" id="standorvirtmngmtcapa">
+          <description>
+            <!-- Add description here. -->
+          </description>
+        </usecase>
+        <usecase title="Standalone or Virtual Cluster" id="standorvirtcluster">
+          <description>
+            <!-- Add description here. -->
+          </description>
+        </usecase>
+        <usecase title="Hyper-Converge" id="hypercov">
+          <description>
+            <!-- Add more description here. -->
+            This consists of an amalgam of computing resources in a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads.
           </description>
         </usecase>
       </usecases>
-    </section>
-  </chapter>
-  <chapter title="Conformance Claims" id="ccl">
-    <cclaims>
-      <cclaim id="Conformance Statement">
-        <description> To be conformant to this PP, a <abbr linkend="ST"/> must demonstrate Exact
-          Conformance, a subset of Strict Conformance as defined in <cite linkend="bibCC"/> Part 1
-          (ASE_CCL). The <abbr linkend="ST"/> must include all components in this PP that are: <h:ul>
-            <h:li>unconditional (which are always required)</h:li>
-            <h:li>selection-based (which are required when certain <h:i>selections</h:i> are chosen in the
-              unconditional requirements)</h:li>
-          </h:ul>and may include components that are <h:ul>
-            <h:li>optional or</h:li>
-            <h:li>objective.</h:li>
-          </h:ul>
-          <InsertAppendixExplainer/> The <abbr linkend="ST"/> may iterate any of these components,
-          but it must not include any additional component (e.g. from CC Part 2 or 3 or a PP not
-          conformant with this one, or extended by the <abbr linkend="ST"/>) not defined in this PP
-          or a PP conformant to this one. 
-          <h:br/>
-		  Some components in this Protection Profile have a dependency on
-		  other components.  In accordance with <cite linkend="bibCC"/> Part 1, <appref linkend="satisfiedreqs"/> 
-          includes justifications for those cases where the PP does not explicitly contain the component
-		  upon which there is a dependency.
-        </description>
-      </cclaim>
-      <cclaim id="CC Conformance Claims">
-        <description>This PP is conformant to Parts 2 (extended) and 3 (extended) of Common Criteria
-          Version 3.1, Revision 4.<cite linkend="bibCC"/>.</description>
-      </cclaim>
-      <cclaim id="PP Claim">
-        <description>This PP does not claim conformance to any other Protection
-          Profile.</description>
-      </cclaim>
-      <cclaim id="Package Claim">
-        <description>This PP does not claim conformance to any packages.</description>
-      </cclaim>
-    </cclaims>
-  </chapter>
-  <chapter title="Security Problem Definition" id="spd">The security problem is described in terms
-    of the threats that the <abbr linkend="OS"/> is expected to address, assumptions about the
-    operational environment, and any organizational security policies that the <abbr linkend="OS"/>
-    is expected to enforce. <section title="Threats" id="threats">
+    </sec:Use_Cases>
+  </sec:Introduction>
+    
+    <sec:Conformance_Claims boilerplate="no">
+      <!-- The new CClaimsInfo construct -->
+      <!-- Need to update for SDN Controller; this is from the GPOS PP. -->
+      <CClaimsInfo cc-version="cc-2022r1" cc-approach="direct-rationale">
+        <cc-st-conf>exact</cc-st-conf>       
+        <cc-pt2-conf>extended</cc-pt2-conf>
+        <cc-pt3-conf>extended</cc-pt3-conf>        
+      </CClaimsInfo>      
+    </sec:Conformance_Claims>
+  
+  <sec:Security_Problem_Definition>The security problem is described in terms of the threats that the OS is expected to address, assumptions about the operational
+            environment, and any organizational security policies that the OS is expected to enforce.
+    <sec:Threats>
+      <!-- Need to add a description, the SFRs each threat is addressed by, and the rationale. -->
       <threats>
-        <threat id="T.QQQQ">
-          <description> </description>
-          <objective-refer ref="O.QQQQ">
-            <rationale>The threat T.QQQQ is countered by O.QQQQ as this
-              provides for .</rationale>
-          </objective-refer>
+        <threat name="T.NETWORK_ATTACK">
+          <description>
+            An attacker can send unwanted input to the Application Programming Interface (API) of the SDN controller management interface, which could interfere with network
+            traffic.
+          </description>
+          
+          <addressed-by></addressed-by>
+          <rationale></rationale>
+          <addressed-by></addressed-by>
+          <rationale></rationale>
+          <addressed-by></addressed-by>
+          <rationale></rationale>                  
+        </threat>
+        
+        <threat name="T.UNAUTHORIZED_ACCESS">
+          <description>
+            An attacker can compromise the SDN controller and use it to cause unwanted configurations against network devices that are under the SDN controller's control. This
+            can allow network configurations to be changed by an unauthorized user.
+          </description>
+          
+          <addressed-by></addressed-by>
+          <rationale></rationale>
+          <addressed-by></addressed-by>
+          <rationale></rationale>
+          <addressed-by></addressed-by>
+          <rationale></rationale>          
+                 
         </threat>
       </threats>
-    </section>
-    <section title="Assumptions" id="assumptions">
+    </sec:Threats>
+	
+	
+    <sec:Assumptions>
       <assumptions>
-        <assumption id="A.QQQQ">
-          <description> The product relies QQQQ its execution. This underlying platform is out of scope of this PP. </description>
-          <objective-refer ref="OE.PLATFORM">
-            <rationale> The operational environment objective OE.PLATFORM is realized through
-              A.PLATFORM. </rationale>
+        <assumption name="A.NO_TOE_BYPASS">
+          <description> 
+            Information cannot flow between the SDN controller and the network devices under the its control without passing through the TOE.
+          </description>
+          <objective-refer ref="OE.NO_TOE_BYPASS">
+            <rationale> The operational environment objective OE.NO_TOE_BYPASS is realized through A.NO_TOE_BYPASS.</rationale>
           </objective-refer>
         </assumption>
+        
+        <assumption name="A.CONNECTIVITY">
+          <description> 
+            The SDN Controller has an Application Programming Interface (API) in the management interface to control interactions between components
+            and services.
+          </description>
+          <objective-refer ref="OE.CONNECTIVITY">
+            <rationale>The operational environment objective OE.CONNECTIVITY is realized through A.CONNECTIVITY.</rationale>
+          </objective-refer>
+        </assumption>        
       </assumptions>
-    </section>
+    </sec:Assumptions>
+<!--    <section title="Organizational Security Policies" id="OSPs">
+      <OSPs>
+        <OSP id="P.ENTERPRISE">
+          <description>If the OS is bound to a directory or management server, the configuration of
+            the OS software must be capable of adhering to the enterprise security policies
+            distributed by them.</description>
+          <objective-refer ref="O.MANAGEMENT">
+            <rationale>The organizational security policy P.ENTERPRISE is enforced through the
+              objective O.MANAGEMENT as this objective represents how the enterprise and user assert
+              management over the OS.</rationale>
+          </objective-refer>
+        </OSP>
+      </OSPs>
+    </section> -->
+  </sec:Security_Problem_Definition>
+  
 <!--    <section title="Organizational Security Policies" id="OSPs">
       <OSPs>
         <OSP id="P.ENTERPRISE">
@@ -200,8 +395,8 @@
           </objective-refer>
         </OSP>
       </OSPs>
-    </section> -->
-  </chapter>
+    </section> -->  
+  
   <chapter title="Security Objectives" id="obj">
     <section title="Security Objectives for the TOE" id="SecurityObjectivesTOE">
       <SOs>
@@ -1306,5 +1501,5 @@
       </entry>
     </acronyms>
   </appendix>
-</PP>
+</Module>
 
