@@ -1,4 +1,4 @@
-<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"><meta content="utf-8" http-equiv="encoding"><title>Protection Profile for QQQQ</title><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/x-mathjax-config">
+<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"><meta content="utf-8" http-equiv="encoding"><title>PP-Module for Software Defined Networking Controllers</title><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/x-mathjax-config">
             MathJax.Hub.Config({
             extensions: ["tex2jax.js"],
             jax: ["input/TeX", "output/HTML-CSS"],
@@ -627,54 +627,649 @@ function showTarget(id){
 	            img[src="images/collapsed.png"] { display:none;}
 
           }
-    </style></head><body onLoad="init()"><h1 class="title" style="page-break-before:auto;">Protection Profile for QQQQ</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"><br>
-      Version: 1.0<br>2015-08-14<br><b>National Information Assurance Partnership</b><br></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>Round 1</td><td>2015-04-23</td><td>First draft of version 1.0 for comment</td></tr>
-<tr><td>1.0</td><td>2015-08-14</td><td>Release - first version released</td></tr>
-</table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:0px">Appendix B - <span>Strictly Optional  Requirements
-    </span></a><a href="#objective-reqs" style="text-indent:0px">Appendix C - <span>Objective  Requirements
-    </span></a><a href="#feat-based-reqs" style="text-indent:0px">Appendix D - <span>Implementation-dependent  Requirements
-    </span></a><a href="#sel-based-reqs" style="text-indent:0px">Appendix E - <span>Selection-based  Requirements
-    </span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix F - <span>Inherently Satisfied Requirements</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix G - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:0px">Appendix H - <span>Design Description</span></a><a href="#entropyjustification" style="text-indent:0px">Appendix I - <span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:0px">Appendix J - <span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:0px">Appendix K - <span>Health Testing</span></a><a href="#acronyms" style="text-indent:0px">Appendix L - <span>Acronyms</span></a><a href="#acronyms" style="text-indent:0px">Appendix M - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix N - <span>Bibliography</span></a></div><h1 id="opt-app" class="indexable" data-level="A">Appendix A -  Optional Requirements</h1>
-    As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, the baseline requirements (those that must be
-	  performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_0" href="#period_0">. </a>    This appendix contains three other types of optional requirements:<br><br>
+    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"><br>
+      Version: 1.0<br>2024-10-31<br><b>National Information Assurance Partnership</b><br></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
+</table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#TOE_Platform" style="text-indent:20px">1.3.2<span>TOE Platform</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#SecurityObjectivesTOE" style="text-indent:0px">4<span>Security Objectives for the TOE</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:0px">5<span>Security Objectives for the Operational Environment</span></a><a href="#SOR" style="text-indent:10px">5.1<span>Security Objectives Rationale</span></a><a href="#SFRs" style="text-indent:10px">5.2<span>Security Functional Requirements</span></a><a href="#SARs" style="text-indent:0px">6<span>Security Assurance Requirements</span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix A - <span>Inherently Satisfied Requirements</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix B - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:10px">B.1<span>Design Description</span></a><a href="#entropyjustification" style="text-indent:10px">B.2<span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:10px">B.3<span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:10px">B.4<span>Health Testing</span></a><a href="#biblio" style="text-indent:0px">Appendix C - <span>References</span></a><a href="#acronyms" style="text-indent:0px">Appendix D - <span>Acronyms</span></a></div>
+  
+ 
+  
+    
+      1.0
+      National Information Assurance Partnership
+      2024-10-31
+      SDN; software defined networking      
+    
+  
 
-   The first type, defined in Appendix <a href="#optional-reqs" class="dynref">Appendix B -  Strictly Optional  Requirements</a>, are strictly optional requirements<a id="period_1" href="#period_1">. </a>   If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> meets any of these requirements the vendor is encouraged to claim the associated <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>
-	  in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, but doing so is not required in order to conform to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_2" href="#period_2">. </a><br><br>
+  
+    
+      1.0
+      2024-10-31
+      First draft of version 1.0 for comment
+    
+  
+  
+  <h3>TDs Applied</h3>
+    
+  
+  
+  <h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
+    <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2> 
+      <span style="" class="comment " id="Comment-1-">Not sure if/how we want to communicate functional package guidance but this is our expectation for what claims can be made:
+         <br>TLS package:<br> - no restrictions, any claims can be made (FTP_ITC_EXT.1 allows for both TLS and DTLS client and server to be specified) but none are mandatory<br>
+         <br>SSH package:<br> - no restrictions, any claims can be made (FTP_ITC_EXT.1 allows for both SSH client and server to be specified) but none are mandatory<br>
+         <br>X.509 package:<br> - FIA_XCU_EXT.2 may be claimed because the TOE may need to assert its identity to external entities (i.e<a id="period_0" href="#period_0">. </a>if it implements IPsec or if it implements TLS or DTLS as a server)<br>
+          - FIA_X509_EXT.3 would likely need to be claimed if FIA_XCU_EXT.1 is claimed - it's not technically mandatory but the likely use case is for the TOE to request certs from an external CA<a id="period_1" href="#period_1">. </a>
+          - FIA_X509_EXT.1 must be claimed (it was mandatory in the old PP but the minimum required function is TLS, which isn't actually mandatory, so this may require further examination - right now it is valid to say the TOE implements TLS/DTLS as a server only and then it never actually has to validate a certificate, not sure if this is intended though)<a id="period_2" href="#period_2">. </a>CRL or OCSP is expected as the only supported revocation methods<a id="period_3" href="#period_3">. </a>Specific additional guidance may be needed to limit the FIA_X509_EXT.1.3 selections to those values<a id="period_4" href="#period_4">. </a>SME input is needed as to whether any of the other selections in this component are mandatory or forbidden<a id="period_5" href="#period_5">. </a><br>
+          - FIA_X509_EXT.2 must be claimed (it was mandatory in the old PP<br>
+      Also, right now we don't make an explicit statement in FAU_GEN.1 that the corresponding audit events from the claimed functional package SFRs must also be added to the audit table<a id="period_6" href="#period_6">. </a>Do we need that or is it sufficiently implied? 
+     </span>      
+        <p>
+          The scope of this Protection Profile (PP) is to describe the security functionality of a Software Defined Networking (SDN) Controller use in an enterprise, and define
+          functional and assurance requirements for such products<a id="period_7" href="#period_7">. </a>An SDN is one of many components of an SDN networking architecture<a id="period_8" href="#period_8">. </a>It is intended to provide a minimal, 
+          baseline set of requirements which can be built upon by future revisions to provide an overall set of security solutions for an enterprise network<a id="period_9" href="#period_9">. </a>An SDN is also a 
+          central and vital component of what constitutes an SDN system and is available as a logical or a physical device<a id="period_10" href="#period_10">. </a>An SDN Controller manages and distributes network
+          policies, collects routing and payload information from the Data Plane and interfaces with user applications in the Management Plane<a id="period_11" href="#period_11">. </a>Each of the planes in an SDN 
+          system is composed of multiple logical or physical components<a id="period_12" href="#period_12">. </a>SDN Controllers logically centralize the network intelligence and state in the Control Plane<a id="period_13" href="#period_13">. </a>        </p>
+        <p>
+          An SDN Controller is meant to 'do no harm' on a network<a id="period_14" href="#period_14">. </a>Rather than providing any explicit security functionality, compliant SDN Controllers simply ensure the
+          following<a id="period_15" href="#period_15">. </a>          <ul>
+            <li>
+              They can be remotely managed in a secure manner<a id="period_16" href="#period_16">. </a>            </li>
+            <li>
+              Any software or firmware updates are from a trusted source<a id="period_17" href="#period_17">. </a>            </li>
+            <li>
+              Any interfaces to applications, VMs, and other devices are trusted (zone of trust)<a id="period_18" href="#period_18">. </a>            </li>
+            <li>
+               All suspect events are reported<a id="period_19" href="#period_19">. </a>            </li>
+            <li>
+               Logical or physical separation of the Control and Data Planes<a id="period_20" href="#period_20">. </a>            </li>
+            <li>
+              Logical or physical separation of the Control and Management Planes<a id="period_21" href="#period_21">. </a>            </li>
+            <li>
+              Protect data collected and distributed by the Control Plane to the Data Plane, such as flow tables and configurations<a id="period_22" href="#period_22">. </a>            </li>
+            <li>
+              Protect data collected and distributed by the Control Plane to the Management Plane, such as auditable events and traffic or packet statistics<a id="period_23" href="#period_23">. </a>            </li>
+            <li>
+              Protect data collected that is distributed and shared within the Control Plane, such as when multiple SDN controllers exist in the architecture<a id="period_24" href="#period_24">. </a>            </li>       
+          </ul>
+        </p>
+    
+    <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
+The following sections list Common Criteria and technology terms used in this document<a id="period_25" href="#period_25">. </a>    <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a><a id="period_26" href="#period_26">. </a></td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration<a id="period_27" href="#period_27">. </a></td></tr>
+<tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
+    international technical communities and approved by multiple schemes<a id="period_28" href="#period_28">. </a></td></tr>
+<tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408)<a id="period_29" href="#period_29">. </a></td></tr>
+<tr><td><div id="Common_Criteria_Testing_Laboratory">Common Criteria Testing Laboratory</div></td><td>
+      Within the context of the Common Criteria Evaluation and Validation Scheme (CCEVS), an IT security evaluation facility
+      accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations<a id="period_30" href="#period_30">. </a>    </td></tr>
+<tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation<a id="period_31" href="#period_31">. </a></td></tr>
+<tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole<a id="period_32" href="#period_32">. </a></td></tr>
+<tr><td><div id="Extended_Package">Extended Package (EP)</div></td><td>A deprecated document form for collecting SFRs that implement a particular protocol, technology,
+	    or functionality<a id="period_33" href="#period_33">. </a>See Functional Packages<a id="period_34" href="#period_34">. </a></td></tr>
+<tr><td><div id="Functional_Package">Functional Package (FP)</div></td><td>A document that collects SFRs for a particular protocol, technology,
+	    or functionality<a id="period_35" href="#period_35">. </a></td></tr>
+<tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy<a id="period_36" href="#period_36">. </a></td></tr>
+<tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products<a id="period_37" href="#period_37">. </a></td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module<a id="period_38" href="#period_38">. </a></td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs<a id="period_39" href="#period_39">. </a></td></tr>
+<tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE<a id="period_40" href="#period_40">. </a></td></tr>
+<tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE<a id="period_41" href="#period_41">. </a></td></tr>
+<tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product<a id="period_42" href="#period_42">. </a></td></tr>
+<tr><td><div id="Target_of_Evaluation">Target of Evaluation (TOE)</div></td><td>The product under evaluation<a id="period_43" href="#period_43">. </a></td></tr>
+<tr><td><div id="TOE_Security_Functionality">TOE Security Functionality (TSF)</div></td><td>The security functionality of the product under evaluation<a id="period_44" href="#period_44">. </a></td></tr>
+<tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST<a id="period_45" href="#period_45">. </a></td></tr>
+</table><h3 id="tech-terms" class="indexable" data-level="3">1.2.2 Technical Terms</h3><table style="width: 100%"><tr><td><div id="Address_Space_Layout_Randomization">Address Space Layout Randomization (ASLR)</div></td><td>
+	       An anti-exploitation feature which loads memory mappings into unpredictable locations<a id="period_46" href="#period_46">. </a>ASLR makes it more difficult for an attacker to redirect control to code
+	       that they have introduced into the address space of a process<a id="period_47" href="#period_47">. </a>      </td></tr>
+<tr><td><div id="Administrator">Administrator</div></td><td>
+	       An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system<a id="period_48" href="#period_48">. </a>This administrator
+	       could be acting remotely through a management server, from which the system receives configuration policies<a id="period_49" href="#period_49">. </a>An administrator can enforce settings on the system 
+	       which cannot be overridden by non-administrator users<a id="period_50" href="#period_50">. </a>      </td></tr>
+<tr><td><div id="Application">Application (app)</div></td><td>
+	       Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation<a id="period_51" href="#period_51">. </a>
+      </td></tr>
+<tr><td><div id="Application_Programming_Interface">Application Programming Interface (API)</div></td><td>
+	       A specification of routines, data structures, object classes, and variables that allows an application to make use of services provided by another software
+	       component, such as a library<a id="period_52" href="#period_52">. </a>APIs are often provided for a set of libraries included with the platform<a id="period_53" href="#period_53">. </a>      </td></tr>
+<tr><td><div id="Control_Plane">Control Plane</div></td><td>
+          A logical entity that receives instructions or requirements from the SDN Application layer through its northbound interface and relays them to the Data Plane through
+          its southbound interface<a id="period_54" href="#period_54">. </a>The Controller extracts information about the network from the Data Plane and communicates back to the SDN Application Layer with an 
+          abstract view of the network, including statistics and events about what is happening<a id="period_55" href="#period_55">. </a>
+      </td></tr>
+<tr><td><div id="Credential">Credential</div></td><td>
+	       Data that establishes the identity of a user, e.g<a id="period_56" href="#period_56">. </a>a cryptographic key or password<a id="period_57" href="#period_57">. </a>      </td></tr>
+<tr><td><div id="Critical_Security_Parameters">Critical Security Parameters (CSP)</div></td><td>
+	       Information that is either user or system defined and is used to operate a cryptographic module in processing encryption functions including cryptographic keys and
+	       authentication data, such as passwords, the disclosure or modification of which can compromise the security of a cryptographic module or the security of the
+	       information protected by the module<a id="period_58" href="#period_58">. </a>      </td></tr>
+<tr><td><div id="DAR_Protection">DAR Protection</div></td><td>
+	       Countermeasures that prevent attackers, even those with physical access, from extracting data from non-volatile storage<a id="period_59" href="#period_59">. </a>Common techniques include data encryption
+	       and wiping<a id="period_60" href="#period_60">. </a>      </td></tr>
+<tr><td><div id="Data_Execution_Prevention">Data Execution Prevention (DEP)</div></td><td>
+	       An anti-exploitation feature of modern operating systems executing on modern computer hardware, which enforces a non-execute permission on pages of memory<a id="period_61" href="#period_61">. </a>DEP
+	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code<a id="period_62" href="#period_62">. </a>      </td></tr>
+<tr><td><div id="Data_Plane">Data Plane</div></td><td>
+        (SDN Network Devices&gt; Controls the forwarding and data processing capabilities for the network<a id="period_63" href="#period_63">. </a>This includes forwarding and processing of the data path<a id="period_64" href="#period_64">. </a>      </td></tr>
+<tr><td><div id="Developer">Developer</div></td><td>
+	       An entity that writes OS software<a id="period_65" href="#period_65">. </a>For the purposes of this document, vendors and developers are the same<a id="period_66" href="#period_66">. </a>      </td></tr>
+<tr><td><div id="General_Purpose_Operating_System">General Purpose Operating System</div></td><td>
+	       A class of OSes designed to support a wide-variety of workloads consisting of many concurrent applications or services<a id="period_67" href="#period_67">. </a>Typical characteristics for OSes in this 
+	       class include support for third-party applications, support for multiple users, and security separation between users and their respective resources<a id="period_68" href="#period_68">. </a>General 
+	       Purpose Operating Systems also lack the real-time constraint that defines Real Time Operating Systems which are typically used in routers, switches, and embedded
+	       devices<a id="period_69" href="#period_69">. </a>      </td></tr>
+<tr><td><div id="Host-based_Firewall">Host-based Firewall</div></td><td>
+	       A software-based firewall implementation running on the OS for filtering inbound and outbound network traffic to and from processes running on the OS<a id="period_70" href="#period_70">. </a>      </td></tr>
+<tr><td><div id="Hybrid_Authentication">Hybrid Authentication</div></td><td>
+	       A hybrid authentication factor is one where a user has to submit a combination of a cryptographic token and a PIN or password and both must pass<a id="period_71" href="#period_71">. </a>If either factor
+	       fails, the entire attempt fails<a id="period_72" href="#period_72">. </a>      </td></tr>
+<tr><td><div id="Management_Plane">Management Plane</div></td><td>
+        (SDN Applications Layer) Composed of programs that communicate behaviors and needed resources with the SDN Controller via application programming interfaces (APIs)<a id="period_73" href="#period_73">. </a>        In addition, the applications can build an abstracted view of the network by collecting information from the Controller for decision-making purposes<a id="period_74" href="#period_74">. </a>These 
+        applications could include networking management, analytics, or business applications used to run large data centers<a id="period_75" href="#period_75">. </a>For example, an analytics application might be
+        built to recognize suspicious network activity for security purposes<a id="period_76" href="#period_76">. </a>The Management Plane is sometimes also referred to as the Orchestration Layer<a id="period_77" href="#period_77">. </a>      </td></tr>
+<tr><td><div id="Operating_System">Operating System (OS)</div></td><td>
+	       Software that manages physical and logical resources and provides services for applications<a id="period_78" href="#period_78">. </a>The terms <i>TOE</i> and <i>OS</i> are interchangeable in this
+	       document<a id="period_79" href="#period_79">. </a>
+      </td></tr>
+<tr><td><div id="Personal_Identification_Number">Personal Identification Number (PIN)</div></td><td>
+	       An authentication factor that is comprised of a set of numeric or alphabetic characters that may be used  in addition to a cryptographic token to provide a hybrid
+	       authentication factor<a id="period_80" href="#period_80">. </a>At this time it  is not considered as a stand-alone authentication mechanism<a id="period_81" href="#period_81">. </a>A PIN is distinct from a password in that the allowed character
+	       set and required length of a PIN is typically smaller than that of a password as it is designed to be input quickly<a id="period_82" href="#period_82">. </a>      </td></tr>
+<tr><td><div id="Personally_Identifiable_Information">Personally Identifiable Information (PII)</div></td><td>
+	       Any information about an individual maintained by an agency, including, but not limited to, education, financial transactions, medical history, and criminal or
+	       employment history and information which can be used to distinguish or trace an individual's identity, such as their name, social security number, date and place
+	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual<a id="period_83" href="#period_83">. </a><a href="#bibOMB">[OMB]</a>
+      </td></tr>
+<tr><td><div id="Sensitive_Data">Sensitive Data</div></td><td>
+	       Sensitive data may include all user or enterprise data or may be specific application data such as PII, emails, messaging, documents, calendar items, and contacts<a id="period_84" href="#period_84">. </a>	       Sensitive data must minimally include credentials and keys<a id="period_85" href="#period_85">. </a>Sensitive data shall be identified in the OS's TSS by the ST author<a id="period_86" href="#period_86">. </a>
+      </td></tr>
+<tr><td><div id="User">User</div></td><td>
+	       A user is subject to configuration policies applied to the operating system by administrators<a id="period_87" href="#period_87">. </a> On some systems under certain configurations, a normal user can
+	       temporarily elevate privileges to that of an administrator<a id="period_88" href="#period_88">. </a>At that time, such a user should be considered an administrator<a id="period_89" href="#period_89">. </a>      </td></tr>
+</table></div>
+    
+    <h2 class="indexable" data-level="2" id="Compliant_Targets_of_Evaluation">1.3 Compliant Targets of Evaluation</h2> 
+      Compliant TOEs will implement security functionality in the following general areas:
+      <ul>
+        <li>Accountability: ensuring that information exists to discover unintentional issues with the configuration and operation of the TOE so that the root cause can be determined<a id="period_90" href="#period_90">. </a></li>
+        <li>Integrity: ensuring the integrity of updates to the TOE and enforcing mechanisms that control the deployment and execution of applications running on it<a id="period_91" href="#period_91">. </a></li>
+        <li>Management: providing mechanisms for configuration of the TSF and deployment of applications running on the TOE<a id="period_92" href="#period_92">. </a></li>
+        <li>Protected Storage: ensuring that credentials and file system data are not subject to unauthorized disclosure<a id="period_93" href="#period_93">. </a></li>
+        <li>Protected Communications: ensuring that sensitive data in transit to and from the TOE is adequately protected from unauthorized modification and disclosure<a id="period_94" href="#period_94">. </a></li>
+      </ul>
+      <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
+        The TOE boundary for an SDN Controller is available as a logical or a physical device<a id="period_95" href="#period_95">. </a>An SDN Controller manages and distributes network policies, collects routing 
+        and payload information from the Data Plane, and interfaces with user applications in the Management Plane<a id="period_96" href="#period_96">. </a>Each plane in an SDN system is composed of multiple 
+        logical or physical components<a id="period_97" href="#period_97">. </a>SDN Controllers logically centralize the network intelligence and state in the Control Plane<a id="period_98" href="#period_98">. </a>        <ul>
+          <li>In a physical standalone SDN controller device, the device's hardware, firmware, and software define the evaluation boundary<a id="period_99" href="#period_99">. </a></li>
+          <li>In a virtual SDN controller, the software of the Virtual Machine (VM) defines the evaluation boundary<a id="period_100" href="#period_100">. </a></li>
+          <li>All security functionality is contained and executed within the evaluation boundary of the SDN controller<a id="period_101" href="#period_101">. </a></li>
+        </ul>       
+        
+      
+      
+      <h3 class="indexable" data-level="3" id="TOE_Platform">1.3.2 TOE Platform</h3>
+	       
+	       The TOE platform of a virtualized SDN Controller is out of scope for this evaluation<a id="period_102" href="#period_102">. </a>
+      
+    
+    
+          
+    <h2 class="indexable" data-level="2" id="Use_Cases">1.4 Use Cases</h2>Requirements in this PP-Module are designed to address the security problems in at least the following use cases<a id="period_103" href="#period_103">. </a>These use cases are 
+        intentionally very broad, as many specific use cases exist for an SDN controller These use cases may also overlap with one another<a id="period_104" href="#period_104">. </a>An SDN controller's 
+        functionality may even be effectively extended by privileged applications installed on it<a id="period_105" href="#period_105">. </a>However, these are out of scope of this PP<a id="period_106" href="#period_106">. </a>      <dl><dt id="standalonephysdev"> [USE CASE 1] Standalone Physical Device</dt><dd><span class="description">	          
+                        
+          </span></dd><dt id="virtualdev"> [USE CASE 2] Virtual Device</dt><dd><span class="description">
+            
+          </span></dd><dt id="standorvirtmngmtcapa"> [USE CASE 3] Standalone or Virtual with Management Capabilities</dt><dd><span class="description">
+            
+          </span></dd><dt id="standorvirtcluster"> [USE CASE 4] Standalone or Virtual Cluster</dt><dd><span class="description">
+            
+          </span></dd><dt id="hypercov"> [USE CASE 5] Hyper-Converge</dt><dd><span class="description">
+            
+            This consists of an amalgam of computing resources in a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads<a id="period_107" href="#period_107">. </a>          </span></dd></dl>
+    
+  
+    
+    <h1 class="indexable" data-level="1" id="Conformance_Claims">2 Conformance Claims</h1>
+      
+      
+      <dl><dt>Conformance Statement</dt><p></p><dd>An ST must claim exact conformance 
+		 to this PP-Module<a id="period_108" href="#period_108">. </a></dd><p></p><dd>The evaluation methods used for evaluating the TOE are a combination of the workunits 
+			defined in <a href="#bibCEM">[CEM]</a> as well as the Evaluation Activities for ensuring that individual SFRs 
+			and SARs have a sufficient level of supporting evidence in the Security Target and guidance 
+			documentation and have been sufficiently tested by the laboratory as part of completing 
+			ATE_IND.1<a id="period_109" href="#period_109">. </a>Any functional packages this PP claims similarly contain their own Evaluation 
+			Activities that are used in this same manner<a id="period_110" href="#period_110">. </a>			</dd><dt>CC Conformance Claims</dt><p></p><dd>This PP-Module is conformant to 
+			Part 2 (extended) 
+			
+			
+			and Part 3 (extended)
+			
+				of Common Criteria CC:2022, Revision 1<a id="period_111" href="#period_111">. </a>			</dd><dt>PP Claim</dt><p></p><dd><ul></ul></dd><p></p><dd>The following PPs and PP-Modules are allowed to be specified in a 
+					PP-Configuration with this PP-Module<a id="period_112" href="#period_112">. </a>					<ul></ul></dd><dt>Package Claim</dt><p></p><dd><ul><li>This PP-Module does not conform to any 
+						functional packages<a id="period_113" href="#period_113">. </a></li><li>This PP-Module does not conform to any 
+						assurance packages<a id="period_114" href="#period_114">. </a></li></ul></dd><p></p><dd>
+		The functional packages to which the PP conforms may include SFRs that are not mandatory 
+		to claim for the sake of conformance<a id="period_115" href="#period_115">. </a>An ST that claims one or more of these functional 
+		packages may include any non-mandatory SFRs that are appropriate to claim based on the 
+		capabilities of the TSF and on any triggers for their inclusion based inherently on the SFR 
+		selections made<a id="period_116" href="#period_116">. </a>
+	</dd></dl>      
+    
+  
+  <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>The security problem is described in terms of the threats that the OS is expected to address, assumptions about the operational
+            environment, and any organizational security policies that the OS is expected to enforce<a id="period_117" href="#period_117">. </a>    <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
+      
+      <dl><dt class="threat defined" id="T.NETWORK_ATTACK">T.NETWORK_ATTACK</dt><dd><span class="description">
+            An attacker can send unwanted input to the Application Programming Interface (API) of the SDN controller management interface, which could interfere with network
+            traffic<a id="period_118" href="#period_118">. </a>          </span></dd><dt class="threat defined" id="T.UNAUTHORIZED_ACCESS">T.UNAUTHORIZED_ACCESS</dt><dd><span class="description">
+            An attacker can compromise the SDN controller and use it to cause unwanted configurations against network devices that are under the SDN controller's control<a id="period_119" href="#period_119">. </a>This
+            can allow network configurations to be changed by an unauthorized user<a id="period_120" href="#period_120">. </a>          </span></dd></dl>
+    
+	
+	
+    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2>
+These assumptions are made on the Operational Environment (OE) in order to be able to ensure that the
+security functionality specified in the PP-Module can be provided by the TOE<a id="period_121" href="#period_121">. </a>If the TOE is placed in an OE that does not meet these assumptions, the TOE may no longer be able to
+provide all of its security functionality<a id="period_122" href="#period_122">. </a>      
+      <dl><dt class="assumption defined" id="A.NO_TOE_BYPASS">A.NO_TOE_BYPASS</dt><dd><span class="description"> 
+            Information cannot flow between the SDN controller and the network devices under the its control without passing through the TOE<a id="period_123" href="#period_123">. </a>          </span></dd><dt class="assumption defined" id="A.CONNECTIVITY">A.CONNECTIVITY</dt><dd><span class="description"> 
+            The SDN Controller has an Application Programming Interface (API) in the management interface to control interactions between components
+            and services<a id="period_124" href="#period_124">. </a>          </span></dd></dl>
+    
 
-  The second type, defined in Appendix <a href="#objective-reqs" class="dynref">Appendix C -  Objective  Requirements</a>, are objective requirements<a id="period_3" href="#period_3">. </a>These describe security functionality that is not yet 
-	  widely available in commercial technology<a id="period_4" href="#period_4">. </a>
-   Objective requirements are not currently mandated by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, but will be mandated in
-	  the future<a id="period_5" href="#period_5">. </a>Adoption by vendors is encouraged, but claiming these <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> is not required in order to conform to this
-	  <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_6" href="#period_6">. </a><br><br>
+  
+  
+  
+  
+  
+    <h1 class="indexable" data-level="1" id="SecurityObjectivesTOE">4 Security Objectives for the TOE</h1>
+      <dl><dt class="SO defined" id=""></dt><dd><span class="description"> Conformant s ensure that information exists that allows
+            administrators to discover unintentional issues with the configuration and operation of
+            the operating system and discover its cause<a id="period_125" href="#period_125">. </a> Gathering event information and immediately 
+            transmitting it to another system can also enable incident response in the event
+            of system compromise<a id="period_126" href="#period_126">. </a></span></dd></dl>
+    
+    <h1 class="indexable" data-level="1" id="SecurityObjectivesTOEorEnvironment">5 Security Objectives for the Operational Environment</h1>
+The OE of the TOE implements technical and procedural measures to assist the TOE in correctly providing its security functionality (which is defined by the security objectives for the TOE)<a id="period_127" href="#period_127">. </a>The security objectives for the OE consist of a set of statements describing the goals that the OE should achieve<a id="period_128" href="#period_128">. </a>This section defines the security objectives that are to be addressed by the IT domain or by non-technical or procedural means<a id="period_129" href="#period_129">. </a>The assumptions identified in Section 3 are incorporated as security objectives for the environment<a id="period_130" href="#period_130">. </a>      The following security objectives for the operational
+      environment assist the  in correctly providing its security functionality<a id="period_131" href="#period_131">. </a>      These track with the assumptions about the environment<a id="period_132" href="#period_132">. </a><dl><dt class="SOE defined" id=""></dt><dd><span class="description">The  relies on being installed on trusted
+            hardware<a id="period_133" href="#period_133">. </a></span></dd><dt class="SOE defined" id=""></dt><dd><span class="description"> The user of the  is not willfully negligent or hostile,
+            and uses the software within compliance of the applied enterprise security policy<a id="period_134" href="#period_134">. </a>            Standard user accounts are provisioned in accordance with the least privilege model<a id="period_135" href="#period_135">. </a>            Users requiring higher levels of access should have a separate account dedicated for
+            that use<a id="period_136" href="#period_136">. </a></span></dd><dt class="SOE defined" id=""></dt><dd><span class="description"> The administrator of the  is not careless, willfully
+            negligent or hostile, and administers the OS within compliance of the applied enterprise
+            security policy<a id="period_137" href="#period_137">. </a></span></dd></dl>
+    <h2 id="SOR" class="indexable,h2" data-level="2">5.1 Security Objectives Rationale</h2>   
+		This section describes how the assumptions and organizational 
+		security policies map to operational environment security objectives<a id="period_138" href="#period_138">. </a>	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.NO_TOE_BYPASS">A.NO_&#8203;TOE_&#8203;BYPASS</a></td><td>OE.NO_&#8203;TOE_&#8203;BYPASS</td><td> The operational environment objective OE.NO_TOE_BYPASS is realized through <a href="#A.NO_TOE_BYPASS">A.NO_TOE_BYPASS</a><a id="period_139" href="#period_139">. </a></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.CONNECTIVITY">A.CONNECTIVITY</a></td><td>OE.CONNECTIVITY</td><td>The operational environment objective OE.CONNECTIVITY is realized through <a href="#A.CONNECTIVITY">A.CONNECTIVITY</a><a id="period_140" href="#period_140">. </a></td></tr></table>
+  
+  This chapter describes the security requirements
+    which have to be fulfilled by the <a id="period_141" href="#period_141">. </a>Those requirements comprise functional
+    components from Part 2 and assurance components from Part 3 of <a id="period_142" href="#period_142">. </a>The
+    following notations are used: <ul>
+      <li>
+        <b>Refinement</b> operation (denoted by <b>bold text</b>): is used to add details to a
+        requirement, and thus further restricts a requirement<a id="period_143" href="#period_143">. </a></li>
+      <li>
+        <b>Selection</b> (denoted by <i>italicized text</i>): is used to select one or more options
+        provided by the [CC] in stating a requirement<a id="period_144" href="#period_144">. </a></li>
+      <li>
+        <b>Assignment</b> operation (denoted by <span class="assignable-content">italicized text</span>): is used to assign a
+        specific value to an unspecified parameter, such as the length of a password<a id="period_145" href="#period_145">. </a>Showing the
+        value in square brackets indicates assignment<a id="period_146" href="#period_146">. </a></li>
+      <li>
+        <b>Iteration</b> operation: are identified with a number inside parentheses (e.g<a id="period_147" href="#period_147">. </a>        "(1)")</li>
+    </ul>
 
-  The third type, defined in Appendix <a href="#feat-based-reqs" class="dynref">Appendix D -  Implementation-dependent  Requirements</a>, are Implementation-dependent requirements<a id="period_7" href="#period_7">. </a>	If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements the product features associated with the listed <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>, either the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must be claimed
-	or the product features must be disabled in the evaluated configuration<a id="period_8" href="#period_8">. </a>
-  <h2 id="optional-reqs" class="indexable" data-level="2">Appendix B -  Strictly Optional  Requirements
-    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Strictly Optional requirements<a id="period_9" href="#period_9">. </a></p><h2 id="objective-reqs" class="indexable" data-level="2">Appendix C -  Objective  Requirements
-    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Objective requirements<a id="period_10" href="#period_10">. </a></p><h2 id="feat-based-reqs" class="indexable" data-level="2">Appendix D -  Implementation-dependent  Requirements
-    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Implementation-dependent requirements<a id="period_11" href="#period_11">. </a></p><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix E -  Selection-based  Requirements
-    </h1><span class="description">
-	<p>As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>,
-        the baseline requirements
-        (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or its underlying platform)
-        are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_12" href="#period_12">. </a>        There are additional requirements based on selections in the body of 
-        the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
-        if certain selections are made, then additional requirements below must be included<a id="period_13" href="#period_13">. </a> 	</p>
-		 </span><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Selection-based requirements<a id="period_14" href="#period_14">. </a></p><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix F -  Inherently Satisfied Requirements</h1> This
+    <h2 id="SFRs" class="indexable" data-level="2">5.2 Security Functional Requirements</h2>The Security Functional Requirements
+      included in this section are derived from Part 2 of the Common Criteria for Information
+      Technology Security Evaluation, Version 3.1, Revision 4, with additional extended functional
+      components<a id="period_148" href="#period_148">. </a>
+
+      
+      
+        <div class="comp" id=""><h4> QQQQQ</h4>
+          <div class="element"><div class="reqid" id=".1"><a href="#.1" class="abbr">.1</a></div><div class="reqdesc"> 
+            <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note"></span></div></div></div>
+        </div>
+      
+    
+    <h1 class="indexable" data-level="1" id="SARs">6 Security Assurance Requirements</h1>
+      The Security Objectives in 
+       were constructed to address threats identified in
+      <a id="period_149" href="#period_149">. </a>The Security Functional Requirements (s)
+      in  are a formal instantiation of the Security Objectives<a id="period_150" href="#period_150">. </a>The PP
+      identifies the Security Assurance Requirements (s) to frame the extent to
+      which the evaluator assesses the documentation applicable for the evaluation and performs
+      independent testing<a id="period_151" href="#period_151">. </a><br> This section lists the set of s from CC part 3
+      that are required in evaluations against this PP<a id="period_152" href="#period_152">. </a>Individual Assurance Activities
+       to be performed are specified both in  as well as in this section<a id="period_153" href="#period_153">. </a><br> The general model for evaluation of s against STs written to conform to this PP is as follows: <br> After the
+         has been approved for evaluation, the ITSEF will obtain the
+        , supporting environmental IT, and the administrative/user guides for
+      the OS<a id="period_154" href="#period_154">. </a>The ITSEF is expected to perform actions mandated by the Common Evaluation
+      Methodology (CEM) for the ASE and ALC SARs<a id="period_155" href="#period_155">. </a>The ITSEF also performs the Assurance Activities
+      contained within , which are intended to be an interpretation of the
+      other CEM assurance requirements as they apply to the specific technology instantiated in the
+      OS<a id="period_156" href="#period_156">. </a>The Assurance Activities that are captured in  also provide
+      clarification as to what the developer needs to provide to demonstrate the OS is compliant
+      with the PP<a id="period_157" href="#period_157">. </a>As per ASE activities
+        defined in <a id="period_158" href="#period_158">. </a>      The information about the  is contained in the guidance documentation available to the end user as
+        well as the  portion of the <a id="period_159" href="#period_159">. </a>The  developer must concur with the description of the product that is
+        contained in the TSS as it relates to the functional requirements<a id="period_160" href="#period_160">. </a>The Assurance Activities
+        contained in  should provide the  authors with
+        sufficient information to determine the appropriate content for the TSS section<a id="period_161" href="#period_161">. </a>          <div class="comp" id=""><h4> Basic Functional Specification (ADV_FSP.1)</h4>The
+          functional specification describes the TSFIs<a id="period_162" href="#period_162">. </a>It is not
+          necessary to have a formal or complete specification of these interfaces<a id="period_163" href="#period_163">. </a>Additionally,
+          because s conforming to this PP will necessarily have interfaces to
+          the Operational Environment that are not directly invokable by 
+          users, there is little point specifying that such interfaces be described in and of
+          themselves since only indirect testing of such interfaces may be possible<a id="period_164" href="#period_164">. </a>For this PP,
+          the activities for this family should focus on understanding the interfaces presented in
+          the  in response to the functional requirements and the interfaces
+          presented in the AGD documentation<a id="period_165" href="#period_165">. </a>No additional &#8220;functional specification&#8221; documentation
+          is necessary to satisfy the assurance activities specified<a id="period_166" href="#period_166">. </a>The interfaces that need to be
+          evaluated are characterized through the information needed to perform the assurance
+          activities listed, rather than as an independent, abstract list<a id="period_167" href="#period_167">. </a>
+	  
+            
+            
+	  
+	  
+            
+            
+            
+            
+	  
+	  
+            
+            
+	  
+        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>There are no specific assurance activities associated with these SARs, except
+              ensuring the information is provided<a id="period_168" href="#period_168">. </a>The functional specification documentation is
+              provided to support the evaluation activities described in , and
+              other activities described for AGD, ATE, and AVA SARs<a id="period_169" href="#period_169">. </a>The requirements on the content
+              of the functional specification information is implicitly assessed by virtue of the
+              other assurance activities being performed; if the evaluator is unable to perform an
+              activity because there is insufficient interface information, then an adequate
+              functional specification has not been provided<a id="period_170" href="#period_170">. </a>	      </div></div></div>
+      
+      The guidance documents will be
+        provided with the <a id="period_171" href="#period_171">. </a>Guidance must include a description of how the IT
+        personnel verifies that the Operational Environment can fulfill its role for the security
+        functionality<a id="period_172" href="#period_172">. </a>The documentation should be in an informal style and readable by the IT
+        personnel<a id="period_173" href="#period_173">. </a>Guidance must be provided for every operational environment that the product
+        supports as claimed in the <a id="period_174" href="#period_174">. </a>This guidance includes instructions to
+        successfully install the  in that environment; and Instructions to
+        manage the security of the  as a product and as a component of the
+        larger operational environment<a id="period_175" href="#period_175">. </a>Guidance pertaining to particular security functionality is
+        also provided; requirements on such guidance are contained in the assurance activities
+        specified with each requirement<a id="period_176" href="#period_176">. </a>
+	<div class="comp" id=""><h4> Operational User Guidance (AGD_OPE.1)</h4>
+	  
+	    
+          
+	  
+            
+            
+            
+            
+            
+            
+            
+	  
+	  
+            
+	  
+        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>Some of the contents of the operational guidance are verified by the
+              assurance activities in  and evaluation of the  according to the <a id="period_177" href="#period_177">. </a>The following additional
+              information is also required<a id="period_178" href="#period_178">. </a>If cryptographic functions are provided by the , the operational guidance shall contain instructions for configuring
+              the cryptographic engine associated with the evaluated configuration of the <a id="period_179" href="#period_179">. </a>It shall provide a warning to the administrator that use of other
+              cryptographic engines was not evaluated nor tested during the CC evaluation of the
+              <a id="period_180" href="#period_180">. </a>The documentation must describe the process for verifying
+              updates to the  by verifying a digital signature &#8211; this may be
+              done by the  or the underlying platform<a id="period_181" href="#period_181">. </a>The evaluator will
+              verify that this process includes the following steps: Instructions for obtaining the
+              update itself<a id="period_182" href="#period_182">. </a>This should include instructions for making the update accessible to
+              the  (e.g., placement in a specific directory)<a id="period_183" href="#period_183">. </a>Instructions for
+              initiating the update process, as well as discerning whether the process was
+              successful or unsuccessful<a id="period_184" href="#period_184">. </a>This includes generation of the hash/digital signature<a id="period_185" href="#period_185">. </a>              The  will likely contain security functionality that does not
+              fall in the scope of evaluation under this PP<a id="period_186" href="#period_186">. </a>The operational guidance shall make it
+              clear to an administrator which security functionality is covered by the evaluation
+              activities<a id="period_187" href="#period_187">. </a></div></div></div>
+        <div class="comp" id=""><h4> Preparative Procedures (AGD_PRE.1)</h4>
+	  
+            
+	  
+	  
+            
+            
+	  
+	  
+            
+            
+	  
+        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>As indicated in the introduction above, there are significant expectations
+              with respect to the documentation&#8212;especially when configuring the operational
+              environment to support  functional requirements<a id="period_188" href="#period_188">. </a>The evaluator
+              shall check to ensure that the guidance provided for the 
+              adequately addresses all platforms claimed for the  in the <a id="period_189" href="#period_189">. </a></div></div></div>
+      
+       At the assurance level provided
+        for OSs conformant to this PP, life-cycle support is limited to end-user-visible aspects of
+        the life-cycle, rather than an examination of the OS vendor&#8217;s development and configuration
+        management process<a id="period_190" href="#period_190">. </a>This is not meant to diminish the critical role that a developer&#8217;s
+        practices play in contributing to the overall trustworthiness of a product; rather, it is a
+        reflection on the information to be made available for evaluation at this assurance level<a id="period_191" href="#period_191">. </a>          <div class="comp" id=""><h4> Labeling of the TOE (ALC_CMC.1)</h4>This component is
+          targeted at identifying the  such that it can be distinguished from
+          other products or versions from the same vendor and can be easily specified when being
+          procured by an end user<a id="period_192" href="#period_192">. </a>
+	  
+            
+	  
+	  
+            
+	  
+	  
+            
+	  
+        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>The evaluator will check the  to ensure that it contains
+              an identifier (such as a product name/version number) that specifically identifies the
+              version that meets the requirements of the <a id="period_193" href="#period_193">. </a>Further, the
+              evaluator will check the AGD guidance and  samples received for
+              testing to ensure that the version number is consistent with that in the <a id="period_194" href="#period_194">. </a>If the vendor maintains a web site advertising the , the evaluator will examine the information on the web site to
+              ensure that the information in the  is sufficient to distinguish
+              the product<a id="period_195" href="#period_195">. </a></div></div></div>
+        <div class="comp" id=""><h4> TOE CM Coverage (ALC_CMS.1)</h4>
+	  Given the scope of the  and its associated evaluation 
+	  evidence requirements, this component&#8217;s assurance activities are covered 
+	  by the assurance activities listed for ALC_CMC.1<a id="period_196" href="#period_196">. </a>          
+            
+	  
+	  
+            
+            
+	  
+          
+            
+	  
+        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>The "evaluation evidence required by the SARs" in this PP is limited to the
+              information in the  coupled with the guidance provided to
+              administrators and users under the AGD requirements<a id="period_197" href="#period_197">. </a>By ensuring that the  is specifically identified and that this identification is
+              consistent in the  and in the AGD guidance (as done in the
+              assurance activity for ALC_CMC.1), the evaluator implicitly confirms the information
+              required by this component<a id="period_198" href="#period_198">. </a>Life-cycle support is targeted aspects of the developer&#8217;s
+              life-cycle and instructions to providers of applications for the developer&#8217;s devices,
+              rather than an in-depth examination of the  manufacturer&#8217;s
+              development and configuration management process<a id="period_199" href="#period_199">. </a>This is not meant to diminish the
+              critical role that a developer&#8217;s practices play in contributing to the overall
+              trustworthiness of a product; rather, it&#8217;s a reflection on the information to be made
+              available for evaluation<a id="period_200" href="#period_200">. </a><br> The evaluator will ensure that the developer has
+              identified (in guidance documentation for application developers concerning the
+              targeted platform) one or more development environments appropriate for use in
+              developing applications for the developer&#8217;s platform<a id="period_201" href="#period_201">. </a>For each of these development
+              environments, the developer shall provide information on how to configure the
+              environment to ensure that buffer overflow protection mechanisms in the environment(s)
+              are invoked (e.g., compiler and linker flags)<a id="period_202" href="#period_202">. </a>The evaluator will ensure that this documentation
+              also includes an indication of whether such protections are on by default, or have to
+              be specifically enabled<a id="period_203" href="#period_203">. </a>The evaluator will ensure that the  is
+              uniquely identified (with respect to other products from the 
+              vendor), and that documentation provided by the developer in association with the
+              requirements in the  is associated with the 
+              using this unique identification<a id="period_204" href="#period_204">. </a></div></div></div>
+        <div class="comp" id=""><h4> Timely Security Updates</h4> This component requires the
+          OS developer, in conjunction with any other necessary parties, to provide information as
+          to how the end-user devices are updated to address security issues in a timely manner<a id="period_205" href="#period_205">. </a>The
+          documentation describes the process of providing updates to the public from the time a
+          security flaw is reported/discovered, to the time an update is released<a id="period_206" href="#period_206">. </a>This description
+          includes the parties involved (e.g., the developer, carriers(s)) and the steps that are
+          performed (e.g., developer testing, carrier testing), including worst case time periods,
+          before an update is made available to the public<a id="period_207" href="#period_207">. </a>
+	  
+            
+            
+	  
+	  
+            
+            
+	  
+	  
+            
+	  
+        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div> The evaluator will verify that the TSS contains a description of the timely
+              security update process used by the developer to create and deploy security updates<a id="period_208" href="#period_208">. </a>              The evaluator will verify that this description addresses the entire application<a id="period_209" href="#period_209">. </a>The
+              evaluator will also verify that, in addition to the OS developer&#8217;s process, any
+              third-party processes are also addressed in the description<a id="period_210" href="#period_210">. </a>The evaluator will also
+              verify that each mechanism for deployment of security updates is described<a id="period_211" href="#period_211">. </a><br> The
+              evaluator will verify that, for each deployment mechanism described for the update
+              process, the TSS lists a time between public disclosure of a vulnerability and public
+              availability of the security update to the OS patching this vulnerability, to include
+              any third-party or carrier delays in deployment<a id="period_212" href="#period_212">. </a>The evaluator will verify that this
+              time is expressed in a number or range of days<a id="period_213" href="#period_213">. </a><br> The evaluator will verify that
+              this description includes the publicly available mechanisms (including either an email
+              address or website) for reporting security issues related to the OS<a id="period_214" href="#period_214">. </a>The evaluator
+              shall verify that the description of this mechanism includes a method for protecting
+              the report either using a public key for encrypting email or a trusted channel for a
+              website<a id="period_215" href="#period_215">. </a></div></div></div>
+      
+      Testing is specified for functional aspects of
+        the system as well as aspects that take advantage of design or implementation weaknesses<a id="period_216" href="#period_216">. </a>        The former is done through the ATE_IND family, while the latter is through the AVA_VAN
+        family<a id="period_217" href="#period_217">. </a>At the assurance level specified in this PP, testing is based on advertised
+        functionality and interfaces with dependency on the availability of design information<a id="period_218" href="#period_218">. </a>One
+        of the primary outputs of the evaluation process is the test report as specified in the
+        following requirements<a id="period_219" href="#period_219">. </a><div class="comp" id=""><h4> Independent Testing &#8211; Conformance (ATE_IND.1)</h4> Testing is performed to confirm the
+          functionality described in the  as well as the administrative
+          (including configuration and operational) documentation provided<a id="period_220" href="#period_220">. </a>The focus of the testing
+          is to confirm that the requirements specified in  being met,
+          although some additional testing is specified for SARs in <a id="period_221" href="#period_221">. </a>The
+          Assurance Activities identify the additional testing activities associated with these
+          components<a id="period_222" href="#period_222">. </a>The evaluator produces a test report documenting the plan for and results of
+          testing, as well as coverage arguments focused on the platform/
+          combinations that are claiming conformance to this PP<a id="period_223" href="#period_223">. </a>Given the scope of the  and its associated evaluation evidence requirements, this component&#8217;s
+          assurance activities are covered by the assurance activities listed for ALC_CMC.1<a id="period_224" href="#period_224">. </a>	  
+            
+	  
+          
+            
+	  
+	  
+            
+            
+	  
+        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>The evaluator will prepare a test plan and report documenting the testing
+              aspects of the system, including any application crashes during testing<a id="period_225" href="#period_225">. </a>The evaluator
+              shall determine the root cause of any application crashes and include that information
+              in the report<a id="period_226" href="#period_226">. </a>The test plan covers all of the testing actions contained in the  and the body of this PP&#8217;s Assurance Activities<a id="period_227" href="#period_227">. </a><br> While it is
+              not necessary to have one test case per test listed in an Assurance Activity, the
+              evaluator must document in the test plan that each applicable testing requirement in
+              the  is covered<a id="period_228" href="#period_228">. </a>The test plan identifies the platforms to be
+              tested, and for those platforms not included in the test plan but included in the
+                , the test plan provides a justification for not testing the
+              platforms<a id="period_229" href="#period_229">. </a>This justification must address the differences between the tested
+              platforms and the untested platforms, and make an argument that the differences do not
+              affect the testing to be performed<a id="period_230" href="#period_230">. </a>It is not sufficient to merely assert that the
+              differences have no affect; rationale must be provided<a id="period_231" href="#period_231">. </a>If all platforms claimed in
+              the  are tested, then no rationale is necessary<a id="period_232" href="#period_232">. </a>The test plan
+              describes the composition of each platform to be tested, and any setup that is
+              necessary beyond what is contained in the AGD documentation<a id="period_233" href="#period_233">. </a>It should be noted that
+              the evaluator is expected to follow the AGD documentation for installation and setup
+              of each platform either as part of a test or as a standard pre-test condition<a id="period_234" href="#period_234">. </a>This
+              may include special test drivers or tools<a id="period_235" href="#period_235">. </a>For each driver or tool, an argument (not
+              just an assertion) should be provided that the driver or tool will not adversely
+              affect the performance of the functionality by the  and its
+              platform<a id="period_236" href="#period_236">. </a><br> This also includes the configuration of the cryptographic engine to be
+              used<a id="period_237" href="#period_237">. </a>The cryptographic algorithms implemented by this engine are those specified by
+              this PP and used by the cryptographic protocols being evaluated (IPsec, TLS)<a id="period_238" href="#period_238">. </a>The test
+              plan identifies high-level test objectives as well as the test procedures to be
+              followed to achieve those objectives<a id="period_239" href="#period_239">. </a>These procedures include expected results<a id="period_240" href="#period_240">. </a><br>
+              The test report (which could just be an annotated version of the test plan) details
+              the activities that took place when the test procedures were executed, and includes
+              the actual results of the tests<a id="period_241" href="#period_241">. </a>This shall be a cumulative account, so if there was a
+              test run that resulted in a failure; a fix installed; and then a successful re-run of
+              the test, the report would show a &#8220;fail&#8221; and &#8220;pass&#8221; result (and the supporting
+              details), and not just the &#8220;pass&#8221; result<a id="period_242" href="#period_242">. </a></div></div></div>
+      
+      For the first generation of
+        this protection profile, the evaluation lab is expected to survey open sources to discover
+        what vulnerabilities have been discovered in these types of products<a id="period_243" href="#period_243">. </a>In most cases, these
+        vulnerabilities will require sophistication beyond that of a basic attacker<a id="period_244" href="#period_244">. </a>Until
+        penetration tools are created and uniformly distributed to the evaluation labs, the
+        evaluator will not be expected to test for these vulnerabilities in the <a id="period_245" href="#period_245">. </a>The labs will be expected to comment on the likelihood of these vulnerabilities given
+        the documentation provided by the vendor<a id="period_246" href="#period_246">. </a>This information will be used in the development
+        of penetration testing tools and for the development of future protection profiles<a id="period_247" href="#period_247">. </a>        <div class="comp" id=""><h4> Vulnerability Survey (AVA_VAN.1)</h4>
+	  
+            
+	  
+	  
+          
+	  
+	  
+          
+          
+          
+	  
+        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>The evaluator will generate a report to document their
+              findings with respect to this requirement<a id="period_248" href="#period_248">. </a>This report could physically be part of the
+              overall test report mentioned in ATE_IND, or a separate document<a id="period_249" href="#period_249">. </a>The evaluator
+              performs a search of public information to find vulnerabilities that have been found
+              in similar applications with a particular focus on network protocols the application
+              uses and document formats it parses<a id="period_250" href="#period_250">. </a>
+              The evaluator documents the sources consulted and
+              the vulnerabilities found in the report<a id="period_251" href="#period_251">. </a>
+              <br>
+              For each vulnerability found, the evaluator
+              either provides a rationale with respect to its non-applicability, or the evaluator
+              formulates a test (using the guidelines provided in ATE_IND) to confirm the
+              vulnerability, if suitable<a id="period_252" href="#period_252">. </a>Suitability is determined by assessing the attack vector
+              needed to take advantage of the vulnerability<a id="period_253" href="#period_253">. </a>If exploiting the vulnerability
+              requires expert skills and an electron microscope, for instance, then a test would not
+              be suitable and an appropriate justification would be formulated<a id="period_254" href="#period_254">. </a></div></div></div>
+            
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix A -  Inherently Satisfied Requirements</h1> This
 	appendix lists requirements that should be considered satisfied by products
-	successfully evaluated against this Protection Profile<a id="period_15" href="#period_15">. </a> 
-	However, these requirements are not featured explicitly as <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> and should not be
-	included in the <a id="period_16" href="#period_16">. </a> 
-	They are not included as standalone <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> because it would
-	increase the time, cost, and complexity of evaluation<a id="period_17" href="#period_17">. </a> This approach is permitted
-	by  Part 1, <b>8.2 Dependencies between components</b><a id="period_18" href="#period_18">. </a>    <br>
+	successfully evaluated against this Protection Profile<a id="period_255" href="#period_255">. </a> 
+	However, these requirements are not featured explicitly as SFRs and should not be
+	included in the <a id="period_256" href="#period_256">. </a> 
+	They are not included as standalone SFRs because it would
+	increase the time, cost, and complexity of evaluation<a id="period_257" href="#period_257">. </a> This approach is permitted
+	by  Part 1, <b>8.2 Dependencies between components</b><a id="period_258" href="#period_258">. </a>    <br>
 	This information benefits systems engineering activities which call for inclusion of 
-	particular security controls<a id="period_19" href="#period_19">. </a> Evaluation against the Protection Profile
-	provides evidence that these controls are present and have been evaluated<a id="period_20" href="#period_20">. </a>    
+	particular security controls<a id="period_259" href="#period_259">. </a> Evaluation against the Protection Profile
+	provides evidence that these controls are present and have been evaluated<a id="period_260" href="#period_260">. </a>    
 	
 	Requirement
 	Rationale for Satisfaction
@@ -686,7 +1281,7 @@ function showTarget(id){
 	  including those on behalf of the user who has not been authenticated, 
 	  in order to authenticate;
 	  therefore it is duplicative to include these actions as a 
-	  separate assignment and test<a id="period_21" href="#period_21">. </a>	
+	  separate assignment and test<a id="period_261" href="#period_261">. </a>	
 	
 	
 	FIA_UID.1 - Timing of identification
@@ -695,38 +1290,38 @@ function showTarget(id){
 	  including those on behalf of the user who has not been identified, 
 	  in order to authenticate;
 	  therefore it is duplicative to include these actions as a 
-	  separate assignment and test<a id="period_22" href="#period_22">. </a>	
+	  separate assignment and test<a id="period_262" href="#period_262">. </a>	
 	
 	
 	FMT_SMR.1 - Security roles
 	
 	   specifies role-based management functions that implicitly defines
 	  user and privileged accounts; 
-	  therefore, it is duplicative to include separate role requirements<a id="period_23" href="#period_23">. </a>	
+	  therefore, it is duplicative to include separate role requirements<a id="period_263" href="#period_263">. </a>	
 	
 	
 	FPT_STM.1 - Reliable time stamps
 	
 	   explicitly requires that the OS associate timestamps with audit records;
-	  therefore it is duplicative to include a separate timestamp requirement<a id="period_24" href="#period_24">. </a>	
+	  therefore it is duplicative to include a separate timestamp requirement<a id="period_264" href="#period_264">. </a>	
 	
 	
-	FTA_SSL.1 - <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>-initiated session locking
+	FTA_SSL.1 - TSF-initiated session locking
 	
 	   defines requirements for managing session locking;
-	  therefore, it is duplicative to include a separate session locking requirement<a id="period_25" href="#period_25">. </a>	
+	  therefore, it is duplicative to include a separate session locking requirement<a id="period_265" href="#period_265">. </a>	
 	
 	
 	FTA_SSL.2 - User-initiated locking
 	
 	   defines requirements for user-initiated session locking;
-	  therefore, it is duplicative to include a separate session locking requirement<a id="period_26" href="#period_26">. </a>	
+	  therefore, it is duplicative to include a separate session locking requirement<a id="period_266" href="#period_266">. </a>	
 	
 	
 	FAU_STG.1 - Protected audit trail storage
 	
 	   defines a requirement to protect audit logs;
-	  therefore, it is duplicative to include a separate protection of audit trail requirements<a id="period_27" href="#period_27">. </a>	
+	  therefore, it is duplicative to include a separate protection of audit trail requirements<a id="period_267" href="#period_267">. </a>	
 	
 	
 	FAU_GEN.2 - User identity association
@@ -734,81 +1329,120 @@ function showTarget(id){
 	   explicitly requires that the OS record
 	  any user account associated with each event; therefore, it is duplicative
 	  to include a separate requirement to associate a user account with each
-	  event<a id="period_28" href="#period_28">. </a>	
+	  event<a id="period_268" href="#period_268">. </a>	
 	
 	
 	  FAU_SAR.1 - Audit review
 	  
 	     requires that audit logs (and other objects)
 	    are protected from reading by unprivileged users; therefore, it is duplicative
-	    to include a separate requirement to protect only the audit information<a id="period_29" href="#period_29">. </a>	  
+	    to include a separate requirement to protect only the audit information<a id="period_269" href="#period_269">. </a>	  
 	
     
 
-  <h1 id="entropyappendix" class="indexable" data-level="A">Appendix G -  Entropy Documentation and Assessment</h1> This appendix
-    describes the required supplementary information for the entropy source used by the OS<a id="period_30" href="#period_30">. </a><br>
+  
+
+  
+  <h1 id="entropyappendix" class="indexable" data-level="A">Appendix B -  Entropy Documentation and Assessment</h1> This appendix
+    describes the required supplementary information for the entropy source used by the OS<a id="period_270" href="#period_270">. </a><br>
     The documentation of the entropy source should be detailed enough that, after reading, the
     evaluator will thoroughly understand the entropy source and why it can be relied upon to provide
-    sufficient entropy<a id="period_31" href="#period_31">. </a>This documentation should include multiple detailed sections: design
-    description, entropy justification, operating conditions, and health testing<a id="period_32" href="#period_32">. </a>This documentation
-    is not required to be part of the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr><a id="period_33" href="#period_33">. </a><h2 class="indexable" data-level="2" id="entropydesign">Appendix H -  Design Description</h2>
+    sufficient entropy<a id="period_271" href="#period_271">. </a>This documentation should include multiple detailed sections: design
+    description, entropy justification, operating conditions, and health testing<a id="period_272" href="#period_272">. </a>This documentation
+    is not required to be part of the TSS<a id="period_273" href="#period_273">. </a><h2 class="indexable" data-level="2" id="entropydesign">B.1 Design Description</h2>
       Documentation shall include the design of the entropy source as a whole, including the
-      interaction of all entropy source components<a id="period_34" href="#period_34">. </a>Any information that can be shared regarding the
+      interaction of all entropy source components<a id="period_274" href="#period_274">. </a>Any information that can be shared regarding the
       design should also be included for any third-party entropy sources that are included in the
-      product<a id="period_35" href="#period_35">. </a><br> The documentation will describe the operation of the entropy source to include,
+      product<a id="period_275" href="#period_275">. </a><br> The documentation will describe the operation of the entropy source to include,
       how entropy is produced, and how unprocessed (raw) data can be obtained from within the
-      entropy source for testing purposes<a id="period_36" href="#period_36">. </a>The documentation should walk through the entropy source
+      entropy source for testing purposes<a id="period_276" href="#period_276">. </a>The documentation should walk through the entropy source
       design indicating where the entropy comes from, where the entropy output is passed next, any
       post-processing of the raw outputs (hash, XOR, etc.), if/where it is stored, and finally, how
-      it is output from the entropy source<a id="period_37" href="#period_37">. </a>Any conditions placed on the process (e.g., blocking)
-      should also be described in the entropy source design<a id="period_38" href="#period_38">. </a>Diagrams and examples are encouraged<a id="period_39" href="#period_39">. </a>      <br> This design must also include a description of the content of the security boundary of
+      it is output from the entropy source<a id="period_277" href="#period_277">. </a>Any conditions placed on the process (e.g., blocking)
+      should also be described in the entropy source design<a id="period_278" href="#period_278">. </a>Diagrams and examples are encouraged<a id="period_279" href="#period_279">. </a>      <br> This design must also include a description of the content of the security boundary of
       the entropy source and a description of how the security boundary ensures that an adversary
-      outside the boundary cannot affect the entropy rate<a id="period_40" href="#period_40">. </a><br> If implemented, the design
+      outside the boundary cannot affect the entropy rate<a id="period_280" href="#period_280">. </a><br> If implemented, the design
       description shall include a description of how third-party applications can add entropy to the
-      RBG<a id="period_41" href="#period_41">. </a>A description of any RBG state saving between power-off and power-on shall be included<a id="period_42" href="#period_42">. </a>
-    <h2 class="indexable" data-level="2" id="entropyjustification">Appendix I -  Entropy Justification</h2> There should be a technical
+      RBG<a id="period_281" href="#period_281">. </a>A description of any RBG state saving between power-off and power-on shall be included<a id="period_282" href="#period_282">. </a>
+    <h2 class="indexable" data-level="2" id="entropyjustification">B.2 Entropy Justification</h2> There should be a technical
       argument for where the unpredictability in the source comes from and why there is confidence
       in the entropy source delivering sufficient entropy for the uses made of the RBG output (by
-      this particular OS)<a id="period_43" href="#period_43">. </a>This argument will include a description of the expected min-entropy
-      rate (i.e<a id="period_44" href="#period_44">. </a>the minimum entropy (in bits) per bit or byte of source data) and explain that
-      sufficient entropy is going into the OS randomizer seeding process<a id="period_45" href="#period_45">. </a>This discussion will be
+      this particular OS)<a id="period_283" href="#period_283">. </a>This argument will include a description of the expected min-entropy
+      rate (i.e<a id="period_284" href="#period_284">. </a>the minimum entropy (in bits) per bit or byte of source data) and explain that
+      sufficient entropy is going into the OS randomizer seeding process<a id="period_285" href="#period_285">. </a>This discussion will be
       part of a justification for why the entropy source can be relied upon to produce bits with
-      entropy<a id="period_46" href="#period_46">. </a><br> The amount of information necessary to justify the expected min-entropy rate
-      depends on the type of entropy source included in the product<a id="period_47" href="#period_47">. </a><br> For developer provided
+      entropy<a id="period_286" href="#period_286">. </a><br> The amount of information necessary to justify the expected min-entropy rate
+      depends on the type of entropy source included in the product<a id="period_287" href="#period_287">. </a><br> For developer provided
       entropy sources, in order to justify the min-entropy rate, it is expected that a large number
       of raw source bits will be collected, statistical tests will be performed, and the min-entropy
-      rate determined from the statistical tests<a id="period_48" href="#period_48">. </a>While no particular statistical tests are required
+      rate determined from the statistical tests<a id="period_288" href="#period_288">. </a>While no particular statistical tests are required
       at this time, it is expected that some testing is necessary in order to determine the amount
-      of min-entropy in each output<a id="period_49" href="#period_49">. </a><br> For third-party provided entropy sources, in which the
+      of min-entropy in each output<a id="period_289" href="#period_289">. </a><br> For third-party provided entropy sources, in which the
       OS vendor has limited access to the design and raw entropy data of the source, the
       documentation will indicate an estimate of the amount of min-entropy obtained from this
-      third-party source<a id="period_50" href="#period_50">. </a>It is acceptable for the vendor to &#8220;assume&#8221; an amount of min-entropy,
-      however, this assumption must be clearly stated in the documentation provided<a id="period_51" href="#period_51">. </a>In particular,
-      the min-entropy estimate must be specified and the assumption included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr><a id="period_52" href="#period_52">. </a><br>
+      third-party source<a id="period_290" href="#period_290">. </a>It is acceptable for the vendor to &#8220;assume&#8221; an amount of min-entropy,
+      however, this assumption must be clearly stated in the documentation provided<a id="period_291" href="#period_291">. </a>In particular,
+      the min-entropy estimate must be specified and the assumption included in the ST<a id="period_292" href="#period_292">. </a><br>
       Regardless of type of entropy source, the justification will also include how the DRBG is
-      initialized with the entropy stated in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, for example by verifying that the min-entropy
+      initialized with the entropy stated in the ST, for example by verifying that the min-entropy
       rate is multiplied by the amount of source data used to seed the DRBG or that the rate of
       entropy expected based on the amount of source data is explicitly stated and compared to the
-      statistical rate<a id="period_53" href="#period_53">. </a>If the amount of source data used to seed the DRBG is not clear or the
+      statistical rate<a id="period_293" href="#period_293">. </a>If the amount of source data used to seed the DRBG is not clear or the
       calculated rate is not explicitly related to the seed, the documentation will not be
-      considered complete<a id="period_54" href="#period_54">. </a><br> The entropy justification shall not include any data added from any
-      third-party application or from any state saving between restarts<a id="period_55" href="#period_55">. </a>
-    <h2 class="indexable" data-level="2" id="entropyoperatingconditions">Appendix J -  Operating Conditions</h2> The entropy rate may be
-      affected by conditions outside the control of the entropy source itself<a id="period_56" href="#period_56">. </a>For example, voltage,
+      considered complete<a id="period_294" href="#period_294">. </a><br> The entropy justification shall not include any data added from any
+      third-party application or from any state saving between restarts<a id="period_295" href="#period_295">. </a>
+    <h2 class="indexable" data-level="2" id="entropyoperatingconditions">B.3 Operating Conditions</h2> The entropy rate may be
+      affected by conditions outside the control of the entropy source itself<a id="period_296" href="#period_296">. </a>For example, voltage,
       frequency, temperature, and elapsed time after power-on are just a few of the factors that may
-      affect the operation of the entropy source<a id="period_57" href="#period_57">. </a>As such, documentation will also include the range
-      of operating conditions under which the entropy source is expected to generate random data<a id="period_58" href="#period_58">. </a>It
+      affect the operation of the entropy source<a id="period_297" href="#period_297">. </a>As such, documentation will also include the range
+      of operating conditions under which the entropy source is expected to generate random data<a id="period_298" href="#period_298">. </a>It
       will clearly describe the measures that have been taken in the system design to ensure the
-      entropy source continues to operate under those conditions<a id="period_59" href="#period_59">. </a>Similarly, documentation shall
+      entropy source continues to operate under those conditions<a id="period_299" href="#period_299">. </a>Similarly, documentation shall
       describe the conditions under which the entropy source is known to malfunction or become
-      inconsistent<a id="period_60" href="#period_60">. </a>Methods used to detect failure or degradation of the source shall be included<a id="period_61" href="#period_61">. </a>
-    <h2 class="indexable" data-level="2" id="entropyhealthtesting">Appendix K -  Health Testing</h2> More specifically, all entropy source
-      health tests and their rationale will be documented<a id="period_62" href="#period_62">. </a>This includes a description of the health
+      inconsistent<a id="period_300" href="#period_300">. </a>Methods used to detect failure or degradation of the source shall be included<a id="period_301" href="#period_301">. </a>
+    <h2 class="indexable" data-level="2" id="entropyhealthtesting">B.4 Health Testing</h2> More specifically, all entropy source
+      health tests and their rationale will be documented<a id="period_302" href="#period_302">. </a>This includes a description of the health
       tests, the rate and conditions under which each health test is performed (e.g., at start,
       continuously, or on-demand), the expected results for each health test, and rationale
       indicating why each test is believed to be appropriate for detecting one or more failures in
-      the entropy source<a id="period_63" href="#period_63">. </a>
-  <h1 id="acronyms" class="indexable" data-level="A">Appendix L -  Acronyms</h1>
+      the entropy source<a id="period_303" href="#period_303">. </a>
+  
+
+  <h1 id="biblio" class="indexable" data-level="A">Appendix C -  References</h1>
+    
+      <tr><td><span id="bibCC"></span>[CC]</td><td>Common Criteria for Information Technology Security Evaluation - <ul>
+            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R4.pdf">Part
+                1: Introduction and General Model</a>, CCMB-2012-09-001, Version 3.1 Revision 4,
+              September 2012<a id="period_304" href="#period_304">. </a></li>
+            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R4.pdf">Part
+                2: Security Functional Components</a>, CCMB-2012-09-002, Version 3.1 Revision 4,
+              September 2012<a id="period_305" href="#period_305">. </a></li>
+            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R4.pdf">Part
+                3: Security Assurance Components</a>, CCMB-2012-09-003, Version 3.1 Revision 4,
+              September 2012<a id="period_306" href="#period_306">. </a></li>
+          </ul></td></tr>
+
+      <tr><td><span id="bibCEM"></span>[CEM]</td><td>
+          <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R4.pdf">Common
+            Evaluation Methodology for Information Technology Security - Evaluation Methodology</a>,
+          CCMB-2012-09-004, Version 3.1, Revision 4, September 2012<a id="period_307" href="#period_307">. </a></td></tr>
+
+      <tr><td><span id="bibCESG"></span>[CESG]</td><td>CESG - <a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End
+            User Devices Security and Configuration Guidance</a></td></tr>
+
+      <tr><td><span id="bibCSA"></span>[CSA]</td><td>
+          <a href="http://csrc.nist.gov/groups/SMA/ispab/documents/csa_87.txt">Computer Security Act
+            of 1987</a>, H.R<a id="period_308" href="#period_308">. </a>145, June 11, 1987<a id="period_309" href="#period_309">. </a></td></tr>
+
+      <tr><td><span id="bibOMB"></span>[OMB]</td><td>
+          <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">Reporting Incidents Involving Personally Identifiable Information and Incorporating the
+            Cost for Security in Agency Information Technology Investments</a>, OMB M-06-19, July
+          12, 2006<a id="period_310" href="#period_310">. </a></td></tr>
+
+    
+  
+
+  <h1 id="acronyms" class="indexable" data-level="A">Appendix D -  Acronyms</h1>
     
       
         AES
@@ -988,7 +1622,7 @@ function showTarget(id){
         <span class="description">Public Key Infrastructure</span>
       
       
-        <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>
+        PP
         <span class="description">Protection Profile</span>
       
       
@@ -1012,11 +1646,11 @@ function showTarget(id){
         <span class="description">Subject Alternative Name</span>
       
       
-        <abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr>
+        SAR
         <span class="description">Security Assurance Requirement</span>
       
       
-        <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>
+        SFR
         <span class="description">Security Functional Requirement</span>
       
       
@@ -1060,51 +1694,5 @@ function showTarget(id){
         <span class="description">Exclusive Or</span>
       
     
-  <h1 id="acronyms" class="indexable" data-level="A">Appendix M -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">1</span></span>: Acronyms
-		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
-<tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
-<tr><td><span class="term" id="abbr_CEM"><abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr></span></td><td><span id="long_abbr_CEM">Common Evaluation Methodology</span></td></tr>
-<tr><td><span class="term" id="abbr_cPP" data-plural="cPPs"><abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></span></td><td><span id="long_abbr_cPP">Collaborative Protection Profile</span></td></tr>
-<tr><td><span class="term" id="abbr_EP"><abbr class="dyn-abbr"><a href="#abbr_EP">EP</a></abbr></span></td><td><span id="long_abbr_EP">Extended Package</span></td></tr>
-<tr><td><span class="term" id="abbr_FP"><abbr class="dyn-abbr"><a href="#abbr_FP">FP</a></abbr></span></td><td><span id="long_abbr_FP">Functional Package</span></td></tr>
-<tr><td><span class="term" id="abbr_OE"><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr></span></td><td><span id="long_abbr_OE">Operational Environment</span></td></tr>
-<tr><td><span class="term" id="abbr_PP" data-plural="PPs"><abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr></span></td><td><span id="long_abbr_PP">Protection Profile</span></td></tr>
-<tr><td><span class="term" id="abbr_PP-Configuration"><abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr></span></td><td><span id="long_abbr_PP-Configuration">Protection Profile Configuration</span></td></tr>
-<tr><td><span class="term" id="abbr_PP-Module"><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr></span></td><td><span id="long_abbr_PP-Module">Protection Profile Module</span></td></tr>
-<tr><td><span class="term" id="abbr_SAR" data-plural="SARs"><abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr></span></td><td><span id="long_abbr_SAR">Security Assurance Requirement</span></td></tr>
-<tr><td><span class="term" id="abbr_SFR" data-plural="SFRs"><abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr></span></td><td><span id="long_abbr_SFR">Security Functional Requirement</span></td></tr>
-<tr><td><span class="term" id="abbr_ST" data-plural="STs"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr></span></td><td><span id="long_abbr_ST">Security Target</span></td></tr>
-<tr><td><span class="term" id="abbr_TOE" data-plural="TOEs"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr></span></td><td><span id="long_abbr_TOE">Target of Evaluation</span></td></tr>
-<tr><td><span class="term" id="abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span></td><td><span id="long_abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Security Functionality</span></td></tr>
-<tr><td><span class="term" id="abbr_TSFI" data-plural="TSFIs"><abbr class="dyn-abbr"><a href="#abbr_TSFI">TSFI</a></abbr></span></td><td><span id="long_abbr_TSFI"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> Interface</span></td></tr>
-<tr><td><span class="term" id="abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></span></td><td><span id="long_abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Summary Specification</span></td></tr>
-</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix N -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">2</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
-            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R4.pdf">Part
-                1: Introduction and General Model</a>, CCMB-2012-09-001, Version 3.1 Revision 4,
-              September 2012<a id="period_64" href="#period_64">. </a></li>
-            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R4.pdf">Part
-                2: Security Functional Components</a>, CCMB-2012-09-002, Version 3.1 Revision 4,
-              September 2012<a id="period_65" href="#period_65">. </a></li>
-            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R4.pdf">Part
-                3: Security Assurance Components</a>, CCMB-2012-09-003, Version 3.1 Revision 4,
-              September 2012<a id="period_66" href="#period_66">. </a></li>
-          </ul></span></td></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
-            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part
-                1: Introduction and General Model</a>, CCMB-2017-04-001, Version 3.1 Revision 5,
-              April 2017<a id="period_67" href="#period_67">. </a></li>
-            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R5.pdf">Part
-                2: Security Functional Components</a>, CCMB-2017-04-002, Version 3.1 Revision 5,
-              April 2017<a id="period_68" href="#period_68">. </a></li>
-            <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R5.pdf">Part
-                3: Security Assurance Components</a>, CCMB-2017-04-003, Version 3.1 Revision 5,
-              April 2017<a id="period_69" href="#period_69">. </a></li>
-          </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">
-          <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R4.pdf">Common
-            Evaluation Methodology for Information Technology Security - Evaluation Methodology</a>,
-          CCMB-2012-09-004, Version 3.1, Revision 4, September 2012<a id="period_70" href="#period_70">. </a></span></td></tr><tr><td><span id="bibCESG">[CESG]</span></td><td><span class="description">CESG - <a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End
-            User Devices Security and Configuration Guidance</a></span></td></tr><tr><td><span id="bibCSA">[CSA]</span></td><td><span class="description">
-          <a href="http://csrc.nist.gov/groups/SMA/ispab/documents/csa_87.txt">Computer Security Act
-            of 1987</a>, H.R<a id="period_71" href="#period_71">. </a>145, June 11, 1987<a id="period_72" href="#period_72">. </a></span></td></tr><tr><td><span id="bibOMB">[OMB]</span></td><td><span class="description">
-          <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">Reporting Incidents Involving Personally Identifiable Information and Incorporating the
-            Cost for Security in Agency Information Technology Investments</a>, OMB M-06-19, July
-          12, 2006<a id="period_73" href="#period_73">. </a></span></td></tr></table></body></html>
+  
+</body></html>
