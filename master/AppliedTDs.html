@@ -629,9 +629,9 @@ function showTarget(id){
 	            img[src="images/collapsed.png"] { display:none;}
 
           }
-    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
+    </style></head><body onLoad="init()"><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
       Version: 1.0<br/>2024-10-31<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
-</table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#TOE_Platform" style="text-indent:20px">1.3.2<span>TOE Platform</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#SecurityObjectivesTOE" style="text-indent:0px">4<span>Security Objectives for the TOE</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:0px">5<span>Security Objectives for the Operational Environment</span></a><a href="#SOR" style="text-indent:10px">5.1<span>Security Objectives Rationale</span></a><a href="#SFRs" style="text-indent:10px">5.2<span>Security Functional Requirements</span></a><a href="#SARs" style="text-indent:0px">6<span>Security Assurance Requirements</span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix A - <span>Inherently Satisfied Requirements</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix B - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:10px">B.1<span>Design Description</span></a><a href="#entropyjustification" style="text-indent:10px">B.2<span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:10px">B.3<span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:10px">B.4<span>Health Testing</span></a><a href="#biblio" style="text-indent:0px">Appendix C - <span>References</span></a><a href="#acronyms" style="text-indent:0px">Appendix D - <span>Acronyms</span></a></div>
+</table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#TOE_Platform" style="text-indent:20px">1.3.2<span>TOE Platform</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.1<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.2<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.3<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.4<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.5<span>qqq qqq</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix A - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:10px">A.1<span>Design Description</span></a><a href="#entropyjustification" style="text-indent:10px">A.2<span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:10px">A.3<span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:10px">A.4<span>Health Testing</span></a></div>
   
  
   
@@ -649,23 +649,10 @@ function showTarget(id){
       2024-10-31
       First draft of version 1.0 for comment
     
-  
-  
-  <h3>TDs Applied</h3>
     
   
-  
-  <h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
-    <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2> 
-      <span style="" class="comment " id="Comment-1-">Not sure if/how we want to communicate functional package guidance but this is our expectation for what claims can be made:
-         <br/>TLS package:<br/> - no restrictions, any claims can be made (FTP_ITC_EXT.1 allows for both TLS and DTLS client and server to be specified) but none are mandatory<br/>
-         <br/>SSH package:<br/> - no restrictions, any claims can be made (FTP_ITC_EXT.1 allows for both SSH client and server to be specified) but none are mandatory<br/>
-         <br/>X.509 package:<br/> - FIA_XCU_EXT.2 may be claimed because the TOE may need to assert its identity to external entities (i.e. if it implements IPsec or if it implements TLS or DTLS as a server)<br/>
-          - FIA_X509_EXT.3 would likely need to be claimed if FIA_XCU_EXT.1 is claimed - it's not technically mandatory but the likely use case is for the TOE to request certs from an external CA. 
-          - FIA_X509_EXT.1 must be claimed (it was mandatory in the old PP but the minimum required function is TLS, which isn't actually mandatory, so this may require further examination - right now it is valid to say the TOE implements TLS/DTLS as a server only and then it never actually has to validate a certificate, not sure if this is intended though). CRL or OCSP is expected as the only supported revocation methods. Specific additional guidance may be needed to limit the FIA_X509_EXT.1.3 selections to those values. SME input is needed as to whether any of the other selections in this component are mandatory or forbidden.<br/>
-          - FIA_X509_EXT.2 must be claimed (it was mandatory in the old PP<br/>
-      Also, right now we don't make an explicit statement in FAU_GEN.1 that the corresponding audit events from the claimed functional package SFRs must also be added to the audit table. Do we need that or is it sufficiently implied? 
-     </span>      
+  <h3>TDs Applied</h3><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
+    <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2>          
         <p>
           The scope of this Protection Profile (PP) is to describe the security functionality of a Software Defined Networking (SDN) Controller use in an enterprise, and define
           functional and assurance requirements for such products. An SDN is one of many components of an SDN networking architecture. It is intended to provide a minimal, 
@@ -884,18 +871,13 @@ The following sections list Common Criteria and technology terms used in this do
 			and Part 3 (extended)
 			
 				of Common Criteria CC:2022, Revision 1.
-			</dd><dt>PP Claim</dt><p></p><dd><ul></ul></dd><p></p><dd>The following PPs and PP-Modules are allowed to be specified in a 
-					PP-Configuration with this PP-Module.
-					<ul></ul></dd><dt>Package Claim</dt><p></p><dd><ul><li>This PP-Module does not conform to any 
-						functional packages.</li><li>This PP-Module does not conform to any 
-						assurance packages.</li></ul></dd><p></p><dd>
-		The functional packages to which the PP conforms may include SFRs that are not mandatory 
-		to claim for the sake of conformance. An ST that claims one or more of these functional 
-		packages may include any non-mandatory SFRs that are appropriate to claim based on the 
-		capabilities of the TSF and on any triggers for their inclusion based inherently on the SFR 
-		selections made. 
-	</dd></dl>      
-    
+			</dd><dt>PP Claim</dt><p></p><dd>
+					This PP-Module does not claim conformance to 
+					any Protection Profile.
+				</dd><p></p><dd>There are no PPs or PP-Modules that are allowed in a PP-Configuration 
+					with this PP-Module.</dd><dt>Package Claim</dt><p></p><dd>This PP-Module is not conformant to any 
+						Functional or Assurance Packages.</dd></dl>
+          
   
   <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>The security problem is described in terms of the threats that the OS is expected to address, assumptions about the operational
             environment, and any organizational security policies that the OS is expected to enforce.
@@ -929,502 +911,152 @@ provide all of its security functionality.
   
   
   
-  
-    <h1 class="indexable" data-level="1" id="SecurityObjectivesTOE">4 Security Objectives for the TOE</h1>
-      <dl><dt class="SO defined" id=""></dt><dd><span class="description"> Conformant s ensure that information exists that allows
+  <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
+    
+  <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_TOE">4.1 Security Objectives for the TOE</h2>
+      <dl><dt class="SO defined" id="O.ACCOUNTABILITY">O.ACCOUNTABILITY</dt><dd><span class="description">Conformant OSs ensure that information exists that allows
             administrators to discover unintentional issues with the configuration and operation of
             the operating system and discover its cause.  Gathering event information and immediately 
             transmitting it to another system can also enable incident response in the event
             of system compromise.</span></dd></dl>
+  
     
-    <h1 class="indexable" data-level="1" id="SecurityObjectivesTOEorEnvironment">5 Security Objectives for the Operational Environment</h1>
-The OE of the TOE implements technical and procedural measures to assist the TOE in correctly providing its security functionality (which is defined by the security objectives for the TOE).
-The security objectives for the OE consist of a set of statements describing the goals that the OE should achieve.
-This section defines the security objectives that are to be addressed by the IT domain or by non-technical or procedural means.
-The assumptions identified in Section 3 are incorporated as security objectives for the environment.
-      The following security objectives for the operational
-      environment assist the  in correctly providing its security functionality.
-      These track with the assumptions about the environment. <dl><dt class="SOE defined" id=""></dt><dd><span class="description">The  relies on being installed on trusted
-            hardware.</span></dd><dt class="SOE defined" id=""></dt><dd><span class="description"> The user of the  is not willfully negligent or hostile,
+    <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_Operational_Environment">4.2 Security Objectives for the Operational Environment</h2>
+      The following security objectives for the operational environment assist the OS in correctly providing its security functionality.
+      These track with the assumptions about the environment.
+      <dl><dt class="SOE defined" id="OE.PLATFORM">OE.PLATFORM</dt><dd><span class="description">The OS relies on being installed on trusted
+            hardware.</span></dd><dt class="SOE defined" id="OE.PROPER_USER">OE.PROPER_USER</dt><dd><span class="description"> The user of the OS is not willfully negligent or hostile,
             and uses the software within compliance of the applied enterprise security policy.
             Standard user accounts are provisioned in accordance with the least privilege model.
             Users requiring higher levels of access should have a separate account dedicated for
-            that use. </span></dd><dt class="SOE defined" id=""></dt><dd><span class="description"> The administrator of the  is not careless, willfully
+            that use. </span></dd><dt class="SOE defined" id="OE.PROPER_ADMIN">OE.PROPER_ADMIN</dt><dd><span class="description"> The administrator of the OS is not careless, willfully
             negligent or hostile, and administers the OS within compliance of the applied enterprise
             security policy. </span></dd></dl>
-    <h2 id="SOR" class="indexable,h2" data-level="2">5.1 Security Objectives Rationale</h2>   
+    
+    <h2 id="" class="indexable,h2" data-level="2">4.3 Security Objectives Rationale</h2>   
 		This section describes how the assumptions and organizational 
 		security policies map to operational environment security objectives.
 	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.NO_TOE_BYPASS">A.NO_​TOE_​BYPASS</a></td><td>OE.NO_​TOE_​BYPASS</td><td> The operational environment objective OE.NO_TOE_BYPASS is realized through <a href="#A.NO_TOE_BYPASS">A.NO_TOE_BYPASS</a>.</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.CONNECTIVITY">A.CONNECTIVITY</a></td><td>OE.CONNECTIVITY</td><td>The operational environment objective OE.CONNECTIVITY is realized through <a href="#A.CONNECTIVITY">A.CONNECTIVITY</a>.</td></tr></table>
   
-  This chapter describes the security requirements
-    which have to be fulfilled by the . Those requirements comprise functional
-    components from Part 2 and assurance components from Part 3 of . The
-    following notations are used: <ul>
-      <li>
-        <b>Refinement</b> operation (denoted by <b>bold text</b>): is used to add details to a
-        requirement, and thus further restricts a requirement.</li>
-      <li>
-        <b>Selection</b> (denoted by <i>italicized text</i>): is used to select one or more options
-        provided by the [CC] in stating a requirement.</li>
-      <li>
-        <b>Assignment</b> operation (denoted by <span class="assignable-content">italicized text</span>): is used to assign a
-        specific value to an unspecified parameter, such as the length of a password. Showing the
-        value in square brackets indicates assignment.</li>
-      <li>
-        <b>Iteration</b> operation: are identified with a number inside parentheses (e.g.
-        "(1)")</li>
+    
+  <h1 class="indexable" data-level="1" id="Security_Requirements">5 Security Requirements</h1>
+            
+    The SFRs included in this section are derived from Part 2 of the
+    Common Criteria for Information Technology Security Evaluation, Version 3.1, Revision 5, with
+    additional extended functional components.<br/><br/>
+    The CC defines operations on SFRs: assignments, selections, assignments
+    within selections and refinements. This document uses the following font conventions to identify the
+    operations defined by the CC:<br/><br/>
+    <ul>
+      <li>Assignments are indicated with <i>italicized</i> text.</li>
+      <li>Refinements made by the PP-Module author are indicated with <b>bold text</b> for added or substituted
+        text and <s>strikethrough</s> text for removed text. Refinements are only applied to significant technical
+        changes to existing SFRs; minor presentation changes with no technical impact (such as British vs
+        American spelling differences) are not marked as refinements. Refinements are also indicated when
+        an operation is added or substituted for an existing operation (e.g. the PP-Module completes an
+        assignment in such a way that it introduces a selection into the assignment).<br/><br/>
+        Note that for SFRs that are defined either in CC Part 2 or in this PP-Module’s Extended Components
+        Definition, the refinement operation is used to indicate deviations from the defined component. For
+        Base-PP SFRs that are modified by this PP-Module, the refinement operation is used to indicate
+        deviations from the Base-PP’s definition of the SFR (i.e. if the Base-PP refined an SFR and that
+        change is not affected by this PP-Module, it is not shown here as a refinement).</li>
+      <li>Selections are indicated with <i>italicized</i> text.</li>
+      <li>Iteration is indicated by appending the SFR name with a slash and unique identifier suggesting the
+        purpose of the iteration, e.g. ‘/VPN’ for an SFR relating to VPN functionality, or by a sequential
+        number in parentheses, e.g. (1). </li>  
+      <li>Extended SFRs are identified by having a label “EXT” after the SFR name.</li>
     </ul>
-
-    <h2 id="SFRs" class="indexable" data-level="2">5.2 Security Functional Requirements</h2>The Security Functional Requirements
-      included in this section are derived from Part 2 of the Common Criteria for Information
-      Technology Security Evaluation, Version 3.1, Revision 4, with additional extended functional
-      components. 
-
+    Note that selections and assignments to be completed by the ST author are preceded with “selection:”
+    and “assignment:”. If text is italicized and does not include either of these, it means that the selection or
+    assignment has already been completed in this PP-Module and the ST author must use the text as
+    written. 
+    
+      https://old.niap-ccevs.org/MMO/PP/CPP_ND_V3.0E.pdf
       
       
-        <div class="comp" id=""><h4> QQQQQ</h4>
-          <div class="element"><div class="reqid" id=".1"><a href="#.1" class="abbr">.1</a></div><div class="reqdesc"> 
+      
+      
+        When this PP-Module is used to extend the NDcPP, the TOE type for the overall TOE is still a network device. The TOE boundary is simply extended to 
+        include SDN controller functionality that is provided by the network device. 
+      
+      
+        The threats defined by this PP-Module (see section 3.1) supplement those defined in the NDcPP as follows:
+      
+      
+        TBD
+      
+    
+    
+    
+   
+        <h3 id="qqq_qqq" class="indexable" data-level="3">5.0.1 qqq qqq</h3>          
+        <div class="comp" id="FQQ_FQQ.1"><h4>FQQ_FQQ.1 qqq</h4>
+      
+          <div class="element"><div class="reqid" id="FQQ_FQQ.1.1"><a href="#FQQ_FQQ.1.1" class="abbr">FQQ_FQQ.1.1</a></div><div class="reqdesc">
+            <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note"></span></div></div></div>
+        </div>
+        
+    
+      
+      
+      <h3 id="qqq_qqq" class="indexable" data-level="3">5.0.2 qqq qqq</h3>          
+        <div class="comp" id="FQQ_FQQ.1"><h4>FQQ_FQQ.1 qqq</h4>
+          
+          <div class="element"><div class="reqid" id="FQQ_FQQ.1.1"><a href="#FQQ_FQQ.1.1" class="abbr">FQQ_FQQ.1.1</a></div><div class="reqdesc">
+            <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note"></span></div></div></div>
+        </div>
+      
+      
+      
+      
+        <h3 id="qqq_qqq" class="indexable" data-level="3">5.0.3 qqq qqq</h3>          
+            <div class="comp" id="FQQ_FQQ.1"><h4>FQQ_FQQ.1 qqq</h4><div class="statustag"></div>
+              
+              <div class="element"><div class="reqid" id="FQQ_FQQ.1.1"><a href="#FQQ_FQQ.1.1" class="abbr">FQQ_FQQ.1.1</a></div><div class="reqdesc">
+                <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note"></span></div></div></div>
+            </div>
+                  
+      
+    
+    
+      <h3 id="qqq_qqq" class="indexable" data-level="3">5.0.4 qqq qqq</h3>          
+        <div class="comp" id="FQQ_FQQ.1"><h4>FQQ_FQQ.1 qqq</h4>
+          
+          <div class="element"><div class="reqid" id="FQQ_FQQ.1.1"><a href="#FQQ_FQQ.1.1" class="abbr">FQQ_FQQ.1.1</a></div><div class="reqdesc">
             <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note"></span></div></div></div>
         </div>
       
     
-    <h1 class="indexable" data-level="1" id="SARs">6 Security Assurance Requirements</h1>
-      The Security Objectives in 
-       were constructed to address threats identified in
-      . The Security Functional Requirements (s)
-      in  are a formal instantiation of the Security Objectives. The PP
-      identifies the Security Assurance Requirements (s) to frame the extent to
-      which the evaluator assesses the documentation applicable for the evaluation and performs
-      independent testing. <br/> This section lists the set of s from CC part 3
-      that are required in evaluations against this PP. Individual Assurance Activities
-       to be performed are specified both in  as well as in this section. <br/> The general model for evaluation of s against STs written to conform to this PP is as follows: <br/> After the
-         has been approved for evaluation, the ITSEF will obtain the
-        , supporting environmental IT, and the administrative/user guides for
-      the OS. The ITSEF is expected to perform actions mandated by the Common Evaluation
-      Methodology (CEM) for the ASE and ALC SARs. The ITSEF also performs the Assurance Activities
-      contained within , which are intended to be an interpretation of the
-      other CEM assurance requirements as they apply to the specific technology instantiated in the
-      OS. The Assurance Activities that are captured in  also provide
-      clarification as to what the developer needs to provide to demonstrate the OS is compliant
-      with the PP. As per ASE activities
-        defined in .
-      The information about the  is contained in the guidance documentation available to the end user as
-        well as the  portion of the . The  developer must concur with the description of the product that is
-        contained in the TSS as it relates to the functional requirements. The Assurance Activities
-        contained in  should provide the  authors with
-        sufficient information to determine the appropriate content for the TSS section.
-          <div class="comp" id=""><h4> Basic Functional Specification (ADV_FSP.1)</h4>The
-          functional specification describes the TSFIs. It is not
-          necessary to have a formal or complete specification of these interfaces. Additionally,
-          because s conforming to this PP will necessarily have interfaces to
-          the Operational Environment that are not directly invokable by 
-          users, there is little point specifying that such interfaces be described in and of
-          themselves since only indirect testing of such interfaces may be possible. For this PP,
-          the activities for this family should focus on understanding the interfaces presented in
-          the  in response to the functional requirements and the interfaces
-          presented in the AGD documentation. No additional “functional specification” documentation
-          is necessary to satisfy the assurance activities specified. The interfaces that need to be
-          evaluated are characterized through the information needed to perform the assurance
-          activities listed, rather than as an independent, abstract list. 
-	  
-            
-            
-	  
-	  
-            
-            
-            
-            
-	  
-	  
-            
-            
-	  
-        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>There are no specific assurance activities associated with these SARs, except
-              ensuring the information is provided. The functional specification documentation is
-              provided to support the evaluation activities described in , and
-              other activities described for AGD, ATE, and AVA SARs. The requirements on the content
-              of the functional specification information is implicitly assessed by virtue of the
-              other assurance activities being performed; if the evaluator is unable to perform an
-              activity because there is insufficient interface information, then an adequate
-              functional specification has not been provided.
-	      </div></div></div>
+    
+    
+      <h3 id="qqq_qqq" class="indexable" data-level="3">5.0.5 qqq qqq</h3>          
+        <div class="comp" id="FQQ_FQQ.1"><h4>FQQ_FQQ.1 qqq</h4>
+          
+          <div class="element"><div class="reqid" id="FQQ_FQQ.1.1"><a href="#FQQ_FQQ.1.1" class="abbr">FQQ_FQQ.1.1</a></div><div class="reqdesc">
+            <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note"></span></div></div></div>
+        </div>
       
-      The guidance documents will be
-        provided with the . Guidance must include a description of how the IT
-        personnel verifies that the Operational Environment can fulfill its role for the security
-        functionality. The documentation should be in an informal style and readable by the IT
-        personnel. Guidance must be provided for every operational environment that the product
-        supports as claimed in the . This guidance includes instructions to
-        successfully install the  in that environment; and Instructions to
-        manage the security of the  as a product and as a component of the
-        larger operational environment. Guidance pertaining to particular security functionality is
-        also provided; requirements on such guidance are contained in the assurance activities
-        specified with each requirement. 
-	<div class="comp" id=""><h4> Operational User Guidance (AGD_OPE.1)</h4>
-	  
-	    
-          
-	  
-            
-            
-            
-            
-            
-            
-            
-	  
-	  
-            
-	  
-        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>Some of the contents of the operational guidance are verified by the
-              assurance activities in  and evaluation of the  according to the . The following additional
-              information is also required. If cryptographic functions are provided by the , the operational guidance shall contain instructions for configuring
-              the cryptographic engine associated with the evaluated configuration of the . It shall provide a warning to the administrator that use of other
-              cryptographic engines was not evaluated nor tested during the CC evaluation of the
-              . The documentation must describe the process for verifying
-              updates to the  by verifying a digital signature – this may be
-              done by the  or the underlying platform. The evaluator will
-              verify that this process includes the following steps: Instructions for obtaining the
-              update itself. This should include instructions for making the update accessible to
-              the  (e.g., placement in a specific directory). Instructions for
-              initiating the update process, as well as discerning whether the process was
-              successful or unsuccessful. This includes generation of the hash/digital signature.
-              The  will likely contain security functionality that does not
-              fall in the scope of evaluation under this PP. The operational guidance shall make it
-              clear to an administrator which security functionality is covered by the evaluation
-              activities. </div></div></div>
-        <div class="comp" id=""><h4> Preparative Procedures (AGD_PRE.1)</h4>
-	  
-            
-	  
-	  
-            
-            
-	  
-	  
-            
-            
-	  
-        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>As indicated in the introduction above, there are significant expectations
-              with respect to the documentation—especially when configuring the operational
-              environment to support  functional requirements. The evaluator
-              shall check to ensure that the guidance provided for the 
-              adequately addresses all platforms claimed for the  in the . </div></div></div>
-      
-       At the assurance level provided
-        for OSs conformant to this PP, life-cycle support is limited to end-user-visible aspects of
-        the life-cycle, rather than an examination of the OS vendor’s development and configuration
-        management process. This is not meant to diminish the critical role that a developer’s
-        practices play in contributing to the overall trustworthiness of a product; rather, it is a
-        reflection on the information to be made available for evaluation at this assurance level.
-          <div class="comp" id=""><h4> Labeling of the TOE (ALC_CMC.1)</h4>This component is
-          targeted at identifying the  such that it can be distinguished from
-          other products or versions from the same vendor and can be easily specified when being
-          procured by an end user. 
-	  
-            
-	  
-	  
-            
-	  
-	  
-            
-	  
-        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>The evaluator will check the  to ensure that it contains
-              an identifier (such as a product name/version number) that specifically identifies the
-              version that meets the requirements of the . Further, the
-              evaluator will check the AGD guidance and  samples received for
-              testing to ensure that the version number is consistent with that in the . If the vendor maintains a web site advertising the , the evaluator will examine the information on the web site to
-              ensure that the information in the  is sufficient to distinguish
-              the product.</div></div></div>
-        <div class="comp" id=""><h4> TOE CM Coverage (ALC_CMS.1)</h4>
-	  Given the scope of the  and its associated evaluation 
-	  evidence requirements, this component’s assurance activities are covered 
-	  by the assurance activities listed for ALC_CMC.1.
-          
-            
-	  
-	  
-            
-            
-	  
-          
-            
-	  
-        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>The "evaluation evidence required by the SARs" in this PP is limited to the
-              information in the  coupled with the guidance provided to
-              administrators and users under the AGD requirements. By ensuring that the  is specifically identified and that this identification is
-              consistent in the  and in the AGD guidance (as done in the
-              assurance activity for ALC_CMC.1), the evaluator implicitly confirms the information
-              required by this component. Life-cycle support is targeted aspects of the developer’s
-              life-cycle and instructions to providers of applications for the developer’s devices,
-              rather than an in-depth examination of the  manufacturer’s
-              development and configuration management process. This is not meant to diminish the
-              critical role that a developer’s practices play in contributing to the overall
-              trustworthiness of a product; rather, it’s a reflection on the information to be made
-              available for evaluation. <br/> The evaluator will ensure that the developer has
-              identified (in guidance documentation for application developers concerning the
-              targeted platform) one or more development environments appropriate for use in
-              developing applications for the developer’s platform. For each of these development
-              environments, the developer shall provide information on how to configure the
-              environment to ensure that buffer overflow protection mechanisms in the environment(s)
-              are invoked (e.g., compiler and linker flags). The evaluator will ensure that this documentation
-              also includes an indication of whether such protections are on by default, or have to
-              be specifically enabled. The evaluator will ensure that the  is
-              uniquely identified (with respect to other products from the 
-              vendor), and that documentation provided by the developer in association with the
-              requirements in the  is associated with the 
-              using this unique identification.</div></div></div>
-        <div class="comp" id=""><h4> Timely Security Updates</h4> This component requires the
-          OS developer, in conjunction with any other necessary parties, to provide information as
-          to how the end-user devices are updated to address security issues in a timely manner. The
-          documentation describes the process of providing updates to the public from the time a
-          security flaw is reported/discovered, to the time an update is released. This description
-          includes the parties involved (e.g., the developer, carriers(s)) and the steps that are
-          performed (e.g., developer testing, carrier testing), including worst case time periods,
-          before an update is made available to the public. 
-	  
-            
-            
-	  
-	  
-            
-            
-	  
-	  
-            
-	  
-        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div> The evaluator will verify that the TSS contains a description of the timely
-              security update process used by the developer to create and deploy security updates.
-              The evaluator will verify that this description addresses the entire application. The
-              evaluator will also verify that, in addition to the OS developer’s process, any
-              third-party processes are also addressed in the description. The evaluator will also
-              verify that each mechanism for deployment of security updates is described. <br/> The
-              evaluator will verify that, for each deployment mechanism described for the update
-              process, the TSS lists a time between public disclosure of a vulnerability and public
-              availability of the security update to the OS patching this vulnerability, to include
-              any third-party or carrier delays in deployment. The evaluator will verify that this
-              time is expressed in a number or range of days. <br/> The evaluator will verify that
-              this description includes the publicly available mechanisms (including either an email
-              address or website) for reporting security issues related to the OS. The evaluator
-              shall verify that the description of this mechanism includes a method for protecting
-              the report either using a public key for encrypting email or a trusted channel for a
-              website. </div></div></div>
-      
-      Testing is specified for functional aspects of
-        the system as well as aspects that take advantage of design or implementation weaknesses.
-        The former is done through the ATE_IND family, while the latter is through the AVA_VAN
-        family. At the assurance level specified in this PP, testing is based on advertised
-        functionality and interfaces with dependency on the availability of design information. One
-        of the primary outputs of the evaluation process is the test report as specified in the
-        following requirements. <div class="comp" id=""><h4> Independent Testing – Conformance (ATE_IND.1)</h4> Testing is performed to confirm the
-          functionality described in the  as well as the administrative
-          (including configuration and operational) documentation provided. The focus of the testing
-          is to confirm that the requirements specified in  being met,
-          although some additional testing is specified for SARs in . The
-          Assurance Activities identify the additional testing activities associated with these
-          components. The evaluator produces a test report documenting the plan for and results of
-          testing, as well as coverage arguments focused on the platform/
-          combinations that are claiming conformance to this PP. Given the scope of the  and its associated evaluation evidence requirements, this component’s
-          assurance activities are covered by the assurance activities listed for ALC_CMC.1.
-	  
-            
-	  
-          
-            
-	  
-	  
-            
-            
-	  
-        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>The evaluator will prepare a test plan and report documenting the testing
-              aspects of the system, including any application crashes during testing. The evaluator
-              shall determine the root cause of any application crashes and include that information
-              in the report. The test plan covers all of the testing actions contained in the  and the body of this PP’s Assurance Activities. <br/> While it is
-              not necessary to have one test case per test listed in an Assurance Activity, the
-              evaluator must document in the test plan that each applicable testing requirement in
-              the  is covered. The test plan identifies the platforms to be
-              tested, and for those platforms not included in the test plan but included in the
-                , the test plan provides a justification for not testing the
-              platforms. This justification must address the differences between the tested
-              platforms and the untested platforms, and make an argument that the differences do not
-              affect the testing to be performed. It is not sufficient to merely assert that the
-              differences have no affect; rationale must be provided. If all platforms claimed in
-              the  are tested, then no rationale is necessary. The test plan
-              describes the composition of each platform to be tested, and any setup that is
-              necessary beyond what is contained in the AGD documentation. It should be noted that
-              the evaluator is expected to follow the AGD documentation for installation and setup
-              of each platform either as part of a test or as a standard pre-test condition. This
-              may include special test drivers or tools. For each driver or tool, an argument (not
-              just an assertion) should be provided that the driver or tool will not adversely
-              affect the performance of the functionality by the  and its
-              platform. <br/> This also includes the configuration of the cryptographic engine to be
-              used. The cryptographic algorithms implemented by this engine are those specified by
-              this PP and used by the cryptographic protocols being evaluated (IPsec, TLS). The test
-              plan identifies high-level test objectives as well as the test procedures to be
-              followed to achieve those objectives. These procedures include expected results. <br/>
-              The test report (which could just be an annotated version of the test plan) details
-              the activities that took place when the test procedures were executed, and includes
-              the actual results of the tests. This shall be a cumulative account, so if there was a
-              test run that resulted in a failure; a fix installed; and then a successful re-run of
-              the test, the report would show a “fail” and “pass” result (and the supporting
-              details), and not just the “pass” result.</div></div></div>
-      
-      For the first generation of
-        this protection profile, the evaluation lab is expected to survey open sources to discover
-        what vulnerabilities have been discovered in these types of products. In most cases, these
-        vulnerabilities will require sophistication beyond that of a basic attacker. Until
-        penetration tools are created and uniformly distributed to the evaluation labs, the
-        evaluator will not be expected to test for these vulnerabilities in the . The labs will be expected to comment on the likelihood of these vulnerabilities given
-        the documentation provided by the vendor. This information will be used in the development
-        of penetration testing tools and for the development of future protection profiles.
-        <div class="comp" id=""><h4> Vulnerability Survey (AVA_VAN.1)</h4>
-	  
-            
-	  
-	  
-          
-	  
-	  
-          
-          
-          
-	  
-        <h4>Developer action elements: </h4><h4>Content and presentation elements: </h4><h4>Evaluator action elements: </h4><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"></div>The evaluator will generate a report to document their
-              findings with respect to this requirement. This report could physically be part of the
-              overall test report mentioned in ATE_IND, or a separate document. The evaluator
-              performs a search of public information to find vulnerabilities that have been found
-              in similar applications with a particular focus on network protocols the application
-              uses and document formats it parses. 
-              The evaluator documents the sources consulted and
-              the vulnerabilities found in the report. 
-              <br/>
-              For each vulnerability found, the evaluator
-              either provides a rationale with respect to its non-applicability, or the evaluator
-              formulates a test (using the guidelines provided in ATE_IND) to confirm the
-              vulnerability, if suitable. Suitability is determined by assessing the attack vector
-              needed to take advantage of the vulnerability. If exploiting the vulnerability
-              requires expert skills and an electron microscope, for instance, then a test would not
-              be suitable and an appropriate justification would be formulated.</div></div></div>
-            
     
   
-
-  
-  
-
-  
-  
-
-  
-  
-
-  <h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix A -  Inherently Satisfied Requirements</h1> This
-	appendix lists requirements that should be considered satisfied by products
-	successfully evaluated against this Protection Profile.  
-	However, these requirements are not featured explicitly as SFRs and should not be
-	included in the .  
-	They are not included as standalone SFRs because it would
-	increase the time, cost, and complexity of evaluation.  This approach is permitted
-	by  Part 1, <b>8.2 Dependencies between components</b>.
-    <br/>
-	This information benefits systems engineering activities which call for inclusion of 
-	particular security controls.  Evaluation against the Protection Profile
-	provides evidence that these controls are present and have been evaluated.
     
-	
-	Requirement
-	Rationale for Satisfaction
-	
-	
-	FIA_UAU.1 - Timing of authentication
-	
-	   implicitly requires that the OS perform all necessary actions, 
-	  including those on behalf of the user who has not been authenticated, 
-	  in order to authenticate;
-	  therefore it is duplicative to include these actions as a 
-	  separate assignment and test.
-	
-	
-	
-	FIA_UID.1 - Timing of identification
-	
-	   implicitly requires that the OS perform all necessary actions, 
-	  including those on behalf of the user who has not been identified, 
-	  in order to authenticate;
-	  therefore it is duplicative to include these actions as a 
-	  separate assignment and test.
-	
-	
-	
-	FMT_SMR.1 - Security roles
-	
-	   specifies role-based management functions that implicitly defines
-	  user and privileged accounts; 
-	  therefore, it is duplicative to include separate role requirements.
-	
-	
-	
-	FPT_STM.1 - Reliable time stamps
-	
-	   explicitly requires that the OS associate timestamps with audit records;
-	  therefore it is duplicative to include a separate timestamp requirement.
-	
-	
-	
-	FTA_SSL.1 - TSF-initiated session locking
-	
-	   defines requirements for managing session locking;
-	  therefore, it is duplicative to include a separate session locking requirement.
-	
-	
-	
-	FTA_SSL.2 - User-initiated locking
-	
-	   defines requirements for user-initiated session locking;
-	  therefore, it is duplicative to include a separate session locking requirement.
-	
-	
-	
-	FAU_STG.1 - Protected audit trail storage
-	
-	   defines a requirement to protect audit logs;
-	  therefore, it is duplicative to include a separate protection of audit trail requirements.
-	
-	
-	
-	FAU_GEN.2 - User identity association
-	
-	   explicitly requires that the OS record
-	  any user account associated with each event; therefore, it is duplicative
-	  to include a separate requirement to associate a user account with each
-	  event.
-	
-	
-	
-	  FAU_SAR.1 - Audit review
-	  
-	     requires that audit logs (and other objects)
-	    are protected from reading by unprivileged users; therefore, it is duplicative
-	    to include a separate requirement to protect only the audit information.
-	  
-	
-    
-
   
-
-  
-  <h1 id="entropyappendix" class="indexable" data-level="A">Appendix B -  Entropy Documentation and Assessment</h1> This appendix
+  <h1 id="entropyappendix" class="indexable" data-level="A">Appendix A -  Entropy Documentation and Assessment</h1> This appendix
     describes the required supplementary information for the entropy source used by the OS. <br/>
     The documentation of the entropy source should be detailed enough that, after reading, the
     evaluator will thoroughly understand the entropy source and why it can be relied upon to provide
     sufficient entropy. This documentation should include multiple detailed sections: design
     description, entropy justification, operating conditions, and health testing. This documentation
-    is not required to be part of the TSS. <h2 class="indexable" data-level="2" id="entropydesign">B.1 Design Description</h2>
+    is not required to be part of the TSS. <h2 class="indexable" data-level="2" id="entropydesign">A.1 Design Description</h2>
       Documentation shall include the design of the entropy source as a whole, including the
       interaction of all entropy source components. Any information that can be shared regarding the
       design should also be included for any third-party entropy sources that are included in the
@@ -1440,7 +1072,7 @@ The assumptions identified in Section 3 are incorporated as security objectives 
       outside the boundary cannot affect the entropy rate. <br/> If implemented, the design
       description shall include a description of how third-party applications can add entropy to the
       RBG. A description of any RBG state saving between power-off and power-on shall be included. 
-    <h2 class="indexable" data-level="2" id="entropyjustification">B.2 Entropy Justification</h2> There should be a technical
+    <h2 class="indexable" data-level="2" id="entropyjustification">A.2 Entropy Justification</h2> There should be a technical
       argument for where the unpredictability in the source comes from and why there is confidence
       in the entropy source delivering sufficient entropy for the uses made of the RBG output (by
       this particular OS). This argument will include a description of the expected min-entropy
@@ -1467,7 +1099,7 @@ The assumptions identified in Section 3 are incorporated as security objectives 
       calculated rate is not explicitly related to the seed, the documentation will not be
       considered complete. <br/> The entropy justification shall not include any data added from any
       third-party application or from any state saving between restarts. 
-    <h2 class="indexable" data-level="2" id="entropyoperatingconditions">B.3 Operating Conditions</h2> The entropy rate may be
+    <h2 class="indexable" data-level="2" id="entropyoperatingconditions">A.3 Operating Conditions</h2> The entropy rate may be
       affected by conditions outside the control of the entropy source itself. For example, voltage,
       frequency, temperature, and elapsed time after power-on are just a few of the factors that may
       affect the operation of the entropy source. As such, documentation will also include the range
@@ -1476,7 +1108,7 @@ The assumptions identified in Section 3 are incorporated as security objectives 
       entropy source continues to operate under those conditions. Similarly, documentation shall
       describe the conditions under which the entropy source is known to malfunction or become
       inconsistent. Methods used to detect failure or degradation of the source shall be included. 
-    <h2 class="indexable" data-level="2" id="entropyhealthtesting">B.4 Health Testing</h2> More specifically, all entropy source
+    <h2 class="indexable" data-level="2" id="entropyhealthtesting">A.4 Health Testing</h2> More specifically, all entropy source
       health tests and their rationale will be documented. This includes a description of the health
       tests, the rate and conditions under which each health test is performed (e.g., at start,
       continuously, or on-demand), the expected results for each health test, and rationale
@@ -1484,8 +1116,7 @@ The assumptions identified in Section 3 are incorporated as security objectives 
       the entropy source. 
   
 
-  <h1 id="biblio" class="indexable" data-level="A">Appendix C -  References</h1>
-    
+  
       <tr><td><span id="bibCC"></span>[CC]</td><td>Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R4.pdf">Part
                 1: Introduction and General Model</a>, CCMB-2012-09-001, Version 3.1 Revision 4,
@@ -1515,260 +1146,6 @@ The assumptions identified in Section 3 are incorporated as security objectives 
             Cost for Security in Agency Information Technology Investments</a>, OMB M-06-19, July
           12, 2006. </td></tr>
 
-    
-  
-
-  <h1 id="acronyms" class="indexable" data-level="A">Appendix D -  Acronyms</h1>
-    
-      
-        AES
-        <span class="description">Advanced Encryption Standard</span>
-      
-      
-        ANSI
-        <span class="description">American National Standards Institute</span>
-      
-      
-        API
-        <span class="description">Application Programming Interface</span>
-      
-      
-        ASLR
-        <span class="description">Address Space Layout Randomization</span>
-      
-      
-      
-      
-      
-      
-      
-        CESG
-        <span class="description">Communications-Electronics Security Group</span>
-      
-      
-        CMC
-        <span class="description">Certificate Management over CMS</span>
-      
-      
-        CMS
-        <span class="description">Cryptographic Message Syntax</span>
-      
-      
-        CN
-        <span class="description">Common Names</span>
-      
-      
-        CRL
-        <span class="description">Certificate Revocation List</span>
-      
-      
-        CSA
-        <span class="description">Computer Security Act</span>
-      
-      
-        DEP
-        <span class="description">Data Execution Prevention</span>
-      
-      
-        DES
-        <span class="description">Data Encryption Standard</span>
-      
-      
-        DHE
-        <span class="description">Diffie-Hellman Ephemeral</span>
-      
-      
-        DNS
-        <span class="description">Domain Name System</span>
-      
-      
-        DRBG
-        <span class="description">Deterministic Random Bit Generator</span>
-      
-      
-        DSS
-        <span class="description">Digital Signature Standard</span>
-      
-      
-        DT
-        <span class="description">Date/Time Vector</span>
-      
-      
-        DTLS
-        <span class="description">Datagram Transport Layer Security</span>
-      
-      
-        EAP
-        <span class="description">Extensible Authentication Protocol</span>
-      
-      
-        ECDHE
-        <span class="description">Elliptic Curve Diffie-Hellman Ephemeral</span>
-      
-      
-        ECDSA
-        <span class="description">Elliptic Curve Digital Signature Algorithm</span>
-      
-      
-        EST
-        <span class="description">Enrollment over Secure Transport</span>
-      
-      
-        FIPS
-        <span class="description">Federal Information Processing Standards</span>
-      
-      
-        DSS
-        <span class="description">Digital Signature Standard</span>
-      
-      
-        HMAC
-        <span class="description">Hash-based Message Authentication Code</span>
-      
-      
-        HTTP
-        <span class="description">Hypertext Transfer Protocol</span>
-      
-      
-        HTTPS
-        <span class="description">Hypertext Transfer Protocol Secure</span>
-      
-      
-        DSS
-        <span class="description">Digital Signature Standard</span>
-      
-      
-      
-      
-      
-      
-        IETF
-        <span class="description">Internet Engineering Task Force</span>
-      
-      
-        IP
-        <span class="description">Internet Protocol</span>
-      
-      
-        ISO
-        <span class="description">International Organization for Standardization</span>
-      
-      
-        IT
-        <span class="description">Information Technology</span>
-      
-      
-        ITSEF
-        <span class="description">Information Technology Security Evaluation Facility</span>
-      
-      
-        NFC
-        <span class="description">Near Field Communication</span>
-      
-      
-        NIAP
-        <span class="description">National Information Assurance Partnership</span>
-      
-      
-        NIST
-        <span class="description">National Institute of Standards and Technology</span>
-      
-      
-        OCSP
-        <span class="description">Online Certificate Status Protocol</span>
-      
-      
-        OID
-        <span class="description">Object Identifier</span>
-      
-      
-        OMB
-        <span class="description">Office of Management and Budget</span>
-      
-      
-        OS
-        <span class="description">Operating System</span>
-      
-      
-        PII
-        <span class="description">Personally Identifiable Information</span>
-      
-      
-        PKI
-        <span class="description">Public Key Infrastructure</span>
-      
-      
-        PP
-        <span class="description">Protection Profile</span>
-      
-      
-        RBG
-        <span class="description">Random Bit Generator</span>
-      
-      
-        RFC
-        <span class="description">Request for Comment</span>
-      
-      
-        RNG
-        <span class="description">Random Number Generator</span>
-      
-      
-        RNGVS
-        <span class="description">Random Number Generator Validation System</span>
-      
-      
-        SAN
-        <span class="description">Subject Alternative Name</span>
-      
-      
-        SAR
-        <span class="description">Security Assurance Requirement</span>
-      
-      
-        SFR
-        <span class="description">Security Functional Requirement</span>
-      
-      
-        SHA
-        <span class="description">Secure Hash Algorithm</span>
-      
-      
-        S/MIME
-        <span class="description">Secure/Multi-purpose Internet Mail Extensions</span>
-      
-      
-        SIP
-        <span class="description">Session Initiation Protocol</span>
-      
-      
-        SWID
-        <span class="description">Software Identification</span>
-      
-      
-        TLS
-        <span class="description">Transport Layer Security</span>
-      
-      
-        URI
-        <span class="description">Uniform Resource Identifier</span>
-      
-      
-        URL
-        <span class="description">Uniform Resource Locator</span>
-      
-      
-        USB
-        <span class="description">Universal Serial Bus</span>
-      
-      
-        XCCDF
-        <span class="description">eXtensible Configuration Checklist Description Format</span>
-      
-      
-        XOR
-        <span class="description">Exclusive Or</span>
-      
     
   
 </body></html>

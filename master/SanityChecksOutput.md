@@ -1,1 +1,3 @@
-* Warning: This document still has at least one comment.
+* Warning: fqq_fqq.1 in impl-dep-sfrs section is missing a _depends_ element. /Module[1]""/sec:Security_Requirements[1]""/impl-dep-sfrs[1]""/sec:qqq_qqq[1]""/f-component[1]""
+* Warning: fqq_fqq.1 in obj-sfrs section is missing a _depends_/_objective_ sub tree (We're transitioning to using depends and not sections). /Module[1]""/sec:Security_Requirements[1]""/obj-sfrs[1]""/sec:qqq_qqq[1]""/f-component[1]""
+* Warning: fqq_fqq.1 in opt-sfrs section is missing a _depends_/_optional_ sub tree (We're transitioning to using depends and not sections). /Module[1]""/sec:Security_Requirements[1]""/opt-sfrs[1]""/sec:qqq_qqq[1]""/f-component[1]""
