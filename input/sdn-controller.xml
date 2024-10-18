@@ -551,7 +551,7 @@
     
     <obj-sfrs>
       <sec:qqq_qqq>          
-        <f-component cc-id="fqq_fqq.1" name="qqq" iteration="objective">
+        <f-component cc-id="fqq_fqq.1" name="qqq" status="objective">
           <consistency-rationale>
             TBD
           </consistency-rationale>
@@ -574,7 +574,7 @@
     
     <impl-dep-sfrs>
       <sec:qqq_qqq>          
-        <f-component cc-id="fqq_fqq.1" name="qqq" iteration="implementation_dependent">
+        <f-component cc-id="fqq_fqq.1" name="qqq">
           <consistency-rationale>
             TBD
           </consistency-rationale>
@@ -666,11 +666,10 @@
 
   <appendix id="biblio" title="Bibliography"></appendix>
   <bibliography>
-    <cc-entry/>
-      
+          
     <entry id="bibCC">
         <tag>CC</tag>
-        <description>Common Criteria for Information Technology Security Evaluation - <h:ul>
+        <description> Common Criteria for Information Technology Security Evaluation - <h:ul>
           <h:li><h:a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part
                 1: Introduction and General Model</h:a>, CCMB-2022-11-001, CC:2022, Revision 1, November 2022</h:li>
           <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part
@@ -692,10 +691,10 @@
       <entry id="bibOMB">
         <tag>OMB</tag>
         <description>
-          <h:a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf"
-            >Reporting Incidents Involving Personally Identifiable Information and Incorporating the
+          <h:a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">
+            Reporting Incidents Involving Personally Identifiable Information and Incorporating the
             Cost for Security in Agency Information Technology Investments</h:a>, OMB M-06-19, July
-          12, 2006. </description>
+          12, 2006.</description>
       </entry>
     </bibliography>
   
