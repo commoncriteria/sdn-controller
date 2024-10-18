@@ -631,7 +631,7 @@ function showTarget(id){
           }
     </style></head><body onLoad="init()"><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
       Version: 1.0<br/>2024-10-31<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
-</table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#TOE_Platform" style="text-indent:20px">1.3.2<span>TOE Platform</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.1<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.2<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.3<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.4<span>qqq qqq</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix A - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:10px">A.1<span>Design Description</span></a><a href="#entropyjustification" style="text-indent:10px">A.2<span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:10px">A.3<span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:10px">A.4<span>Health Testing</span></a><a href="#biblio" style="text-indent:0px">Appendix B - <span>Bibliography</span></a></div>
+</table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#TOE_Platform" style="text-indent:20px">1.3.2<span>TOE Platform</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.1<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.2<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.3<span>qqq qqq</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix A - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:10px">A.1<span>Design Description</span></a><a href="#entropyjustification" style="text-indent:10px">A.2<span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:10px">A.3<span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:10px">A.4<span>Health Testing</span></a><a href="#biblio" style="text-indent:0px">Appendix B - <span>Bibliography</span></a></div>
   
  
   
@@ -1004,22 +1004,14 @@ provide all of its security functionality.
       
     
     
-      <h3 id="qqq_qqq" class="indexable" data-level="3">5.0.3 qqq qqq</h3>          
-        <div class="comp" id="FQQ_FQQ.1/objective"><h4>FQQ_FQQ.1/objective qqq</h4>
-          
-          <div class="element"><div class="reqid" id="FQQ_FQQ.1.1/objective"><a href="#FQQ_FQQ.1.1/objective" class="abbr">FQQ_FQQ.1.1/objective</a></div><div class="reqdesc">
-            <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note"></span></div></div></div>
-        </div>
       
     
     
     
-      <h3 id="qqq_qqq" class="indexable" data-level="3">5.0.4 qqq qqq</h3>          
-        <div class="comp" id="FQQ_FQQ.1/implementation_dependent"><h4>FQQ_FQQ.1/implementation_dependent qqq</h4>
+      <h3 id="qqq_qqq" class="indexable" data-level="3">5.0.3 qqq qqq</h3>          
+        <div class="comp" id="FQQ_FQQ.1"><h4>FQQ_FQQ.1 qqq</h4>
           
-          <div class="element"><div class="reqid" id="FQQ_FQQ.1.1/implementation_dependent"><a href="#FQQ_FQQ.1.1/implementation_dependent" class="abbr">FQQ_FQQ.1.1/implementation_dependent</a></div><div class="reqdesc">
+          <div class="element"><div class="reqid" id="FQQ_FQQ.1.1"><a href="#FQQ_FQQ.1.1" class="abbr">FQQ_FQQ.1.1</a></div><div class="reqdesc">
             <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note"></span></div></div></div>
@@ -1098,15 +1090,8 @@ provide all of its security functionality.
 
   <h1 id="biblio" class="indexable" data-level="A">Appendix B -  Bibliography</h1>
   
-    <tr><td><span id="bibCC"> [CC] </span></td><td>Common Criteria for Information Technology Security Evaluation - <ul><li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part
-                1: Introduction and General Model</a>, CCMB-2017-04-001, Version 3.1 Revision 5,
-              April 2017.</li><li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R5.pdf">Part
-                2: Security Functional Components</a>, CCMB-2017-04-002, Version 3.1 Revision 5,
-              April 2017.</li><li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R5.pdf">Part
-                3: Security Assurance Components</a>, CCMB-2017-04-003, Version 3.1 Revision 5,
-              April 2017.</li></ul></td></tr>
-      
-    <tr><td><span id="bibCC"></span>[CC]</td><td>Common Criteria for Information Technology Security Evaluation - <ul>
+          
+    <tr><td><span id="bibCC"></span>[CC]</td><td> Common Criteria for Information Technology Security Evaluation - <ul>
           <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part
                 1: Introduction and General Model</a>, CCMB-2022-11-001, CC:2022, Revision 1, November 2022</li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part
@@ -1124,9 +1109,10 @@ provide all of its security functionality.
             Common Methodology for Information Technology Security Evaluation</a>, CCMB-2022-11-006, CC:2022, Revision 1, November 2022.</td></tr>
  
       <tr><td><span id="bibOMB"></span>[OMB]</td><td>
-          <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">Reporting Incidents Involving Personally Identifiable Information and Incorporating the
+          <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">
+            Reporting Incidents Involving Personally Identifiable Information and Incorporating the
             Cost for Security in Agency Information Technology Investments</a>, OMB M-06-19, July
-          12, 2006. </td></tr>
+          12, 2006.</td></tr>
 
     
   
