@@ -32,15 +32,15 @@
   <sec:Introduction>
     <sec:Overview>          
         <h:p>
-          The scope of this Protection Profile (PP) is to describe the security functionality of a Software Defined Networking (SDN) Controller use in an enterprise, and define
+          The scope of this Protection Profile (PP) is to describe the security functionality of Software Defined Networking (SDN) controller use in an enterprise, and define
           functional and assurance requirements for such products. An SDN is one of many components of an SDN networking architecture. It is intended to provide a minimal, 
           baseline set of requirements which can be built upon by future revisions to provide an overall set of security solutions for an enterprise network. An SDN is also a 
-          central and vital component of what constitutes an SDN system and is available as a logical or a physical device. An SDN Controller manages and distributes network
-          policies, collects routing and payload information from the Data Plane and interfaces with user applications in the Management Plane. Each of the planes in an SDN 
-          system is composed of multiple logical or physical components. SDN Controllers logically centralize the network intelligence and state in the Control Plane.
+          central and vital component of what constitutes an SDN system and is available as a logical or a physical device. An SDN controller manages and distributes network
+          policies, collects routing and payload information from the data plane and interfaces with user applications in the management plane. Each of the planes in an SDN 
+          system is composed of multiple logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane.
         </h:p>
         <h:p>
-          An SDN Controller is meant to 'do no harm' on a network. Rather than providing any explicit security functionality, compliant SDN Controllers simply ensure the
+          An SDN controller is meant to 'do no harm' on a network. Rather than providing any explicit security functionality, compliant SDN controllers ensure the
           following.
           <h:ul>
             <h:li>
@@ -56,19 +56,19 @@
                All suspect events are reported.
             </h:li>
             <h:li>
-               Logical or physical separation of the Control and Data Planes.
+               Logical or physical separation of the control and data planes.
             </h:li>
             <h:li>
-              Logical or physical separation of the Control and Management Planes.
+              Logical or physical separation of the control and management planes.
             </h:li>
             <h:li>
-              Protect data collected and distributed by the Control Plane to the Data Plane, such as flow tables and configurations.
+              Protect data collected and distributed by the control plane to the data plane, such as flow tables and configurations.
             </h:li>
             <h:li>
-              Protect data collected and distributed by the Control Plane to the Management Plane, such as auditable events and traffic or packet statistics.
+              Protect data collected and distributed by the control plane to the management plane, such as auditable events and traffic or packet statistics.
             </h:li>
             <h:li>
-              Protect data collected that is distributed and shared within the Control Plane, such as when multiple SDN controllers exist in the architecture.
+              Protect data collected that is distributed and shared within the control plane, such as when multiple SDN controllers exist in the architecture.
             </h:li>       
           </h:ul>
         </h:p>
@@ -103,14 +103,14 @@
       <term abbr='CMS' full="Cryptographic Message Syntax"/>
       <term abbr='CN' full="Common Names"/>
       <term full="Credential">
-	       Data that establishes the identity of a user, e.g. a cryptographic key or password.
+	       Data that establishes the identity of a user (e.g., a cryptographic key or password).
       </term>
       <term abbr='CRL' full="Certificate Revocation List"/>
       <term abbr='CRUD' full="Create, Read, Update, Delete"/>
       <term abbr='CSA' full="Computer Security Act"/>
       <term full="Control Plane">
-          A logical entity that receives instructions or requirements from the SDN Application layer through its northbound interface and relays them to the Data Plane through
-          its southbound interface. The Controller extracts information about the network from the Data Plane and communicates back to the SDN Application Layer with an 
+          A logical entity that receives instructions or requirements from the SDN application layer through its northbound interface and relays them to the data plane through
+          its southbound interface. The controller extracts information about the network from the data plane and communicates back to the SDN application layer with an 
           abstract view of the network, including statistics and events about what is happening. 
       </term>
       <term full="Critical Security Parameters" abbr="CSP">
@@ -128,7 +128,7 @@
 	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code.
       </term>
       <term full="Data Plane">
-        (SDN Network Devices> Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.
+        (SDN Network Devices) Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.
       </term>
       <term abbr='DES' full="Data Encryption Standard"/>
       <term full="Developer">
@@ -145,13 +145,7 @@
       <term abbr='ECDSA' full="Elliptic Curve Digital Signature Algorithm"/>
       <term abbr='ESR' full="Equivalent Series Resistance"/>
       <term abbr='EST' full="Enrollment over Secure Transport"/>
-      <term abbr='FIPS' full="Federal Information Processing Standards"/>
-      <term full="General Purpose Operating System">
-	       A class of OSes designed to support a wide-variety of workloads consisting of many concurrent applications or services. Typical characteristics for OSes in this 
-	       class include support for third-party applications, support for multiple users, and security separation between users and their respective resources. General 
-	       Purpose Operating Systems also lack the real-time constraint that defines Real Time Operating Systems which are typically used in routers, switches, and embedded
-	       devices.
-      </term>
+      <term abbr='FIPS' full="Federal Information Processing Standards"/>      
       <term full="Hybrid Authentication">
 	       A hybrid authentication factor is one where a user has to submit a combination of a cryptographic token and a PIN or password and both must pass. If either factor
 	       fails, the entire attempt fails.
@@ -168,10 +162,10 @@
       <term abbr='IT'    full="Information Technology"/>
       <term abbr='ITSEF' full="Information Technology Security Evaluation Facility"/>
       <term full="Management Plane">
-        (SDN Applications Layer) Composed of programs that communicate behaviors and needed resources with the SDN Controller via application programming interfaces (APIs).
-        In addition, the applications can build an abstracted view of the network by collecting information from the Controller for decision-making purposes. These 
+        (SDN Applications Layer) Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs).
+        In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes. These 
         applications could include networking management, analytics, or business applications used to run large data centers. For example, an analytics application might be
-        built to recognize suspicious network activity for security purposes. The Management Plane is sometimes also referred to as the Orchestration Layer.
+        built to recognize suspicious network activity for security purposes. The management plane is sometimes also referred to as the Orchestration Layer.
       </term>
       <term abbr='MFA' full="Multi-Factor Authentication"/>
       <term abbr='MITM' full="Man-in-the-Middle"/>
@@ -183,7 +177,7 @@
       <term abbr='OID' full="Object Identifier"/>
       <term abbr='OMB' full="Office of Management and Budget"/>
       <term abbr="OS" full="Operating System">
-	       Software that manages physical and logical resources and provides services for applications. The terms <h:i>TOE</h:i> and <h:i>OS</h:i> are interchangeable in this
+	       Software that manages physical and logical resources and provides services for applications. The terms TOE and OS are interchangeable in this
 	       document. 
       </term>
       <term abbr='OWASP' full="Open Worldwide Application Securtiy Project"/>
@@ -202,8 +196,8 @@
       <!-- <term abbr='RNGVS' full="Random Number Generator Validation System"/> -->
       <term full="Personally Identifiable Information" abbr="PII">
 	       Any information about an individual maintained by an agency, including, but not limited to, education, financial transactions, medical history, and criminal or
-	       employment history and information which can be used to distinguish or trace an individual's identity, such as their name, social security number, date and place
-	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual.<xref to="bibOMB"/>
+	       employment history, and information which can be used to distinguish or trace an individual's identity, such as their name, social security number, date and place
+	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual.
       </term>
       <term abbr='SAN' full="Subject Alternative Name"/>
       <term abbr='SAR' full="Security Assurance Requirements"/>
@@ -222,7 +216,7 @@
       <term abbr='URL' full="Uniform Resource Locator"/>
       <term abbr='USB' full="Universal Serial Bus"/>
       <term full="User">
-	       A user is subject to configuration policies applied to the operating system by administrators.  On some systems under certain configurations, a normal user can
+	       A user is subject to configuration policies applied to the operating system by administrators.  On some systems, under certain configurations, a normal user can
 	       temporarily elevate privileges to that of an administrator. At that time, such a user should be considered an administrator.
       </term>
       <term abbr="VM" full="Virtual Machine"/>
@@ -231,19 +225,19 @@
       <term abbr='XOR' full="Exclusive Or"/>
     </tech-terms>
     
-    <sec:Compliant_Targets_of_Evaluation> <!-- Need to update for SDN Controller; this is from the GPOS PP. -->
-      Compliant TOEs will implement security functionality in the following general areas:
+    <sec:Compliant_Targets_of_Evaluation> <!-- Need to update for SDN controller; this is from the GPOS PP. -->
+      Compliant TOEs will implement security functionality in the following general areas.
       <h:ul>
-        <h:li>Accountability: ensuring that information exists to discover unintentional issues with the configuration and operation of the TOE so that the root cause can be determined.</h:li>
-        <h:li>Integrity: ensuring the integrity of updates to the TOE and enforcing mechanisms that control the deployment and execution of applications running on it.</h:li>
-        <h:li>Management: providing mechanisms for configuration of the TSF and deployment of applications running on the TOE.</h:li>
-        <h:li>Protected Storage: ensuring that credentials and file system data are not subject to unauthorized disclosure.</h:li>
-        <h:li>Protected Communications: ensuring that sensitive data in transit to and from the TOE is adequately protected from unauthorized modification and disclosure.</h:li>
+        <h:li>Accountability: Ensuring that information exists to discover unintentional issues with the configuration and operation of the TOE so that the root cause can be determined.</h:li>
+        <h:li>Integrity: Ensuring the integrity of updates to the TOE and enforcing mechanisms that control the deployment and execution of applications running on it.</h:li>
+        <h:li>Management: Providing mechanisms for configuration of the TSF and deployment of applications running on the TOE.</h:li>
+        <h:li>Protected Storage: Ensuring that credentials and file system data are not subject to unauthorized disclosure.</h:li>
+        <h:li>Protected Communications: Ensuring that sensitive data in transit to and from the TOE is adequately protected from unauthorized modification and disclosure.</h:li>
       </h:ul>
       <sec:TOE_Boundary>
-        The TOE boundary for an SDN Controller is available as a logical or a physical device. An SDN Controller manages and distributes network policies, collects routing 
-        and payload information from the Data Plane, and interfaces with user applications in the Management Plane. Each plane in an SDN system is composed of multiple 
-        logical or physical components. SDN Controllers logically centralize the network intelligence and state in the Control Plane.
+        The TOE boundary for an SDN controller is available as a logical or a physical device. An SDN controller manages and distributes network policies, collects routing 
+        and payload information from the data plane, and interfaces with user applications in the management plane. Each plane in an SDN system is composed of multiple 
+        logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane.
         <h:ul>
           <h:li>In a physical standalone SDN controller device, the device's hardware, firmware, and software define the evaluation boundary.</h:li>
           <h:li>In a virtual SDN controller, the software of the Virtual Machine (VM) defines the evaluation boundary.</h:li>
@@ -254,7 +248,7 @@
       
       <sec:TOE_Platform>
 	       <!-- Information needs to be added here. -->
-	       The TOE platform of a virtualized SDN Controller is out of scope for this evaluation. 
+	       The TOE platform of a virtualized SDN controller is out of scope for this evaluation. 
       </sec:TOE_Platform>
     
     </sec:Compliant_Targets_of_Evaluation>
@@ -273,12 +267,12 @@
             <!-- Add description here. -->
           </description>
         </usecase>
-        <usecase title="Standalone or Virtual with Management Capabilities" id="standorvirtmngmtcapa">
+        <usecase title="Management Capabilities (stand-alone or virtual)" id="standorvirtmngmtcapa">
           <description>
             <!-- Add description here. -->
           </description>
         </usecase>
-        <usecase title="Standalone or Virtual Cluster" id="standorvirtcluster">
+        <usecase title="Cluster (stand-alone or virtual)" id="standorvirtcluster">
           <description>
             <!-- Add description here. -->
           </description>
@@ -295,7 +289,7 @@
     
     <sec:Conformance_Claims boilerplate="no">
       <!-- The new CClaimsInfo construct -->
-      <!-- Need to update for SDN Controller; this is from the GPOS PP. -->
+      <!-- Need to update for SDN controller; this is from the GPOS PP. -->
       <CClaimsInfo cc-version="cc-2022r1" cc-approach="direct-rationale">
         <cc-st-conf>exact</cc-st-conf>       
         <cc-pt2-conf>extended</cc-pt2-conf>
@@ -345,24 +339,32 @@
 	
     <sec:Assumptions>
       <assumptions>
-        <assumption name="A.NO_TOE_BYPASS">
+        <assumption name="A.PLATFORM">
           <description> 
-            Information cannot flow between the SDN controller and the network devices under the its control without passing through the TOE.
+            The OS relies upon a trustworthy computing platform for its execution. This underlying platform is out of scope of this PP.
           </description>
-          <objective-refer ref="OE.NO_TOE_BYPASS">
-            <rationale> The operational environment objective OE.NO_TOE_BYPASS is realized through A.NO_TOE_BYPASS.</rationale>
+          <objective-refer ref="OE.PLATFORM">
+            <rationale> The operational environment objective OE.PLATFORM is realized through A.PLATFORM.</rationale>
           </objective-refer>
         </assumption>
         
-        <assumption name="A.CONNECTIVITY">
+        <assumption name="A.PROPER_USER">
           <description> 
-            The SDN Controller has an Application Programming Interface (API) in the management interface to control interactions between components
-            and services.
+            The OS user is not willfully negligent or hostile, and uses the software in compliance with the applied enterprise security policy. At the same time, 
+            malicious software could act as the user, so requirements which confine malicious subjects are still in scope.
           </description>
-          <objective-refer ref="OE.CONNECTIVITY">
-            <rationale>The operational environment objective OE.CONNECTIVITY is realized through A.CONNECTIVITY.</rationale>
+          <objective-refer ref="OE.PROPER_USER">
+            <rationale>The operational environment objective OE.PROPER_USER is realized through A.PROPER_USER.</rationale>
           </objective-refer>
-        </assumption>        
+        </assumption>       
+        <assumption name="A.PROPER_ADMIN">
+          <description> 
+            The OS administrator is not careless, willfully negligent or hostile, and administers the OS within compliance of the applied enterprise security policy.
+          </description>
+          <objective-refer ref="OE.ADMIN">
+            <rationale>The operational environment objective OE.PROPER_ADMIN is realized through A.PROPER_ADMIN.</rationale>
+          </objective-refer>
+        </assumption>       
       </assumptions>
     </sec:Assumptions>
 <!--    <section title="Organizational Security Policies" id="OSPs">
@@ -401,11 +403,9 @@
   <sec:Security_Objectives_for_the_TOE>
       <SOs>
         <SO name="O.ACCOUNTABILITY">
-          <description>Conformant OSs ensure that information exists that allows
-            administrators to discover unintentional issues with the configuration and operation of
-            the operating system and discover its cause.  Gathering event information and immediately 
-            transmitting it to another system can also enable incident response in the event
-            of system compromise.</description>
+          <description>Conformant OSs ensure that information exists that allows administrators to discover unintentional issues with the configuration and operation of
+            the operating system and discover its cause.  Gathering event information and immediately transmitting it to another system can also enable incident response
+            in the event of system compromise.</description>
           <consistency-rationale>TBD</consistency-rationale>
           <addressed-by>ref="fau_gen.1"</addressed-by>
           <rationale>TBD</rationale>
@@ -414,24 +414,20 @@
   </sec:Security_Objectives_for_the_TOE>
     
     <sec:Security_Objectives_for_the_Operational_Environment>
-      The following security objectives for the operational environment assist the OS in correctly providing its security functionality.
+      The following security objectives for the operational environment help the OS in correctly providing its security functionality.
       These track with the assumptions about the environment.
       <SOEs>
         <SOE name="OE.PLATFORM">
-          <description>The OS relies on being installed on trusted
-            hardware.</description>
+          <description>The OS relies on being installed on trusted hardware.</description>
         </SOE>
         <SOE name="OE.PROPER_USER">
-          <description> The user of the OS is not willfully negligent or hostile,
-            and uses the software within compliance of the applied enterprise security policy.
-            Standard user accounts are provisioned in accordance with the least privilege model.
-            Users requiring higher levels of access should have a separate account dedicated for
-            that use. </description>
+          <description>The OS user is not willfully negligent or hostile, and uses the software within compliance of the applied enterprise security policy.
+            Standard user accounts are provisioned in accordance with the least privilege model. Users requiring higher levels of access should have a separate 
+            account dedicated for that use.</description>
         </SOE>
         <SOE name="OE.PROPER_ADMIN">
-          <description> The administrator of the OS is not careless, willfully
-            negligent or hostile, and administers the OS within compliance of the applied enterprise
-            security policy. </description>
+          <description>The OS administrator is not careless, willfully negligent or hostile, and administers the OS within compliance of the applied enterprise
+            security policy.</description>
         </SOE>
       </SOEs></sec:Security_Objectives_for_the_Operational_Environment>
     
@@ -440,12 +436,10 @@
     
   <sec:Security_Requirements>
             <!-- Note: Every SFR must have a status = "threshold" or "optional" or "sel-based" or "objective" -->
-    The SFRs included in this section are derived from Part 2 of the
-    Common Criteria for Information Technology Security Evaluation, Version 3.1, Revision 5, with
+    The SFRs included in this section are derived from Part 2 of the Common Criteria for Information Technology Security Evaluation, CC:2022R1, with
     additional extended functional components.<h:br/><h:br/>
-    The CC defines operations on SFRs: assignments, selections, assignments
-    within selections and refinements. This document uses the following font conventions to identify the
-    operations defined by the CC:<h:br/><h:br/>
+    The CC defines operations on SFRs: assignments, selections, assignments within selections and refinements. This document uses the following font 
+    conventions to identify the operations defined by the CC:<h:br/><h:br/>
     <h:ul>
       <h:li>Assignments are indicated with <h:i>italicized</h:i> text.</h:li>
       <h:li>Refinements made by the PP-Module author are indicated with <h:b>bold text</h:b> for added or substituted
@@ -458,11 +452,10 @@
         Definition, the refinement operation is used to indicate deviations from the defined component. For
         Base-PP SFRs that are modified by this PP-Module, the refinement operation is used to indicate
         deviations from the Base-PP’s definition of the SFR (i.e. if the Base-PP refined an SFR and that
-        change is not affected by this PP-Module, it is not shown here as a refinement).</h:li>
+        change is not affected by this PP-Module, it is not shown here as a refinement).</h:li><h:br/>
       <h:li>Selections are indicated with <h:i>italicized</h:i> text.</h:li>
       <h:li>Iteration is indicated by appending the SFR name with a slash and unique identifier suggesting the
-        purpose of the iteration, e.g. ‘/VPN’ for an SFR relating to VPN functionality, or by a sequential
-        number in parentheses, e.g. (1). </h:li>  
+        purpose of the iteration, e.g. ‘/SDN’ for an SFR relating to VPN functionality.</h:li>  
       <h:li>Extended SFRs are identified by having a label “EXT” after the SFR name.</h:li>
     </h:ul>
     Note that selections and assignments to be completed by the ST author are preceded with “selection:”
@@ -512,7 +505,7 @@
       
       <opt-sfrs>
       <sec:qqq_qqq>          
-        <f-component cc-id="fqq_fqq.1" name="qqq">
+        <f-component cc-id="fqq_fqq.1" name="qqq" iteration="optional">
           <consistency-rationale>
             TBD
           </consistency-rationale>
@@ -535,7 +528,7 @@
       
       <sel-sfrs>
         <sec:qqq_qqq>          
-            <f-component cc-id="fqq_fqq.1" name="qqq">
+            <f-component cc-id="fqq_fqq.1" name="qqq" iteration="selection_based">
               <consistency-rationale>
                 TBD
               </consistency-rationale>
@@ -558,7 +551,7 @@
     
     <obj-sfrs>
       <sec:qqq_qqq>          
-        <f-component cc-id="fqq_fqq.1" name="qqq">
+        <f-component cc-id="fqq_fqq.1" name="qqq" iteration="objective">
           <consistency-rationale>
             TBD
           </consistency-rationale>
@@ -581,7 +574,7 @@
     
     <impl-dep-sfrs>
       <sec:qqq_qqq>          
-        <f-component cc-id="fqq_fqq.1" name="qqq">
+        <f-component cc-id="fqq_fqq.1" name="qqq" iteration="implementation_dependent">
           <consistency-rationale>
             TBD
           </consistency-rationale>
@@ -610,15 +603,16 @@
     evaluator will thoroughly understand the entropy source and why it can be relied upon to provide
     sufficient entropy. This documentation should include multiple detailed sections: design
     description, entropy justification, operating conditions, and health testing. This documentation
-    is not required to be part of the TSS. <section id="entropydesign" title="Design Description">
-      Documentation shall include the design of the entropy source as a whole, including the
+    is not required to be part of the TSS. 
+    <section id="entropydesign" title="Design Description">
+      Documentation will include the design of the entropy source as a whole, including the
       interaction of all entropy source components. Any information that can be shared regarding the
       design should also be included for any third-party entropy sources that are included in the
       product. <h:br/> The documentation will describe the operation of the entropy source to include,
       how entropy is produced, and how unprocessed (raw) data can be obtained from within the
       entropy source for testing purposes. The documentation should walk through the entropy source
       design indicating where the entropy comes from, where the entropy output is passed next, any
-      post-processing of the raw outputs (hash, XOR, etc.), if/where it is stored, and finally, how
+      post-processing of the raw outputs (hash, XOR, etc.), if and where it is stored, and finally, how
       it is output from the entropy source. Any conditions placed on the process (e.g., blocking)
       should also be described in the entropy source design. Diagrams and examples are encouraged.
       <h:br/> This design must also include a description of the content of the security boundary of
@@ -634,15 +628,15 @@
       sufficient entropy is going into the OS randomizer seeding process. This discussion will be
       part of a justification for why the entropy source can be relied upon to produce bits with
       entropy. <h:br/> The amount of information necessary to justify the expected min-entropy rate
-      depends on the type of entropy source included in the product. <h:br/> For developer provided
+      depends on the type of entropy source included in the product. <h:br/> For developer-provided
       entropy sources, in order to justify the min-entropy rate, it is expected that a large number
       of raw source bits will be collected, statistical tests will be performed, and the min-entropy
       rate determined from the statistical tests. While no particular statistical tests are required
       at this time, it is expected that some testing is necessary in order to determine the amount
-      of min-entropy in each output. <h:br/> For third-party provided entropy sources, in which the
+      of min-entropy in each output. <h:br/> For third-party-provided entropy sources, in which the
       OS vendor has limited access to the design and raw entropy data of the source, the
       documentation will indicate an estimate of the amount of min-entropy obtained from this
-      third-party source. It is acceptable for the vendor to “assume” an amount of min-entropy,
+      third-party source. It is acceptable for the vendor to 'assume' an amount of min-entropy,
       however, this assumption must be clearly stated in the documentation provided. In particular,
       the min-entropy estimate must be specified and the assumption included in the ST. <h:br/>
       Regardless of type of entropy source, the justification will also include how the DRBG is
@@ -671,7 +665,9 @@
   </appendix>
 
   <bibliography>
-      <entry id="bibCC">
+    <cc-entry/>
+      
+    <entry id="bibCC">
         <tag>CC</tag>
         <description>Common Criteria for Information Technology Security Evaluation - <h:ul>
             <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R4.pdf">Part
