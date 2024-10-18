@@ -361,7 +361,7 @@
           <description> 
             The OS administrator is not careless, willfully negligent or hostile, and administers the OS within compliance of the applied enterprise security policy.
           </description>
-          <objective-refer ref="OE.ADMIN">
+          <objective-refer ref="OE.PROPER_ADMIN">
             <rationale>The operational environment objective OE.PROPER_ADMIN is realized through A.PROPER_ADMIN.</rationale>
           </objective-refer>
         </assumption>       
@@ -505,7 +505,7 @@
       
       <opt-sfrs>
       <sec:qqq_qqq>          
-        <f-component cc-id="fqq_fqq.1" name="qqq" iteration="optional">
+        <f-component cc-id="fqq_fqq.1" name="qqq" status="optional">
           <consistency-rationale>
             TBD
           </consistency-rationale>
@@ -528,7 +528,7 @@
       
       <sel-sfrs>
         <sec:qqq_qqq>          
-            <f-component cc-id="fqq_fqq.1" name="qqq" iteration="selection_based">
+            <f-component cc-id="fqq_fqq.1" name="qqq">
               <consistency-rationale>
                 TBD
               </consistency-rationale>
@@ -664,42 +664,31 @@
       the entropy source. </section>
   </appendix>
 
+  <appendix id="biblio" title="Bibliography"></appendix>
   <bibliography>
     <cc-entry/>
       
     <entry id="bibCC">
         <tag>CC</tag>
         <description>Common Criteria for Information Technology Security Evaluation - <h:ul>
-            <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R4.pdf">Part
-                1: Introduction and General Model</h:a>, CCMB-2012-09-001, Version 3.1 Revision 4,
-              September 2012.</h:li>
-            <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R4.pdf">Part
-                2: Security Functional Components</h:a>, CCMB-2012-09-002, Version 3.1 Revision 4,
-              September 2012.</h:li>
+          <h:li><h:a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part
+                1: Introduction and General Model</h:a>, CCMB-2022-11-001, CC:2022, Revision 1, November 2022</h:li>
+          <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part
+                2: Security Functional Requirements</h:a>, CCMB-2022-11-002, CC:2022, Revision 1, November 2022.</h:li> 
             <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R4.pdf">Part
-                3: Security Assurance Components</h:a>, CCMB-2012-09-003, Version 3.1 Revision 4,
-              September 2012.</h:li>
+                3: Security Assurance Requirements</h:a>, CCMB-2022-11-003, CC:2022, Revision 1, November 2022.</h:li>
+          <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
+                4: Framework for the Specification of Evaluation Methods and Activities</h:a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022.</h:li>
+          <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
+                5: Pre-defined Packages of Security Requirements</h:a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022.</h:li>
           </h:ul></description>
       </entry>
       <entry id="bibCEM">
         <tag>CEM</tag>
         <description>
-          <h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R4.pdf">Common
-            Evaluation Methodology for Information Technology Security - Evaluation Methodology</h:a>,
-          CCMB-2012-09-004, Version 3.1, Revision 4, September 2012. </description>
-      </entry>
-      <entry id="bibCESG">
-        <tag>CESG</tag>
-        <description>CESG - <h:a
-            href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End
-            User Devices Security and Configuration Guidance</h:a></description>
-      </entry>
-      <entry id="bibCSA">
-        <tag>CSA</tag>
-        <description>
-          <h:a href="http://csrc.nist.gov/groups/SMA/ispab/documents/csa_87.txt">Computer Security Act
-            of 1987</h:a>, H.R. 145, June 11, 1987. </description>
-      </entry>
+          <h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">Common
+            Common Methodology for Information Technology Security Evaluation</h:a>, CCMB-2022-11-006, CC:2022, Revision 1, November 2022.</description>
+      </entry> 
       <entry id="bibOMB">
         <tag>OMB</tag>
         <description>
