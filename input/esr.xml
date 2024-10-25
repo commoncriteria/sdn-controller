@@ -310,7 +310,7 @@
 				against unauthorized changes, malware, and a range of cybersecurity threats.    
 			</li>
 			<li>
-				SDN Controllers must comply with established security standards and implement best practices for API security, particularly emphasizing REST security principles. They are expected to follow guidelines set forth by recognized entities like OWASP, NIST, and ISO/IEC. This involves ensuring secure authentication, authorization, encryption, and coding practices, alongside
+				SDN Controllers must comply with established security standards and implement best practices for API security. They are expected to follow guidelines set forth by recognized entities like OWASP, NIST, and ISO/IEC. This involves ensuring secure authentication, authorization, encryption, and coding practices, alongside
 				conducting regular security evaluations and managing vulnerabilities to protect against current and emerging cyber threats.    
 			</li>
 			<li>
@@ -334,10 +334,7 @@
 
 	<section title="Threats" id="threats">
 		<ul>
-			<li>Attackers send unwanted input to the Application Programming Interface (API) of the SDN Controller 
-			management interface.</li>
-			<li>Compromised SDN Controller is used to cause unwanted configurations against network devices under 
-			the compromised SDN Controller's control.</li>
+			<li>Insecure Interfaces and APIs - Insecure application programming interfaces (APIs) and user interfaces can provide attackers with opportunities to inject malicious code or to retrieve sensitive information. Unwanted and or unauthorized API functions executed and API manipulations can compromise network services and sensitive data leakage can take place through insecure interfaces.</li>
 		</ul>
 	</section>
 
