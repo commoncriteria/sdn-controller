@@ -651,209 +651,197 @@ function showTarget(id){
   
   <h3>TDs Applied</h3><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
     <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2>          
-        <p>
-          The scope of this Protection Profile (PP) is to describe the security functionality of Software Defined Networking (SDN) controller use in an enterprise, and define
-          functional and assurance requirements for such products<a id="period_0" href="#period_0">. </a>An SDN is one of many components of an SDN networking architecture<a id="period_1" href="#period_1">. </a>It is intended to provide a minimal, 
-          baseline set of requirements which can be built upon by future revisions to provide an overall set of security solutions for an enterprise network<a id="period_2" href="#period_2">. </a>An SDN is also a 
-          central and vital component of what constitutes an SDN system and is available as a logical or a physical device<a id="period_3" href="#period_3">. </a>An SDN controller manages and distributes network
-          policies, collects routing and payload information from the data plane and interfaces with user applications in the management plane<a id="period_4" href="#period_4">. </a>Each of the planes in an SDN 
-          system is composed of multiple logical or physical components<a id="period_5" href="#period_5">. </a>SDN controllers logically centralize the network intelligence and state in the control plane<a id="period_6" href="#period_6">. </a>        </p>
-        <p>
-          An SDN controller is meant to 'do no harm' on a network<a id="period_7" href="#period_7">. </a>Rather than providing any explicit security functionality, compliant SDN controllers ensure the
-          following<a id="period_8" href="#period_8">. </a>          <ul>
-            <li>
-              They can be remotely managed in a secure manner<a id="period_9" href="#period_9">. </a>            </li>
-            <li>
-              Any software or firmware updates are from a trusted source<a id="period_10" href="#period_10">. </a>            </li>
-            <li>
-              Any interfaces to applications, VMs, and other devices are trusted (zone of trust)<a id="period_11" href="#period_11">. </a>            </li>
-            <li>
-               All suspect events are reported<a id="period_12" href="#period_12">. </a>            </li>
-            <li>
-               Logical or physical separation of the control and data planes<a id="period_13" href="#period_13">. </a>            </li>
-            <li>
-              Logical or physical separation of the control and management planes<a id="period_14" href="#period_14">. </a>            </li>
-            <li>
-              Protect data collected and distributed by the control plane to the data plane, such as flow tables and configurations<a id="period_15" href="#period_15">. </a>            </li>
-            <li>
-              Protect data collected and distributed by the control plane to the management plane, such as auditable events and traffic or packet statistics<a id="period_16" href="#period_16">. </a>            </li>
-            <li>
-              Protect data collected that is distributed and shared within the control plane, such as when multiple SDN controllers exist in the architecture<a id="period_17" href="#period_17">. </a>            </li>       
-          </ul>
-        </p>
+
+            The scope of this Protection Profile Module (PP-Module) is to describe the security functionality of a software defined network (SDN) controller in terms of  <a href="#bibCC">[CC]</a> and to define functional and assurance requirements for such
+            products<a id="period_0" href="#period_0">. </a>This PP-Module is intended for use with the following Base-PP:
+            
+            <ul>
+              <li>collaborative Protection Profile for Network Devices (NDcPP), Version 3.0E</li>
+            </ul>
+            
+            This Base-PP is valid because an SDN controller is a specific implementation of a network device<a id="period_1" href="#period_1">. </a>Specifically, an SDN controller is one of many components of an SDN networking architecture<a id="period_2" href="#period_2">. </a>Specifically, an SDN controller manages and distributes network policies, collects routing and payload information from the data plane, and interfaces with user applications in the management plane<a id="period_3" href="#period_3">. </a>Each of the planes in an SDN system is composed of multiple logical or physical components<a id="period_4" href="#period_4">. </a>SDN controllers logically centralize the network intelligence and state in the control plane<a id="period_5" href="#period_5">. </a>
     
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
-The following sections list Common Criteria and technology terms used in this document<a id="period_18" href="#period_18">. </a>    <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a><a id="period_19" href="#period_19">. </a></td></tr>
-<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration<a id="period_20" href="#period_20">. </a></td></tr>
+The following sections list Common Criteria and technology terms used in this document<a id="period_6" href="#period_6">. </a>    <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a><a id="period_7" href="#period_7">. </a></td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration<a id="period_8" href="#period_8">. </a></td></tr>
 <tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
-    international technical communities and approved by multiple schemes<a id="period_21" href="#period_21">. </a></td></tr>
-<tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408)<a id="period_22" href="#period_22">. </a></td></tr>
+    international technical communities and approved by multiple schemes<a id="period_9" href="#period_9">. </a></td></tr>
+<tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408)<a id="period_10" href="#period_10">. </a></td></tr>
 <tr><td><div id="Common_Criteria_Testing_Laboratory">Common Criteria Testing Laboratory</div></td><td>
       Within the context of the Common Criteria Evaluation and Validation Scheme (CCEVS), an IT security evaluation facility
-      accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations<a id="period_23" href="#period_23">. </a>    </td></tr>
-<tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation<a id="period_24" href="#period_24">. </a></td></tr>
-<tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole<a id="period_25" href="#period_25">. </a></td></tr>
+      accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations<a id="period_11" href="#period_11">. </a>    </td></tr>
+<tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation<a id="period_12" href="#period_12">. </a></td></tr>
+<tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole<a id="period_13" href="#period_13">. </a></td></tr>
 <tr><td><div id="Extended_Package">Extended Package (EP)</div></td><td>A deprecated document form for collecting SFRs that implement a particular protocol, technology,
-	    or functionality<a id="period_26" href="#period_26">. </a>See Functional Packages<a id="period_27" href="#period_27">. </a></td></tr>
+	    or functionality<a id="period_14" href="#period_14">. </a>See Functional Packages<a id="period_15" href="#period_15">. </a></td></tr>
 <tr><td><div id="Functional_Package">Functional Package (FP)</div></td><td>A document that collects SFRs for a particular protocol, technology,
-	    or functionality<a id="period_28" href="#period_28">. </a></td></tr>
-<tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy<a id="period_29" href="#period_29">. </a></td></tr>
-<tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products<a id="period_30" href="#period_30">. </a></td></tr>
-<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module<a id="period_31" href="#period_31">. </a></td></tr>
-<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs<a id="period_32" href="#period_32">. </a></td></tr>
-<tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE<a id="period_33" href="#period_33">. </a></td></tr>
-<tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE<a id="period_34" href="#period_34">. </a></td></tr>
-<tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product<a id="period_35" href="#period_35">. </a></td></tr>
-<tr><td><div id="Target_of_Evaluation">Target of Evaluation (TOE)</div></td><td>The product under evaluation<a id="period_36" href="#period_36">. </a></td></tr>
-<tr><td><div id="TOE_Security_Functionality">TOE Security Functionality (TSF)</div></td><td>The security functionality of the product under evaluation<a id="period_37" href="#period_37">. </a></td></tr>
-<tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST<a id="period_38" href="#period_38">. </a></td></tr>
+	    or functionality<a id="period_16" href="#period_16">. </a></td></tr>
+<tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy<a id="period_17" href="#period_17">. </a></td></tr>
+<tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products<a id="period_18" href="#period_18">. </a></td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module<a id="period_19" href="#period_19">. </a></td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs<a id="period_20" href="#period_20">. </a></td></tr>
+<tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE<a id="period_21" href="#period_21">. </a></td></tr>
+<tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE<a id="period_22" href="#period_22">. </a></td></tr>
+<tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product<a id="period_23" href="#period_23">. </a></td></tr>
+<tr><td><div id="Target_of_Evaluation">Target of Evaluation (TOE)</div></td><td>The product under evaluation<a id="period_24" href="#period_24">. </a></td></tr>
+<tr><td><div id="TOE_Security_Functionality">TOE Security Functionality (TSF)</div></td><td>The security functionality of the product under evaluation<a id="period_25" href="#period_25">. </a></td></tr>
+<tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST<a id="period_26" href="#period_26">. </a></td></tr>
 </table><h3 id="tech-terms" class="indexable" data-level="3">1.2.2 Technical Terms</h3><table style="width: 100%"><tr><td><div id="Address_Space_Layout_Randomization">Address Space Layout Randomization (ASLR)</div></td><td>
-	       An anti-exploitation feature which loads memory mappings into unpredictable locations<a id="period_39" href="#period_39">. </a>ASLR makes it more difficult for an attacker to redirect control to code
-	       that they have introduced into the address space of a process<a id="period_40" href="#period_40">. </a>      </td></tr>
+	       An anti-exploitation feature which loads memory mappings into unpredictable locations<a id="period_27" href="#period_27">. </a>ASLR makes it more difficult for an attacker to redirect control to code
+	       that they have introduced into the address space of a process<a id="period_28" href="#period_28">. </a>      </td></tr>
 <tr><td><div id="Administrator">Administrator</div></td><td>
-	       An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system<a id="period_41" href="#period_41">. </a>This administrator
-	       could be acting remotely through a management server, from which the system receives configuration policies<a id="period_42" href="#period_42">. </a>An administrator can enforce settings on the system 
-	       which cannot be overridden by non-administrator users<a id="period_43" href="#period_43">. </a>      </td></tr>
+	       An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system<a id="period_29" href="#period_29">. </a>This administrator
+	       could be acting remotely through a management server, from which the system receives configuration policies<a id="period_30" href="#period_30">. </a>An administrator can enforce settings on the system 
+	       which cannot be overridden by non-administrator users<a id="period_31" href="#period_31">. </a>      </td></tr>
 <tr><td><div id="Application">Application (app)</div></td><td>
-	       Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation<a id="period_44" href="#period_44">. </a>
+	       Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation<a id="period_32" href="#period_32">. </a>
       </td></tr>
 <tr><td><div id="Application_Programming_Interface">Application Programming Interface (API)</div></td><td>
 	       A specification of routines, data structures, object classes, and variables that allows an application to make use of services provided by another software
-	       component, such as a library<a id="period_45" href="#period_45">. </a>APIs are often provided for a set of libraries included with the platform<a id="period_46" href="#period_46">. </a>      </td></tr>
+	       component, such as a library<a id="period_33" href="#period_33">. </a>APIs are often provided for a set of libraries included with the platform<a id="period_34" href="#period_34">. </a>      </td></tr>
 <tr><td><div id="Control_Plane">Control Plane</div></td><td>
           A logical entity that receives instructions or requirements from the SDN application layer through its northbound interface and relays them to the data plane through
-          its southbound interface<a id="period_47" href="#period_47">. </a>The controller extracts information about the network from the data plane and communicates back to the SDN application layer with an 
-          abstract view of the network, including statistics and events about what is happening<a id="period_48" href="#period_48">. </a>
+          its southbound interface<a id="period_35" href="#period_35">. </a>The controller extracts information about the network from the data plane and communicates back to the SDN application layer with an 
+          abstract view of the network, including statistics and events about what is happening<a id="period_36" href="#period_36">. </a>
       </td></tr>
 <tr><td><div id="Credential">Credential</div></td><td>
-	       Data that establishes the identity of a user (e.g., a cryptographic key or password)<a id="period_49" href="#period_49">. </a>      </td></tr>
+	       Data that establishes the identity of a user (e.g., a cryptographic key or password)<a id="period_37" href="#period_37">. </a>      </td></tr>
 <tr><td><div id="Critical_Security_Parameters">Critical Security Parameters (CSP)</div></td><td>
 	       Information that is either user or system defined and is used to operate a cryptographic module in processing encryption functions including cryptographic keys and
 	       authentication data, such as passwords, the disclosure or modification of which can compromise the security of a cryptographic module or the security of the
-	       information protected by the module<a id="period_50" href="#period_50">. </a>      </td></tr>
+	       information protected by the module<a id="period_38" href="#period_38">. </a>      </td></tr>
 <tr><td><div id="DAR_Protection">DAR Protection</div></td><td>
-	       Countermeasures that prevent attackers, even those with physical access, from extracting data from non-volatile storage<a id="period_51" href="#period_51">. </a>Common techniques include data encryption
-	       and wiping<a id="period_52" href="#period_52">. </a>      </td></tr>
+	       Countermeasures that prevent attackers, even those with physical access, from extracting data from non-volatile storage<a id="period_39" href="#period_39">. </a>Common techniques include data encryption
+	       and wiping<a id="period_40" href="#period_40">. </a>      </td></tr>
 <tr><td><div id="Data_Execution_Prevention">Data Execution Prevention (DEP)</div></td><td>
-	       An anti-exploitation feature of modern operating systems executing on modern computer hardware, which enforces a non-execute permission on pages of memory<a id="period_53" href="#period_53">. </a>DEP
-	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code<a id="period_54" href="#period_54">. </a>      </td></tr>
+	       An anti-exploitation feature of modern operating systems executing on modern computer hardware, which enforces a non-execute permission on pages of memory<a id="period_41" href="#period_41">. </a>DEP
+	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code<a id="period_42" href="#period_42">. </a>      </td></tr>
 <tr><td><div id="Data_Plane">Data Plane</div></td><td>
-        (SDN Network Devices) Controls the forwarding and data processing capabilities for the network<a id="period_55" href="#period_55">. </a>This includes forwarding and processing of the data path<a id="period_56" href="#period_56">. </a>      </td></tr>
+        Controls the forwarding and data processing capabilities for the network<a id="period_43" href="#period_43">. </a>This includes forwarding and processing of the data path<a id="period_44" href="#period_44">. </a>      </td></tr>
 <tr><td><div id="Developer">Developer</div></td><td>
-	       An entity that writes OS software<a id="period_57" href="#period_57">. </a>For the purposes of this document, vendors and developers are the same<a id="period_58" href="#period_58">. </a>      </td></tr>
+	       An entity that writes OS software<a id="period_45" href="#period_45">. </a>For the purposes of this document, vendors and developers are the same<a id="period_46" href="#period_46">. </a>      </td></tr>
 <tr><td><div id="Host-based_Firewall">Host-based Firewall</div></td><td>
-	       A software-based firewall implementation running on the OS for filtering inbound and outbound network traffic to and from processes running on the OS<a id="period_59" href="#period_59">. </a>      </td></tr>
+	       A software-based firewall implementation running on the OS for filtering inbound and outbound network traffic to and from processes running on the OS<a id="period_47" href="#period_47">. </a>      </td></tr>
 <tr><td><div id="Hybrid_Authentication">Hybrid Authentication</div></td><td>
-	       A hybrid authentication factor is one where a user has to submit a combination of a cryptographic token and a PIN or password and both must pass<a id="period_60" href="#period_60">. </a>If either factor
-	       fails, the entire attempt fails<a id="period_61" href="#period_61">. </a>      </td></tr>
+	       A hybrid authentication factor is one where a user has to submit a combination of a cryptographic token and a PIN or password and both must pass<a id="period_48" href="#period_48">. </a>If either factor
+	       fails, the entire attempt fails<a id="period_49" href="#period_49">. </a>      </td></tr>
 <tr><td><div id="Management_Plane">Management Plane</div></td><td>
-        (SDN Applications Layer) Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs)<a id="period_62" href="#period_62">. </a>        In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes<a id="period_63" href="#period_63">. </a>These 
-        applications could include networking management, analytics, or business applications used to run large data centers<a id="period_64" href="#period_64">. </a>For example, an analytics application might be
-        built to recognize suspicious network activity for security purposes<a id="period_65" href="#period_65">. </a>The management plane is sometimes also referred to as the Orchestration Layer<a id="period_66" href="#period_66">. </a>      </td></tr>
+        Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs)<a id="period_50" href="#period_50">. </a>        In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes<a id="period_51" href="#period_51">. </a>These 
+        applications could include networking management, analytics, or business applications used to run large data centers<a id="period_52" href="#period_52">. </a>For example, an analytics application might be
+        built to recognize suspicious network activity for security purposes<a id="period_53" href="#period_53">. </a>This is sometimes also referred to as the Orchestration Layer<a id="period_54" href="#period_54">. </a>      </td></tr>
+<tr><td><div id="Northbound">Northbound</div></td><td>Communications between an SDN and applications in the management plane<a id="period_55" href="#period_55">. </a></td></tr>
 <tr><td><div id="Operating_System">Operating System (OS)</div></td><td>
-	       Software that manages physical and logical resources and provides services for applications<a id="period_67" href="#period_67">. </a>The terms TOE and OS are interchangeable in this
-	       document<a id="period_68" href="#period_68">. </a>
+	       Software that manages physical and logical resources and provides services for applications<a id="period_56" href="#period_56">. </a>The terms TOE and OS are interchangeable in this
+	       document<a id="period_57" href="#period_57">. </a>
       </td></tr>
 <tr><td><div id="Personal_Identification_Number">Personal Identification Number (PIN)</div></td><td>
 	       An authentication factor that is comprised of a set of numeric or alphabetic characters that may be used  in addition to a cryptographic token to provide a hybrid
-	       authentication factor<a id="period_69" href="#period_69">. </a>At this time it  is not considered as a stand-alone authentication mechanism<a id="period_70" href="#period_70">. </a>A PIN is distinct from a password in that the allowed character
-	       set and required length of a PIN is typically smaller than that of a password as it is designed to be input quickly<a id="period_71" href="#period_71">. </a>      </td></tr>
+	       authentication factor<a id="period_58" href="#period_58">. </a>At this time it  is not considered as a stand-alone authentication mechanism<a id="period_59" href="#period_59">. </a>A PIN is distinct from a password in that the allowed character
+	       set and required length of a PIN is typically smaller than that of a password as it is designed to be input quickly<a id="period_60" href="#period_60">. </a>      </td></tr>
 <tr><td><div id="Personally_Identifiable_Information">Personally Identifiable Information (PII)</div></td><td>
 	       Any information about an individual maintained by an agency, including, but not limited to, education, financial transactions, medical history, and criminal or
 	       employment history, and information which can be used to distinguish or trace an individual's identity, such as their name, social security number, date and place
-	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual<a id="period_72" href="#period_72">. </a>      </td></tr>
+	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual<a id="period_61" href="#period_61">. </a>      </td></tr>
 <tr><td><div id="Sensitive_Data">Sensitive Data</div></td><td>
-	       Sensitive data may include all user or enterprise data or may be specific application data such as PII, emails, messaging, documents, calendar items, and contacts<a id="period_73" href="#period_73">. </a>	       Sensitive data must minimally include credentials and keys<a id="period_74" href="#period_74">. </a>Sensitive data shall be identified in the OS's TSS by the ST author<a id="period_75" href="#period_75">. </a>
+	       Sensitive data may include all user or enterprise data or may be specific application data such as PII, emails, messaging, documents, calendar items, and contacts<a id="period_62" href="#period_62">. </a>	       Sensitive data must minimally include credentials and keys<a id="period_63" href="#period_63">. </a>Sensitive data shall be identified in the OS's TSS by the ST author<a id="period_64" href="#period_64">. </a>
       </td></tr>
+<tr><td><div id="Southbound">Southbound</div></td><td>Communications between an SDN and network devices in the data plane<a id="period_65" href="#period_65">. </a></td></tr>
 <tr><td><div id="User">User</div></td><td>
-	       A user is subject to configuration policies applied to the operating system by administrators<a id="period_76" href="#period_76">. </a> On some systems, under certain configurations, a normal user can
-	       temporarily elevate privileges to that of an administrator<a id="period_77" href="#period_77">. </a>At that time, such a user should be considered an administrator<a id="period_78" href="#period_78">. </a>      </td></tr>
+	       A user is subject to configuration policies applied to the operating system by administrators<a id="period_66" href="#period_66">. </a> On some systems, under certain configurations, a normal user can
+	       temporarily elevate privileges to that of an administrator<a id="period_67" href="#period_67">. </a>At that time, such a user should be considered an administrator<a id="period_68" href="#period_68">. </a>      </td></tr>
 </table></div>
     
     <h2 class="indexable" data-level="2" id="Compliant_Targets_of_Evaluation">1.3 Compliant Targets of Evaluation</h2> 
-      Compliant TOEs will implement security functionality in the following general areas<a id="period_79" href="#period_79">. </a>      <ul>
-        <li>Accountability: Ensuring that information exists to discover unintentional issues with the configuration and operation of the TOE so that the root cause can be determined<a id="period_80" href="#period_80">. </a></li>
-        <li>Integrity: Ensuring the integrity of updates to the TOE and enforcing mechanisms that control the deployment and execution of applications running on it<a id="period_81" href="#period_81">. </a></li>
-        <li>Management: Providing mechanisms for configuration of the TSF and deployment of applications running on the TOE<a id="period_82" href="#period_82">. </a></li>
-        <li>Protected Storage: Ensuring that credentials and file system data are not subject to unauthorized disclosure<a id="period_83" href="#period_83">. </a></li>
-        <li>Protected Communications: Ensuring that sensitive data in transit to and from the TOE is adequately protected from unauthorized modification and disclosure<a id="period_84" href="#period_84">. </a></li>
+      Compliant TOEs will implement necessary functionality in a "do no harm" manner with respect to network security<a id="period_69" href="#period_69">. </a>Specifically:
+      <ul>
+        <li>They can be remotely managed in a secure manner<a id="period_70" href="#period_70">. </a></li>
+        <li>Any software/firmware updates are from a trusted source<a id="period_71" href="#period_71">. </a></li>
+        <li>Any interfaces to applications, VMs, and other devices are trusted (zone of trust)<a id="period_72" href="#period_72">. </a></li>
+        <li>All security-relevant events are reported<a id="period_73" href="#period_73">. </a></li>
+        <li>The control plane and data plane are logically separated<a id="period_74" href="#period_74">. </a></li>
+        <li>The control plane and management plane are logically separated<a id="period_75" href="#period_75">. </a></li>
+        <li>Data that is collected by the control plane and distributed to the data plane, such as flow tables and configurations, is protected<a id="period_76" href="#period_76">. </a></li>
+        <li>Data that is collected by the control plane and distributed t othe management plane, such as auditable events and traffic or packet statistics, is protected<a id="period_77" href="#period_77">. </a></li>
+        <li>Data that is collected, distributed, and shared within the control plane, such as when multiple SDN controllers exist in the architecture, is protected<a id="period_78" href="#period_78">. </a></li>
       </ul>
-      <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
-        The TOE boundary for an SDN controller is available as a logical or a physical device<a id="period_85" href="#period_85">. </a>An SDN controller manages and distributes network policies, collects routing 
-        and payload information from the data plane, and interfaces with user applications in the management plane<a id="period_86" href="#period_86">. </a>Each plane in an SDN system is composed of multiple 
-        logical or physical components<a id="period_87" href="#period_87">. </a>SDN controllers logically centralize the network intelligence and state in the control plane<a id="period_88" href="#period_88">. </a>        <ul>
-          <li>In a physical standalone SDN controller device, the device's hardware, firmware, and software define the evaluation boundary<a id="period_89" href="#period_89">. </a></li>
-          <li>In a virtual SDN controller, the software of the Virtual Machine (VM) defines the evaluation boundary<a id="period_90" href="#period_90">. </a></li>
-          <li>All security functionality is contained and executed within the evaluation boundary of the SDN controller<a id="period_91" href="#period_91">. </a></li>
-        </ul>       
-        
+      A conformant TOE decouples its data and control planes such that data traffic and control traffic are restricted to their respective planes<a id="period_79" href="#period_79">. </a>It also enforces centralization of control so that all components of the SDN environment are under its control<a id="period_80" href="#period_80">. </a>This can expand across multiple distributed controllers for large, complex, or geographically dispersed networks<a id="period_81" href="#period_81">. </a>      <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
+        The TOE boundary for an SDN controller is one or more physical or virtual devices<a id="period_82" href="#period_82">. </a>An SDN controller may be a distributed TOE, as defined by the Base-PP<a id="period_83" href="#period_83">. </a>        <ul>
+          <li>In a physical standalone SDN controller device, the device's hardware, firmware, and software define the evaluation boundary<a id="period_84" href="#period_84">. </a></li>
+          <li>In a virtual SDN controller, the software of the Virtual Machine (VM) defines the evaluation boundary<a id="period_85" href="#period_85">. </a></li>
+          <li>All security functionality is contained and executed within the evaluation boundary of the SDN controller<a id="period_86" href="#period_86">. </a></li>
+        </ul>
+      <p>  
+        The following figure shows the SDN controller sitting between the management and data planes within the SDN infrastructure<a id="period_87" href="#period_87">. </a>This is a simplified diagram of the TOE's position in an SDN deployment<a id="period_88" href="#period_88">. </a>Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown<a id="period_89" href="#period_89">. </a>        <div class="figure" id="figure-toe-as-apponos"><img id="toe-as-apponos" src="images/sdncontroller.png" width="" height=""><br><span class="ctr" data-myid="toe-as-apponos" data-counter-type="ct-figure">Figure <span class="counter">1</span></span>:
+      High-Level SDN Representation</div>
+      </p>
+        <p>
+          The following elements of an SDN controller are outside the scope of this PP-Module and are therefore considered to be non-interfering with respect to security, even if they are included as part of a compliant product:
+          <ul>
+            <li>Examination of data plane content, such as virus or email scanning<a id="period_90" href="#period_90">. </a></li>
+            <li>Intrusion detection or prevention capabilities<a id="period_91" href="#period_91">. </a></li>
+            <li>Network Address Translation (NAT) as a security function<a id="period_92" href="#period_92">. </a></li>
+            <li>If the TOE boundary is a single virtual machine, the hardware or firmware of the underlying platform<a id="period_93" href="#period_93">. </a></li>
+            <li>If the TOE boundary is a single virtual machine, the host operating system or runtime environment<a id="period_94" href="#period_94">. </a></li>
+            <li>Specific security functionality that is not global to all SDN controllers (e.g<a id="period_95" href="#period_95">. </a>firewall, load balancing)<a id="period_96" href="#period_96">. </a></li>
+            <li>Ohter objects belonging in the data plane<a id="period_97" href="#period_97">. </a></li>
+          </ul>
+        </p>
       
       
       <h3 class="indexable" data-level="3" id="TOE_Platform">1.3.2 TOE Platform</h3>
 	       
-	       The TOE platform of a virtualized SDN controller is out of scope for this evaluation<a id="period_92" href="#period_92">. </a>
+	       The TOE platform of a virtualized SDN controller is out of scope for this evaluation<a id="period_98" href="#period_98">. </a>
       
     
     
           
-    <h2 class="indexable" data-level="2" id="Use_Cases">1.4 Use Cases</h2>Requirements in this PP-Module are designed to address the security problems in at least the following use cases<a id="period_93" href="#period_93">. </a>These use cases are 
-        intentionally very broad, as many specific use cases exist for an SDN controller These use cases may also overlap with one another<a id="period_94" href="#period_94">. </a>An SDN controller's 
-        functionality may even be effectively extended by privileged applications installed on it<a id="period_95" href="#period_95">. </a>However, these are out of scope of this PP<a id="period_96" href="#period_96">. </a>      <dl><dt id="standalonephysdev"> [USE CASE 1] Standalone Physical Device</dt><dd><span class="description">	          
-                        
+    <h2 class="indexable" data-level="2" id="Use_Cases">1.4 Use Cases</h2>Requirements in this PP-Module are designed to address the security problems in at least the following use cases<a id="period_99" href="#period_99">. </a>These use cases are 
+        intentionally very broad, as many specific use cases exist for an SDN controller These use cases may also overlap with one another<a id="period_100" href="#period_100">. </a>An SDN controller's 
+        functionality may even be effectively extended by privileged applications installed on it<a id="period_101" href="#period_101">. </a>However, these are out of scope of this PP<a id="period_102" href="#period_102">. </a>      <dl><dt id="standalonephysdev"> [USE CASE 1] Standalone Physical Device</dt><dd><span class="description">	          
+            The TOE is a single physical appliance that provides SDN controller functionality<a id="period_103" href="#period_103">. </a>            
           </span></dd><dt id="virtualdev"> [USE CASE 2] Virtual Device</dt><dd><span class="description">
-            
-          </span></dd><dt id="standorvirtmngmtcapa"> [USE CASE 3] Management Capabilities (stand-alone or virtual)</dt><dd><span class="description">
-            
-          </span></dd><dt id="standorvirtcluster"> [USE CASE 4] Cluster (stand-alone or virtual)</dt><dd><span class="description">
-            
-          </span></dd><dt id="hypercov"> [USE CASE 5] Hyper-Converge</dt><dd><span class="description">
-            
-            This consists of an amalgam of computing resources in a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads<a id="period_97" href="#period_97">. </a>          </span></dd></dl>
+            The TOE is a virtual machine that provides SDN controller functionality<a id="period_104" href="#period_104">. </a>The TOE boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the SDN controller<a id="period_105" href="#period_105">. </a>
+          </span></dd><dt id="standorvirtcluster"> [USE CASE 3] Cluster (stand-alone or virtual)</dt><dd><span class="description">
+            Regardless of whether the TOE is physical, virtual, or both, it includes multiple distinct instances that are combined into a distributed cluster<a id="period_106" href="#period_106">. </a>          </span></dd><dt id="hypercov"> [USE CASE 4] Hyper-Converge</dt><dd><span class="description">
+            The TOE amalgamates various computing resources into a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads<a id="period_107" href="#period_107">. </a>          </span></dd></dl>
     
   
     
     <h1 class="indexable" data-level="1" id="Conformance_Claims">2 Conformance Claims</h1>
       
-      
       <dl><dt>Conformance Statement</dt><p></p><dd>An ST must claim exact conformance 
-		 to this PP-Module<a id="period_98" href="#period_98">. </a></dd><p></p><dd>The evaluation methods used for evaluating the TOE are a combination of the workunits 
+		 to this PP-Module<a id="period_108" href="#period_108">. </a></dd><p></p><dd>The evaluation methods used for evaluating the TOE are a combination of the workunits 
 			defined in <a href="#bibCEM">[CEM]</a> as well as the Evaluation Activities for ensuring that individual SFRs 
 			and SARs have a sufficient level of supporting evidence in the Security Target and guidance 
 			documentation and have been sufficiently tested by the laboratory as part of completing 
-			ATE_IND.1<a id="period_99" href="#period_99">. </a>Any functional packages this PP claims similarly contain their own Evaluation 
-			Activities that are used in this same manner<a id="period_100" href="#period_100">. </a>			</dd><dt>CC Conformance Claims</dt><p></p><dd>This PP-Module is conformant to 
+			ATE_IND.1<a id="period_109" href="#period_109">. </a>Any functional packages this PP claims similarly contain their own Evaluation 
+			Activities that are used in this same manner<a id="period_110" href="#period_110">. </a>			</dd><dt>CC Conformance Claims</dt><p></p><dd>This PP-Module is conformant to 
 			Part 2 (extended) 
 			
 			
-			and Part 3 (extended)
+			and Part 3 (conformant)
 			
-				of Common Criteria CC:2022, Revision 1<a id="period_101" href="#period_101">. </a>			</dd><dt>PP Claim</dt><p></p><dd>
+				of Common Criteria CC:2022, Revision 1<a id="period_111" href="#period_111">. </a>			</dd><dt>PP Claim</dt><p></p><dd>
 					This PP-Module does not claim conformance to 
-					any Protection Profile<a id="period_102" href="#period_102">. </a>				</dd><p></p><dd>There are no PPs or PP-Modules that are allowed in a PP-Configuration 
-					with this PP-Module<a id="period_103" href="#period_103">. </a></dd><dt>Package Claim</dt><p></p><dd>This PP-Module is not conformant to any 
-						Functional or Assurance Packages<a id="period_104" href="#period_104">. </a></dd></dl>
+					any Protection Profile<a id="period_112" href="#period_112">. </a>				</dd><p></p><dd>There are no PPs or PP-Modules that are allowed in a PP-Configuration 
+					with this PP-Module<a id="period_113" href="#period_113">. </a></dd><dt>Package Claim</dt><p></p><dd>This PP-Module is not conformant to any 
+						Functional or Assurance Packages<a id="period_114" href="#period_114">. </a></dd></dl>
           
   
-  <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>The security problem is described in terms of the threats that the OS is expected to address, assumptions about the operational
-            environment, and any organizational security policies that the OS is expected to enforce<a id="period_105" href="#period_105">. </a>    <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
-      
-      <dl><dt class="threat defined" id="T.NETWORK_ATTACK">T.NETWORK_ATTACK</dt><dd><span class="description">
-            An attacker can send unwanted input to the Application Programming Interface (API) of the SDN controller management interface, which could interfere with network
-            traffic<a id="period_106" href="#period_106">. </a>          </span></dd><dt class="threat defined" id="T.UNAUTHORIZED_ACCESS">T.UNAUTHORIZED_ACCESS</dt><dd><span class="description">
-            An attacker can compromise the SDN controller and use it to cause unwanted configurations against network devices that are under the SDN controller's control<a id="period_107" href="#period_107">. </a>This
-            can allow network configurations to be changed by an unauthorized user<a id="period_108" href="#period_108">. </a>          </span></dd></dl>
+  <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>The security problem is described in terms of the threats that the TOE is expected to address, assumptions about the operational
+            environment, and any organizational security policies that the OS is expected to enforce<a id="period_115" href="#period_115">. </a>    <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
+      <dl><dt class="threat defined" id="T.INSECURE_INTERFACE">T.INSECURE_INTERFACE</dt><dd><span class="description">
+            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with opportunities to inject malicious code or to retrieve sensitive information<a id="period_116" href="#period_116">. </a>Unwanted and or unauthorized API functions executed and API manipulations can compromise network services and sensitive data leakage can take place through insecure interfaces<a id="period_117" href="#period_117">. </a>          </span></dd></dl>
     
 	
 	
     <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2>
 These assumptions are made on the Operational Environment (OE) in order to be able to ensure that the
-security functionality specified in the PP-Module can be provided by the TOE<a id="period_109" href="#period_109">. </a>If the TOE is placed in an OE that does not meet these assumptions, the TOE may no longer be able to
-provide all of its security functionality<a id="period_110" href="#period_110">. </a>      
-      <dl><dt class="assumption defined" id="A.PLATFORM">A.PLATFORM</dt><dd><span class="description"> 
-            The OS relies upon a trustworthy computing platform for its execution<a id="period_111" href="#period_111">. </a>This underlying platform is out of scope of this PP<a id="period_112" href="#period_112">. </a>          </span></dd><dt class="assumption defined" id="A.PROPER_USER">A.PROPER_USER</dt><dd><span class="description"> 
-            The OS user is not willfully negligent or hostile, and uses the software in compliance with the applied enterprise security policy<a id="period_113" href="#period_113">. </a>At the same time, 
-            malicious software could act as the user, so requirements which confine malicious subjects are still in scope<a id="period_114" href="#period_114">. </a>          </span></dd><dt class="assumption defined" id="A.PROPER_ADMIN">A.PROPER_ADMIN</dt><dd><span class="description"> 
-            The OS administrator is not careless, willfully negligent or hostile, and administers the OS within compliance of the applied enterprise security policy<a id="period_115" href="#period_115">. </a>          </span></dd></dl>
+security functionality specified in the PP-Module can be provided by the TOE<a id="period_118" href="#period_118">. </a>If the TOE is placed in an OE that does not meet these assumptions, the TOE may no longer be able to
+provide all of its security functionality<a id="period_119" href="#period_119">. </a>      
+      <dl><dt class="assumption defined" id="A.SECURED_INFRASTRUCTURE">A.SECURED_INFRASTRUCTURE</dt><dd><span class="description"> 
+            Connections between SDN Controller and network devices under the SDN Controller's control are secure from unauthorized access<a id="period_120" href="#period_120">. </a>          </span></dd><dt class="assumption defined" id="A.SUPPORTED_API">A.SUPPORTED_API</dt><dd><span class="description"> 
+            The SDN Controller will have an API in the management interface<a id="period_121" href="#period_121">. </a>          </span></dd></dl>
     
 
   
@@ -863,57 +851,54 @@ provide all of its security functionality<a id="period_110" href="#period_110">.
   <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
     
   <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_TOE">4.1 Security Objectives for the TOE</h2>
-      <dl><dt class="SO defined" id="O.ACCOUNTABILITY">O.ACCOUNTABILITY</dt><dd><span class="description">Conformant OSs ensure that information exists that allows administrators to discover unintentional issues with the configuration and operation of
-            the operating system and discover its cause<a id="period_116" href="#period_116">. </a> Gathering event information and immediately transmitting it to another system can also enable incident response
-            in the event of system compromise<a id="period_117" href="#period_117">. </a></span></dd></dl>
+      
+      This document does not define any additional SOs<a id="period_122" href="#period_122">. </a>    
   
     
     <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_Operational_Environment">4.2 Security Objectives for the Operational Environment</h2>
-      The following security objectives for the operational environment help the OS in correctly providing its security functionality<a id="period_118" href="#period_118">. </a>      These track with the assumptions about the environment<a id="period_119" href="#period_119">. </a>      <dl><dt class="SOE defined" id="OE.PLATFORM">OE.PLATFORM</dt><dd><span class="description">The OS relies on being installed on trusted hardware<a id="period_120" href="#period_120">. </a></span></dd><dt class="SOE defined" id="OE.PROPER_USER">OE.PROPER_USER</dt><dd><span class="description">The OS user is not willfully negligent or hostile, and uses the software within compliance of the applied enterprise security policy<a id="period_121" href="#period_121">. </a>            Standard user accounts are provisioned in accordance with the least privilege model<a id="period_122" href="#period_122">. </a>Users requiring higher levels of access should have a separate 
-            account dedicated for that use<a id="period_123" href="#period_123">. </a></span></dd><dt class="SOE defined" id="OE.PROPER_ADMIN">OE.PROPER_ADMIN</dt><dd><span class="description">The OS administrator is not careless, willfully negligent or hostile, and administers the OS within compliance of the applied enterprise
-            security policy<a id="period_124" href="#period_124">. </a></span></dd></dl>
+      The following security objectives for the operational environment help the OS in correctly providing its security functionality<a id="period_123" href="#period_123">. </a>      These track with the assumptions about the environment<a id="period_124" href="#period_124">. </a>      <dl><dt class="SOE defined" id="OE.QQQQ">OE.QQQQ</dt><dd><span class="description">QQQQ</span></dd></dl>
     
     <h2 id="" class="indexable,h2" data-level="2">4.3 Security Objectives Rationale</h2>   
 		This section describes how the assumptions and organizational 
-		security policies map to operational environment security objectives<a id="period_125" href="#period_125">. </a>	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PLATFORM">A.PLATFORM</a></td><td><a href="#OE.PLATFORM">OE.PLATFORM</a></td><td> The operational environment objective <a href="#OE.PLATFORM">OE.PLATFORM</a> is realized through <a href="#A.PLATFORM">A.PLATFORM</a><a id="period_126" href="#period_126">. </a></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PROPER_USER">A.PROPER_&#8203;USER</a></td><td><a href="#OE.PROPER_USER">OE.PROPER_&#8203;USER</a></td><td>The operational environment objective <a href="#OE.PROPER_USER">OE.PROPER_USER</a> is realized through <a href="#A.PROPER_USER">A.PROPER_USER</a><a id="period_127" href="#period_127">. </a></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PROPER_ADMIN">A.PROPER_&#8203;ADMIN</a></td><td><a href="#OE.PROPER_ADMIN">OE.PROPER_&#8203;ADMIN</a></td><td>The operational environment objective <a href="#OE.PROPER_ADMIN">OE.PROPER_ADMIN</a> is realized through <a href="#A.PROPER_ADMIN">A.PROPER_ADMIN</a><a id="period_128" href="#period_128">. </a></td></tr></table>
+		security policies map to operational environment security objectives<a id="period_125" href="#period_125">. </a>	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SECURED_INFRASTRUCTURE">A.SECURED_&#8203;INFRASTRUCTURE</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SUPPORTED_API">A.SUPPORTED_&#8203;API</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr></table>
   
     
   <h1 class="indexable" data-level="1" id="Security_Requirements">5 Security Requirements</h1>
             
     The SFRs included in this section are derived from Part 2 of the Common Criteria for Information Technology Security Evaluation, CC:2022R1, with
-    additional extended functional components<a id="period_129" href="#period_129">. </a><br><br>
-    The CC defines operations on SFRs: assignments, selections, assignments within selections and refinements<a id="period_130" href="#period_130">. </a>This document uses the following font 
+    additional extended functional components<a id="period_126" href="#period_126">. </a><br><br>
+    The CC defines operations on SFRs: assignments, selections, assignments within selections and refinements<a id="period_127" href="#period_127">. </a>This document uses the following font 
     conventions to identify the operations defined by the CC:<br><br>
     <ul>
-      <li>Assignments are indicated with <i>italicized</i> text<a id="period_131" href="#period_131">. </a></li>
+      <li>Assignments are indicated with <i>italicized</i> text<a id="period_128" href="#period_128">. </a></li>
       <li>Refinements made by the PP-Module author are indicated with <b>bold text</b> for added or substituted
-        text and <s>strikethrough</s> text for removed text<a id="period_132" href="#period_132">. </a>Refinements are only applied to significant technical
+        text and <s>strikethrough</s> text for removed text<a id="period_129" href="#period_129">. </a>Refinements are only applied to significant technical
         changes to existing SFRs; minor presentation changes with no technical impact (such as British vs
-        American spelling differences) are not marked as refinements<a id="period_133" href="#period_133">. </a>Refinements are also indicated when
-        an operation is added or substituted for an existing operation (e.g<a id="period_134" href="#period_134">. </a>the PP-Module completes an
-        assignment in such a way that it introduces a selection into the assignment)<a id="period_135" href="#period_135">. </a><br><br>
+        American spelling differences) are not marked as refinements<a id="period_130" href="#period_130">. </a>Refinements are also indicated when
+        an operation is added or substituted for an existing operation (e.g<a id="period_131" href="#period_131">. </a>the PP-Module completes an
+        assignment in such a way that it introduces a selection into the assignment)<a id="period_132" href="#period_132">. </a><br><br>
         Note that for SFRs that are defined either in CC Part 2 or in this PP-Module&#8217;s Extended Components
-        Definition, the refinement operation is used to indicate deviations from the defined component<a id="period_136" href="#period_136">. </a>For
+        Definition, the refinement operation is used to indicate deviations from the defined component<a id="period_133" href="#period_133">. </a>For
         Base-PP SFRs that are modified by this PP-Module, the refinement operation is used to indicate
-        deviations from the Base-PP&#8217;s definition of the SFR (i.e<a id="period_137" href="#period_137">. </a>if the Base-PP refined an SFR and that
-        change is not affected by this PP-Module, it is not shown here as a refinement)<a id="period_138" href="#period_138">. </a></li><br>
-      <li>Selections are indicated with <i>italicized</i> text<a id="period_139" href="#period_139">. </a></li>
+        deviations from the Base-PP&#8217;s definition of the SFR (i.e<a id="period_134" href="#period_134">. </a>if the Base-PP refined an SFR and that
+        change is not affected by this PP-Module, it is not shown here as a refinement)<a id="period_135" href="#period_135">. </a></li><br>
+      <li>Selections are indicated with <i>italicized</i> text<a id="period_136" href="#period_136">. </a></li>
       <li>Iteration is indicated by appending the SFR name with a slash and unique identifier suggesting the
-        purpose of the iteration, e.g<a id="period_140" href="#period_140">. </a>&#8216;/SDN&#8217; for an SFR relating to VPN functionality<a id="period_141" href="#period_141">. </a></li>  
-      <li>Extended SFRs are identified by having a label &#8220;EXT&#8221; after the SFR name<a id="period_142" href="#period_142">. </a></li>
+        purpose of the iteration, e.g<a id="period_137" href="#period_137">. </a>&#8216;/SDN&#8217; for an SFR relating to VPN functionality<a id="period_138" href="#period_138">. </a></li>  
+      <li>Extended SFRs are identified by having a label &#8220;EXT&#8221; after the SFR name<a id="period_139" href="#period_139">. </a></li>
     </ul>
     Note that selections and assignments to be completed by the ST author are preceded with &#8220;selection:&#8221;
-    and &#8220;assignment:&#8221;<a id="period_143" href="#period_143">. </a>If text is italicized and does not include either of these, it means that the selection or
+    and &#8220;assignment:&#8221;<a id="period_140" href="#period_140">. </a>If text is italicized and does not include either of these, it means that the selection or
     assignment has already been completed in this PP-Module and the ST author must use the text as
-    written<a id="period_144" href="#period_144">. </a>
+    written<a id="period_141" href="#period_141">. </a>
     
       https://old.niap-ccevs.org/MMO/PP/CPP_ND_V3.0E.pdf
       
       
       
       
-        When this PP-Module is used to extend the NDcPP, the TOE type for the overall TOE is still a network device<a id="period_145" href="#period_145">. </a>The TOE boundary is simply extended to 
-        include SDN controller functionality that is provided by the network device<a id="period_146" href="#period_146">. </a>
+        When this PP-Module is used to extend the NDcPP, the TOE type for the overall TOE is still a network device<a id="period_142" href="#period_142">. </a>The TOE boundary is simply extended to 
+        include SDN controller functionality that is provided by the network device<a id="period_143" href="#period_143">. </a>
       
       
         The threats defined by this PP-Module (see section 3.1) supplement those defined in the NDcPP as follows:
@@ -971,69 +956,69 @@ provide all of its security functionality<a id="period_110" href="#period_110">.
     
   
   <h1 id="entropyappendix" class="indexable" data-level="A">Appendix A -  Entropy Documentation and Assessment</h1> This appendix
-    describes the required supplementary information for the entropy source used by the OS<a id="period_147" href="#period_147">. </a><br>
+    describes the required supplementary information for the entropy source used by the OS<a id="period_144" href="#period_144">. </a><br>
     The documentation of the entropy source should be detailed enough that, after reading, the
     evaluator will thoroughly understand the entropy source and why it can be relied upon to provide
-    sufficient entropy<a id="period_148" href="#period_148">. </a>This documentation should include multiple detailed sections: design
-    description, entropy justification, operating conditions, and health testing<a id="period_149" href="#period_149">. </a>This documentation
-    is not required to be part of the TSS<a id="period_150" href="#period_150">. </a>
+    sufficient entropy<a id="period_145" href="#period_145">. </a>This documentation should include multiple detailed sections: design
+    description, entropy justification, operating conditions, and health testing<a id="period_146" href="#period_146">. </a>This documentation
+    is not required to be part of the TSS<a id="period_147" href="#period_147">. </a>
     <h2 class="indexable" data-level="2" id="entropydesign">A.1 Design Description</h2>
       Documentation will include the design of the entropy source as a whole, including the
-      interaction of all entropy source components<a id="period_151" href="#period_151">. </a>Any information that can be shared regarding the
+      interaction of all entropy source components<a id="period_148" href="#period_148">. </a>Any information that can be shared regarding the
       design should also be included for any third-party entropy sources that are included in the
-      product<a id="period_152" href="#period_152">. </a><br> The documentation will describe the operation of the entropy source to include,
+      product<a id="period_149" href="#period_149">. </a><br> The documentation will describe the operation of the entropy source to include,
       how entropy is produced, and how unprocessed (raw) data can be obtained from within the
-      entropy source for testing purposes<a id="period_153" href="#period_153">. </a>The documentation should walk through the entropy source
+      entropy source for testing purposes<a id="period_150" href="#period_150">. </a>The documentation should walk through the entropy source
       design indicating where the entropy comes from, where the entropy output is passed next, any
       post-processing of the raw outputs (hash, XOR, etc.), if and where it is stored, and finally, how
-      it is output from the entropy source<a id="period_154" href="#period_154">. </a>Any conditions placed on the process (e.g., blocking)
-      should also be described in the entropy source design<a id="period_155" href="#period_155">. </a>Diagrams and examples are encouraged<a id="period_156" href="#period_156">. </a>      <br> This design must also include a description of the content of the security boundary of
+      it is output from the entropy source<a id="period_151" href="#period_151">. </a>Any conditions placed on the process (e.g., blocking)
+      should also be described in the entropy source design<a id="period_152" href="#period_152">. </a>Diagrams and examples are encouraged<a id="period_153" href="#period_153">. </a>      <br> This design must also include a description of the content of the security boundary of
       the entropy source and a description of how the security boundary ensures that an adversary
-      outside the boundary cannot affect the entropy rate<a id="period_157" href="#period_157">. </a><br> If implemented, the design
+      outside the boundary cannot affect the entropy rate<a id="period_154" href="#period_154">. </a><br> If implemented, the design
       description shall include a description of how third-party applications can add entropy to the
-      RBG<a id="period_158" href="#period_158">. </a>A description of any RBG state saving between power-off and power-on shall be included<a id="period_159" href="#period_159">. </a>
+      RBG<a id="period_155" href="#period_155">. </a>A description of any RBG state saving between power-off and power-on shall be included<a id="period_156" href="#period_156">. </a>
     <h2 class="indexable" data-level="2" id="entropyjustification">A.2 Entropy Justification</h2> There should be a technical
       argument for where the unpredictability in the source comes from and why there is confidence
       in the entropy source delivering sufficient entropy for the uses made of the RBG output (by
-      this particular OS)<a id="period_160" href="#period_160">. </a>This argument will include a description of the expected min-entropy
-      rate (i.e<a id="period_161" href="#period_161">. </a>the minimum entropy (in bits) per bit or byte of source data) and explain that
-      sufficient entropy is going into the OS randomizer seeding process<a id="period_162" href="#period_162">. </a>This discussion will be
+      this particular OS)<a id="period_157" href="#period_157">. </a>This argument will include a description of the expected min-entropy
+      rate (i.e<a id="period_158" href="#period_158">. </a>the minimum entropy (in bits) per bit or byte of source data) and explain that
+      sufficient entropy is going into the OS randomizer seeding process<a id="period_159" href="#period_159">. </a>This discussion will be
       part of a justification for why the entropy source can be relied upon to produce bits with
-      entropy<a id="period_163" href="#period_163">. </a><br> The amount of information necessary to justify the expected min-entropy rate
-      depends on the type of entropy source included in the product<a id="period_164" href="#period_164">. </a><br> For developer-provided
+      entropy<a id="period_160" href="#period_160">. </a><br> The amount of information necessary to justify the expected min-entropy rate
+      depends on the type of entropy source included in the product<a id="period_161" href="#period_161">. </a><br> For developer-provided
       entropy sources, in order to justify the min-entropy rate, it is expected that a large number
       of raw source bits will be collected, statistical tests will be performed, and the min-entropy
-      rate determined from the statistical tests<a id="period_165" href="#period_165">. </a>While no particular statistical tests are required
+      rate determined from the statistical tests<a id="period_162" href="#period_162">. </a>While no particular statistical tests are required
       at this time, it is expected that some testing is necessary in order to determine the amount
-      of min-entropy in each output<a id="period_166" href="#period_166">. </a><br> For third-party-provided entropy sources, in which the
+      of min-entropy in each output<a id="period_163" href="#period_163">. </a><br> For third-party-provided entropy sources, in which the
       OS vendor has limited access to the design and raw entropy data of the source, the
       documentation will indicate an estimate of the amount of min-entropy obtained from this
-      third-party source<a id="period_167" href="#period_167">. </a>It is acceptable for the vendor to 'assume' an amount of min-entropy,
-      however, this assumption must be clearly stated in the documentation provided<a id="period_168" href="#period_168">. </a>In particular,
-      the min-entropy estimate must be specified and the assumption included in the ST<a id="period_169" href="#period_169">. </a><br>
+      third-party source<a id="period_164" href="#period_164">. </a>It is acceptable for the vendor to 'assume' an amount of min-entropy,
+      however, this assumption must be clearly stated in the documentation provided<a id="period_165" href="#period_165">. </a>In particular,
+      the min-entropy estimate must be specified and the assumption included in the ST<a id="period_166" href="#period_166">. </a><br>
       Regardless of type of entropy source, the justification will also include how the DRBG is
       initialized with the entropy stated in the ST, for example by verifying that the min-entropy
       rate is multiplied by the amount of source data used to seed the DRBG or that the rate of
       entropy expected based on the amount of source data is explicitly stated and compared to the
-      statistical rate<a id="period_170" href="#period_170">. </a>If the amount of source data used to seed the DRBG is not clear or the
+      statistical rate<a id="period_167" href="#period_167">. </a>If the amount of source data used to seed the DRBG is not clear or the
       calculated rate is not explicitly related to the seed, the documentation will not be
-      considered complete<a id="period_171" href="#period_171">. </a><br> The entropy justification shall not include any data added from any
-      third-party application or from any state saving between restarts<a id="period_172" href="#period_172">. </a>
+      considered complete<a id="period_168" href="#period_168">. </a><br> The entropy justification shall not include any data added from any
+      third-party application or from any state saving between restarts<a id="period_169" href="#period_169">. </a>
     <h2 class="indexable" data-level="2" id="entropyoperatingconditions">A.3 Operating Conditions</h2> The entropy rate may be
-      affected by conditions outside the control of the entropy source itself<a id="period_173" href="#period_173">. </a>For example, voltage,
+      affected by conditions outside the control of the entropy source itself<a id="period_170" href="#period_170">. </a>For example, voltage,
       frequency, temperature, and elapsed time after power-on are just a few of the factors that may
-      affect the operation of the entropy source<a id="period_174" href="#period_174">. </a>As such, documentation will also include the range
-      of operating conditions under which the entropy source is expected to generate random data<a id="period_175" href="#period_175">. </a>It
+      affect the operation of the entropy source<a id="period_171" href="#period_171">. </a>As such, documentation will also include the range
+      of operating conditions under which the entropy source is expected to generate random data<a id="period_172" href="#period_172">. </a>It
       will clearly describe the measures that have been taken in the system design to ensure the
-      entropy source continues to operate under those conditions<a id="period_176" href="#period_176">. </a>Similarly, documentation shall
+      entropy source continues to operate under those conditions<a id="period_173" href="#period_173">. </a>Similarly, documentation shall
       describe the conditions under which the entropy source is known to malfunction or become
-      inconsistent<a id="period_177" href="#period_177">. </a>Methods used to detect failure or degradation of the source shall be included<a id="period_178" href="#period_178">. </a>
+      inconsistent<a id="period_174" href="#period_174">. </a>Methods used to detect failure or degradation of the source shall be included<a id="period_175" href="#period_175">. </a>
     <h2 class="indexable" data-level="2" id="entropyhealthtesting">A.4 Health Testing</h2> More specifically, all entropy source
-      health tests and their rationale will be documented<a id="period_179" href="#period_179">. </a>This includes a description of the health
+      health tests and their rationale will be documented<a id="period_176" href="#period_176">. </a>This includes a description of the health
       tests, the rate and conditions under which each health test is performed (e.g., at start,
       continuously, or on-demand), the expected results for each health test, and rationale
       indicating why each test is believed to be appropriate for detecting one or more failures in
-      the entropy source<a id="period_180" href="#period_180">. </a>
+      the entropy source<a id="period_177" href="#period_177">. </a>
   
 
   <h1 id="biblio" class="indexable" data-level="A">Appendix B -  Bibliography</h1>
@@ -1043,24 +1028,24 @@ provide all of its security functionality<a id="period_110" href="#period_110">.
           <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part
                 1: Introduction and General Model</a>, CCMB-2022-11-001, CC:2022, Revision 1, November 2022</li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part
-                2: Security Functional Requirements</a>, CCMB-2022-11-002, CC:2022, Revision 1, November 2022<a id="period_181" href="#period_181">. </a></li> 
+                2: Security Functional Requirements</a>, CCMB-2022-11-002, CC:2022, Revision 1, November 2022<a id="period_178" href="#period_178">. </a></li> 
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R4.pdf">Part
-                3: Security Assurance Requirements</a>, CCMB-2022-11-003, CC:2022, Revision 1, November 2022<a id="period_182" href="#period_182">. </a></li>
+                3: Security Assurance Requirements</a>, CCMB-2022-11-003, CC:2022, Revision 1, November 2022<a id="period_179" href="#period_179">. </a></li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
-                4: Framework for the Specification of Evaluation Methods and Activities</a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022<a id="period_183" href="#period_183">. </a></li>
+                4: Framework for the Specification of Evaluation Methods and Activities</a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022<a id="period_180" href="#period_180">. </a></li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
-                5: Pre-defined Packages of Security Requirements</a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022<a id="period_184" href="#period_184">. </a></li>
+                5: Pre-defined Packages of Security Requirements</a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022<a id="period_181" href="#period_181">. </a></li>
           </ul></td></tr>
 
       <tr><td><span id="bibCEM"></span>[CEM]</td><td>
           <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">Common
-            Common Methodology for Information Technology Security Evaluation</a>, CCMB-2022-11-006, CC:2022, Revision 1, November 2022<a id="period_185" href="#period_185">. </a></td></tr>
+            Common Methodology for Information Technology Security Evaluation</a>, CCMB-2022-11-006, CC:2022, Revision 1, November 2022<a id="period_182" href="#period_182">. </a></td></tr>
  
       <tr><td><span id="bibOMB"></span>[OMB]</td><td>
           <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">
             Reporting Incidents Involving Personally Identifiable Information and Incorporating the
             Cost for Security in Agency Information Technology Investments</a>, OMB M-06-19, July
-          12, 2006<a id="period_186" href="#period_186">. </a></td></tr>
+          12, 2006<a id="period_183" href="#period_183">. </a></td></tr>
 
     
   

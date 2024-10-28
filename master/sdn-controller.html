@@ -653,47 +653,15 @@ function showTarget(id){
   
   <h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
     <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2>          
-        <p>
-          The scope of this Protection Profile (PP) is to describe the security functionality of Software Defined Networking (SDN) controller use in an enterprise, and define
-          functional and assurance requirements for such products. An SDN is one of many components of an SDN networking architecture. It is intended to provide a minimal, 
-          baseline set of requirements which can be built upon by future revisions to provide an overall set of security solutions for an enterprise network. An SDN is also a 
-          central and vital component of what constitutes an SDN system and is available as a logical or a physical device. An SDN controller manages and distributes network
-          policies, collects routing and payload information from the data plane and interfaces with user applications in the management plane. Each of the planes in an SDN 
-          system is composed of multiple logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane.
-        </p>
-        <p>
-          An SDN controller is meant to 'do no harm' on a network. Rather than providing any explicit security functionality, compliant SDN controllers ensure the
-          following.
-          <ul>
-            <li>
-              They can be remotely managed in a secure manner.
-            </li>
-            <li>
-              Any software or firmware updates are from a trusted source.
-            </li>
-            <li>
-              Any interfaces to applications, VMs, and other devices are trusted (zone of trust).
-            </li>
-            <li>
-               All suspect events are reported.
-            </li>
-            <li>
-               Logical or physical separation of the control and data planes.
-            </li>
-            <li>
-              Logical or physical separation of the control and management planes.
-            </li>
-            <li>
-              Protect data collected and distributed by the control plane to the data plane, such as flow tables and configurations.
-            </li>
-            <li>
-              Protect data collected and distributed by the control plane to the management plane, such as auditable events and traffic or packet statistics.
-            </li>
-            <li>
-              Protect data collected that is distributed and shared within the control plane, such as when multiple SDN controllers exist in the architecture.
-            </li>       
-          </ul>
-        </p>
+
+            The scope of this Protection Profile Module (PP-Module) is to describe the security functionality of a software defined network (SDN) controller in terms of  <a href="#bibCC">[CC]</a> and to define functional and assurance requirements for such
+            products. This PP-Module is intended for use with the following Base-PP:
+            
+            <ul>
+              <li>collaborative Protection Profile for Network Devices (NDcPP), Version 3.0E</li>
+            </ul>
+            
+            This Base-PP is valid because an SDN controller is a specific implementation of a network device. Specifically, an SDN controller is one of many components of an SDN networking architecture. Specifically, an SDN controller manages and distributes network policies, collects routing and payload information from the data plane, and interfaces with user applications in the management plane. Each of the planes in an SDN system is composed of multiple logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane. 
     
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
@@ -760,7 +728,7 @@ The following sections list Common Criteria and technology terms used in this do
 	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code.
       </td></tr>
 <tr><td><div id="Data_Plane">Data Plane</div></td><td>
-        (SDN Network Devices) Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.
+        Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.
       </td></tr>
 <tr><td><div id="Developer">Developer</div></td><td>
 	       An entity that writes OS software. For the purposes of this document, vendors and developers are the same.
@@ -773,11 +741,12 @@ The following sections list Common Criteria and technology terms used in this do
 	       fails, the entire attempt fails.
       </td></tr>
 <tr><td><div id="Management_Plane">Management Plane</div></td><td>
-        (SDN Applications Layer) Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs).
+        Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs).
         In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes. These 
         applications could include networking management, analytics, or business applications used to run large data centers. For example, an analytics application might be
-        built to recognize suspicious network activity for security purposes. The management plane is sometimes also referred to as the Orchestration Layer.
+        built to recognize suspicious network activity for security purposes. This is sometimes also referred to as the Orchestration Layer.
       </td></tr>
+<tr><td><div id="Northbound">Northbound</div></td><td>Communications between an SDN and applications in the management plane.</td></tr>
 <tr><td><div id="Operating_System">Operating System (OS)</div></td><td>
 	       Software that manages physical and logical resources and provides services for applications. The terms TOE and OS are interchangeable in this
 	       document. 
@@ -796,6 +765,7 @@ The following sections list Common Criteria and technology terms used in this do
 	       Sensitive data may include all user or enterprise data or may be specific application data such as PII, emails, messaging, documents, calendar items, and contacts.
 	       Sensitive data must minimally include credentials and keys. Sensitive data shall be identified in the OS's TSS by the ST author. 
       </td></tr>
+<tr><td><div id="Southbound">Southbound</div></td><td>Communications between an SDN and network devices in the data plane.</td></tr>
 <tr><td><div id="User">User</div></td><td>
 	       A user is subject to configuration policies applied to the operating system by administrators.  On some systems, under certain configurations, a normal user can
 	       temporarily elevate privileges to that of an administrator. At that time, such a user should be considered an administrator.
@@ -803,24 +773,43 @@ The following sections list Common Criteria and technology terms used in this do
 </table></div>
     
     <h2 class="indexable" data-level="2" id="Compliant_Targets_of_Evaluation">1.3 Compliant Targets of Evaluation</h2> 
-      Compliant TOEs will implement security functionality in the following general areas.
+      Compliant TOEs will implement necessary functionality in a "do no harm" manner with respect to network security. Specifically:
       <ul>
-        <li>Accountability: Ensuring that information exists to discover unintentional issues with the configuration and operation of the TOE so that the root cause can be determined.</li>
-        <li>Integrity: Ensuring the integrity of updates to the TOE and enforcing mechanisms that control the deployment and execution of applications running on it.</li>
-        <li>Management: Providing mechanisms for configuration of the TSF and deployment of applications running on the TOE.</li>
-        <li>Protected Storage: Ensuring that credentials and file system data are not subject to unauthorized disclosure.</li>
-        <li>Protected Communications: Ensuring that sensitive data in transit to and from the TOE is adequately protected from unauthorized modification and disclosure.</li>
+        <li>They can be remotely managed in a secure manner.</li>
+        <li>Any software/firmware updates are from a trusted source.</li>
+        <li>Any interfaces to applications, VMs, and other devices are trusted (zone of trust).</li>
+        <li>All security-relevant events are reported.</li>
+        <li>The control plane and data plane are logically separated.</li>
+        <li>The control plane and management plane are logically separated.</li>
+        <li>Data that is collected by the control plane and distributed to the data plane, such as flow tables and configurations, is protected.</li>
+        <li>Data that is collected by the control plane and distributed t othe management plane, such as auditable events and traffic or packet statistics, is protected.</li>
+        <li>Data that is collected, distributed, and shared within the control plane, such as when multiple SDN controllers exist in the architecture, is protected.</li>
       </ul>
+      A conformant TOE decouples its data and control planes such that data traffic and control traffic are restricted to their respective planes. It also enforces centralization of control so that all components of the SDN environment are under its control. This can expand across multiple distributed controllers for large, complex, or geographically dispersed networks.
       <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
-        The TOE boundary for an SDN controller is available as a logical or a physical device. An SDN controller manages and distributes network policies, collects routing 
-        and payload information from the data plane, and interfaces with user applications in the management plane. Each plane in an SDN system is composed of multiple 
-        logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane.
+        The TOE boundary for an SDN controller is one or more physical or virtual devices. An SDN controller may be a distributed TOE, as defined by the Base-PP.
         <ul>
           <li>In a physical standalone SDN controller device, the device's hardware, firmware, and software define the evaluation boundary.</li>
           <li>In a virtual SDN controller, the software of the Virtual Machine (VM) defines the evaluation boundary.</li>
           <li>All security functionality is contained and executed within the evaluation boundary of the SDN controller.</li>
-        </ul>       
-        
+        </ul>
+      <p>  
+        The following figure shows the SDN controller sitting between the management and data planes within the SDN infrastructure. This is a simplified diagram of the TOE's position in an SDN deployment. Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown.
+        <div class="figure" id="figure-toe-as-apponos"><img id="toe-as-apponos" src="images/sdncontroller.png" width="" height=""></img><br/><span class="ctr" data-myid="toe-as-apponos" data-counter-type="ct-figure">Figure <span class="counter">1</span></span>:
+      High-Level SDN Representation</div>
+      </p>
+        <p>
+          The following elements of an SDN controller are outside the scope of this PP-Module and are therefore considered to be non-interfering with respect to security, even if they are included as part of a compliant product:
+          <ul>
+            <li>Examination of data plane content, such as virus or email scanning.</li>
+            <li>Intrusion detection or prevention capabilities.</li>
+            <li>Network Address Translation (NAT) as a security function.</li>
+            <li>If the TOE boundary is a single virtual machine, the hardware or firmware of the underlying platform.</li>
+            <li>If the TOE boundary is a single virtual machine, the host operating system or runtime environment.</li>
+            <li>Specific security functionality that is not global to all SDN controllers (e.g. firewall, load balancing).</li>
+            <li>Ohter objects belonging in the data plane.</li>
+          </ul>
+        </p>
       
       
       <h3 class="indexable" data-level="3" id="TOE_Platform">1.3.2 TOE Platform</h3>
@@ -834,22 +823,18 @@ The following sections list Common Criteria and technology terms used in this do
         intentionally very broad, as many specific use cases exist for an SDN controller These use cases may also overlap with one another. An SDN controller's 
         functionality may even be effectively extended by privileged applications installed on it. However, these are out of scope of this PP.
       <dl><dt id="standalonephysdev"> [USE CASE 1] Standalone Physical Device</dt><dd><span class="description">	          
-                        
+            The TOE is a single physical appliance that provides SDN controller functionality.             
           </span></dd><dt id="virtualdev"> [USE CASE 2] Virtual Device</dt><dd><span class="description">
-            
-          </span></dd><dt id="standorvirtmngmtcapa"> [USE CASE 3] Management Capabilities (stand-alone or virtual)</dt><dd><span class="description">
-            
-          </span></dd><dt id="standorvirtcluster"> [USE CASE 4] Cluster (stand-alone or virtual)</dt><dd><span class="description">
-            
-          </span></dd><dt id="hypercov"> [USE CASE 5] Hyper-Converge</dt><dd><span class="description">
-            
-            This consists of an amalgam of computing resources in a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads.
+            The TOE is a virtual machine that provides SDN controller functionality. The TOE boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the SDN controller. 
+          </span></dd><dt id="standorvirtcluster"> [USE CASE 3] Cluster (stand-alone or virtual)</dt><dd><span class="description">
+            Regardless of whether the TOE is physical, virtual, or both, it includes multiple distinct instances that are combined into a distributed cluster.
+          </span></dd><dt id="hypercov"> [USE CASE 4] Hyper-Converge</dt><dd><span class="description">
+            The TOE amalgamates various computing resources into a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads.
           </span></dd></dl>
     
   
     
     <h1 class="indexable" data-level="1" id="Conformance_Claims">2 Conformance Claims</h1>
-      
       
       <dl><dt>Conformance Statement</dt><p></p><dd>An ST must claim exact conformance 
 		 to this PP-Module.</dd><p></p><dd>The evaluation methods used for evaluating the TOE are a combination of the workunits 
@@ -862,7 +847,7 @@ The following sections list Common Criteria and technology terms used in this do
 			Part 2 (extended) 
 			
 			
-			and Part 3 (extended)
+			and Part 3 (conformant)
 			
 				of Common Criteria CC:2022, Revision 1.
 			</dd><dt>PP Claim</dt><p></p><dd>
@@ -873,16 +858,11 @@ The following sections list Common Criteria and technology terms used in this do
 						Functional or Assurance Packages.</dd></dl>
           
   
-  <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>The security problem is described in terms of the threats that the OS is expected to address, assumptions about the operational
+  <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>The security problem is described in terms of the threats that the TOE is expected to address, assumptions about the operational
             environment, and any organizational security policies that the OS is expected to enforce.
     <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
-      
-      <dl><dt class="threat defined" id="T.NETWORK_ATTACK">T.NETWORK_ATTACK</dt><dd><span class="description">
-            An attacker can send unwanted input to the Application Programming Interface (API) of the SDN controller management interface, which could interfere with network
-            traffic.
-          </span></dd><dt class="threat defined" id="T.UNAUTHORIZED_ACCESS">T.UNAUTHORIZED_ACCESS</dt><dd><span class="description">
-            An attacker can compromise the SDN controller and use it to cause unwanted configurations against network devices that are under the SDN controller's control. This
-            can allow network configurations to be changed by an unauthorized user.
+      <dl><dt class="threat defined" id="T.INSECURE_INTERFACE">T.INSECURE_INTERFACE</dt><dd><span class="description">
+            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with opportunities to inject malicious code or to retrieve sensitive information. Unwanted and or unauthorized API functions executed and API manipulations can compromise network services and sensitive data leakage can take place through insecure interfaces.
           </span></dd></dl>
     
 	
@@ -893,13 +873,10 @@ security functionality specified in the PP-Module can be provided by the TOE.
 If the TOE is placed in an OE that does not meet these assumptions, the TOE may no longer be able to
 provide all of its security functionality.
       
-      <dl><dt class="assumption defined" id="A.PLATFORM">A.PLATFORM</dt><dd><span class="description"> 
-            The OS relies upon a trustworthy computing platform for its execution. This underlying platform is out of scope of this PP.
-          </span></dd><dt class="assumption defined" id="A.PROPER_USER">A.PROPER_USER</dt><dd><span class="description"> 
-            The OS user is not willfully negligent or hostile, and uses the software in compliance with the applied enterprise security policy. At the same time, 
-            malicious software could act as the user, so requirements which confine malicious subjects are still in scope.
-          </span></dd><dt class="assumption defined" id="A.PROPER_ADMIN">A.PROPER_ADMIN</dt><dd><span class="description"> 
-            The OS administrator is not careless, willfully negligent or hostile, and administers the OS within compliance of the applied enterprise security policy.
+      <dl><dt class="assumption defined" id="A.SECURED_INFRASTRUCTURE">A.SECURED_INFRASTRUCTURE</dt><dd><span class="description"> 
+            Connections between SDN Controller and network devices under the SDN Controller's control are secure from unauthorized access.
+          </span></dd><dt class="assumption defined" id="A.SUPPORTED_API">A.SUPPORTED_API</dt><dd><span class="description"> 
+            The SDN Controller will have an API in the management interface.
           </span></dd></dl>
     
 
@@ -910,23 +887,20 @@ provide all of its security functionality.
   <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
     
   <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_TOE">4.1 Security Objectives for the TOE</h2>
-      <dl><dt class="SO defined" id="O.ACCOUNTABILITY">O.ACCOUNTABILITY</dt><dd><span class="description">Conformant OSs ensure that information exists that allows administrators to discover unintentional issues with the configuration and operation of
-            the operating system and discover its cause.  Gathering event information and immediately transmitting it to another system can also enable incident response
-            in the event of system compromise.</span></dd></dl>
+      
+      This document does not define any additional SOs.
+    
   
     
     <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_Operational_Environment">4.2 Security Objectives for the Operational Environment</h2>
       The following security objectives for the operational environment help the OS in correctly providing its security functionality.
       These track with the assumptions about the environment.
-      <dl><dt class="SOE defined" id="OE.PLATFORM">OE.PLATFORM</dt><dd><span class="description">The OS relies on being installed on trusted hardware.</span></dd><dt class="SOE defined" id="OE.PROPER_USER">OE.PROPER_USER</dt><dd><span class="description">The OS user is not willfully negligent or hostile, and uses the software within compliance of the applied enterprise security policy.
-            Standard user accounts are provisioned in accordance with the least privilege model. Users requiring higher levels of access should have a separate 
-            account dedicated for that use.</span></dd><dt class="SOE defined" id="OE.PROPER_ADMIN">OE.PROPER_ADMIN</dt><dd><span class="description">The OS administrator is not careless, willfully negligent or hostile, and administers the OS within compliance of the applied enterprise
-            security policy.</span></dd></dl>
+      <dl><dt class="SOE defined" id="OE.QQQQ">OE.QQQQ</dt><dd><span class="description">QQQQ</span></dd></dl>
     
     <h2 id="" class="indexable,h2" data-level="2">4.3 Security Objectives Rationale</h2>   
 		This section describes how the assumptions and organizational 
 		security policies map to operational environment security objectives.
-	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PLATFORM">A.PLATFORM</a></td><td><a href="#OE.PLATFORM">OE.PLATFORM</a></td><td> The operational environment objective <a href="#OE.PLATFORM">OE.PLATFORM</a> is realized through <a href="#A.PLATFORM">A.PLATFORM</a>.</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PROPER_USER">A.PROPER_​USER</a></td><td><a href="#OE.PROPER_USER">OE.PROPER_​USER</a></td><td>The operational environment objective <a href="#OE.PROPER_USER">OE.PROPER_USER</a> is realized through <a href="#A.PROPER_USER">A.PROPER_USER</a>.</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PROPER_ADMIN">A.PROPER_​ADMIN</a></td><td><a href="#OE.PROPER_ADMIN">OE.PROPER_​ADMIN</a></td><td>The operational environment objective <a href="#OE.PROPER_ADMIN">OE.PROPER_ADMIN</a> is realized through <a href="#A.PROPER_ADMIN">A.PROPER_ADMIN</a>.</td></tr></table>
+	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SECURED_INFRASTRUCTURE">A.SECURED_​INFRASTRUCTURE</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SUPPORTED_API">A.SUPPORTED_​API</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr></table>
   
     
   <h1 class="indexable" data-level="1" id="Security_Requirements">5 Security Requirements</h1>
