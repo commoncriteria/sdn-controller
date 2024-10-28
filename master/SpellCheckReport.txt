@@ -25,7 +25,6 @@ output/sdn-controller-release-linkable.html: TBD
 output/sdn-controller-release-linkable.html: VMs
 output/sdn-controller-release-linkable.html: othe
 output/sdn-controller-release-linkable.html: qqq
-output/sdn-controller-release-linkable.html: virtualized
 output/sdn-controller-release.html: 0E
 output/sdn-controller-release.html: 2022R1
 output/sdn-controller-release.html: NDcPP
@@ -35,7 +34,6 @@ output/sdn-controller-release.html: TBD
 output/sdn-controller-release.html: VMs
 output/sdn-controller-release.html: othe
 output/sdn-controller-release.html: qqq
-output/sdn-controller-release.html: virtualized
 output/sdn-controller.html: 0E
 output/sdn-controller.html: 2022R1
 output/sdn-controller.html: NDcPP
@@ -45,4 +43,3 @@ output/sdn-controller.html: TBD
 output/sdn-controller.html: VMs
 output/sdn-controller.html: othe
 output/sdn-controller.html: qqq
-output/sdn-controller.html: virtualized

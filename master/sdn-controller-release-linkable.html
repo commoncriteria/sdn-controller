@@ -629,7 +629,7 @@ function showTarget(id){
           }
     </style></head><body onLoad="init()"><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"><br>
       Version: 1.0<br>2024-10-31<br><b>National Information Assurance Partnership</b><br></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
-</table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#TOE_Platform" style="text-indent:20px">1.3.2<span>TOE Platform</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.1<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.2<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.3<span>qqq qqq</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix A - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:10px">A.1<span>Design Description</span></a><a href="#entropyjustification" style="text-indent:10px">A.2<span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:10px">A.3<span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:10px">A.4<span>Health Testing</span></a><a href="#biblio" style="text-indent:0px">Appendix B - <span>Bibliography</span></a></div>
+</table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.1<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.2<span>qqq qqq</span></a><a href="#qqq_qqq" style="text-indent:20px">5.0.3<span>qqq qqq</span></a><a href="#entropyappendix" style="text-indent:0px">Appendix A - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:10px">A.1<span>Design Description</span></a><a href="#entropyjustification" style="text-indent:10px">A.2<span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:10px">A.3<span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:10px">A.4<span>Health Testing</span></a><a href="#biblio" style="text-indent:0px">Appendix B - <span>Bibliography</span></a></div>
   
  
   
@@ -787,61 +787,56 @@ The following sections list Common Criteria and technology terms used in this do
           </ul>
         </p>
       
-      
-      <h3 class="indexable" data-level="3" id="TOE_Platform">1.3.2 TOE Platform</h3>
-	       
-	       The TOE platform of a virtualized SDN controller is out of scope for this evaluation<a id="period_98" href="#period_98">. </a>
-      
     
     
           
-    <h2 class="indexable" data-level="2" id="Use_Cases">1.4 Use Cases</h2>Requirements in this PP-Module are designed to address the security problems in at least the following use cases<a id="period_99" href="#period_99">. </a>These use cases are 
-        intentionally very broad, as many specific use cases exist for an SDN controller These use cases may also overlap with one another<a id="period_100" href="#period_100">. </a>An SDN controller's 
-        functionality may even be effectively extended by privileged applications installed on it<a id="period_101" href="#period_101">. </a>However, these are out of scope of this PP<a id="period_102" href="#period_102">. </a>      <dl><dt id="standalonephysdev"> [USE CASE 1] Standalone Physical Device</dt><dd><span class="description">	          
-            The TOE is a single physical appliance that provides SDN controller functionality<a id="period_103" href="#period_103">. </a>            
+    <h2 class="indexable" data-level="2" id="Use_Cases">1.4 Use Cases</h2>Requirements in this PP-Module are designed to address the security problems in at least the following use cases<a id="period_98" href="#period_98">. </a>These use cases are 
+        intentionally very broad, as many specific use cases exist for an SDN controller These use cases may also overlap with one another<a id="period_99" href="#period_99">. </a>An SDN controller's 
+        functionality may even be effectively extended by privileged applications installed on it<a id="period_100" href="#period_100">. </a>However, these are out of scope of this PP<a id="period_101" href="#period_101">. </a>      <dl><dt id="standalonephysdev"> [USE CASE 1] Standalone Physical Device</dt><dd><span class="description">	          
+            The TOE is a single physical appliance that provides SDN controller functionality<a id="period_102" href="#period_102">. </a>            
           </span></dd><dt id="virtualdev"> [USE CASE 2] Virtual Device</dt><dd><span class="description">
-            The TOE is a virtual machine that provides SDN controller functionality<a id="period_104" href="#period_104">. </a>The TOE boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the SDN controller<a id="period_105" href="#period_105">. </a>
+            The TOE is a virtual machine that provides SDN controller functionality<a id="period_103" href="#period_103">. </a>The TOE boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the SDN controller<a id="period_104" href="#period_104">. </a>
           </span></dd><dt id="standorvirtcluster"> [USE CASE 3] Cluster (stand-alone or virtual)</dt><dd><span class="description">
-            Regardless of whether the TOE is physical, virtual, or both, it includes multiple distinct instances that are combined into a distributed cluster<a id="period_106" href="#period_106">. </a>          </span></dd><dt id="hypercov"> [USE CASE 4] Hyper-Converge</dt><dd><span class="description">
-            The TOE amalgamates various computing resources into a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads<a id="period_107" href="#period_107">. </a>          </span></dd></dl>
+            Regardless of whether the TOE is physical, virtual, or both, it includes multiple distinct instances that are combined into a distributed cluster<a id="period_105" href="#period_105">. </a>          </span></dd><dt id="hypercov"> [USE CASE 4] Hyper-Converge</dt><dd><span class="description">
+            The TOE amalgamates various computing resources into a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads<a id="period_106" href="#period_106">. </a>          </span></dd></dl>
     
   
     
     <h1 class="indexable" data-level="1" id="Conformance_Claims">2 Conformance Claims</h1>
       
       <dl><dt>Conformance Statement</dt><p></p><dd>An ST must claim exact conformance 
-		 to this PP-Module<a id="period_108" href="#period_108">. </a></dd><p></p><dd>The evaluation methods used for evaluating the TOE are a combination of the workunits 
+		 to this PP-Module<a id="period_107" href="#period_107">. </a></dd><p></p><dd>The evaluation methods used for evaluating the TOE are a combination of the workunits 
 			defined in <a href="#bibCEM">[CEM]</a> as well as the Evaluation Activities for ensuring that individual SFRs 
 			and SARs have a sufficient level of supporting evidence in the Security Target and guidance 
 			documentation and have been sufficiently tested by the laboratory as part of completing 
-			ATE_IND.1<a id="period_109" href="#period_109">. </a>Any functional packages this PP claims similarly contain their own Evaluation 
-			Activities that are used in this same manner<a id="period_110" href="#period_110">. </a>			</dd><dt>CC Conformance Claims</dt><p></p><dd>This PP-Module is conformant to 
+			ATE_IND.1<a id="period_108" href="#period_108">. </a>Any functional packages this PP claims similarly contain their own Evaluation 
+			Activities that are used in this same manner<a id="period_109" href="#period_109">. </a>			</dd><dt>CC Conformance Claims</dt><p></p><dd>This PP-Module is conformant to 
 			Part 2 (extended) 
 			
 			
 			and Part 3 (conformant)
 			
-				of Common Criteria CC:2022, Revision 1<a id="period_111" href="#period_111">. </a>			</dd><dt>PP Claim</dt><p></p><dd>
+				of Common Criteria CC:2022, Revision 1<a id="period_110" href="#period_110">. </a>			</dd><dt>PP Claim</dt><p></p><dd>
 					This PP-Module does not claim conformance to 
-					any Protection Profile<a id="period_112" href="#period_112">. </a>				</dd><p></p><dd>There are no PPs or PP-Modules that are allowed in a PP-Configuration 
-					with this PP-Module<a id="period_113" href="#period_113">. </a></dd><dt>Package Claim</dt><p></p><dd>This PP-Module is not conformant to any 
-						Functional or Assurance Packages<a id="period_114" href="#period_114">. </a></dd></dl>
+					any Protection Profile<a id="period_111" href="#period_111">. </a>				</dd><p></p><dd>There are no PPs or PP-Modules that are allowed in a PP-Configuration 
+					with this PP-Module<a id="period_112" href="#period_112">. </a></dd><dt>Package Claim</dt><p></p><dd>This PP-Module is not conformant to any 
+						Functional or Assurance Packages<a id="period_113" href="#period_113">. </a></dd></dl>
           
   
   <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>The security problem is described in terms of the threats that the TOE is expected to address, assumptions about the operational
-            environment, and any organizational security policies that the OS is expected to enforce<a id="period_115" href="#period_115">. </a>    <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
+            environment, and any organizational security policies that the OS is expected to enforce<a id="period_114" href="#period_114">. </a>    <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
       <dl><dt class="threat defined" id="T.INSECURE_INTERFACE">T.INSECURE_INTERFACE</dt><dd><span class="description">
-            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with opportunities to inject malicious code or to retrieve sensitive information<a id="period_116" href="#period_116">. </a>Unwanted and or unauthorized API functions executed and API manipulations can compromise network services and sensitive data leakage can take place through insecure interfaces<a id="period_117" href="#period_117">. </a>          </span></dd></dl>
+            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with opportunities to inject malicious code or to retrieve sensitive information<a id="period_115" href="#period_115">. </a>Unwanted and or unauthorized API functions executed and API manipulations can compromise network services and sensitive data leakage can take place through insecure interfaces<a id="period_116" href="#period_116">. </a>          </span></dd></dl>
     
 	
 	
     <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2>
 These assumptions are made on the Operational Environment (OE) in order to be able to ensure that the
-security functionality specified in the PP-Module can be provided by the TOE<a id="period_118" href="#period_118">. </a>If the TOE is placed in an OE that does not meet these assumptions, the TOE may no longer be able to
-provide all of its security functionality<a id="period_119" href="#period_119">. </a>      
+security functionality specified in the PP-Module can be provided by the TOE<a id="period_117" href="#period_117">. </a>If the TOE is placed in an OE that does not meet these assumptions, the TOE may no longer be able to
+provide all of its security functionality<a id="period_118" href="#period_118">. </a>      
       <dl><dt class="assumption defined" id="A.SECURED_INFRASTRUCTURE">A.SECURED_INFRASTRUCTURE</dt><dd><span class="description"> 
-            Connections between SDN Controller and network devices under the SDN Controller's control are secure from unauthorized access<a id="period_120" href="#period_120">. </a>          </span></dd><dt class="assumption defined" id="A.SUPPORTED_API">A.SUPPORTED_API</dt><dd><span class="description"> 
-            The SDN Controller will have an API in the management interface<a id="period_121" href="#period_121">. </a>          </span></dd></dl>
+            Connections between SDN Controller and network devices under the SDN Controller's control are secure from unauthorized access<a id="period_119" href="#period_119">. </a>          </span></dd><dt class="assumption defined" id="A.SUPPORTED_API">A.SUPPORTED_API</dt><dd><span class="description"> 
+            The SDN Controller will have an API in the management interface<a id="period_120" href="#period_120">. </a>          </span></dd></dl>
     
 
   
@@ -852,53 +847,53 @@ provide all of its security functionality<a id="period_119" href="#period_119">.
     
   <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_TOE">4.1 Security Objectives for the TOE</h2>
       
-      This document does not define any additional SOs<a id="period_122" href="#period_122">. </a>    
+      This document does not define any additional SOs<a id="period_121" href="#period_121">. </a>    
   
     
     <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_Operational_Environment">4.2 Security Objectives for the Operational Environment</h2>
-      The following security objectives for the operational environment help the OS in correctly providing its security functionality<a id="period_123" href="#period_123">. </a>      These track with the assumptions about the environment<a id="period_124" href="#period_124">. </a>      <dl><dt class="SOE defined" id="OE.QQQQ">OE.QQQQ</dt><dd><span class="description">QQQQ</span></dd></dl>
+      The following security objectives for the operational environment help the OS in correctly providing its security functionality<a id="period_122" href="#period_122">. </a>      These track with the assumptions about the environment<a id="period_123" href="#period_123">. </a>      <dl><dt class="SOE defined" id="OE.QQQQ">OE.QQQQ</dt><dd><span class="description">QQQQ</span></dd></dl>
     
     <h2 id="" class="indexable,h2" data-level="2">4.3 Security Objectives Rationale</h2>   
 		This section describes how the assumptions and organizational 
-		security policies map to operational environment security objectives<a id="period_125" href="#period_125">. </a>	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SECURED_INFRASTRUCTURE">A.SECURED_&#8203;INFRASTRUCTURE</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SUPPORTED_API">A.SUPPORTED_&#8203;API</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr></table>
+		security policies map to operational environment security objectives<a id="period_124" href="#period_124">. </a>	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SECURED_INFRASTRUCTURE">A.SECURED_&#8203;INFRASTRUCTURE</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SUPPORTED_API">A.SUPPORTED_&#8203;API</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr></table>
   
     
   <h1 class="indexable" data-level="1" id="Security_Requirements">5 Security Requirements</h1>
             
     The SFRs included in this section are derived from Part 2 of the Common Criteria for Information Technology Security Evaluation, CC:2022R1, with
-    additional extended functional components<a id="period_126" href="#period_126">. </a><br><br>
-    The CC defines operations on SFRs: assignments, selections, assignments within selections and refinements<a id="period_127" href="#period_127">. </a>This document uses the following font 
+    additional extended functional components<a id="period_125" href="#period_125">. </a><br><br>
+    The CC defines operations on SFRs: assignments, selections, assignments within selections and refinements<a id="period_126" href="#period_126">. </a>This document uses the following font 
     conventions to identify the operations defined by the CC:<br><br>
     <ul>
-      <li>Assignments are indicated with <i>italicized</i> text<a id="period_128" href="#period_128">. </a></li>
+      <li>Assignments are indicated with <i>italicized</i> text<a id="period_127" href="#period_127">. </a></li>
       <li>Refinements made by the PP-Module author are indicated with <b>bold text</b> for added or substituted
-        text and <s>strikethrough</s> text for removed text<a id="period_129" href="#period_129">. </a>Refinements are only applied to significant technical
+        text and <s>strikethrough</s> text for removed text<a id="period_128" href="#period_128">. </a>Refinements are only applied to significant technical
         changes to existing SFRs; minor presentation changes with no technical impact (such as British vs
-        American spelling differences) are not marked as refinements<a id="period_130" href="#period_130">. </a>Refinements are also indicated when
-        an operation is added or substituted for an existing operation (e.g<a id="period_131" href="#period_131">. </a>the PP-Module completes an
-        assignment in such a way that it introduces a selection into the assignment)<a id="period_132" href="#period_132">. </a><br><br>
+        American spelling differences) are not marked as refinements<a id="period_129" href="#period_129">. </a>Refinements are also indicated when
+        an operation is added or substituted for an existing operation (e.g<a id="period_130" href="#period_130">. </a>the PP-Module completes an
+        assignment in such a way that it introduces a selection into the assignment)<a id="period_131" href="#period_131">. </a><br><br>
         Note that for SFRs that are defined either in CC Part 2 or in this PP-Module&#8217;s Extended Components
-        Definition, the refinement operation is used to indicate deviations from the defined component<a id="period_133" href="#period_133">. </a>For
+        Definition, the refinement operation is used to indicate deviations from the defined component<a id="period_132" href="#period_132">. </a>For
         Base-PP SFRs that are modified by this PP-Module, the refinement operation is used to indicate
-        deviations from the Base-PP&#8217;s definition of the SFR (i.e<a id="period_134" href="#period_134">. </a>if the Base-PP refined an SFR and that
-        change is not affected by this PP-Module, it is not shown here as a refinement)<a id="period_135" href="#period_135">. </a></li><br>
-      <li>Selections are indicated with <i>italicized</i> text<a id="period_136" href="#period_136">. </a></li>
+        deviations from the Base-PP&#8217;s definition of the SFR (i.e<a id="period_133" href="#period_133">. </a>if the Base-PP refined an SFR and that
+        change is not affected by this PP-Module, it is not shown here as a refinement)<a id="period_134" href="#period_134">. </a></li><br>
+      <li>Selections are indicated with <i>italicized</i> text<a id="period_135" href="#period_135">. </a></li>
       <li>Iteration is indicated by appending the SFR name with a slash and unique identifier suggesting the
-        purpose of the iteration, e.g<a id="period_137" href="#period_137">. </a>&#8216;/SDN&#8217; for an SFR relating to VPN functionality<a id="period_138" href="#period_138">. </a></li>  
-      <li>Extended SFRs are identified by having a label &#8220;EXT&#8221; after the SFR name<a id="period_139" href="#period_139">. </a></li>
+        purpose of the iteration, e.g<a id="period_136" href="#period_136">. </a>&#8216;/SDN&#8217; for an SFR relating to VPN functionality<a id="period_137" href="#period_137">. </a></li>  
+      <li>Extended SFRs are identified by having a label &#8220;EXT&#8221; after the SFR name<a id="period_138" href="#period_138">. </a></li>
     </ul>
     Note that selections and assignments to be completed by the ST author are preceded with &#8220;selection:&#8221;
-    and &#8220;assignment:&#8221;<a id="period_140" href="#period_140">. </a>If text is italicized and does not include either of these, it means that the selection or
+    and &#8220;assignment:&#8221;<a id="period_139" href="#period_139">. </a>If text is italicized and does not include either of these, it means that the selection or
     assignment has already been completed in this PP-Module and the ST author must use the text as
-    written<a id="period_141" href="#period_141">. </a>
+    written<a id="period_140" href="#period_140">. </a>
     
       https://old.niap-ccevs.org/MMO/PP/CPP_ND_V3.0E.pdf
       
       
       
       
-        When this PP-Module is used to extend the NDcPP, the TOE type for the overall TOE is still a network device<a id="period_142" href="#period_142">. </a>The TOE boundary is simply extended to 
-        include SDN controller functionality that is provided by the network device<a id="period_143" href="#period_143">. </a>
+        When this PP-Module is used to extend the NDcPP, the TOE type for the overall TOE is still a network device<a id="period_141" href="#period_141">. </a>The TOE boundary is simply extended to 
+        include SDN controller functionality that is provided by the network device<a id="period_142" href="#period_142">. </a>
       
       
         The threats defined by this PP-Module (see section 3.1) supplement those defined in the NDcPP as follows:
@@ -956,69 +951,69 @@ provide all of its security functionality<a id="period_119" href="#period_119">.
     
   
   <h1 id="entropyappendix" class="indexable" data-level="A">Appendix A -  Entropy Documentation and Assessment</h1> This appendix
-    describes the required supplementary information for the entropy source used by the OS<a id="period_144" href="#period_144">. </a><br>
+    describes the required supplementary information for the entropy source used by the OS<a id="period_143" href="#period_143">. </a><br>
     The documentation of the entropy source should be detailed enough that, after reading, the
     evaluator will thoroughly understand the entropy source and why it can be relied upon to provide
-    sufficient entropy<a id="period_145" href="#period_145">. </a>This documentation should include multiple detailed sections: design
-    description, entropy justification, operating conditions, and health testing<a id="period_146" href="#period_146">. </a>This documentation
-    is not required to be part of the TSS<a id="period_147" href="#period_147">. </a>
+    sufficient entropy<a id="period_144" href="#period_144">. </a>This documentation should include multiple detailed sections: design
+    description, entropy justification, operating conditions, and health testing<a id="period_145" href="#period_145">. </a>This documentation
+    is not required to be part of the TSS<a id="period_146" href="#period_146">. </a>
     <h2 class="indexable" data-level="2" id="entropydesign">A.1 Design Description</h2>
       Documentation will include the design of the entropy source as a whole, including the
-      interaction of all entropy source components<a id="period_148" href="#period_148">. </a>Any information that can be shared regarding the
+      interaction of all entropy source components<a id="period_147" href="#period_147">. </a>Any information that can be shared regarding the
       design should also be included for any third-party entropy sources that are included in the
-      product<a id="period_149" href="#period_149">. </a><br> The documentation will describe the operation of the entropy source to include,
+      product<a id="period_148" href="#period_148">. </a><br> The documentation will describe the operation of the entropy source to include,
       how entropy is produced, and how unprocessed (raw) data can be obtained from within the
-      entropy source for testing purposes<a id="period_150" href="#period_150">. </a>The documentation should walk through the entropy source
+      entropy source for testing purposes<a id="period_149" href="#period_149">. </a>The documentation should walk through the entropy source
       design indicating where the entropy comes from, where the entropy output is passed next, any
       post-processing of the raw outputs (hash, XOR, etc.), if and where it is stored, and finally, how
-      it is output from the entropy source<a id="period_151" href="#period_151">. </a>Any conditions placed on the process (e.g., blocking)
-      should also be described in the entropy source design<a id="period_152" href="#period_152">. </a>Diagrams and examples are encouraged<a id="period_153" href="#period_153">. </a>      <br> This design must also include a description of the content of the security boundary of
+      it is output from the entropy source<a id="period_150" href="#period_150">. </a>Any conditions placed on the process (e.g., blocking)
+      should also be described in the entropy source design<a id="period_151" href="#period_151">. </a>Diagrams and examples are encouraged<a id="period_152" href="#period_152">. </a>      <br> This design must also include a description of the content of the security boundary of
       the entropy source and a description of how the security boundary ensures that an adversary
-      outside the boundary cannot affect the entropy rate<a id="period_154" href="#period_154">. </a><br> If implemented, the design
+      outside the boundary cannot affect the entropy rate<a id="period_153" href="#period_153">. </a><br> If implemented, the design
       description shall include a description of how third-party applications can add entropy to the
-      RBG<a id="period_155" href="#period_155">. </a>A description of any RBG state saving between power-off and power-on shall be included<a id="period_156" href="#period_156">. </a>
+      RBG<a id="period_154" href="#period_154">. </a>A description of any RBG state saving between power-off and power-on shall be included<a id="period_155" href="#period_155">. </a>
     <h2 class="indexable" data-level="2" id="entropyjustification">A.2 Entropy Justification</h2> There should be a technical
       argument for where the unpredictability in the source comes from and why there is confidence
       in the entropy source delivering sufficient entropy for the uses made of the RBG output (by
-      this particular OS)<a id="period_157" href="#period_157">. </a>This argument will include a description of the expected min-entropy
-      rate (i.e<a id="period_158" href="#period_158">. </a>the minimum entropy (in bits) per bit or byte of source data) and explain that
-      sufficient entropy is going into the OS randomizer seeding process<a id="period_159" href="#period_159">. </a>This discussion will be
+      this particular OS)<a id="period_156" href="#period_156">. </a>This argument will include a description of the expected min-entropy
+      rate (i.e<a id="period_157" href="#period_157">. </a>the minimum entropy (in bits) per bit or byte of source data) and explain that
+      sufficient entropy is going into the OS randomizer seeding process<a id="period_158" href="#period_158">. </a>This discussion will be
       part of a justification for why the entropy source can be relied upon to produce bits with
-      entropy<a id="period_160" href="#period_160">. </a><br> The amount of information necessary to justify the expected min-entropy rate
-      depends on the type of entropy source included in the product<a id="period_161" href="#period_161">. </a><br> For developer-provided
+      entropy<a id="period_159" href="#period_159">. </a><br> The amount of information necessary to justify the expected min-entropy rate
+      depends on the type of entropy source included in the product<a id="period_160" href="#period_160">. </a><br> For developer-provided
       entropy sources, in order to justify the min-entropy rate, it is expected that a large number
       of raw source bits will be collected, statistical tests will be performed, and the min-entropy
-      rate determined from the statistical tests<a id="period_162" href="#period_162">. </a>While no particular statistical tests are required
+      rate determined from the statistical tests<a id="period_161" href="#period_161">. </a>While no particular statistical tests are required
       at this time, it is expected that some testing is necessary in order to determine the amount
-      of min-entropy in each output<a id="period_163" href="#period_163">. </a><br> For third-party-provided entropy sources, in which the
+      of min-entropy in each output<a id="period_162" href="#period_162">. </a><br> For third-party-provided entropy sources, in which the
       OS vendor has limited access to the design and raw entropy data of the source, the
       documentation will indicate an estimate of the amount of min-entropy obtained from this
-      third-party source<a id="period_164" href="#period_164">. </a>It is acceptable for the vendor to 'assume' an amount of min-entropy,
-      however, this assumption must be clearly stated in the documentation provided<a id="period_165" href="#period_165">. </a>In particular,
-      the min-entropy estimate must be specified and the assumption included in the ST<a id="period_166" href="#period_166">. </a><br>
+      third-party source<a id="period_163" href="#period_163">. </a>It is acceptable for the vendor to 'assume' an amount of min-entropy,
+      however, this assumption must be clearly stated in the documentation provided<a id="period_164" href="#period_164">. </a>In particular,
+      the min-entropy estimate must be specified and the assumption included in the ST<a id="period_165" href="#period_165">. </a><br>
       Regardless of type of entropy source, the justification will also include how the DRBG is
       initialized with the entropy stated in the ST, for example by verifying that the min-entropy
       rate is multiplied by the amount of source data used to seed the DRBG or that the rate of
       entropy expected based on the amount of source data is explicitly stated and compared to the
-      statistical rate<a id="period_167" href="#period_167">. </a>If the amount of source data used to seed the DRBG is not clear or the
+      statistical rate<a id="period_166" href="#period_166">. </a>If the amount of source data used to seed the DRBG is not clear or the
       calculated rate is not explicitly related to the seed, the documentation will not be
-      considered complete<a id="period_168" href="#period_168">. </a><br> The entropy justification shall not include any data added from any
-      third-party application or from any state saving between restarts<a id="period_169" href="#period_169">. </a>
+      considered complete<a id="period_167" href="#period_167">. </a><br> The entropy justification shall not include any data added from any
+      third-party application or from any state saving between restarts<a id="period_168" href="#period_168">. </a>
     <h2 class="indexable" data-level="2" id="entropyoperatingconditions">A.3 Operating Conditions</h2> The entropy rate may be
-      affected by conditions outside the control of the entropy source itself<a id="period_170" href="#period_170">. </a>For example, voltage,
+      affected by conditions outside the control of the entropy source itself<a id="period_169" href="#period_169">. </a>For example, voltage,
       frequency, temperature, and elapsed time after power-on are just a few of the factors that may
-      affect the operation of the entropy source<a id="period_171" href="#period_171">. </a>As such, documentation will also include the range
-      of operating conditions under which the entropy source is expected to generate random data<a id="period_172" href="#period_172">. </a>It
+      affect the operation of the entropy source<a id="period_170" href="#period_170">. </a>As such, documentation will also include the range
+      of operating conditions under which the entropy source is expected to generate random data<a id="period_171" href="#period_171">. </a>It
       will clearly describe the measures that have been taken in the system design to ensure the
-      entropy source continues to operate under those conditions<a id="period_173" href="#period_173">. </a>Similarly, documentation shall
+      entropy source continues to operate under those conditions<a id="period_172" href="#period_172">. </a>Similarly, documentation shall
       describe the conditions under which the entropy source is known to malfunction or become
-      inconsistent<a id="period_174" href="#period_174">. </a>Methods used to detect failure or degradation of the source shall be included<a id="period_175" href="#period_175">. </a>
+      inconsistent<a id="period_173" href="#period_173">. </a>Methods used to detect failure or degradation of the source shall be included<a id="period_174" href="#period_174">. </a>
     <h2 class="indexable" data-level="2" id="entropyhealthtesting">A.4 Health Testing</h2> More specifically, all entropy source
-      health tests and their rationale will be documented<a id="period_176" href="#period_176">. </a>This includes a description of the health
+      health tests and their rationale will be documented<a id="period_175" href="#period_175">. </a>This includes a description of the health
       tests, the rate and conditions under which each health test is performed (e.g., at start,
       continuously, or on-demand), the expected results for each health test, and rationale
       indicating why each test is believed to be appropriate for detecting one or more failures in
-      the entropy source<a id="period_177" href="#period_177">. </a>
+      the entropy source<a id="period_176" href="#period_176">. </a>
   
 
   <h1 id="biblio" class="indexable" data-level="A">Appendix B -  Bibliography</h1>
@@ -1028,24 +1023,24 @@ provide all of its security functionality<a id="period_119" href="#period_119">.
           <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part
                 1: Introduction and General Model</a>, CCMB-2022-11-001, CC:2022, Revision 1, November 2022</li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part
-                2: Security Functional Requirements</a>, CCMB-2022-11-002, CC:2022, Revision 1, November 2022<a id="period_178" href="#period_178">. </a></li> 
+                2: Security Functional Requirements</a>, CCMB-2022-11-002, CC:2022, Revision 1, November 2022<a id="period_177" href="#period_177">. </a></li> 
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R4.pdf">Part
-                3: Security Assurance Requirements</a>, CCMB-2022-11-003, CC:2022, Revision 1, November 2022<a id="period_179" href="#period_179">. </a></li>
+                3: Security Assurance Requirements</a>, CCMB-2022-11-003, CC:2022, Revision 1, November 2022<a id="period_178" href="#period_178">. </a></li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
-                4: Framework for the Specification of Evaluation Methods and Activities</a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022<a id="period_180" href="#period_180">. </a></li>
+                4: Framework for the Specification of Evaluation Methods and Activities</a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022<a id="period_179" href="#period_179">. </a></li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
-                5: Pre-defined Packages of Security Requirements</a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022<a id="period_181" href="#period_181">. </a></li>
+                5: Pre-defined Packages of Security Requirements</a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022<a id="period_180" href="#period_180">. </a></li>
           </ul></td></tr>
 
       <tr><td><span id="bibCEM"></span>[CEM]</td><td>
           <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">Common
-            Common Methodology for Information Technology Security Evaluation</a>, CCMB-2022-11-006, CC:2022, Revision 1, November 2022<a id="period_182" href="#period_182">. </a></td></tr>
+            Common Methodology for Information Technology Security Evaluation</a>, CCMB-2022-11-006, CC:2022, Revision 1, November 2022<a id="period_181" href="#period_181">. </a></td></tr>
  
       <tr><td><span id="bibOMB"></span>[OMB]</td><td>
           <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">
             Reporting Incidents Involving Personally Identifiable Information and Incorporating the
             Cost for Security in Agency Information Technology Investments</a>, OMB M-06-19, July
-          12, 2006<a id="period_183" href="#period_183">. </a></td></tr>
+          12, 2006<a id="period_182" href="#period_182">. </a></td></tr>
 
     
   
