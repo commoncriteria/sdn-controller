@@ -233,11 +233,6 @@
           </h:ul>
         </h:p>
       </sec:TOE_Boundary>
-      
-      <sec:TOE_Platform>
-	       <!-- Information needs to be added here. -->
-	       The TOE platform of a virtualized SDN controller is out of scope for this evaluation. 
-      </sec:TOE_Platform>
     
     </sec:Compliant_Targets_of_Evaluation>
         <!-- Information needs to be added here. -->  
