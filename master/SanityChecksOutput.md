@@ -1,3 +1,20 @@
-* Warning: fqq_fqq.1 in impl-dep-sfrs section is missing a _depends_ element. /Module[1]""/sec:Security_Requirements[1]""/impl-dep-sfrs[1]""/sec:qqq_qqq[1]""/f-component[1]""
-* Warning: fqq_fqq.1 in obj-sfrs section is missing a _depends_/_objective_ sub tree (We're transitioning to using depends and not sections). /Module[1]""/sec:Security_Requirements[1]""/obj-sfrs[1]""/sec:qqq_qqq[1]""/f-component[1]""
-* Warning: fqq_fqq.1 in opt-sfrs section is missing a _depends_/_optional_ sub tree (We're transitioning to using depends and not sections). /Module[1]""/sec:Security_Requirements[1]""/opt-sfrs[1]""/sec:qqq_qqq[1]""/f-component[1]""
+* Error: f-element FFW_RUL_EXT.1.1/SDN  appears not to have an associated evaluation activity.:
+        /Module[1]""/sec:Security_Requirements[1]""/man-sfrs[1]""/sec:man_ffw[1]""/f-component[1]""/f-element[1]""
+* Error: f-element FMT_API_EXT.1.1  appears not to have an associated evaluation activity.:
+        /Module[1]""/sec:Security_Requirements[1]""/man-sfrs[1]""/sec:man_fmt[1]""/f-component[1]""/f-element[1]""
+* Error: f-element FMT_API_EXT.1.2  appears not to have an associated evaluation activity.:
+        /Module[1]""/sec:Security_Requirements[1]""/man-sfrs[1]""/sec:man_fmt[1]""/f-component[1]""/f-element[2]""
+* Error: f-element FMT_MOF.1.1/SDN  appears not to have an associated evaluation activity.:
+        /Module[1]""/sec:Security_Requirements[1]""/man-sfrs[1]""/sec:man_fmt[1]""/f-component[2]""/f-element[1]""
+* Error: f-element FMT_SMF.1.1/SDN  appears not to have an associated evaluation activity.:
+        /Module[1]""/sec:Security_Requirements[1]""/man-sfrs[1]""/sec:man_fmt[1]""/f-component[3]""/f-element[1]""
+* Error: f-element FMT_SMR.2.1/SDN  appears not to have an associated evaluation activity.:
+        /Module[1]""/sec:Security_Requirements[1]""/man-sfrs[1]""/sec:man_fmt[1]""/f-component[4]""/f-element[1]""
+* Error: f-element FMT_SMR.2.2/SDN  appears not to have an associated evaluation activity.:
+        /Module[1]""/sec:Security_Requirements[1]""/man-sfrs[1]""/sec:man_fmt[1]""/f-component[4]""/f-element[2]""
+* Error: f-element FMT_SMR.2.3/SDN  appears not to have an associated evaluation activity.:
+        /Module[1]""/sec:Security_Requirements[1]""/man-sfrs[1]""/sec:man_fmt[1]""/f-component[4]""/f-element[3]""
+* Warning: This document still has at least one comment.
+* Error: Detected dangling ref to ''
+        for a ref.
+	/Module[1]""/sec:Security_Requirements[1]""/base-pp[1]""/con-mod[1]""/ref[1]""
