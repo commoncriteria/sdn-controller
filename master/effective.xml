@@ -396,46 +396,8 @@
     <base-pp name="Network Device" short="ND" id="ND" version="3.0e" product="Network Device" plural="Network Devices">
       <url>https://old.niap-ccevs.org/MMO/PP/CPP_ND_V3.0E.pdf</url>
       <cPP/>
-      <modified-sfrs>
-        
-        <section title="Protection of the TSF (FPT)" id="mod-fpt">
-          
-          <!-- FPT_TUD_EXT.1 -->
-          <f-component cc-id="fpt_tud_ext.1" id="mod-fpt-tud-ext-1" name="Trusted Updates">
-            <consistency-rationale>This SFR is consistent with its definition in the Base-PP because the only change is to add support for updates to functionality that is particular to SDN products.</consistency-rationale>
-            <f-element>
-              <title>
-                <comment>•	Regular Updates: The SDN controller must require the API be updated. <h:br/><h:br/></comment>
-                The TSF shall provide Security Administrators the ability to
-                query the currently executing version of the TOE firmware/software and <selectables>
-                  <selectable>the most recently installed version of the TOE firmware/software</selectable>
-                  <selectable>no other TOE firmware/software version</selectable>
-                </selectables>.
-              </title>
-            </f-element>
-            <f-element>
-              <title>The TSF shall provide Security Administrators the ability to
-                manually initiate updates to TOE firmware/software <h:b>and SDN APIs</h:b> and 
-                <selectables>
-                  <selectable>support automatic checking for updates</selectable>
-                  <selectable>support automatic updates</selectable>
-                  <selectable>no other update mechanism</selectable>
-                </selectables>.
-              </title>
-            </f-element>
-            <f-element>
-              <title>The TSF shall provide means to authenticate
-                firmware/software <h:b>and SDN API</h:b> updates to the TOE using a [selection: X.509 certificate, digital
-                signature] prior to installing those updates.</title>
-              <aactivity>
-                <no-tests/>
-              </aactivity>
-            </f-element>
-            <audit-event/>
-          </f-component>
-        
-        </section>
-      </modified-sfrs>
+      <modified-sfrs/>
+    
       <additional-sfrs/>
       <con-toe>
         When this PP-Module is used to extend the NDcPP, the TOE type for the overall TOE is still a network device. The TOE boundary is simply extended to 
@@ -453,17 +415,22 @@
     </base-pp>
     
     <man-sfrs>
-    <sec:man_fau>
+      <section title="Security Audit (FAU)" id="man-fau">
       <!-- FAU_GEN.1/SDN -->
       <f-component id="fau-gen-1-sdn" cc-id="fau_gen.1" name="Audit Data Generation (SDN)" iteration="SDN">
         <f-element>
           <title>
-            <comment>The SDN controller must have maximum auditing and logging of all unauthorized API usage, especially API usage attempts from users that are not in the API roles.<h:br/><h:br/>This will be populated as needed by the audit events for other SFRs</comment>
+            <comment>The SDN controller must have maximum auditing and logging of all unauthorized API usage, especially API usage attempts from users that are not in the API roles.<h:br/><h:br/>This will be populated as needed by the audit events for other SFRs<h:br/><h:br/></comment>
             
             The TSF shall implement functionality to generate audit data of the following <h:b>SDN</h:b> auditable events:
             <h:ol type="a">
               <h:li>Startup and shutdown of the audit functions;</h:li>
               <h:li>All auditable events for [<h:i>not specified</h:i>] level of audit;</h:li>
+              <h:li>All unauthorized usage of all API endpoints, including create, read, update, and delete.</h:li>
+              <h:li>All authorized usage of all API endpoints, including create, read, update, and delete.</h:li>
+              <h:li>Full HTTP REST request parameters and values of any API requests sent to the SDNC controller API.</h:li>
+              <h:li>All HTTP Response Codes returned from any HTTP API requests sent to the SDNC controller API.</h:li>
+              <h:li>All error codes and error messages from usage of the API.</h:li>
               <h:li>[<h:i>all auditable events for mandatory SFRs specified in <xref g="t-audit-mandatory"/>, 
                 selected SFRs in <xref g="t-audit-sel-based"/></h:i>].</h:li>
             </h:ol>
@@ -486,34 +453,11 @@
         <audit-event/>
       </f-component>
       
-      <!-- FAU_STG.2/SDN -->
-      <f-component id="fau-stg-2" cc-id="fau_stg.2" name="Protected Audit Data Storage (SDN)" iteration="SDN">
-      <f-element>
-        <title>
-          <comment>
-            <h:ol>
-              <h:li>Configuration and reboot data, including any policy made part of the boot configuration.</h:li>
-              <h:li>SDN switch configuration and reboot data stored in the SDN Controller.</h:li>
-              <h:li>Traffic/packet statistics.</h:li>
-              <h:li>Control plane communications</h:li>
-            </h:ol>
-            <h:br/><h:br/>
-          </comment>
-          The TSF shall protect the stored <h:b>configuration and reboot data (including any policy made as part of the boot configuration), SDN switch configuration and reboot data, traffic and packet statistics, and control plane communications</h:b> in the audit trail from unauthorized deletion.</title>
-      </f-element>
-      <f-element>
-        <title>The TSF shall be able to [<h:i>prevent</h:i>] unauthorized
-          modifications to the stored <h:b>configuration and reboot data (including any policy made as part of the boot configuration), SDN switch configuration and reboot data, traffic and packet statistics, and control plane communications</h:b> in the audit trail.
-        </title>
-      <aactivity>
-        <no-tests/>
-      </aactivity>
-      </f-element>
-      <audit-event/>
-      </f-component>
-    </sec:man_fau>
       
-    <sec:man_fdp>
+        
+      </section>
+      
+      <section title="User Data Protection (FDP)" id="man-fdp">
       <!-- FDP_ACC.1 -->
       <f-component id="fdp-acc-1" cc-id="fdp_acc.1" name="Subset Access Control">
         <f-element>
@@ -538,7 +482,7 @@
               <h:br/><h:br/>
             </comment>
             The TSF shall enforce the [<h:i>API access control policy</h:i>] to objects based on the
-            following: [<h:i>whether and how APIs object can be manipulated, whether the API issues a valid call, whether the API call is authorized</h:i>].
+            following: [<h:i>whether and how API objects can be manipulated, whether the API issues a valid call, whether the API call is authorized</h:i>].
           </title>
         </f-element>
         <f-element>
@@ -548,8 +492,11 @@
         </f-element>
         <f-element>
           <title>The TSF shall explicitly authorize access of subjects to objects based on the following
-            additional rules: [<h:i>an allowlist explicitly authorizes the API request (though this does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it</h:i>].
+            additional rules: [<h:i>an allowlist explicitly authorizes the API request</h:i>].
           </title>
+          <note role="Application">
+           This does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it.
+          </note>
         </f-element>
         <f-element>
           <title>The TSF shall explicitly deny access of subjects to objects based on the following additional
@@ -561,32 +508,10 @@
         </f-element>
       <audit-event/>
       </f-component>
-    </sec:man_fdp>  
-      
-    <sec:man_ffw>
-      
-      <!-- FFW_RUL_EXT.1 (not sure if needed) -->
-      <f-component id="ffw-rul-ext-1" cc-id="ffw_rul_ext.1" name="Stateful Traffic Filtering (SDN)" iteration="SDN">
-        <f-element>
-          <title>
-            <comment>Is this just intended to reproduce these requirements from the FW-Module? If this is the case it seems like we would just want to mandate that a PP-Configuration with this Module also include FW. Then we don’t need it a second time. Or is the idea here that the firewall doing this is in the TOE’s OE?
-              <h:br/><h:br/>
-              <h:ol>
-                <h:li>An attacker can send arbitrary packets to network interfaces.</h:li>
-                <h:li>An attacker can intercept and arbitrarily modify or drop packets within existing traffic flows.</h:li>
-                <h:li>An attacker can leverage the lack of an established standard for communication between the SDN Controller and other components in an SDN network and so taking advantage of interoperability or under-tested protocols</h:li>
-                <h:li>An attacker can intercept and arbitrarily affect communications between an SDN Controller and any northbound applications and/or components.</h:li>
-                <h:li>An attacker can intercept and arbitrarily affect communications between SDN Controllers, east/west communication.</h:li>
-                <h:li>An attacker can intercept and arbitrarily affect communications between the SDN Controller and any switches under its control, southbound communication.</h:li>
-              </h:ol>
-            </comment>
-          </title>
-        </f-element>
-        <audit-event/>
-      </f-component>
-    </sec:man_ffw>
+    </section>  
+     
    
-      <sec:man_fmt>
+      <section title="Security Management (FMT)" id="man-fmt">
         <!-- FMT_API_EXT.1 -->
         <f-component id="fmt-api-ext-1" cc-id="fmt_api_ext.1" name="Management of API Behavior">
           <f-element>
@@ -612,6 +537,9 @@
               </comment>
               The TSF shall restrict the ability to [<h:i>modify the behaviour of</h:i>] the functions [<h:i>API access function as defined by FDP_ACC.1, API validity function as defined by FMT_API_EXT.1</h:i>] to [<h:i>API Administrator</h:i>].
             </title>
+            <note role="Application">
+              The restriction of modifying API access and validity functions to the API Administrator is intended to imply that the API User does not have the ability to modify API functions. The API User role having read-only access to these functions is not precluded by this requirement, as this requirement only relates to the ability to modify the behavior of the API.  
+            </note>
           </f-element>
           <audit-event/>
         </f-component>
@@ -653,7 +581,7 @@
           <audit-event/>
         </f-component>
         
-      </sec:man_fmt>
+      </section>
 
 
     </man-sfrs>

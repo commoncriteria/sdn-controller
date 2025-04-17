@@ -629,12 +629,12 @@ function showTarget(id){
 	            img[src="images/collapsed.png"] { display:none;}
 
           }
-    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/><a href="#Comment-3-">Comment: Comment-3-</a><br/><a href="#Comment-4-">Comment: Comment-4-</a><br/><a href="#Comment-5-">Comment: Comment-5-</a><br/><a href="#Comment-6-">Comment: Comment-6-</a><br/><a href="#Comment-7-">Comment: Comment-7-</a><br/><a href="#Comment-8-">Comment: Comment-8-</a><br/><a href="#Comment-9-">Comment: Comment-9-</a><br/><a href="#Comment-10-">Comment: Comment-10-</a><br/><a href="#Comment-11-">Comment: Comment-11-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
+    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/><a href="#Comment-3-">Comment: Comment-3-</a><br/><a href="#Comment-4-">Comment: Comment-4-</a><br/><a href="#Comment-5-">Comment: Comment-5-</a><br/><a href="#Comment-6-">Comment: Comment-6-</a><br/><a href="#Comment-7-">Comment: Comment-7-</a><br/><a href="#Comment-8-">Comment: Comment-8-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
       Version: 1.0<br/>2024-10-31<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
 </table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-ND" style="text-indent:10px">5.1<span>Collaborative 
     Protection Profile for Network Devices
        Security Functional Requirements Direction
-    </span></a><a href="#modsfr-ND" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#mod-fpt" style="text-indent:30px">5.1.1.1<span>Protection of the TSF (FPT)</span></a><a href="#man-sfrs" style="text-indent:10px">5.2<span>TOE Security Functional Requirements</span></a><a href="#man_fau" style="text-indent:20px">5.2.1<span>man fau</span></a><a href="#man_fdp" style="text-indent:20px">5.2.2<span>man fdp</span></a><a href="#man_ffw" style="text-indent:20px">5.2.3<span>man ffw</span></a><a href="#man_fmt" style="text-indent:20px">5.2.4<span>man fmt</span></a><a href="#obj-req-map" style="text-indent:10px">5.3<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-ND" style="text-indent:10px">6.1<span>Collaborative 
+    </span></a><a href="#modsfr-ND" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#man-sfrs" style="text-indent:10px">5.2<span>TOE Security Functional Requirements</span></a><a href="#man-fau" style="text-indent:20px">5.2.1<span>Security Audit (FAU)</span></a><a href="#man-fdp" style="text-indent:20px">5.2.2<span>User Data Protection (FDP)</span></a><a href="#man-fmt" style="text-indent:20px">5.2.3<span>Security Management (FMT)</span></a><a href="#obj-req-map" style="text-indent:10px">5.3<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-ND" style="text-indent:10px">6.1<span>Collaborative 
     Protection Profile for Network Devices</span></a><a href="#contoe-ND" style="text-indent:20px">6.1.1<span>
 	Consistency of TOE Type
       </span></a><a href="#consecprob-ND" style="text-indent:20px">6.1.2<span>
@@ -926,46 +926,26 @@ Network Device
       The following sections describe any modifications that the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author must make to the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>
       defined in the NDcPP in addition to what is mandated by <a class="dynref" href="#man-sfrs">Section 5.2 TOE Security Functional Requirements</a>.
     <h3 id="modsfr-ND" class="indexable" data-level="3">5.1.1  Modified SFRs </h3>
-
-		The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> listed in this section are defined in the NDcPP and 
-		relevant to the secure operation of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
-		
-        
-        <h4 id="mod-fpt" class="indexable" data-level="4">5.1.1.1 Protection of the TSF (FPT)</h4>
-          
-          
-          <div class="comp" id="FPT_TUD_EXT.1"><h4>FPT_TUD_EXT.1 Trusted Updates</h4>
-            
-            <div class="element"><div class="reqid" id="FPT_TUD_EXT.1.1"><a href="#FPT_TUD_EXT.1.1" class="abbr">FPT_TUD_EXT.1.1</a></div><div class="reqdesc">
-                <span style="" class="comment " id="Comment-3-">•	Regular Updates: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must require the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> be updated. <br/><br/></span>
-                The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide Security Administrators the ability to
-                query the currently executing version of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software and [<b>selection</b>: <span class="selectable-content" id="_s_1">the most recently installed version of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software</span>, <span class="selectable-content" id="_s_2">no other <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software version</span>].
-              </div></div>
-            <div class="element"><div class="reqid" id="FPT_TUD_EXT.1.2"><a href="#FPT_TUD_EXT.1.2" class="abbr">FPT_TUD_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide Security Administrators the ability to
-                manually initiate updates to <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software <b>and <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> APIs</b> and 
-                [<b>selection</b>: <span class="selectable-content" id="_s_3">support automatic checking for updates</span>, <span class="selectable-content" id="_s_4">support automatic updates</span>, <span class="selectable-content" id="_s_5">no other update mechanism</span>].
-              </div></div>
-            <div class="element"><div class="reqid" id="FPT_TUD_EXT.1.3"><a href="#FPT_TUD_EXT.1.3" class="abbr">FPT_TUD_EXT.1.3</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide means to authenticate
-                firmware/software <b>and <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr></b> updates to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> using a [selection: X.509 certificate, digital
-                signature] prior to installing those updates.</div></div>
-            
-          </div>
-        
-        
-      <h2 id="man-sfrs" class="indexable" data-level="2">5.2 TOE Security Functional Requirements</h2>
+      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not modify any <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> defined by the NDcPP.
+    <h2 id="man-sfrs" class="indexable" data-level="2">5.2 TOE Security Functional Requirements</h2>
 	The following section describes the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> that must be satisfied by any <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> that claims conformance to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.
 	These <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must be claimed regardless of which <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> is used to define the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
         
-    <h3 id="man_fau" class="indexable" data-level="3">5.2.1 man fau</h3>
+      <h3 id="man-fau" class="indexable" data-level="3">5.2.1 Security Audit (FAU)</h3>
       
       <div class="comp" id="FAU_GEN.1/SDN"><h4>FAU_GEN.1/SDN Audit Data Generation (SDN)</h4>
         <div class="element"><div class="reqid" id="FAU_GEN.1.1/SDN"><a href="#FAU_GEN.1.1/SDN" class="abbr">FAU_GEN.1.1/SDN</a></div><div class="reqdesc">
-            <span style="" class="comment " id="Comment-4-">The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have maximum auditing and logging of all unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage, especially <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage attempts from users that are not in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> roles.<br/><br/>This will be populated as needed by the audit events for other <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></span>
+            <span style="" class="comment " id="Comment-3-">The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have maximum auditing and logging of all unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage, especially <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage attempts from users that are not in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> roles.<br/><br/>This will be populated as needed by the audit events for other <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr><br/><br/></span>
             
             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall implement functionality to generate audit data of the following <b><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr></b> auditable events:
             <ol type="a">
               <li>Startup and shutdown of the audit functions;</li>
               <li>All auditable events for [<i>not specified</i>] level of audit;</li>
+              <li>All unauthorized usage of all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints, including create, read, update, and delete.</li>
+              <li>All authorized usage of all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints, including create, read, update, and delete.</li>
+              <li>Full <abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_REST">REST</a></abbr> request parameters and values of any <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> requests sent to the SDNC controller <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>.</li>
+              <li>All <abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr> Response Codes returned from any <abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> requests sent to the SDNC controller <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>.</li>
+              <li>All error codes and error messages from usage of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>.</li>
               <li>[<i>all auditable events for mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> specified in <a onclick="showTarget('t-audit-mandatory')" href="#t-audit-mandatory" class="t-audit-mandatory-ref">Table  <span class="counter">t-audit-mandatory</span></a>, 
                 selected <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in <a onclick="showTarget('t-audit-sel-based')" href="#t-audit-sel-based" class="t-audit-sel-based-ref">Table  <span class="counter">t-audit-sel-based</span></a></i>].</li>
             </ol>
@@ -983,26 +963,10 @@ Network Device
       </div>
       
       
-      <div class="comp" id="FAU_STG.2/SDN"><h4>FAU_STG.2/SDN Protected Audit Data Storage (SDN)</h4>
-      <div class="element"><div class="reqid" id="FAU_STG.2.1/SDN"><a href="#FAU_STG.2.1/SDN" class="abbr">FAU_STG.2.1/SDN</a></div><div class="reqdesc">
-          <span style="" class="comment " id="Comment-5-">
-            <ol>
-              <li>Configuration and reboot data, including any policy made part of the boot configuration.</li>
-              <li><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> switch configuration and reboot data stored in the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller.</li>
-              <li>Traffic/packet statistics.</li>
-              <li>Control plane communications</li>
-            </ol>
-            <br/><br/>
-          </span>
-          The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall protect the stored <b>configuration and reboot data (including any policy made as part of the boot configuration), <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> switch configuration and reboot data, traffic and packet statistics, and control plane communications</b> in the audit trail from unauthorized deletion.</div></div>
-      <div class="element"><div class="reqid" id="FAU_STG.2.2/SDN"><a href="#FAU_STG.2.2/SDN" class="abbr">FAU_STG.2.2/SDN</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to [<i>prevent</i>] unauthorized
-          modifications to the stored <b>configuration and reboot data (including any policy made as part of the boot configuration), <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> switch configuration and reboot data, traffic and packet statistics, and control plane communications</b> in the audit trail.
-        </div></div>
+        
       
-      </div>
-    
       
-    <h3 id="man_fdp" class="indexable" data-level="3">5.2.2 man fdp</h3>
+      <h3 id="man-fdp" class="indexable" data-level="3">5.2.2 User Data Protection (FDP)</h3>
       
       <div class="comp" id="FDP_ACC.1"><h4>FDP_ACC.1 Subset Access Control</h4>
         <div class="element"><div class="reqid" id="FDP_ACC.1.1"><a href="#FDP_ACC.1.1" class="abbr">FDP_ACC.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy</i>] on [<i>all APIs used to access the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></i>].</div></div>
@@ -1012,7 +976,7 @@ Network Device
       
       <div class="comp" id="FDP_ACF.1"><h4>FDP_ACF.1 Security Attribute-Based Access Control</h4>
         <div class="element"><div class="reqid" id="FDP_ACF.1.1"><a href="#FDP_ACF.1.1" class="abbr">FDP_ACF.1.1</a></div><div class="reqdesc">
-            <span style="" class="comment " id="Comment-6-">
+            <span style="" class="comment " id="Comment-4-">
               <ol>
                 <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must perform validation of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls against the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates.</li>
                 <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must block <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that fail validation.</li>
@@ -1021,47 +985,31 @@ Network Device
               <br/><br/>
             </span>
             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy</i>] to objects based on the
-            following: [<i>whether and how APIs object can be manipulated, whether the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> issues a valid call, whether the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call is authorized</i>].
+            following: [<i>whether and how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects can be manipulated, whether the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> issues a valid call, whether the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call is authorized</i>].
           </div></div>
         <div class="element"><div class="reqid" id="FDP_ACF.1.2"><a href="#FDP_ACF.1.2" class="abbr">FDP_ACF.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the following rules to determine if an operation among controlled
             subjects and controlled objects is allowed: [<i>an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call that is valid with respect to an allowlisted <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> template can manipulate an object if allowing this manipulation has been configured</i>].
           </div></div>
         <div class="element"><div class="reqid" id="FDP_ACF.1.3"><a href="#FDP_ACF.1.3" class="abbr">FDP_ACF.1.3</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly authorize access of subjects to objects based on the following
-            additional rules: [<i>an allowlist explicitly authorizes the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> request (though this does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it</i>].
-          </div></div>
+            additional rules: [<i>an allowlist explicitly authorizes the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> request</i>].
+          <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+           This does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it.
+          </span></div></div></div>
         <div class="element"><div class="reqid" id="FDP_ACF.1.4"><a href="#FDP_ACF.1.4" class="abbr">FDP_ACF.1.4</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly deny access of subjects to objects based on the following additional
             rules: [<i>no additional rules</i>].
           </div></div>
       
       </div>
       
-      
-    <h3 id="man_ffw" class="indexable" data-level="3">5.2.3 man ffw</h3>
-      
-      
-      <div class="comp" id="FFW_RUL_EXT.1/SDN"><h4>FFW_RUL_EXT.1/SDN Stateful Traffic Filtering (SDN)</h4>
-        <div class="element"><div class="reqid" id="FFW_RUL_EXT.1.1/SDN"><a href="#FFW_RUL_EXT.1.1/SDN" class="abbr">FFW_RUL_EXT.1.1/SDN</a></div><div class="reqdesc">
-            <span style="" class="comment " id="Comment-7-">Is this just intended to reproduce these requirements from the FW-Module? If this is the case it seems like we would just want to mandate that a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> with this Module also include FW. Then we don’t need it a second time. Or is the idea here that the firewall doing this is in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>?
-              <br/><br/>
-              <ol>
-                <li>An attacker can send arbitrary packets to network interfaces.</li>
-                <li>An attacker can intercept and arbitrarily modify or drop packets within existing traffic flows.</li>
-                <li>An attacker can leverage the lack of an established standard for communication between the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller and other components in an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> network and so taking advantage of interoperability or under-tested protocols</li>
-                <li>An attacker can intercept and arbitrarily affect communications between an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller and any northbound applications and/or components.</li>
-                <li>An attacker can intercept and arbitrarily affect communications between <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controllers, east/west communication.</li>
-                <li>An attacker can intercept and arbitrarily affect communications between the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller and any switches under its control, southbound communication.</li>
-              </ol>
-            </span>
-          </div></div>
-        
-      </div>
-    
+     
    
-      <h3 id="man_fmt" class="indexable" data-level="3">5.2.4 man fmt</h3>
+      <h3 id="man-fmt" class="indexable" data-level="3">5.2.3 Security Management (FMT)</h3>
         
         <div class="comp" id="FMT_API_EXT.1"><h4>FMT_API_EXT.1 Management of API Behavior</h4>
           <div class="element"><div class="reqid" id="FMT_API_EXT.1.1"><a href="#FMT_API_EXT.1.1" class="abbr">FMT_API_EXT.1.1</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-8-">•<abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Call Templates: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that define how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls must be performed to access <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects.
+              <span style="" class="comment " id="Comment-5-">•<abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Call Templates: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that define how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls must be performed to access <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects.
                 <br/><br/>
               </span>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide the ability to define the following <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates [<b>assignment</b>: 
@@ -1076,18 +1024,22 @@ Network Device
         
         <div class="comp" id="FMT_MOF.1/SDN"><h4>FMT_MOF.1/SDN Management of Functions Behavior (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/SDN"><a href="#FMT_MOF.1.1/SDN" class="abbr">FMT_MOF.1.1/SDN</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-9-">Manipulation Control: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator specify how the allowed <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects can be manipulated.
+              <span style="" class="comment " id="Comment-6-">Manipulation Control: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator specify how the allowed <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects can be manipulated.
                 <br/><br/>
               </span>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to [<i>modify the behaviour of</i>] the functions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access function as defined by <a href="#FDP_ACC.1">FDP_ACC.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity function as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>] to [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator</i>].
-            </div></div>
+            <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              The restriction of modifying <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access and validity functions to the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator is intended to imply that the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User does not have the ability to modify <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions. The <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User role having read-only access to these functions is not precluded by this requirement, as this requirement only relates to the ability to modify the behavior of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>.  
+            </span></div></div></div>
           
         </div>
         
         
         <div class="comp" id="FMT_SMF.1/SDN"><h4>FMT_SMF.1/SDN Specification of Management Functions (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_SMF.1.1/SDN"><a href="#FMT_SMF.1.1/SDN" class="abbr">FMT_SMF.1.1/SDN</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-10-">Allowlisting: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator be able to allowlist <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates so that configuration attempts from all other APIs not in the allowlist is blocked.
+              <span style="" class="comment " id="Comment-7-">Allowlisting: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator be able to allowlist <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates so that configuration attempts from all other APIs not in the allowlist is blocked.
                 <br/><br/>
               </span>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of performing the following management functions: [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control as defined by <a href="#FDP_ACF.1">FDP_ACF.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>].
@@ -1100,7 +1052,7 @@ Network Device
         
         <div class="comp" id="FMT_SMR.2/SDN"><h4>FMT_SMR.2/SDN Restrictions on Security Roles (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_SMR.2.1/SDN"><a href="#FMT_SMR.2.1/SDN" class="abbr">FMT_SMR.2.1/SDN</a></div><div class="reqdesc">
-<span style="" class="comment " id="Comment-11-">This could also just be done as a Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to FMT_SMR.2 in the NDcPP but it may be cleaner just to do it as its own iteration here.<br/><br/>
+<span style="" class="comment " id="Comment-8-">This could also just be done as a Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to FMT_SMR.2 in the NDcPP but it may be cleaner just to do it as its own iteration here.<br/><br/>
   <ol>
     <li><abbr class="dyn-abbr"><a href="#abbr_RBAC">RBAC</a></abbr>: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must provide an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> user role and <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator role for role-based access control</li>
     <li><abbr class="dyn-abbr"><a href="#abbr_RBAC">RBAC</a></abbr>: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must require that only administrators in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator role can perform <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls.</li>
@@ -1118,7 +1070,7 @@ Network Device
 
 
     <h2 id="obj-req-map" class="indexable" data-level="2">5.3 TOE Security Functional Requirements Rationale</h2><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">2</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="3"><a href="#T.INSECURE_API">T.INSECURE_​API</a><br/></td><td></td><td></td></tr>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">2</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="3"><a href="#T.INSECURE_API">T.INSECURE_​API</a></td><td></td><td></td></tr>
 <tr><td></td><td></td></tr>
 <tr><td></td><td></td></tr>
 </table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-ND" class="indexable" data-level="2">6.1 Collaborative 
@@ -1146,19 +1098,17 @@ Network Device
       This is considered to be consistent because the functionality provided by the
       NDcPP is being used for its intended purpose.
       
-          The <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> also identifies a number of modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> from the
-          NDcPP
-          that are used entirely to provide functionality for
-	  Software Defined Networking Controllers.
-        
           The rationale for why this does not conflict with the claims
       defined by the
       NDcPP are as follows:
       <table><caption><span class="ctr" data-myid="t-con-reqs" data-counter-type="ct-Table" id="t-con-reqs">Table <span class="counter">5</span></span>: Consistency of Requirements (NDcPP base)
-		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Requirement</th><th>Consistency Rationale</th></tr><tr><th colspan="2"> Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></td><td>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is consistent with its definition in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> because the only change is to add support for updates to functionality that is particular to <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> products.</td></tr><tr><th colspan="2"> Additional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td colspan="2" style="text-align:center">
+		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Requirement</th><th>Consistency Rationale</th></tr><tr><th colspan="2"> Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td colspan="2" style="text-align:center">
+			This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not modify any requirements when the
+			NDcPP is the base.
+		  </td></tr><tr><th colspan="2"> Additional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td colspan="2" style="text-align:center">
 	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not add any requirements when the
 	      NDcPP is the base.
-	    </td></tr><tr><th colspan="2"> Mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td><a href="#FAU_GEN.1/SDN">FAU_GEN.1/SDN</a></td><td></td></tr><tr><td><a href="#FAU_STG.2/SDN">FAU_STG.2/SDN</a></td><td></td></tr><tr><td><a href="#FDP_ACC.1">FDP_ACC.1</a></td><td></td></tr><tr><td><a href="#FDP_ACF.1">FDP_ACF.1</a></td><td></td></tr><tr><td><a href="#FFW_RUL_EXT.1/SDN">FFW_RUL_EXT.1/SDN</a></td><td></td></tr><tr><td><a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></td><td></td></tr><tr><td><a href="#FMT_MOF.1/SDN">FMT_MOF.1/SDN</a></td><td></td></tr><tr><td><a href="#FMT_SMF.1/SDN">FMT_SMF.1/SDN</a></td><td></td></tr><tr><td><a href="#FMT_SMR.2/SDN">FMT_SMR.2/SDN</a></td><td></td></tr></tr><tr><th colspan="2"> Optional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
+	    </td></tr><tr><th colspan="2"> Mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td><a href="#FAU_GEN.1/SDN">FAU_GEN.1/SDN</a></td><td></td></tr><tr><td><a href="#FDP_ACC.1">FDP_ACC.1</a></td><td></td></tr><tr><td><a href="#FDP_ACF.1">FDP_ACF.1</a></td><td></td></tr><tr><td><a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></td><td></td></tr><tr><td><a href="#FMT_MOF.1/SDN">FMT_MOF.1/SDN</a></td><td></td></tr><tr><td><a href="#FMT_SMF.1/SDN">FMT_SMF.1/SDN</a></td><td></td></tr><tr><td><a href="#FMT_SMR.2/SDN">FMT_SMR.2/SDN</a></td><td></td></tr></tr><tr><th colspan="2"> Optional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
 	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Optional requirements.
 	    </td></tr></tr><tr><th colspan="2"> Objective <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
 	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Objective requirements.
