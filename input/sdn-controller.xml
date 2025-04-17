@@ -464,7 +464,7 @@
         <audit-event/>
       </f-component>
       
-      <!-- FAU_STG.2/SDN -->
+      
         
       </section>
       
@@ -519,30 +519,8 @@
         </f-element>
       <audit-event/>
       </f-component>
-    </section>>  
-      
-      <section title="Firewall (FFW)" id="man-ffw">
-      
-      <!-- FFW_RUL_EXT.1 (not sure if needed) -->
-      <f-component id="ffw-rul-ext-1" cc-id="ffw_rul_ext.1" name="Stateful Traffic Filtering (SDN)" iteration="SDN">
-        <f-element>
-          <title>
-            <comment>Is this just intended to reproduce these requirements from the FW-Module? If this is the case it seems like we would just want to mandate that a PP-Configuration with this Module also include FW. Then we don’t need it a second time. Or is the idea here that the firewall doing this is in the TOE’s OE?
-              <h:br/><h:br/>
-              <h:ol>
-                <h:li>An attacker can send arbitrary packets to network interfaces.</h:li>
-                <h:li>An attacker can intercept and arbitrarily modify or drop packets within existing traffic flows.</h:li>
-                <h:li>An attacker can leverage the lack of an established standard for communication between the SDN Controller and other components in an SDN network and so taking advantage of interoperability or under-tested protocols</h:li>
-                <h:li>An attacker can intercept and arbitrarily affect communications between an SDN Controller and any northbound applications and/or components.</h:li>
-                <h:li>An attacker can intercept and arbitrarily affect communications between SDN Controllers, east/west communication.</h:li>
-                <h:li>An attacker can intercept and arbitrarily affect communications between the SDN Controller and any switches under its control, southbound communication.</h:li>
-              </h:ol>
-            </comment>
-          </title>
-        </f-element>
-        <audit-event/>
-      </f-component>
-      </section>
+    </section>  
+     
    
       <section title="Security Management (FMT)" id="man-fmt">
         <!-- FMT_API_EXT.1 -->
@@ -614,7 +592,7 @@
           <audit-event/>
         </f-component>
         
-      </sec:man_fmt>
+      </section>
 
 
     </man-sfrs>
