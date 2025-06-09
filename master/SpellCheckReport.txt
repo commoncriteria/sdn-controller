@@ -18,6 +18,7 @@ output/sdn-controller-esr.html: sdn
 output/sdn-controller-esr.html: subnets
 output/sdn-controller-esr.html: virtualized
 output/sdn-controller-release-linkable.html: 0E
+output/sdn-controller-release-linkable.html: ITT
 output/sdn-controller-release-linkable.html: NDcPP
 output/sdn-controller-release-linkable.html: Ohter
 output/sdn-controller-release-linkable.html: SDNC
@@ -30,6 +31,7 @@ output/sdn-controller-release-linkable.html: behaviour
 output/sdn-controller-release-linkable.html: othe
 output/sdn-controller-release-linkable.html: sel
 output/sdn-controller-release.html: 0E
+output/sdn-controller-release.html: ITT
 output/sdn-controller-release.html: NDcPP
 output/sdn-controller-release.html: Ohter
 output/sdn-controller-release.html: SDNC
@@ -48,6 +50,7 @@ output/sdn-controller-sd.html: evaluator’s
 output/sdn-controller-sd.html: fail’
 output/sdn-controller-sd.html: pass’
 output/sdn-controller.html: 0E
+output/sdn-controller.html: ITT
 output/sdn-controller.html: NDcPP
 output/sdn-controller.html: Ohter
 output/sdn-controller.html: SDNC
