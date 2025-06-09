@@ -407,7 +407,33 @@
     <base-pp name="Network Device" short="ND" id="ND" version="3.0e" product="Network Device" plural="Network Devices">
       <url>https://old.niap-ccevs.org/MMO/PP/CPP_ND_V3.0E.pdf</url>
       <cPP/>
-      <modified-sfrs/>
+          
+          <!-- 5.1.1 Modified SFRs -->      
+          <modified-sfrs>
+            <!--        
+        The SFRs listed in this section are defined in the GPOS PP and relevant to the secure operation of the
+        VPN client. It is necessary for the ST author to complete selections and assignments for these SFRs in
+        a specific manner in order to ensure that the functionality provided by the OS is consistent with the
+        functionality required by the VPN client in order for it to conform to this PP-Module.  
+-->        
+            <!-- 5.1.1.1  -->
+            <section title="Trusted Path/Channels (FTP)" id="nd-m-ftp">
+              <base-sfr-spec cc-id="ftp_itc.1" id="nd-ftp-itc-1" title="Inter-TSF Trusted Channel">
+                <consistency-rationale>This PP-Module expands the Base-PP SFR to define additional entities for trusted channels.</consistency-rationale>
+                <description>
+                  <h:p>This SFR has been modified from its definition in the NDcPP to define external interfaces to environmental entities that are particular to this specific technology type.</h:p>
+                  <h:p>The text of the requirement is replaced with:</h:p>
+                  <h:p>
+                    The TSF shall perform encryption/decryption in accordance with a
+                    specified cryptographic algorithm AES used in <h:i>GCM</h:i>
+                    mode and cryptographic key sizes <h:i>256 bits</h:i> that meet the following:
+                    AES as specified in ISO 18033-3, <h:i>GCM as specified in ISO 19772</h:i>.
+                  </h:p>
+                </description>
+                <no-change/>
+              </base-sfr-spec>
+            </section>
+      </modified-sfrs>
     
       <additional-sfrs/>
       <con-toe>
@@ -493,7 +519,7 @@
               <h:br/><h:br/>
             </comment>
             The TSF shall enforce the [<h:i>API access control policy</h:i>] to objects based on the
-            following: [<h:i>whether and how API objects can be manipulated, whether the API issues a valid call, whether the API call is authorized</h:i>].
+            following: [<h:i>supported operations that can be performed on or by API objects, the validity of the API call being issued, whether the API call is authorized based on the subject's role</h:i>].
           </title>
         </f-element>
         <f-element>
