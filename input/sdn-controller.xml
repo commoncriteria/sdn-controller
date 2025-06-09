@@ -424,11 +424,19 @@
                   <h:p>This SFR has been modified from its definition in the NDcPP to define external interfaces to environmental entities that are particular to this specific technology type.</h:p>
                   <h:p>The text of the requirement is replaced with:</h:p>
                   <h:p>
-                    The TSF shall perform encryption/decryption in accordance with a
-                    specified cryptographic algorithm AES used in <h:i>GCM</h:i>
-                    mode and cryptographic key sizes <h:i>256 bits</h:i> that meet the following:
-                    AES as specified in ISO 18033-3, <h:i>GCM as specified in ISO 19772</h:i>.
+                  <h:b>FTP_ITC.1.1</h:b> The TSF shall be capable of using [<h:b>selection:</h:b><h:i> IPsec, SSH, TLS, DTLS, HTTPS</h:i>] to provide a trusted communication channel between itself and authorized IT entities supporting the following capabilities: audit server, <h:b>northbound components, southbound components, external east/west components</h:b>[<h:b>selection:</h:b> <h:i>authentication server, [<h:b>assignment:</h:b> other capabilities], no other capabilities</h:i>] that is logically distinct from other
+                  communication channels and provides assured identification of its end points
+                  and protection of the channel data from disclosure and detection of modification of the channel data.
                   </h:p>
+                  <h:p>
+                    <h:b>FTP_ITC.1.2</h:b> The TSF shall permit [<h:b>selection:</h:b><h:i> the TSF, the authorized IT entities</h:i>] to initiate communication via the trusted channel.
+                  </h:p>
+                  <h:p>
+                    <h:b>FTP_ITC.1.3</h:b> The TSF shall initiate communication via the trusted channel for
+                    [<h:b>assignment:</h:b> <h:i>list of services for which the TSF is able to initiate
+                      communications</h:i>].
+                  </h:p>
+                  <h:b>Application Note:</h:b> This PP-Module modifies this SFR to allow for the specification of any northbound, southbound, or east/west environmental components with which the TSF may implement protected communications. A conformant TOE may implement a distributed east/west configuration rather than the east/west entities being in the OE; in this case, the ST would define the TOE boundary as a distributed TOE in accordance with the NDcPP and use FPT_ITT.1 to define the interface between east/west distributed TOE components.  
                 </description>
                 <no-change/>
               </base-sfr-spec>
