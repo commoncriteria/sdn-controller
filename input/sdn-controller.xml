@@ -205,10 +205,13 @@
         <h:li>The control plane and data plane are logically separated.</h:li>
         <h:li>The control plane and management plane are logically separated.</h:li>
         <h:li>Data that is collected by the control plane and distributed to the data plane, such as flow tables and configurations, is protected.</h:li>
-        <h:li>Data that is collected by the control plane and distributed t othe management plane, such as auditable events and traffic or packet statistics, is protected.</h:li>
+        <h:li>Data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics, is protected.</h:li>
         <h:li>Data that is collected, distributed, and shared within the control plane, such as when multiple SDN controllers exist in the architecture, is protected.</h:li>
       </h:ul>
-      A conformant TOE decouples its data and control planes such that data traffic and control traffic are restricted to their respective planes. It also enforces centralization of control so that all components of the SDN environment are under its control. This can expand across multiple distributed controllers for large, complex, or geographically dispersed networks.
+      A conformant TOE decouples its data and control planes such that data traffic and control traffic are restricted
+	  to their respective planes. It also enforces centralization of control so that all components of the SDN environment
+	  are under its control. This can expand across multiple distributed controllers for large, complex, or geographically
+	  dispersed networks.
       <sec:TOE_Boundary>
         The TOE boundary for an SDN controller is one or more physical or virtual devices. An SDN controller may be a distributed TOE, as defined by the Base-PP.
         <h:ul>
@@ -276,16 +279,21 @@
       </CClaimsInfo>
     </sec:Conformance_Claims>      
   
-  <sec:Security_Problem_Definition>The security problem is described in terms of the threats that the TOE is expected to address, assumptions about the operational
-            environment, and any organizational security policies that the OS is expected to enforce.
+  <sec:Security_Problem_Definition>
+		The security problem is described in terms of the threats that the TOE is expected to address, assumptions about 
+		the operational environment, and any organizational security policies that the OS is expected to enforce.
     <sec:Threats>
       <threats>
 
         <threat name="T.INSECURE_API">
           <description>
-            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with opportunities to inject malicious code to the TOE or to retrieve sensitive information from it. Executing improper or unauthorized API functions or providing malicious input can compromise network services and sensitive data leakage can take place through insecure interfaces.  
+            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with 
+			opportunities to inject malicious code to the TOE or to retrieve sensitive information from it. Executing
+			improper or unauthorized API functions or providing malicious input can compromise network services and sensitive
+			data leakage can take place through insecure interfaces.  
             
-            <comment><h:br/><h:br/>Recommendations above to adjust threat name for more specificity and clarify the description.</comment>
+            <comment><h:br/><h:br/>Recommendations above to adjust threat name for more specificity and clarify the 
+			description.</comment>
           </description>
           <addressed-by></addressed-by>
           <rationale></rationale>
@@ -296,9 +304,12 @@
         </threat>
         <threat name="T.ATTACKER_ACCESS">
           <description>
-          An attacker may attempt to exploit services and functionality to intercept communications and mount attacks against machines in the network.
+          An attacker may attempt to exploit services and functionality to intercept communications and mount attacks 
+		  against machines in the network.
           
-            <comment><h:br/><h:br/>Threat kept as-is but this seems unnecessary. Unless there are SDN-specific threat cases (such as the API threat listed above), this just seems like an extension of threats already defined in the NDcPP, and it should be fine for module SFRs to map back to threats from the base PP.</comment>
+            <comment><h:br/><h:br/>Threat kept as-is but this seems unnecessary. Unless there are SDN-specific threat 
+			cases (such as the API threat listed above), this just seems like an extension of threats already defined in 
+			the NDcPP, and it should be fine for module SFRs to map back to threats from the base PP.</comment>
           </description>
         </threat>
       </threats>
