@@ -671,6 +671,12 @@ The following sections list Common Criteria and technology terms used in this do
       accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations.
     </td></tr>
 <tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation.</td></tr>
+<tr><td><div id="Direct_Rationale">Direct Rationale</div></td><td>
+		A type of Protection Profile, PP-Module, or Security Target in which the security
+		problem definition (SPD) elements are mapped directly to the SFRs and possibly to the 
+		security objectives for the operational environment. There are no security objectives
+		for the TOE.
+	</td></tr>
 <tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole.</td></tr>
 <tr><td><div id="Extended_Package">Extended Package (EP)</div></td><td>A deprecated document form for collecting SFRs that implement a particular protocol, technology,
 	    or functionality. See Functional Packages.</td></tr>
@@ -778,10 +784,13 @@ The following sections list Common Criteria and technology terms used in this do
         <li>The control plane and data plane are logically separated.</li>
         <li>The control plane and management plane are logically separated.</li>
         <li>Data that is collected by the control plane and distributed to the data plane, such as flow tables and configurations, is protected.</li>
-        <li>Data that is collected by the control plane and distributed t othe management plane, such as auditable events and traffic or packet statistics, is protected.</li>
+        <li>Data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics, is protected.</li>
         <li>Data that is collected, distributed, and shared within the control plane, such as when multiple <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers exist in the architecture, is protected.</li>
       </ul>
-      A conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> decouples its data and control planes such that data traffic and control traffic are restricted to their respective planes. It also enforces centralization of control so that all components of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> environment are under its control. This can expand across multiple distributed controllers for large, complex, or geographically dispersed networks.
+      A conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> decouples its data and control planes such that data traffic and control traffic are restricted
+	  to their respective planes. It also enforces centralization of control so that all components of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> environment
+	  are under its control. This can expand across multiple distributed controllers for large, complex, or geographically
+	  dispersed networks.
       <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
         The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary for an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller is one or more physical or virtual devices. An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller may be a distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, as defined by the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>.
         <ul>
@@ -845,17 +854,25 @@ The following sections list Common Criteria and technology terms used in this do
 				</dd><p></p><dd>There are no <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules that are allowed in a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> 
 					with this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
 						Functional or Assurance Packages.</dd></dl>
-    <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>The security problem is described in terms of the threats that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to address, assumptions about the operational
-            environment, and any organizational security policies that the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is expected to enforce.
+    <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>
+		The security problem is described in terms of the threats that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to address, assumptions about 
+		the operational environment, and any organizational security policies that the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is expected to enforce.
     <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
       <dl><dt class="threat defined" id="T.INSECURE_API">T.INSECURE_API</dt><dd><span class="description">
-            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with opportunities to inject malicious code to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or to retrieve sensitive information from it. Executing improper or unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions or providing malicious input can compromise network services and sensitive data leakage can take place through insecure interfaces.  
+            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with 
+			opportunities to inject malicious code to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or to retrieve sensitive information from it. Executing
+			improper or unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions or providing malicious input can compromise network services and sensitive
+			data leakage can take place through insecure interfaces.  
             
-            <span style="" class="comment " id="Comment-1-"><br/><br/>Recommendations above to adjust threat name for more specificity and clarify the description.</span>
+            <span style="" class="comment " id="Comment-1-"><br/><br/>Recommendations above to adjust threat name for more specificity and clarify the 
+			description.</span>
           </span></dd><dt class="threat defined" id="T.ATTACKER_ACCESS">T.ATTACKER_ACCESS</dt><dd><span class="description">
-          An attacker may attempt to exploit services and functionality to intercept communications and mount attacks against machines in the network.
+          An attacker may attempt to exploit services and functionality to intercept communications and mount attacks 
+		  against machines in the network.
           
-            <span style="" class="comment " id="Comment-2-"><br/><br/>Threat kept as-is but this seems unnecessary. Unless there are <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>-specific threat cases (such as the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> threat listed above), this just seems like an extension of threats already defined in the NDcPP, and it should be fine for module <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> to map back to threats from the base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</span>
+            <span style="" class="comment " id="Comment-2-"><br/><br/>Threat kept as-is but this seems unnecessary. Unless there are <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>-specific threat 
+			cases (such as the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> threat listed above), this just seems like an extension of threats already defined in 
+			the NDcPP, and it should be fine for module <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> to map back to threats from the base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</span>
           </span></dd></dl>
       
     
