@@ -277,8 +277,15 @@
         <cc-st-conf>exact</cc-st-conf>       
         <cc-pt2-conf>extended</cc-pt2-conf>
         <cc-pt3-conf>conformant</cc-pt3-conf>
-        <cc-pp-conf/>
-        <cc-pp-config-with/>
+        <cc-pp-conf>
+          <PP-cc-ref>Protection Profile for Certification Authorities, v3.0</PP-cc-ref>
+        </cc-pp-conf>
+        <cc-pp-config-with>
+          <Mod-cc-ref>collaborative Protection Profile Module for Stateful Traffic Filter Firewalls, version 1.4 + Errata 20200625</Mod-cc-ref>
+          <Mod-cc-ref>PP-Module for Authentication Servers, version 2.0</Mod-cc-ref>
+          <Mod-cc-ref>PP-Module for MACsec Ethernet Encryption, version 2.0</Mod-cc-ref>
+          <Mod-cc-ref>PP-Module for VPN Gateways, version 2.0</Mod-cc-ref>
+        </cc-pp-config-with>
         <cc-pkg-claim/>
       </CClaimsInfo>
     </sec:Conformance_Claims>      
