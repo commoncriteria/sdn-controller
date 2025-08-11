@@ -33,7 +33,12 @@
     <sec:Overview>          
 
             The scope of this Protection Profile Module (PP-Module) is to describe the security functionality of a software defined network (SDN) controller in terms of  <xref g="CC"/> and to define functional and assurance requirements for such
-            products. This PP-Module is intended for use with the following Base-PP:
+            products. 
+            
+            
+            An SDN Controller is a central component of an SDN system and is available as a logical or a physical device. An SDN Controller manages and distributes network policies, collects network routing and payload information from the control and data planes, and interfaces with user applications in the management plane for functions such as configuration and logging. Each of the planes in an SDN system is composed of multiple logical or physical components. The SDN Controller logically separates the data plane from the control plane and centralizes control which enhances network flexibility and scalability through more efficient network management.
+            
+            This PP-Module is intended for use with the following Base-PP:
             
             <h:ul>
               <h:li>collaborative Protection Profile for Network Devices (NDcPP), Version 3.0E</h:li>
