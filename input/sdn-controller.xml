@@ -201,7 +201,10 @@
     </tech-terms>
     
     <sec:Compliant_Targets_of_Evaluation> 
-      Compliant TOEs will implement necessary functionality in a "do no harm" manner with respect to network security. Specifically:
+      A conformant TOE decouples its data and control planes such that data traffic and control traffic are restricted
+      to their respective planes. It also enforces centralization of control so that all components of the SDN environment
+      are under its control. This can expand across multiple distributed controllers for large, complex, or geographically
+      dispersed networks. Compliant TOEs will implement necessary functionality in a "do no harm" manner with respect to network security. Specifically:
       <h:ul>
         <h:li>They can be remotely managed in a secure manner.</h:li>
         <h:li>Any software/firmware updates are from a trusted source.</h:li>
@@ -213,10 +216,6 @@
         <h:li>Data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics, is protected.</h:li>
         <h:li>Data that is collected, distributed, and shared within the control plane, such as when multiple SDN controllers exist in the architecture, is protected.</h:li>
       </h:ul>
-      A conformant TOE decouples its data and control planes such that data traffic and control traffic are restricted
-	  to their respective planes. It also enforces centralization of control so that all components of the SDN environment
-	  are under its control. This can expand across multiple distributed controllers for large, complex, or geographically
-	  dispersed networks.
       <sec:TOE_Boundary>
         The TOE boundary for an SDN controller is one or more physical or virtual devices. An SDN controller may be a distributed TOE, as defined by the Base-PP.
         <h:ul>
