@@ -502,6 +502,11 @@
                   <xref g="t-audit-mandatory"/>, <xref g="t-audit-sel-based"/></h:i>].</h:li>
             </h:ol>
           </title>
+          <note role="Application"><h:p>This SFR mandates that audit data be generated for startup and shutdown of the audit functions, which is a duplicate of FAU_GEN.1.1 in the Base-PP. If the TOE has one single audit mechanism, then the events used to conform to the Base-PP requirement also suffice here. Startup and shutdown of the audit functions in the context of the SDN controller portion of the TOE only need to be logged separately if the SDN controller has a different logging mechanism from what the Base-PP uses. Note also that in many cases the startup and shutdown of the audit functions cannot be forced on its own because the audit functions may be operational by default. In this case, logging for startup and shutdown of the TOE itself is sufficient. The purpose of this part of the requirement is to ensure that a malicious user cannot disable auditing to evade detection of other malicious use of the TOE.
+          </h:p><h:p>
+            The auditable events for the 'not specified' level of audit is intended to communicate that this PP-Module does not claim one of the pre-defined audit levels specified in CC Part 2; this is inherently satisfied by demonstrating that the TSF generates appropriate audit data for all events that are explicitly required by the PP-Module.
+          </h:p>
+          </note>
           <aactivity>
           <no-tests/>
           </aactivity>
@@ -748,7 +753,8 @@
             Cost for Security in Agency Information Technology Investments</h:a>, OMB M-06-19, July
           12, 2006.</description>
       </entry>
-    </bibliography>
+    
+  </bibliography>
   
 </Module>
 
