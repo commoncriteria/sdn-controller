@@ -757,22 +757,22 @@ The following sections list Common Criteria and technology terms used in this do
 </table></div>
     
     <h2 class="indexable" data-level="2" id="Compliant_Targets_of_Evaluation">1.3 Compliant Targets of Evaluation</h2> 
-      Compliant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> will implement necessary functionality in a "do no harm" manner with respect to network security<a id="period_75" href="#period_75">. </a>Specifically:
-      <ul>
-        <li>They can be remotely managed in a secure manner<a id="period_76" href="#period_76">. </a></li>
-        <li>Any software/firmware updates are from a trusted source<a id="period_77" href="#period_77">. </a></li>
-        <li>Any interfaces to applications, VMs, and other devices are trusted (zone of trust)<a id="period_78" href="#period_78">. </a></li>
-        <li>All security-relevant events are reported<a id="period_79" href="#period_79">. </a></li>
-        <li>The control plane and data plane are logically separated<a id="period_80" href="#period_80">. </a></li>
-        <li>The control plane and management plane are logically separated<a id="period_81" href="#period_81">. </a></li>
-        <li>Data that is collected by the control plane and distributed to the data plane, such as flow tables and configurations, is protected<a id="period_82" href="#period_82">. </a></li>
-        <li>Data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics, is protected<a id="period_83" href="#period_83">. </a></li>
-        <li>Data that is collected, distributed, and shared within the control plane, such as when multiple <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers exist in the architecture, is protected<a id="period_84" href="#period_84">. </a></li>
-      </ul>
       A conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> decouples its data and control planes such that data traffic and control traffic are restricted
-	  to their respective planes<a id="period_85" href="#period_85">. </a>It also enforces centralization of control so that all components of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> environment
-	  are under its control<a id="period_86" href="#period_86">. </a>This can expand across multiple distributed controllers for large, complex, or geographically
-	  dispersed networks<a id="period_87" href="#period_87">. </a>      <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
+      to their respective planes<a id="period_75" href="#period_75">. </a>It also enforces centralization of control so that all components of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> environment
+      are under its control<a id="period_76" href="#period_76">. </a>This can expand across multiple distributed controllers for large, complex, or geographically
+      dispersed networks<a id="period_77" href="#period_77">. </a>Compliant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> will implement necessary functionality in a "do no harm" manner with respect to network security<a id="period_78" href="#period_78">. </a>Specifically:
+      <ul>
+        <li>They can be remotely managed in a secure manner<a id="period_79" href="#period_79">. </a></li>
+        <li>Any software/firmware updates are from a trusted source<a id="period_80" href="#period_80">. </a></li>
+        <li>Any interfaces to applications, VMs, and other devices are trusted (zone of trust)<a id="period_81" href="#period_81">. </a></li>
+        <li>All security-relevant events are reported<a id="period_82" href="#period_82">. </a></li>
+        <li>The control plane and data plane are logically separated<a id="period_83" href="#period_83">. </a></li>
+        <li>The control plane and management plane are logically separated<a id="period_84" href="#period_84">. </a></li>
+        <li>Data that is collected by the control plane and distributed to the data plane, such as flow tables and configurations, is protected<a id="period_85" href="#period_85">. </a></li>
+        <li>Data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics, is protected<a id="period_86" href="#period_86">. </a></li>
+        <li>Data that is collected, distributed, and shared within the control plane, such as when multiple <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers exist in the architecture, is protected<a id="period_87" href="#period_87">. </a></li>
+      </ul>
+      <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
         The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary for an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller is one or more physical or virtual devices<a id="period_88" href="#period_88">. </a>An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller may be a distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, as defined by the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr><a id="period_89" href="#period_89">. </a>        <ul>
           <li>In a physical standalone <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller device, the device's hardware, firmware, and software define the evaluation boundary<a id="period_90" href="#period_90">. </a></li>
           <li>In a virtual <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller, the software of the Virtual Machine (<abbr class="dyn-abbr"><a href="#abbr_VM">VM</a></abbr>) defines the evaluation boundary<a id="period_91" href="#period_91">. </a></li>
