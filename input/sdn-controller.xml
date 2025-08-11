@@ -318,73 +318,24 @@
 	
 	
     <sec:Assumptions>
-      <assumptions>
-        <assumption name="A.SECURED_INFRASTRUCTURE">
-          <description> 
-            Connections between SDN Controller and network devices under the SDN Controller's control are secure from unauthorized access.
-          </description>
-          <objective-refer ref="OE.QQQQ">
-            <rationale/>
-          </objective-refer>
-        </assumption>
-        
-        <assumption name="A.SUPPORTED_API">
-          <description> 
-            The SDN Controller will have an API in the management interface.
-          </description>
-          <objective-refer ref="OE.QQQQ">
-            <rationale/>
-          </objective-refer>
-        </assumption>
-      </assumptions>
+      All assumptions from the Base-PP also apply to the TOE’s environment when it
+      includes this PP‐Module in its conformance claims.
+      <assumptions/>
     </sec:Assumptions>
-<!--    <section title="Organizational Security Policies" id="OSPs">
-      <OSPs>
-        <OSP id="P.ENTERPRISE">
-          <description>If the OS is bound to a directory or management server, the configuration of
-            the OS software must be capable of adhering to the enterprise security policies
-            distributed by them.</description>
-          <objective-refer ref="O.MANAGEMENT">
-            <rationale>The organizational security policy P.ENTERPRISE is enforced through the
-              objective O.MANAGEMENT as this objective represents how the enterprise and user assert
-              management over the OS.</rationale>
-          </objective-refer>
-        </OSP>
-      </OSPs>
-    </section> -->
+    
+    
+    <sec:Organizational_Security_Policies>
+      <OSPs/>
+    </sec:Organizational_Security_Policies> 
   </sec:Security_Problem_Definition>
   
-<!--    <section title="Organizational Security Policies" id="OSPs">
-      <OSPs>
-        <OSP id="P.ENTERPRISE">
-          <description>If the OS is bound to a directory or management server, the configuration of
-            the OS software must be capable of adhering to the enterprise security policies
-            distributed by them.</description>
-          <objective-refer ref="O.MANAGEMENT">
-            <rationale>The organizational security policy P.ENTERPRISE is enforced through the
-              objective O.MANAGEMENT as this objective represents how the enterprise and user assert
-              management over the <abbr linkend="OS"/>.</rationale>
-          </objective-refer>
-        </OSP>
-      </OSPs>
-    </section> -->  
-  
   <sec:Security_Objectives>
-    <!-- Add consistency-rationale and rationale -->
-  <sec:Security_Objectives_for_the_TOE>
-      <SOs/>
-  </sec:Security_Objectives_for_the_TOE>
     
     <sec:Security_Objectives_for_the_Operational_Environment>
-      The following security objectives for the operational environment help the OS in correctly providing its security functionality.
-      These track with the assumptions about the environment.
-      <SOEs>
-        <SOE name="OE.QQQQ">
-          <description>QQQQ</description>
-        </SOE>
-      </SOEs></sec:Security_Objectives_for_the_Operational_Environment>
+      All environmental security objectives from the Base-PP also apply to the TOE’s environment when it
+      includes this PP‐Module in its conformance claims.
+    </sec:Security_Objectives_for_the_Operational_Environment>
     
-    <sec:Security_Objectives_Rationale/>
   </sec:Security_Objectives>
     
   <sec:Security_Requirements>
