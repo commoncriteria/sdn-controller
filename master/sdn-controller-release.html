@@ -993,7 +993,13 @@ Network Device
                 included in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><b>-Module</b>/<abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, [<i>Additional Audit Record Contents as specified in 
                   <a onclick="showTarget('t-audit-mandatory')" href="#t-audit-mandatory" class="t-audit-mandatory-ref">Table  <span class="counter">t-audit-mandatory</span></a>, <a onclick="showTarget('t-audit-sel-based')" href="#t-audit-sel-based" class="t-audit-sel-based-ref">Table  <span class="counter">t-audit-sel-based</span></a></i>].</li>
             </ol>
-          </div></div>
+          <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note"><p>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> mandates that audit data be generated for startup and shutdown of the audit functions, which is a duplicate of FAU_GEN.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has one single audit mechanism, then the events used to conform to the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> requirement also suffice here. Startup and shutdown of the audit functions in the context of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller portion of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> only need to be logged separately if the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller has a different logging mechanism from what the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> uses. Note also that in many cases the startup and shutdown of the audit functions cannot be forced on its own because the audit functions may be operational by default. In this case, logging for startup and shutdown of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself is sufficient. The purpose of this part of the requirement is to ensure that a malicious user cannot disable auditing to evade detection of other malicious use of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
+          </p><p>
+            The auditable events for the 'not specified' level of audit is intended to communicate that this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not claim one of the pre-defined audit levels specified in <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2; this is inherently satisfied by demonstrating that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generates appropriate audit data for all events that are explicitly required by the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.
+          </p>
+          </span></div></div></div>
         
       </div>
       

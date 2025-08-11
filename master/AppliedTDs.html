@@ -1,4 +1,6 @@
-<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"><meta content="utf-8" http-equiv="encoding"><title>PP-Module for Software Defined Networking Controllers</title><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/x-mathjax-config">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"></meta><meta content="utf-8" http-equiv="encoding"></meta><title>PP-Module for Software Defined Networking Controllers</title><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/x-mathjax-config">
             MathJax.Hub.Config({
             extensions: ["tex2jax.js"],
             jax: ["input/TeX", "output/HTML-CSS"],
@@ -288,7 +290,7 @@ function showTarget(id){
    .uc_not, .uc_mf, .uc_sel, .uc_guide{
        text-indent: 10px;
    }
-   .uc_sel > a{ 
+   .uc_sel &gt; a{ 
        font-style: italic;
    }
 
@@ -627,8 +629,8 @@ function showTarget(id){
 	            img[src="images/collapsed.png"] { display:none;}
 
           }
-    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br><a href="#Comment-2-">Comment: Comment-2-</a><br><a href="#Comment-3-">Comment: Comment-3-</a><br><a href="#Comment-4-">Comment: Comment-4-</a><br><a href="#Comment-5-">Comment: Comment-5-</a><br><a href="#Comment-6-">Comment: Comment-6-</a><br><a href="#Comment-7-">Comment: Comment-7-</a><br><a href="#Comment-8-">Comment: Comment-8-</a><br></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"><br>
-      Version: 1.0<br>2024-10-31<br><b>National Information Assurance Partnership</b><br></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
+    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/><a href="#Comment-3-">Comment: Comment-3-</a><br/><a href="#Comment-4-">Comment: Comment-4-</a><br/><a href="#Comment-5-">Comment: Comment-5-</a><br/><a href="#Comment-6-">Comment: Comment-6-</a><br/><a href="#Comment-7-">Comment: Comment-7-</a><br/><a href="#Comment-8-">Comment: Comment-8-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
+      Version: 1.0<br/>2024-10-31<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
 </table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-ND" style="text-indent:10px">5.1<span>Collaborative 
     Protection Profile for Network Devices
        Security Functional Requirements Direction
@@ -649,197 +651,228 @@ function showTarget(id){
     <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2>          
 
             The scope of this Protection Profile Module (<abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>) is to describe the security functionality of a software defined network (<abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>) controller in terms of  <a href="#bibCC">[CC]</a> and to define functional and assurance requirements for such
-            products<a id="period_0" href="#period_0">. </a>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is intended for use with the following <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>:
+            products. This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is intended for use with the following <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>:
             
             <ul>
               <li>collaborative Protection Profile for Network Devices (NDcPP), Version 3.0E</li>
             </ul>
             
-            This <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> is valid because an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller is a specific implementation of a network device<a id="period_1" href="#period_1">. </a>Specifically, an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller is one of many components of an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> networking architecture<a id="period_2" href="#period_2">. </a>Specifically, an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller manages and distributes network policies, collects routing and payload information from the data plane, and interfaces with user applications in the management plane<a id="period_3" href="#period_3">. </a>Each of the planes in an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> system is composed of multiple logical or physical components<a id="period_4" href="#period_4">. </a><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers logically centralize the network intelligence and state in the control plane<a id="period_5" href="#period_5">. </a>
+            This <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> is valid because an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller is a specific implementation of a network device. Specifically, an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller is one of many components of an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> networking architecture. Specifically, an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller manages and distributes network policies, collects routing and payload information from the data plane, and interfaces with user applications in the management plane. Each of the planes in an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> system is composed of multiple logical or physical components. <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers logically centralize the network intelligence and state in the control plane. 
     
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
-The following sections list Common Criteria and technology terms used in this document<a id="period_6" href="#period_6">. </a>    <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a><a id="period_7" href="#period_7">. </a></td></tr>
-<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration<a id="period_8" href="#period_8">. </a></td></tr>
+The following sections list Common Criteria and technology terms used in this document.
+    <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a>.</td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
 <tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
-    international technical communities and approved by multiple schemes<a id="period_9" href="#period_9">. </a></td></tr>
-<tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408)<a id="period_10" href="#period_10">. </a></td></tr>
+    international technical communities and approved by multiple schemes.</td></tr>
+<tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408).</td></tr>
 <tr><td><div id="Common_Criteria_Testing_Laboratory">Common Criteria Testing Laboratory</div></td><td>
       Within the context of the Common Criteria Evaluation and Validation Scheme (CCEVS), an IT security evaluation facility
-      accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations<a id="period_11" href="#period_11">. </a>    </td></tr>
-<tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation<a id="period_12" href="#period_12">. </a></td></tr>
+      accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations.
+    </td></tr>
+<tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation.</td></tr>
 <tr><td><div id="Direct_Rationale">Direct Rationale</div></td><td>
 		A type of Protection Profile, PP-Module, or Security Target in which the security
 		problem definition (SPD) elements are mapped directly to the SFRs and possibly to the 
-		security objectives for the operational environment<a id="period_13" href="#period_13">. </a>There are no security objectives
-		for the TOE<a id="period_14" href="#period_14">. </a>	</td></tr>
-<tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole<a id="period_15" href="#period_15">. </a></td></tr>
+		security objectives for the operational environment. There are no security objectives
+		for the TOE.
+	</td></tr>
+<tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole.</td></tr>
 <tr><td><div id="Extended_Package">Extended Package (EP)</div></td><td>A deprecated document form for collecting SFRs that implement a particular protocol, technology,
-	    or functionality<a id="period_16" href="#period_16">. </a>See Functional Packages<a id="period_17" href="#period_17">. </a></td></tr>
+	    or functionality. See Functional Packages.</td></tr>
 <tr><td><div id="Functional_Package">Functional Package (FP)</div></td><td>A document that collects SFRs for a particular protocol, technology,
-	    or functionality<a id="period_18" href="#period_18">. </a></td></tr>
-<tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy<a id="period_19" href="#period_19">. </a></td></tr>
-<tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products<a id="period_20" href="#period_20">. </a></td></tr>
-<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module<a id="period_21" href="#period_21">. </a></td></tr>
-<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs<a id="period_22" href="#period_22">. </a></td></tr>
-<tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE<a id="period_23" href="#period_23">. </a></td></tr>
-<tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE<a id="period_24" href="#period_24">. </a></td></tr>
-<tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product<a id="period_25" href="#period_25">. </a></td></tr>
-<tr><td><div id="Target_of_Evaluation">Target of Evaluation (TOE)</div></td><td>The product under evaluation<a id="period_26" href="#period_26">. </a></td></tr>
-<tr><td><div id="TOE_Security_Functionality">TOE Security Functionality (TSF)</div></td><td>The security functionality of the product under evaluation<a id="period_27" href="#period_27">. </a></td></tr>
-<tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST<a id="period_28" href="#period_28">. </a></td></tr>
+	    or functionality.</td></tr>
+<tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy.</td></tr>
+<tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products.</td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module.</td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs.</td></tr>
+<tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE.</td></tr>
+<tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE.</td></tr>
+<tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product.</td></tr>
+<tr><td><div id="Target_of_Evaluation">Target of Evaluation (TOE)</div></td><td>The product under evaluation. </td></tr>
+<tr><td><div id="TOE_Security_Functionality">TOE Security Functionality (TSF)</div></td><td>The security functionality of the product under evaluation.</td></tr>
+<tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST.</td></tr>
 </table><h3 id="tech-terms" class="indexable" data-level="3">1.2.2 Technical Terms</h3><table style="width: 100%"><tr><td><div id="Address_Space_Layout_Randomization">Address Space Layout Randomization (ASLR)</div></td><td>
-	       An anti-exploitation feature which loads memory mappings into unpredictable locations<a id="period_29" href="#period_29">. </a>ASLR makes it more difficult for an attacker to redirect control to code
-	       that they have introduced into the address space of a process<a id="period_30" href="#period_30">. </a>      </td></tr>
+	       An anti-exploitation feature which loads memory mappings into unpredictable locations. ASLR makes it more difficult for an attacker to redirect control to code
+	       that they have introduced into the address space of a process.
+      </td></tr>
 <tr><td><div id="Administrator">Administrator</div></td><td>
-	       An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system<a id="period_31" href="#period_31">. </a>This administrator
-	       could be acting remotely through a management server, from which the system receives configuration policies<a id="period_32" href="#period_32">. </a>An administrator can enforce settings on the system 
-	       which cannot be overridden by non-administrator users<a id="period_33" href="#period_33">. </a>      </td></tr>
+	       An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system. This administrator
+	       could be acting remotely through a management server, from which the system receives configuration policies. An administrator can enforce settings on the system 
+	       which cannot be overridden by non-administrator users.
+      </td></tr>
 <tr><td><div id="Application">Application (app)</div></td><td>
-	       Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation<a id="period_34" href="#period_34">. </a>
+	       Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation. 
       </td></tr>
 <tr><td><div id="Application_Programming_Interface">Application Programming Interface (API)</div></td><td>
 	       A specification of routines, data structures, object classes, and variables that allows an application to make use of services provided by another software
-	       component, such as a library<a id="period_35" href="#period_35">. </a>APIs are often provided for a set of libraries included with the platform<a id="period_36" href="#period_36">. </a>      </td></tr>
+	       component, such as a library. APIs are often provided for a set of libraries included with the platform.
+      </td></tr>
 <tr><td><div id="Control_Plane">Control Plane</div></td><td>
           A logical entity that receives instructions or requirements from the SDN application layer through its northbound interface and relays them to the data plane through
-          its southbound interface<a id="period_37" href="#period_37">. </a>The controller extracts information about the network from the data plane and communicates back to the SDN application layer with an 
-          abstract view of the network, including statistics and events about what is happening<a id="period_38" href="#period_38">. </a>
+          its southbound interface. The controller extracts information about the network from the data plane and communicates back to the SDN application layer with an 
+          abstract view of the network, including statistics and events about what is happening. 
       </td></tr>
 <tr><td><div id="Credential">Credential</div></td><td>
-	       Data that establishes the identity of a user (e.g., a cryptographic key or password)<a id="period_39" href="#period_39">. </a>      </td></tr>
+	       Data that establishes the identity of a user (e.g., a cryptographic key or password).
+      </td></tr>
 <tr><td><div id="Critical_Security_Parameters">Critical Security Parameters (CSP)</div></td><td>
 	       Information that is either user or system defined and is used to operate a cryptographic module in processing encryption functions including cryptographic keys and
 	       authentication data, such as passwords, the disclosure or modification of which can compromise the security of a cryptographic module or the security of the
-	       information protected by the module<a id="period_40" href="#period_40">. </a>      </td></tr>
+	       information protected by the module.
+      </td></tr>
 <tr><td><div id="DAR_Protection">DAR Protection</div></td><td>
-	       Countermeasures that prevent attackers, even those with physical access, from extracting data from non-volatile storage<a id="period_41" href="#period_41">. </a>Common techniques include data encryption
-	       and wiping<a id="period_42" href="#period_42">. </a>      </td></tr>
+	       Countermeasures that prevent attackers, even those with physical access, from extracting data from non-volatile storage. Common techniques include data encryption
+	       and wiping.
+      </td></tr>
 <tr><td><div id="Data_Execution_Prevention">Data Execution Prevention (DEP)</div></td><td>
-	       An anti-exploitation feature of modern operating systems executing on modern computer hardware, which enforces a non-execute permission on pages of memory<a id="period_43" href="#period_43">. </a>DEP
-	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code<a id="period_44" href="#period_44">. </a>      </td></tr>
+	       An anti-exploitation feature of modern operating systems executing on modern computer hardware, which enforces a non-execute permission on pages of memory. DEP
+	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code.
+      </td></tr>
 <tr><td><div id="Data_Plane">Data Plane</div></td><td>
-        Controls the forwarding and data processing capabilities for the network<a id="period_45" href="#period_45">. </a>This includes forwarding and processing of the data path<a id="period_46" href="#period_46">. </a>      </td></tr>
+        Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.
+      </td></tr>
 <tr><td><div id="Developer">Developer</div></td><td>
-	       An entity that writes OS software<a id="period_47" href="#period_47">. </a>For the purposes of this document, vendors and developers are the same<a id="period_48" href="#period_48">. </a>      </td></tr>
+	       An entity that writes OS software. For the purposes of this document, vendors and developers are the same.
+      </td></tr>
 <tr><td><div id="Host-based_Firewall">Host-based Firewall</div></td><td>
-	       A software-based firewall implementation running on the OS for filtering inbound and outbound network traffic to and from processes running on the OS<a id="period_49" href="#period_49">. </a>      </td></tr>
+	       A software-based firewall implementation running on the OS for filtering inbound and outbound network traffic to and from processes running on the OS.
+      </td></tr>
 <tr><td><div id="Hybrid_Authentication">Hybrid Authentication</div></td><td>
-	       A hybrid authentication factor is one where a user has to submit a combination of a cryptographic token and a PIN or password and both must pass<a id="period_50" href="#period_50">. </a>If either factor
-	       fails, the entire attempt fails<a id="period_51" href="#period_51">. </a>      </td></tr>
+	       A hybrid authentication factor is one where a user has to submit a combination of a cryptographic token and a PIN or password and both must pass. If either factor
+	       fails, the entire attempt fails.
+      </td></tr>
 <tr><td><div id="Management_Plane">Management Plane</div></td><td>
-        Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs)<a id="period_52" href="#period_52">. </a>        In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes<a id="period_53" href="#period_53">. </a>These 
-        applications could include networking management, analytics, or business applications used to run large data centers<a id="period_54" href="#period_54">. </a>For example, an analytics application might be
-        built to recognize suspicious network activity for security purposes<a id="period_55" href="#period_55">. </a>This is sometimes also referred to as the Orchestration Layer<a id="period_56" href="#period_56">. </a>      </td></tr>
-<tr><td><div id="Northbound">Northbound</div></td><td>Communications between an SDN and applications in the management plane<a id="period_57" href="#period_57">. </a></td></tr>
+        Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs).
+        In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes. These 
+        applications could include networking management, analytics, or business applications used to run large data centers. For example, an analytics application might be
+        built to recognize suspicious network activity for security purposes. This is sometimes also referred to as the Orchestration Layer.
+      </td></tr>
+<tr><td><div id="Northbound">Northbound</div></td><td>Communications between an SDN and applications in the management plane.</td></tr>
 <tr><td><div id="Operating_System">Operating System (OS)</div></td><td>
-	       Software that manages physical and logical resources and provides services for applications<a id="period_58" href="#period_58">. </a>The terms TOE and OS are interchangeable in this
-	       document<a id="period_59" href="#period_59">. </a>
+	       Software that manages physical and logical resources and provides services for applications. The terms TOE and OS are interchangeable in this
+	       document. 
       </td></tr>
 <tr><td><div id="Personal_Identification_Number">Personal Identification Number (PIN)</div></td><td>
 	       An authentication factor that is comprised of a set of numeric or alphabetic characters that may be used  in addition to a cryptographic token to provide a hybrid
-	       authentication factor<a id="period_60" href="#period_60">. </a>At this time it  is not considered as a stand-alone authentication mechanism<a id="period_61" href="#period_61">. </a>A PIN is distinct from a password in that the allowed character
-	       set and required length of a PIN is typically smaller than that of a password as it is designed to be input quickly<a id="period_62" href="#period_62">. </a>      </td></tr>
+	       authentication factor. At this time it  is not considered as a stand-alone authentication mechanism. A PIN is distinct from a password in that the allowed character
+	       set and required length of a PIN is typically smaller than that of a password as it is designed to be input quickly.
+      </td></tr>
 <tr><td><div id="Personally_Identifiable_Information">Personally Identifiable Information (PII)</div></td><td>
 	       Any information about an individual maintained by an agency, including, but not limited to, education, financial transactions, medical history, and criminal or
 	       employment history, and information which can be used to distinguish or trace an individual's identity, such as their name, social security number, date and place
-	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual<a id="period_63" href="#period_63">. </a>      </td></tr>
-<tr><td><div id="Sensitive_Data">Sensitive Data</div></td><td>
-	       Sensitive data may include all user or enterprise data or may be specific application data such as PII, emails, messaging, documents, calendar items, and contacts<a id="period_64" href="#period_64">. </a>	       Sensitive data must minimally include credentials and keys<a id="period_65" href="#period_65">. </a>Sensitive data shall be identified in the OS's TSS by the ST author<a id="period_66" href="#period_66">. </a>
+	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual.
       </td></tr>
-<tr><td><div id="Southbound">Southbound</div></td><td>Communications between an SDN and network devices in the data plane<a id="period_67" href="#period_67">. </a></td></tr>
+<tr><td><div id="Sensitive_Data">Sensitive Data</div></td><td>
+	       Sensitive data may include all user or enterprise data or may be specific application data such as PII, emails, messaging, documents, calendar items, and contacts.
+	       Sensitive data must minimally include credentials and keys. Sensitive data shall be identified in the OS's TSS by the ST author. 
+      </td></tr>
+<tr><td><div id="Southbound">Southbound</div></td><td>Communications between an SDN and network devices in the data plane.</td></tr>
 <tr><td><div id="User">User</div></td><td>
-	       A user is subject to configuration policies applied to the operating system by administrators<a id="period_68" href="#period_68">. </a> On some systems, under certain configurations, a normal user can
-	       temporarily elevate privileges to that of an administrator<a id="period_69" href="#period_69">. </a>At that time, such a user should be considered an administrator<a id="period_70" href="#period_70">. </a>      </td></tr>
+	       A user is subject to configuration policies applied to the operating system by administrators.  On some systems, under certain configurations, a normal user can
+	       temporarily elevate privileges to that of an administrator. At that time, such a user should be considered an administrator.
+      </td></tr>
 </table></div>
     
     <h2 class="indexable" data-level="2" id="Compliant_Targets_of_Evaluation">1.3 Compliant Targets of Evaluation</h2> 
-      Compliant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> will implement necessary functionality in a "do no harm" manner with respect to network security<a id="period_71" href="#period_71">. </a>Specifically:
+      Compliant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> will implement necessary functionality in a "do no harm" manner with respect to network security. Specifically:
       <ul>
-        <li>They can be remotely managed in a secure manner<a id="period_72" href="#period_72">. </a></li>
-        <li>Any software/firmware updates are from a trusted source<a id="period_73" href="#period_73">. </a></li>
-        <li>Any interfaces to applications, VMs, and other devices are trusted (zone of trust)<a id="period_74" href="#period_74">. </a></li>
-        <li>All security-relevant events are reported<a id="period_75" href="#period_75">. </a></li>
-        <li>The control plane and data plane are logically separated<a id="period_76" href="#period_76">. </a></li>
-        <li>The control plane and management plane are logically separated<a id="period_77" href="#period_77">. </a></li>
-        <li>Data that is collected by the control plane and distributed to the data plane, such as flow tables and configurations, is protected<a id="period_78" href="#period_78">. </a></li>
-        <li>Data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics, is protected<a id="period_79" href="#period_79">. </a></li>
-        <li>Data that is collected, distributed, and shared within the control plane, such as when multiple <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers exist in the architecture, is protected<a id="period_80" href="#period_80">. </a></li>
+        <li>They can be remotely managed in a secure manner.</li>
+        <li>Any software/firmware updates are from a trusted source.</li>
+        <li>Any interfaces to applications, VMs, and other devices are trusted (zone of trust).</li>
+        <li>All security-relevant events are reported.</li>
+        <li>The control plane and data plane are logically separated.</li>
+        <li>The control plane and management plane are logically separated.</li>
+        <li>Data that is collected by the control plane and distributed to the data plane, such as flow tables and configurations, is protected.</li>
+        <li>Data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics, is protected.</li>
+        <li>Data that is collected, distributed, and shared within the control plane, such as when multiple <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers exist in the architecture, is protected.</li>
       </ul>
       A conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> decouples its data and control planes such that data traffic and control traffic are restricted
-	  to their respective planes<a id="period_81" href="#period_81">. </a>It also enforces centralization of control so that all components of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> environment
-	  are under its control<a id="period_82" href="#period_82">. </a>This can expand across multiple distributed controllers for large, complex, or geographically
-	  dispersed networks<a id="period_83" href="#period_83">. </a>      <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
-        The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary for an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller is one or more physical or virtual devices<a id="period_84" href="#period_84">. </a>An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller may be a distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, as defined by the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr><a id="period_85" href="#period_85">. </a>        <ul>
-          <li>In a physical standalone <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller device, the device's hardware, firmware, and software define the evaluation boundary<a id="period_86" href="#period_86">. </a></li>
-          <li>In a virtual <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller, the software of the Virtual Machine (<abbr class="dyn-abbr"><a href="#abbr_VM">VM</a></abbr>) defines the evaluation boundary<a id="period_87" href="#period_87">. </a></li>
-          <li>All security functionality is contained and executed within the evaluation boundary of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller<a id="period_88" href="#period_88">. </a></li>
+	  to their respective planes. It also enforces centralization of control so that all components of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> environment
+	  are under its control. This can expand across multiple distributed controllers for large, complex, or geographically
+	  dispersed networks.
+      <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
+        The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary for an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller is one or more physical or virtual devices. An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller may be a distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, as defined by the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>.
+        <ul>
+          <li>In a physical standalone <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller device, the device's hardware, firmware, and software define the evaluation boundary.</li>
+          <li>In a virtual <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller, the software of the Virtual Machine (<abbr class="dyn-abbr"><a href="#abbr_VM">VM</a></abbr>) defines the evaluation boundary.</li>
+          <li>All security functionality is contained and executed within the evaluation boundary of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller.</li>
         </ul>
       <p>  
-        The following figure shows the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller sitting between the management and data planes within the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> infrastructure<a id="period_89" href="#period_89">. </a>This is a simplified diagram of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s position in an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> deployment<a id="period_90" href="#period_90">. </a>Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown<a id="period_91" href="#period_91">. </a>        <div class="figure" id="figure-toe-as-apponos"><img id="toe-as-apponos" src="images/sdncontroller.png" width="" height=""><br><span class="ctr" data-myid="toe-as-apponos" data-counter-type="ct-figure">Figure <span class="counter">1</span></span>:
+        The following figure shows the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller sitting between the management and data planes within the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> infrastructure. This is a simplified diagram of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s position in an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> deployment. Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown.
+        <div class="figure" id="figure-toe-as-apponos"><img id="toe-as-apponos" src="images/sdncontroller.png" width="" height=""></img><br/><span class="ctr" data-myid="toe-as-apponos" data-counter-type="ct-figure">Figure <span class="counter">1</span></span>:
       High-Level <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Representation</div>
       </p>
         <p>
           The following elements of an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller are outside the scope of this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> and are therefore considered to be non-interfering with respect to security, even if they are included as part of a compliant product:
           <ul>
-            <li>Examination of data plane content, such as virus or email scanning<a id="period_92" href="#period_92">. </a></li>
-            <li>Intrusion detection or prevention capabilities<a id="period_93" href="#period_93">. </a></li>
-            <li>Network Address Translation (<abbr class="dyn-abbr"><a href="#abbr_NAT">NAT</a></abbr>) as a security function<a id="period_94" href="#period_94">. </a></li>
-            <li>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is a single virtual machine, the hardware or firmware of the underlying platform<a id="period_95" href="#period_95">. </a></li>
-            <li>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is a single virtual machine, the host operating system or runtime environment<a id="period_96" href="#period_96">. </a></li>
-            <li>Specific security functionality that is not global to all <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers (e.g<a id="period_97" href="#period_97">. </a>firewall, load balancing)<a id="period_98" href="#period_98">. </a></li>
-            <li>Ohter objects belonging in the data plane<a id="period_99" href="#period_99">. </a></li>
+            <li>Examination of data plane content, such as virus or email scanning.</li>
+            <li>Intrusion detection or prevention capabilities.</li>
+            <li>Network Address Translation (<abbr class="dyn-abbr"><a href="#abbr_NAT">NAT</a></abbr>) as a security function.</li>
+            <li>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is a single virtual machine, the hardware or firmware of the underlying platform.</li>
+            <li>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is a single virtual machine, the host operating system or runtime environment.</li>
+            <li>Specific security functionality that is not global to all <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers (e.g. firewall, load balancing).</li>
+            <li>Ohter objects belonging in the data plane.</li>
           </ul>
         </p>
       
     
     
           
-    <h2 class="indexable" data-level="2" id="Use_Cases">1.4 Use Cases</h2>Requirements in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> are designed to address the security problems in at least the following use cases<a id="period_100" href="#period_100">. </a>These use cases are 
-        intentionally very broad, as many specific use cases exist for an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller These use cases may also overlap with one another<a id="period_101" href="#period_101">. </a>An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's 
-        functionality may even be effectively extended by privileged applications installed on it<a id="period_102" href="#period_102">. </a>However, these are out of scope of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_103" href="#period_103">. </a>      <dl><dt id="standalonephysdev"> [USE CASE 1] Standalone Physical Device</dt><dd><span class="description">	          
-            The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is a single physical appliance that provides <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality<a id="period_104" href="#period_104">. </a>            
+    <h2 class="indexable" data-level="2" id="Use_Cases">1.4 Use Cases</h2>Requirements in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> are designed to address the security problems in at least the following use cases. These use cases are 
+        intentionally very broad, as many specific use cases exist for an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller These use cases may also overlap with one another. An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's 
+        functionality may even be effectively extended by privileged applications installed on it. However, these are out of scope of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+      <dl><dt id="standalonephysdev"> [USE CASE 1] Standalone Physical Device</dt><dd><span class="description">	          
+            The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is a single physical appliance that provides <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality.             
           </span></dd><dt id="virtualdev"> [USE CASE 2] Virtual Device</dt><dd><span class="description">
-            The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is a virtual machine that provides <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality<a id="period_105" href="#period_105">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller<a id="period_106" href="#period_106">. </a>
+            The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is a virtual machine that provides <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller. 
           </span></dd><dt id="standorvirtcluster"> [USE CASE 3] Cluster (stand-alone or virtual)</dt><dd><span class="description">
-            Regardless of whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is physical, virtual, or both, it includes multiple distinct instances that are combined into a distributed cluster<a id="period_107" href="#period_107">. </a>          </span></dd><dt id="hypercov"> [USE CASE 4] Hyper-Converge</dt><dd><span class="description">
-            The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> amalgamates various computing resources into a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads<a id="period_108" href="#period_108">. </a>          </span></dd></dl>
+            Regardless of whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is physical, virtual, or both, it includes multiple distinct instances that are combined into a distributed cluster.
+          </span></dd><dt id="hypercov"> [USE CASE 4] Hyper-Converge</dt><dd><span class="description">
+            The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> amalgamates various computing resources into a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads.
+          </span></dd></dl>
     
   <h1 class="indexable" data-level="1" id="Conformance_Claims">2 Conformance Claims</h1>
       
       <dl><dt>Conformance Statement</dt><p></p><dd>An <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> must claim exact conformance 
-		 to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr><a id="period_109" href="#period_109">. </a></dd><p></p><dd>The evaluation methods used for evaluating the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> are a combination of the workunits 
+		 to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</dd><p></p><dd>The evaluation methods used for evaluating the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> are a combination of the workunits 
 			defined in <a href="#bibCEM">[CEM]</a> as well as the Evaluation Activities for ensuring that individual <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> 
 			and <abbr class="dyn-abbr"><a href="#abbr_SAR">SARs</a></abbr> have a sufficient level of supporting evidence in the Security Target and guidance 
 			documentation and have been sufficiently tested by the laboratory as part of completing 
-			ATE_IND.1<a id="period_110" href="#period_110">. </a>Any functional packages this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> claims similarly contain their own Evaluation 
-			Activities that are used in this same manner<a id="period_111" href="#period_111">. </a>			</dd><dt>CC Conformance Claims</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is conformant to 
+			ATE_IND.1. Any functional packages this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> claims similarly contain their own Evaluation 
+			Activities that are used in this same manner.
+			</dd><dt>CC Conformance Claims</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is conformant to 
 			Part 2 (extended) 
 			
 			
 			and Part 3 (conformant)
 			
-				of Common Criteria <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1<a id="period_112" href="#period_112">. </a>			</dd><dt>PP Claim</dt><p></p><dd>
+				of Common Criteria <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1.
+			</dd><dt>PP Claim</dt><p></p><dd>
 					This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not claim conformance to 
-					any Protection Profile<a id="period_113" href="#period_113">. </a>				</dd><p></p><dd>There are no <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules that are allowed in a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> 
-					with this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr><a id="period_114" href="#period_114">. </a></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
-						Functional or Assurance Packages<a id="period_115" href="#period_115">. </a></dd></dl>
+					any Protection Profile.
+				</dd><p></p><dd>There are no <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules that are allowed in a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> 
+					with this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
+						Functional or Assurance Packages.</dd></dl>
     <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>
 		The security problem is described in terms of the threats that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to address, assumptions about 
-		the operational environment, and any organizational security policies that the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is expected to enforce<a id="period_116" href="#period_116">. </a>    <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
+		the operational environment, and any organizational security policies that the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is expected to enforce.
+    <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
       <dl><dt class="threat defined" id="T.INSECURE_API">T.INSECURE_API</dt><dd><span class="description">
             Insecure application programming interfaces (APIs) and user interfaces can provide attackers with 
-			opportunities to inject malicious code to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or to retrieve sensitive information from it<a id="period_117" href="#period_117">. </a>Executing
+			opportunities to inject malicious code to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or to retrieve sensitive information from it. Executing
 			improper or unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions or providing malicious input can compromise network services and sensitive
-			data leakage can take place through insecure interfaces<a id="period_118" href="#period_118">. </a> 
+			data leakage can take place through insecure interfaces.  
             
-            <span style="" class="comment " id="Comment-1-"><br><br>Recommendations above to adjust threat name for more specificity and clarify the 
-			description<a id="period_119" href="#period_119">. </a></span>
+            <span style="" class="comment " id="Comment-1-"><br/><br/>Recommendations above to adjust threat name for more specificity and clarify the 
+			description.</span>
           </span></dd><dt class="threat defined" id="T.ATTACKER_ACCESS">T.ATTACKER_ACCESS</dt><dd><span class="description">
           An attacker may attempt to exploit services and functionality to intercept communications and mount attacks 
-		  against machines in the network<a id="period_120" href="#period_120">. </a>          
-            <span style="" class="comment " id="Comment-2-"><br><br>Threat kept as-is but this seems unnecessary<a id="period_121" href="#period_121">. </a>Unless there are <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>-specific threat 
+		  against machines in the network.
+          
+            <span style="" class="comment " id="Comment-2-"><br/><br/>Threat kept as-is but this seems unnecessary. Unless there are <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>-specific threat 
 			cases (such as the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> threat listed above), this just seems like an extension of threats already defined in 
-			the NDcPP, and it should be fine for module <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> to map back to threats from the base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_122" href="#period_122">. </a></span>
+			the NDcPP, and it should be fine for module <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> to map back to threats from the base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</span>
           </span></dd></dl>
       
     
@@ -847,45 +880,56 @@ The following sections list Common Criteria and technology terms used in this do
 	
     <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2>
 These assumptions are made on the Operational Environment (<abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>) in order to be able to ensure that the
-security functionality specified in the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> can be provided by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_123" href="#period_123">. </a>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is placed in an <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> that does not meet these assumptions, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may no longer be able to
-provide all of its security functionality<a id="period_124" href="#period_124">. </a>      
+security functionality specified in the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> can be provided by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
+If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is placed in an <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> that does not meet these assumptions, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may no longer be able to
+provide all of its security functionality.
+      
       <dl><dt class="assumption defined" id="A.SECURED_INFRASTRUCTURE">A.SECURED_INFRASTRUCTURE</dt><dd><span class="description"> 
-            Connections between <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller and network devices under the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller's control are secure from unauthorized access<a id="period_125" href="#period_125">. </a>          </span></dd><dt class="assumption defined" id="A.SUPPORTED_API">A.SUPPORTED_API</dt><dd><span class="description"> 
-            The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller will have an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> in the management interface<a id="period_126" href="#period_126">. </a>          </span></dd></dl>
+            Connections between <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller and network devices under the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller's control are secure from unauthorized access.
+          </span></dd><dt class="assumption defined" id="A.SUPPORTED_API">A.SUPPORTED_API</dt><dd><span class="description"> 
+            The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller will have an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> in the management interface.
+          </span></dd></dl>
     
 
   <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
     
   <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_TOE">4.1 Security Objectives for the TOE</h2>
       
-      This document does not define any additional SOs<a id="period_127" href="#period_127">. </a>    
+      This document does not define any additional SOs.
+    
   
     
     <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_Operational_Environment">4.2 Security Objectives for the Operational Environment</h2>
-      The following security objectives for the operational environment help the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> in correctly providing its security functionality<a id="period_128" href="#period_128">. </a>      These track with the assumptions about the environment<a id="period_129" href="#period_129">. </a>      <dl><dt class="SOE defined" id="OE.QQQQ">OE.QQQQ</dt><dd><span class="description">QQQQ</span></dd></dl>
+      The following security objectives for the operational environment help the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> in correctly providing its security functionality.
+      These track with the assumptions about the environment.
+      <dl><dt class="SOE defined" id="OE.QQQQ">OE.QQQQ</dt><dd><span class="description">QQQQ</span></dd></dl>
     
     <h2 id="" class="indexable,h2" data-level="2">4.3 Security Objectives Rationale</h2>   
 		This section describes how the assumptions and organizational 
-		security policies map to operational environment security objectives<a id="period_130" href="#period_130">. </a>	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SECURED_INFRASTRUCTURE">A.SECURED_&#8203;INFRASTRUCTURE</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SUPPORTED_API">A.SUPPORTED_&#8203;API</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr></table>
+		security policies map to operational environment security objectives.
+	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SECURED_INFRASTRUCTURE">A.SECURED_​INFRASTRUCTURE</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.SUPPORTED_API">A.SUPPORTED_​API</a></td><td><a href="#OE.QQQQ">OE.QQQQ</a></td><td></td></tr></table>
   <h1 id="Security_Requirements" class="indexable" data-level="1">5 Security Requirements</h1>
-      This chapter describes the security requirements which have to be fulfilled by the product under evaluation<a id="period_131" href="#period_131">. </a>     Those requirements comprise functional components from Part 2 and assurance components from Part 3 of 
-       <a href="#bibCC">[CC]</a><a id="period_132" href="#period_132">. </a>       
+      This chapter describes the security requirements which have to be fulfilled by the product under evaluation.
+     Those requirements comprise functional components from Part 2 and assurance components from Part 3 of 
+       <a href="#bibCC">[CC]</a>.
+       
     The following conventions are used for the completion of operations:
      <ul>
        <li>
          <b>Refinement</b> operation (denoted by <b>bold text</b> or <strike>strikethrough
          text</strike>): Is used to add details to a requirement or to remove part of the requirement that is made irrelevant
-         through the completion of another operation, and thus further restricts a requirement<a id="period_133" href="#period_133">. </a>         </li>
+         through the completion of another operation, and thus further restricts a requirement.
+         </li>
        <li>
          <b>Selection</b> (denoted by <i>italicized text</i>): Is used to select one or more options
-         provided by the [<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>] in stating a requirement<a id="period_134" href="#period_134">. </a></li>
+         provided by the [<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>] in stating a requirement.</li>
        <li>
          <b>Assignment</b> operation (denoted by <span class="assignable-content">italicized text</span>): Is used to assign a
-         specific value to an unspecified parameter, such as the length of a password<a id="period_135" href="#period_135">. </a>Showing the
-         value in square brackets indicates assignment<a id="period_136" href="#period_136">. </a></li>
+         specific value to an unspecified parameter, such as the length of a password. Showing the
+         value in square brackets indicates assignment.</li>
        <li>
          <b>Iteration</b> operation: Is indicated by appending the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> name with a slash and unique identifier
-            suggesting the purpose of the operation, e.g<a id="period_137" href="#period_137">. </a>"/EXAMPLE1."
+            suggesting the purpose of the operation, e.g. "/EXAMPLE1."
        </li>
      </ul>
    <h2 id="secreq-ND" class="indexable" data-level="2">5.1 Collaborative 
@@ -895,42 +939,50 @@ provide all of its security functionality<a id="period_124" href="#period_124">.
       In a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> that includes the NDcPP,
       the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to rely on some of the security functions implemented by the
 Network Device
-      as a whole and evaluated against the  NDcPP<a id="period_138" href="#period_138">. </a>      The following sections describe any modifications that the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author must make to the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>
-      defined in the NDcPP in addition to what is mandated by <a class="dynref" href="#man-sfrs">Section 5.2 TOE Security Functional Requirements</a><a id="period_139" href="#period_139">. </a>    <h3 id="modsfr-ND" class="indexable" data-level="3">5.1.1  Modified SFRs </h3>
-		The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> listed in this section are defined in the NDcPP and relevant to the secure operation of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_140" href="#period_140">. </a>
+      as a whole and evaluated against the  NDcPP.
+      The following sections describe any modifications that the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author must make to the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>
+      defined in the NDcPP in addition to what is mandated by <a class="dynref" href="#man-sfrs">Section 5.2 TOE Security Functional Requirements</a>.
+    <h3 id="modsfr-ND" class="indexable" data-level="3">5.1.1  Modified SFRs </h3>
+		The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> listed in this section are defined in the NDcPP and relevant to the secure operation of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
+
 		<h4 id="@id" class="indexable" data-level="4">5.1.1.1 Trusted Path/Channels (FTP)</h4><div class="comp" id="@id"><h4>FTP_ITC.1: Inter-TSF Trusted Channel</h4><span class="description">
-                  <p>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> has been modified from its definition in the NDcPP to define external interfaces to environmental entities that are particular to this specific technology type<a id="period_141" href="#period_141">. </a></p>
+                  <p>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> has been modified from its definition in the NDcPP to define external interfaces to environmental entities that are particular to this specific technology type.</p>
                   <p>The text of the requirement is replaced with:</p>
                   <p>
                   <b>FTP_ITC.1.1</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of using [<b>selection:</b><i> IPsec, SSH, <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_DTLS">DTLS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_HTTPS">HTTPS</a></abbr></i>] to provide a trusted communication channel between itself and authorized <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities supporting the following capabilities: audit server, <b>northbound components, southbound components, external east/west components</b>[<b>selection:</b> <i>authentication server, [<b>assignment:</b> other capabilities], no other capabilities</i>] that is logically distinct from other
                   communication channels and provides assured identification of its end points
-                  and protection of the channel data from disclosure and detection of modification of the channel data<a id="period_142" href="#period_142">. </a>                  </p>
+                  and protection of the channel data from disclosure and detection of modification of the channel data.
+                  </p>
                   <p>
-                    <b>FTP_ITC.1.2</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall permit [<b>selection:</b><i> the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, the authorized <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities</i>] to initiate communication via the trusted channel<a id="period_143" href="#period_143">. </a>                  </p>
+                    <b>FTP_ITC.1.2</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall permit [<b>selection:</b><i> the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, the authorized <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities</i>] to initiate communication via the trusted channel.
+                  </p>
                   <p>
                     <b>FTP_ITC.1.3</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall initiate communication via the trusted channel for
                     [<b>assignment:</b> <i>list of services for which the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> is able to initiate
-                      communications</i>]<a id="period_144" href="#period_144">. </a>                  </p>
-                  <b>Application Note:</b> This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> modifies this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to allow for the specification of any northbound, southbound, or east/west environmental components with which the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> may implement protected communications<a id="period_145" href="#period_145">. </a>A conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may implement a distributed east/west configuration rather than the east/west entities being in the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>; in this case, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> would define the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary as a distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in accordance with the NDcPP and use FPT_ITT.1 to define the interface between east/west distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components<a id="period_146" href="#period_146">. </a> 
+                      communications</i>].
+                  </p>
+                  <b>Application Note:</b> This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> modifies this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to allow for the specification of any northbound, southbound, or east/west environmental components with which the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> may implement protected communications. A conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may implement a distributed east/west configuration rather than the east/west entities being in the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>; in this case, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> would define the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary as a distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in accordance with the NDcPP and use FPT_ITT.1 to define the interface between east/west distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components.  
                 </span></div><h2 id="man-sfrs" class="indexable" data-level="2">5.2 TOE Security Functional Requirements</h2>
-	The following section describes the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> that must be satisfied by any <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> that claims conformance to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr><a id="period_147" href="#period_147">. </a>	These <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must be claimed regardless of which <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> is used to define the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_148" href="#period_148">. </a>        
+	The following section describes the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> that must be satisfied by any <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> that claims conformance to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.
+	These <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must be claimed regardless of which <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> is used to define the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
+        
       <h3 id="man-fau" class="indexable" data-level="3">5.2.1 Security Audit (FAU)</h3>
       
       <div class="comp" id="FAU_GEN.1/SDN"><h4>FAU_GEN.1/SDN Audit Data Generation (SDN)</h4>
         <div class="element"><div class="reqid" id="FAU_GEN.1.1/SDN"><a href="#FAU_GEN.1.1/SDN" class="abbr">FAU_GEN.1.1/SDN</a></div><div class="reqdesc">
-            <span style="" class="comment " id="Comment-3-">The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have maximum auditing and logging of all unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage, especially <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage attempts from users that are not in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> roles<a id="period_149" href="#period_149">. </a><br><br>This will be populated as needed by the audit events for other <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr><br><br></span>
+            <span style="" class="comment " id="Comment-3-">The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have maximum auditing and logging of all unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage, especially <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage attempts from users that are not in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> roles.<br/><br/>This will be populated as needed by the audit events for other <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr><br/><br/></span>
             
             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall implement functionality to generate audit data of the following <b><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr></b> auditable events:
             <ol type="a">
               <li>Startup and shutdown of the audit functions;</li>
               <li>All auditable events for [<i>not specified</i>] level of audit;</li>
-              <li>All unauthorized usage of all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints, including create, read, update, and delete<a id="period_150" href="#period_150">. </a></li>
-              <li>All authorized usage of all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints, including create, read, update, and delete<a id="period_151" href="#period_151">. </a></li>
-              <li>Full <abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_REST">REST</a></abbr> request parameters and values of any <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> requests sent to the SDNC controller <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr><a id="period_152" href="#period_152">. </a></li>
-              <li>All <abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr> Response Codes returned from any <abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> requests sent to the SDNC controller <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr><a id="period_153" href="#period_153">. </a></li>
-              <li>All error codes and error messages from usage of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr><a id="period_154" href="#period_154">. </a></li>
+              <li>All unauthorized usage of all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints, including create, read, update, and delete.</li>
+              <li>All authorized usage of all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints, including create, read, update, and delete.</li>
+              <li>Full <abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_REST">REST</a></abbr> request parameters and values of any <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> requests sent to the SDNC controller <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>.</li>
+              <li>All <abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr> Response Codes returned from any <abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> requests sent to the SDNC controller <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>.</li>
+              <li>All error codes and error messages from usage of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>.</li>
               <li>[<i>all auditable events for mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> specified in <a onclick="showTarget('t-audit-mandatory')" href="#t-audit-mandatory" class="t-audit-mandatory-ref">Table  <span class="counter">t-audit-mandatory</span></a>, 
-                selected <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in <a onclick="showTarget('t-audit-sel-based')" href="#t-audit-sel-based" class="t-audit-sel-based-ref">Table  <span class="counter">t-audit-sel-based</span></a></i>]<a id="period_155" href="#period_155">. </a></li>
+                selected <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in <a onclick="showTarget('t-audit-sel-based')" href="#t-audit-sel-based" class="t-audit-sel-based-ref">Table  <span class="counter">t-audit-sel-based</span></a></i>].</li>
             </ol>
           </div></div>
         <div class="element"><div class="reqid" id="FAU_GEN.1.2/SDN"><a href="#FAU_GEN.1.2/SDN" class="abbr">FAU_GEN.1.2/SDN</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall record within the <b><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr></b> audit data at
@@ -939,12 +991,14 @@ Network Device
                 (success or failure) of the event; and</li>         
               <li>For each audit event type, based on the auditable event definitions of the functional components 
                 included in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><b>-Module</b>/<abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, [<i>Additional Audit Record Contents as specified in 
-                  <a onclick="showTarget('t-audit-mandatory')" href="#t-audit-mandatory" class="t-audit-mandatory-ref">Table  <span class="counter">t-audit-mandatory</span></a>, <a onclick="showTarget('t-audit-sel-based')" href="#t-audit-sel-based" class="t-audit-sel-based-ref">Table  <span class="counter">t-audit-sel-based</span></a></i>]<a id="period_156" href="#period_156">. </a></li>
+                  <a onclick="showTarget('t-audit-mandatory')" href="#t-audit-mandatory" class="t-audit-mandatory-ref">Table  <span class="counter">t-audit-mandatory</span></a>, <a onclick="showTarget('t-audit-sel-based')" href="#t-audit-sel-based" class="t-audit-sel-based-ref">Table  <span class="counter">t-audit-sel-based</span></a></i>].</li>
             </ol>
           <div class="appnote"><span class="note-header">Application
       Note:
-    </span><span class="note"><p>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> mandates that audit data be generated for startup and shutdown of the audit functions, which is a duplicate of FAU_GEN.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr><a id="period_157" href="#period_157">. </a>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has one single audit mechanism, then the events used to conform to the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> requirement also suffice here<a id="period_158" href="#period_158">. </a>Startup and shutdown of the audit functions in the context of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller portion of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> only need to be logged separately if the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller has a different logging mechanism from what the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> uses<a id="period_159" href="#period_159">. </a>Note also that in many cases the startup and shutdown of the audit functions cannot be forced on its own because the audit functions may be operational by default<a id="period_160" href="#period_160">. </a>In this case, logging for startup and shutdown of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself is sufficient<a id="period_161" href="#period_161">. </a>The purpose of this part of the requirement is to ensure that a malicious user cannot disable auditing to evade detection of other malicious use of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_162" href="#period_162">. </a>          </p><p>
-            The auditable events for the 'not specified' level of audit is intended to communicate that this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not claim one of the pre-defined audit levels specified in <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2; this is inherently satisfied by demonstrating that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generates appropriate audit data for all events that are explicitly required by the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr><a id="period_163" href="#period_163">. </a>          </p>
+    </span><span class="note"><p>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> mandates that audit data be generated for startup and shutdown of the audit functions, which is a duplicate of FAU_GEN.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has one single audit mechanism, then the events used to conform to the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> requirement also suffice here. Startup and shutdown of the audit functions in the context of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller portion of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> only need to be logged separately if the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller has a different logging mechanism from what the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> uses. Note also that in many cases the startup and shutdown of the audit functions cannot be forced on its own because the audit functions may be operational by default. In this case, logging for startup and shutdown of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself is sufficient. The purpose of this part of the requirement is to ensure that a malicious user cannot disable auditing to evade detection of other malicious use of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
+          </p><p>
+            The auditable events for the 'not specified' level of audit is intended to communicate that this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not claim one of the pre-defined audit levels specified in <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2; this is inherently satisfied by demonstrating that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generates appropriate audit data for all events that are explicitly required by the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.
+          </p>
           </span></div></div></div>
         
       </div>
@@ -956,7 +1010,7 @@ Network Device
       <h3 id="man-fdp" class="indexable" data-level="3">5.2.2 User Data Protection (FDP)</h3>
       
       <div class="comp" id="FDP_ACC.1"><h4>FDP_ACC.1 Subset Access Control</h4>
-        <div class="element"><div class="reqid" id="FDP_ACC.1.1"><a href="#FDP_ACC.1.1" class="abbr">FDP_ACC.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy</i>] on [<i>all APIs used to access the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></i>]<a id="period_164" href="#period_164">. </a></div></div>
+        <div class="element"><div class="reqid" id="FDP_ACC.1.1"><a href="#FDP_ACC.1.1" class="abbr">FDP_ACC.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy</i>] on [<i>all APIs used to access the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></i>].</div></div>
         
       </div>
       
@@ -965,23 +1019,28 @@ Network Device
         <div class="element"><div class="reqid" id="FDP_ACF.1.1"><a href="#FDP_ACF.1.1" class="abbr">FDP_ACF.1.1</a></div><div class="reqdesc">
             <span style="" class="comment " id="Comment-4-">
               <ol>
-                <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must perform validation of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls against the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates<a id="period_165" href="#period_165">. </a></li>
-                <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must block <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that fail validation<a id="period_166" href="#period_166">. </a></li>
-                <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must ensure that <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls conform to the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates, and block any <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that do not conform<a id="period_167" href="#period_167">. </a></li>
+                <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must perform validation of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls against the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates.</li>
+                <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must block <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that fail validation.</li>
+                <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must ensure that <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls conform to the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates, and block any <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that do not conform.</li>
               </ol>
-              <br><br>
+              <br/><br/>
             </span>
             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy</i>] to objects based on the
-            following: [<i>supported operations that can be performed on or by <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects, the validity of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call being issued, whether the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call is authorized based on the subject's role</i>]<a id="period_168" href="#period_168">. </a>          </div></div>
+            following: [<i>supported operations that can be performed on or by <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects, the validity of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call being issued, whether the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call is authorized based on the subject's role</i>].
+          </div></div>
         <div class="element"><div class="reqid" id="FDP_ACF.1.2"><a href="#FDP_ACF.1.2" class="abbr">FDP_ACF.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the following rules to determine if an operation among controlled
-            subjects and controlled objects is allowed: [<i>an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call that is valid with respect to an allowlisted <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> template can manipulate an object if allowing this manipulation has been configured</i>]<a id="period_169" href="#period_169">. </a>          </div></div>
+            subjects and controlled objects is allowed: [<i>an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call that is valid with respect to an allowlisted <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> template can manipulate an object if allowing this manipulation has been configured</i>].
+          </div></div>
         <div class="element"><div class="reqid" id="FDP_ACF.1.3"><a href="#FDP_ACF.1.3" class="abbr">FDP_ACF.1.3</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly authorize access of subjects to objects based on the following
-            additional rules: [<i>an allowlist explicitly authorizes the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> request</i>]<a id="period_170" href="#period_170">. </a>          <div class="appnote"><span class="note-header">Application
+            additional rules: [<i>an allowlist explicitly authorizes the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> request</i>].
+          <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-           This does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it<a id="period_171" href="#period_171">. </a>          </span></div></div></div>
+           This does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it.
+          </span></div></div></div>
         <div class="element"><div class="reqid" id="FDP_ACF.1.4"><a href="#FDP_ACF.1.4" class="abbr">FDP_ACF.1.4</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly deny access of subjects to objects based on the following additional
-            rules: [<i>no additional rules</i>]<a id="period_172" href="#period_172">. </a>          </div></div>
+            rules: [<i>no additional rules</i>].
+          </div></div>
       
       </div>
       
@@ -991,25 +1050,29 @@ Network Device
         
         <div class="comp" id="FMT_API_EXT.1"><h4>FMT_API_EXT.1 Management of API Behavior</h4>
           <div class="element"><div class="reqid" id="FMT_API_EXT.1.1"><a href="#FMT_API_EXT.1.1" class="abbr">FMT_API_EXT.1.1</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-5-">&#8226;<abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Call Templates: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that define how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls must be performed to access <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects<a id="period_173" href="#period_173">. </a>                <br><br>
+              <span style="" class="comment " id="Comment-5-">•<abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Call Templates: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that define how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls must be performed to access <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects.
+                <br/><br/>
               </span>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide the ability to define the following <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates [<b>assignment</b>: 
      <span class="assignable-content">list of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates</span>] against the following <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects [<b>assignment</b>: 
-     <span class="assignable-content">list of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects</span>]<a id="period_174" href="#period_174">. </a>            </div></div>
+     <span class="assignable-content">list of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects</span>].
+            </div></div>
           <div class="element"><div class="reqid" id="FMT_API_EXT.1.2"><a href="#FMT_API_EXT.1.2" class="abbr">FMT_API_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall permit <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates to be defined if they meet the following specified rules: [<b>assignment</b>: 
-     <span class="assignable-content">rules determining allowable templates</span>]<a id="period_175" href="#period_175">. </a></div></div>
+     <span class="assignable-content">rules determining allowable templates</span>].</div></div>
           
         </div>
         
         
         <div class="comp" id="FMT_MOF.1/SDN"><h4>FMT_MOF.1/SDN Management of Functions Behavior (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/SDN"><a href="#FMT_MOF.1.1/SDN" class="abbr">FMT_MOF.1.1/SDN</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-6-">Manipulation Control: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator specify how the allowed <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects can be manipulated<a id="period_176" href="#period_176">. </a>                <br><br>
+              <span style="" class="comment " id="Comment-6-">Manipulation Control: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator specify how the allowed <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects can be manipulated.
+                <br/><br/>
               </span>
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to [<i>modify the behaviour of</i>] the functions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access function as defined by <a href="#FDP_ACC.1">FDP_ACC.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity function as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>] to [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator</i>]<a id="period_177" href="#period_177">. </a>            <div class="appnote"><span class="note-header">Application
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to [<i>modify the behaviour of</i>] the functions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access function as defined by <a href="#FDP_ACC.1">FDP_ACC.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity function as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>] to [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator</i>].
+            <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-              The restriction of modifying <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access and validity functions to the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator is intended to imply that the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User does not have the ability to modify <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions<a id="period_178" href="#period_178">. </a>The <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User role having read-only access to these functions is not precluded by this requirement, as this requirement only relates to the ability to modify the behavior of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr><a id="period_179" href="#period_179">. </a> 
+              The restriction of modifying <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access and validity functions to the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator is intended to imply that the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User does not have the ability to modify <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions. The <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User role having read-only access to these functions is not precluded by this requirement, as this requirement only relates to the ability to modify the behavior of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>.  
             </span></div></div></div>
           
         </div>
@@ -1017,27 +1080,30 @@ Network Device
         
         <div class="comp" id="FMT_SMF.1/SDN"><h4>FMT_SMF.1/SDN Specification of Management Functions (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_SMF.1.1/SDN"><a href="#FMT_SMF.1.1/SDN" class="abbr">FMT_SMF.1.1/SDN</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-7-">Allowlisting: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator be able to allowlist <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates so that configuration attempts from all other APIs not in the allowlist is blocked<a id="period_180" href="#period_180">. </a>                <br><br>
+              <span style="" class="comment " id="Comment-7-">Allowlisting: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator be able to allowlist <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates so that configuration attempts from all other APIs not in the allowlist is blocked.
+                <br/><br/>
               </span>
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of performing the following management functions: [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control as defined by <a href="#FDP_ACF.1">FDP_ACF.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>]<a id="period_181" href="#period_181">. </a>            <div class="appnote"><span class="note-header">Application
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of performing the following management functions: [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control as defined by <a href="#FDP_ACF.1">FDP_ACF.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>].
+            <div class="appnote"><span class="note-header">Application
       Note:
-    </span><span class="note"><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control refers to configuring the allowlist for the permitted <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates<a id="period_182" href="#period_182">. </a><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity refers to the ability to defining the templates for how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls must be performed to access <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects<a id="period_183" href="#period_183">. </a>The intent of this requirement is for the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to have the ability to define both when and how a given <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> can be invoked<a id="period_184" href="#period_184">. </a></span></div></div></div>
+    </span><span class="note"><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control refers to configuring the allowlist for the permitted <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates. <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity refers to the ability to defining the templates for how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls must be performed to access <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects. The intent of this requirement is for the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to have the ability to define both when and how a given <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> can be invoked.</span></div></div></div>
           
         </div>
         
         
         <div class="comp" id="FMT_SMR.2/SDN"><h4>FMT_SMR.2/SDN Restrictions on Security Roles (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_SMR.2.1/SDN"><a href="#FMT_SMR.2.1/SDN" class="abbr">FMT_SMR.2.1/SDN</a></div><div class="reqdesc">
-<span style="" class="comment " id="Comment-8-">This could also just be done as a Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to FMT_SMR.2 in the NDcPP but it may be cleaner just to do it as its own iteration here<a id="period_185" href="#period_185">. </a><br><br>
+<span style="" class="comment " id="Comment-8-">This could also just be done as a Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to FMT_SMR.2 in the NDcPP but it may be cleaner just to do it as its own iteration here.<br/><br/>
   <ol>
     <li><abbr class="dyn-abbr"><a href="#abbr_RBAC">RBAC</a></abbr>: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must provide an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> user role and <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator role for role-based access control</li>
-    <li><abbr class="dyn-abbr"><a href="#abbr_RBAC">RBAC</a></abbr>: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must require that only administrators in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator role can perform <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls<a id="period_186" href="#period_186">. </a></li>
+    <li><abbr class="dyn-abbr"><a href="#abbr_RBAC">RBAC</a></abbr>: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must require that only administrators in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator role can perform <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls.</li>
   </ol>
-  <br><br>
+  <br/><br/>
 </span>
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain the roles: [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator</i>]<a id="period_187" href="#period_187">. </a>            </div></div>
-          <div class="element"><div class="reqid" id="FMT_SMR.2.2/SDN"><a href="#FMT_SMR.2.2/SDN" class="abbr">FMT_SMR.2.2/SDN</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to associate users with roles<a id="period_188" href="#period_188">. </a></div></div>
-          <div class="element"><div class="reqid" id="FMT_SMR.2.3/SDN"><a href="#FMT_SMR.2.3/SDN" class="abbr">FMT_SMR.2.3/SDN</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall ensure that the conditions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User and <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator roles cannot be held simultaneously</i>] are satisfied<a id="period_189" href="#period_189">. </a></div></div>
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain the roles: [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator</i>].
+            </div></div>
+          <div class="element"><div class="reqid" id="FMT_SMR.2.2/SDN"><a href="#FMT_SMR.2.2/SDN" class="abbr">FMT_SMR.2.2/SDN</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to associate users with roles.</div></div>
+          <div class="element"><div class="reqid" id="FMT_SMR.2.3/SDN"><a href="#FMT_SMR.2.3/SDN" class="abbr">FMT_SMR.2.3/SDN</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall ensure that the conditions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User and <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator roles cannot be held simultaneously</i>] are satisfied.</div></div>
           
         </div>
         
@@ -1045,15 +1111,15 @@ Network Device
 
 
     <h2 id="obj-req-map" class="indexable" data-level="2">5.3 TOE Security Functional Requirements Rationale</h2><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">2</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="3"><a href="#T.INSECURE_API">T.INSECURE_&#8203;API</a></td><td></td><td></td></tr>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">2</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="3"><a href="#T.INSECURE_API">T.INSECURE_​API</a></td><td></td><td></td></tr>
 <tr><td></td><td></td></tr>
 <tr><td></td><td></td></tr>
 </table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-ND" class="indexable" data-level="2">6.1 Collaborative 
     Protection Profile for Network Devices</h2><h3 id="contoe-ND" class="indexable" data-level="3">6.1.1 
 	Consistency of TOE Type
       </h3>
-        When this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is used to extend the NDcPP, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> type for the overall <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is still a network device<a id="period_190" href="#period_190">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is simply extended to 
-        include <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality that is provided by the network device<a id="period_191" href="#period_191">. </a>
+        When this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is used to extend the NDcPP, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> type for the overall <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is still a network device. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is simply extended to 
+        include <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality that is provided by the network device. 
       <h3 id="consecprob-ND" class="indexable" data-level="3">6.1.2 
 	Consistency of Security Problem Definition
       </h3>
@@ -1069,90 +1135,98 @@ Network Device
       </h3>
       This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> identifies several <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> from the
       NDcPP that are needed to support
-      Software Defined Networking Controller functionality<a id="period_192" href="#period_192">. </a>      This is considered to be consistent because the functionality provided by the
-      NDcPP is being used for its intended purpose<a id="period_193" href="#period_193">. </a>      
+      Software Defined Networking Controller functionality.
+      This is considered to be consistent because the functionality provided by the
+      NDcPP is being used for its intended purpose.
+      
           The rationale for why this does not conflict with the claims
       defined by the
       NDcPP are as follows:
       <table><caption><span class="ctr" data-myid="t-con-reqs" data-counter-type="ct-Table" id="t-con-reqs">Table <span class="counter">5</span></span>: Consistency of Requirements (NDcPP base)
-		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Requirement</th><th>Consistency Rationale</th></tr><tr><th colspan="2"> Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td>FTP_ITC.1</td><td>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> expands the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to define additional entities for trusted channels<a id="period_194" href="#period_194">. </a></td></tr><tr><th colspan="2"> Additional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td colspan="2" style="text-align:center">
+		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Requirement</th><th>Consistency Rationale</th></tr><tr><th colspan="2"> Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td>FTP_ITC.1</td><td>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> expands the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to define additional entities for trusted channels.</td></tr><tr><th colspan="2"> Additional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td colspan="2" style="text-align:center">
 	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not add any requirements when the
-	      NDcPP is the base<a id="period_195" href="#period_195">. </a>	    </td></tr><tr><th colspan="2"> Mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td><a href="#FAU_GEN.1/SDN">FAU_GEN.1/SDN</a></td><td></td></tr><tr><td><a href="#FDP_ACC.1">FDP_ACC.1</a></td><td></td></tr><tr><td><a href="#FDP_ACF.1">FDP_ACF.1</a></td><td></td></tr><tr><td><a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></td><td></td></tr><tr><td><a href="#FMT_MOF.1/SDN">FMT_MOF.1/SDN</a></td><td></td></tr><tr><td><a href="#FMT_SMF.1/SDN">FMT_SMF.1/SDN</a></td><td></td></tr><tr><td><a href="#FMT_SMR.2/SDN">FMT_SMR.2/SDN</a></td><td></td></tr></tr><tr><th colspan="2"> Optional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
-	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Optional requirements<a id="period_196" href="#period_196">. </a>	    </td></tr></tr><tr><th colspan="2"> Objective <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
-	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Objective requirements<a id="period_197" href="#period_197">. </a>	    </td></tr></tr><tr><th colspan="2"> Implementation-dependent <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
-	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Implementation-dependent requirements<a id="period_198" href="#period_198">. </a>	    </td></tr></tr><tr><th colspan="2"> Selection-based <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
-	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Selection-based requirements<a id="period_199" href="#period_199">. </a>	    </td></tr></tr></table><h1 id="opt-sfrs" class="indexable" data-level="A">Appendix A -  Optional SFRs</h1><h2 id="opt-sfrs" class="indexable" data-level="2">A.1 Strictly Optional Requirements
+	      NDcPP is the base.
+	    </td></tr><tr><th colspan="2"> Mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td><a href="#FAU_GEN.1/SDN">FAU_GEN.1/SDN</a></td><td></td></tr><tr><td><a href="#FDP_ACC.1">FDP_ACC.1</a></td><td></td></tr><tr><td><a href="#FDP_ACF.1">FDP_ACF.1</a></td><td></td></tr><tr><td><a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></td><td></td></tr><tr><td><a href="#FMT_MOF.1/SDN">FMT_MOF.1/SDN</a></td><td></td></tr><tr><td><a href="#FMT_SMF.1/SDN">FMT_SMF.1/SDN</a></td><td></td></tr><tr><td><a href="#FMT_SMR.2/SDN">FMT_SMR.2/SDN</a></td><td></td></tr></tr><tr><th colspan="2"> Optional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
+	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Optional requirements.
+	    </td></tr></tr><tr><th colspan="2"> Objective <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
+	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Objective requirements.
+	    </td></tr></tr><tr><th colspan="2"> Implementation-dependent <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
+	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Implementation-dependent requirements.
+	    </td></tr></tr><tr><th colspan="2"> Selection-based <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
+	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Selection-based requirements.
+	    </td></tr></tr></table><h1 id="opt-sfrs" class="indexable" data-level="A">Appendix A -  Optional SFRs</h1><h2 id="opt-sfrs" class="indexable" data-level="2">A.1 Strictly Optional Requirements
     </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any 
-       Strictly Optional        <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_SAR">SARs</a></abbr><a id="period_200" href="#period_200">. </a></p><h2 id="obj-sfrs" class="indexable" data-level="2">A.2 Objective Requirements
+       Strictly Optional        <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_SAR">SARs</a></abbr>.</p><h2 id="obj-sfrs" class="indexable" data-level="2">A.2 Objective Requirements
     </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any 
-       Objective       <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr><a id="period_201" href="#period_201">. </a></p><h2 id="impl-dep-sfrs" class="indexable" data-level="2">A.3 Implementation-dependent Requirements
+       Objective       <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</p><h2 id="impl-dep-sfrs" class="indexable" data-level="2">A.3 Implementation-dependent Requirements
     </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any 
-       Implementation-dependent       <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr><a id="period_202" href="#period_202">. </a></p><h1 id="sel-sfrs" class="indexable" data-level="1">Appendix B -  Selection-based Requirements
+       Implementation-dependent       <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</p><h1 id="sel-sfrs" class="indexable" data-level="1">Appendix B -  Selection-based Requirements
     </h1><p>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any 
-       Selection-based       <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr><a id="period_203" href="#period_203">. </a></p><h1 id="entropyappendix" class="indexable" data-level="A">Appendix C -  Entropy Documentation and Assessment</h1> This appendix
-    describes the required supplementary information for the entropy source used by the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr><a id="period_204" href="#period_204">. </a><br>
+       Selection-based       <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</p><h1 id="entropyappendix" class="indexable" data-level="A">Appendix C -  Entropy Documentation and Assessment</h1> This appendix
+    describes the required supplementary information for the entropy source used by the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr>. <br/>
     The documentation of the entropy source should be detailed enough that, after reading, the
     evaluator will thoroughly understand the entropy source and why it can be relied upon to provide
-    sufficient entropy<a id="period_205" href="#period_205">. </a>This documentation should include multiple detailed sections: design
-    description, entropy justification, operating conditions, and health testing<a id="period_206" href="#period_206">. </a>This documentation
-    is not required to be part of the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr><a id="period_207" href="#period_207">. </a>
+    sufficient entropy. This documentation should include multiple detailed sections: design
+    description, entropy justification, operating conditions, and health testing. This documentation
+    is not required to be part of the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>. 
     <h2 class="indexable" data-level="2" id="entropydesign">C.1 Design Description</h2>
       Documentation will include the design of the entropy source as a whole, including the
-      interaction of all entropy source components<a id="period_208" href="#period_208">. </a>Any information that can be shared regarding the
+      interaction of all entropy source components. Any information that can be shared regarding the
       design should also be included for any third-party entropy sources that are included in the
-      product<a id="period_209" href="#period_209">. </a><br> The documentation will describe the operation of the entropy source to include,
+      product. <br/> The documentation will describe the operation of the entropy source to include,
       how entropy is produced, and how unprocessed (raw) data can be obtained from within the
-      entropy source for testing purposes<a id="period_210" href="#period_210">. </a>The documentation should walk through the entropy source
+      entropy source for testing purposes. The documentation should walk through the entropy source
       design indicating where the entropy comes from, where the entropy output is passed next, any
       post-processing of the raw outputs (hash, <abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr>, etc.), if and where it is stored, and finally, how
-      it is output from the entropy source<a id="period_211" href="#period_211">. </a>Any conditions placed on the process (e.g., blocking)
-      should also be described in the entropy source design<a id="period_212" href="#period_212">. </a>Diagrams and examples are encouraged<a id="period_213" href="#period_213">. </a>      <br> This design must also include a description of the content of the security boundary of
+      it is output from the entropy source. Any conditions placed on the process (e.g., blocking)
+      should also be described in the entropy source design. Diagrams and examples are encouraged.
+      <br/> This design must also include a description of the content of the security boundary of
       the entropy source and a description of how the security boundary ensures that an adversary
-      outside the boundary cannot affect the entropy rate<a id="period_214" href="#period_214">. </a><br> If implemented, the design
+      outside the boundary cannot affect the entropy rate. <br/> If implemented, the design
       description shall include a description of how third-party applications can add entropy to the
-      <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr><a id="period_215" href="#period_215">. </a>A description of any <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> state saving between power-off and power-on shall be included<a id="period_216" href="#period_216">. </a>
+      <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>. A description of any <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> state saving between power-off and power-on shall be included. 
     <h2 class="indexable" data-level="2" id="entropyjustification">C.2 Entropy Justification</h2> There should be a technical
       argument for where the unpredictability in the source comes from and why there is confidence
       in the entropy source delivering sufficient entropy for the uses made of the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> output (by
-      this particular <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr>)<a id="period_217" href="#period_217">. </a>This argument will include a description of the expected min-entropy
-      rate (i.e<a id="period_218" href="#period_218">. </a>the minimum entropy (in bits) per bit or byte of source data) and explain that
-      sufficient entropy is going into the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> randomizer seeding process<a id="period_219" href="#period_219">. </a>This discussion will be
+      this particular <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr>). This argument will include a description of the expected min-entropy
+      rate (i.e. the minimum entropy (in bits) per bit or byte of source data) and explain that
+      sufficient entropy is going into the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> randomizer seeding process. This discussion will be
       part of a justification for why the entropy source can be relied upon to produce bits with
-      entropy<a id="period_220" href="#period_220">. </a><br> The amount of information necessary to justify the expected min-entropy rate
-      depends on the type of entropy source included in the product<a id="period_221" href="#period_221">. </a><br> For developer-provided
+      entropy. <br/> The amount of information necessary to justify the expected min-entropy rate
+      depends on the type of entropy source included in the product. <br/> For developer-provided
       entropy sources, in order to justify the min-entropy rate, it is expected that a large number
       of raw source bits will be collected, statistical tests will be performed, and the min-entropy
-      rate determined from the statistical tests<a id="period_222" href="#period_222">. </a>While no particular statistical tests are required
+      rate determined from the statistical tests. While no particular statistical tests are required
       at this time, it is expected that some testing is necessary in order to determine the amount
-      of min-entropy in each output<a id="period_223" href="#period_223">. </a><br> For third-party-provided entropy sources, in which the
+      of min-entropy in each output. <br/> For third-party-provided entropy sources, in which the
       <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> vendor has limited access to the design and raw entropy data of the source, the
       documentation will indicate an estimate of the amount of min-entropy obtained from this
-      third-party source<a id="period_224" href="#period_224">. </a>It is acceptable for the vendor to 'assume' an amount of min-entropy,
-      however, this assumption must be clearly stated in the documentation provided<a id="period_225" href="#period_225">. </a>In particular,
-      the min-entropy estimate must be specified and the assumption included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr><a id="period_226" href="#period_226">. </a><br>
+      third-party source. It is acceptable for the vendor to 'assume' an amount of min-entropy,
+      however, this assumption must be clearly stated in the documentation provided. In particular,
+      the min-entropy estimate must be specified and the assumption included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>. <br/>
       Regardless of type of entropy source, the justification will also include how the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is
       initialized with the entropy stated in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, for example by verifying that the min-entropy
       rate is multiplied by the amount of source data used to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> or that the rate of
       entropy expected based on the amount of source data is explicitly stated and compared to the
-      statistical rate<a id="period_227" href="#period_227">. </a>If the amount of source data used to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is not clear or the
+      statistical rate. If the amount of source data used to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is not clear or the
       calculated rate is not explicitly related to the seed, the documentation will not be
-      considered complete<a id="period_228" href="#period_228">. </a><br> The entropy justification shall not include any data added from any
-      third-party application or from any state saving between restarts<a id="period_229" href="#period_229">. </a>
+      considered complete. <br/> The entropy justification shall not include any data added from any
+      third-party application or from any state saving between restarts. 
     <h2 class="indexable" data-level="2" id="entropyoperatingconditions">C.3 Operating Conditions</h2> The entropy rate may be
-      affected by conditions outside the control of the entropy source itself<a id="period_230" href="#period_230">. </a>For example, voltage,
+      affected by conditions outside the control of the entropy source itself. For example, voltage,
       frequency, temperature, and elapsed time after power-on are just a few of the factors that may
-      affect the operation of the entropy source<a id="period_231" href="#period_231">. </a>As such, documentation will also include the range
-      of operating conditions under which the entropy source is expected to generate random data<a id="period_232" href="#period_232">. </a>It
+      affect the operation of the entropy source. As such, documentation will also include the range
+      of operating conditions under which the entropy source is expected to generate random data. It
       will clearly describe the measures that have been taken in the system design to ensure the
-      entropy source continues to operate under those conditions<a id="period_233" href="#period_233">. </a>Similarly, documentation shall
+      entropy source continues to operate under those conditions. Similarly, documentation shall
       describe the conditions under which the entropy source is known to malfunction or become
-      inconsistent<a id="period_234" href="#period_234">. </a>Methods used to detect failure or degradation of the source shall be included<a id="period_235" href="#period_235">. </a>
+      inconsistent. Methods used to detect failure or degradation of the source shall be included. 
     <h2 class="indexable" data-level="2" id="entropyhealthtesting">C.4 Health Testing</h2> More specifically, all entropy source
-      health tests and their rationale will be documented<a id="period_236" href="#period_236">. </a>This includes a description of the health
+      health tests and their rationale will be documented. This includes a description of the health
       tests, the rate and conditions under which each health test is performed (e.g., at start,
       continuously, or on-demand), the expected results for each health test, and rationale
       indicating why each test is believed to be appropriate for detecting one or more failures in
-      the entropy source<a id="period_237" href="#period_237">. </a>
+      the entropy source. 
   <h1 id="biblio" class="indexable" data-level="A">Appendix D -  Bibliography</h1><h1 id="acronyms" class="indexable" data-level="A">Appendix E -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">6</span></span>: Acronyms
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_ABAC"><abbr class="dyn-abbr"><a href="#abbr_ABAC">ABAC</a></abbr></span></td><td><span id="long_abbr_ABAC">Attribute-Based Access Control</span></td></tr>
 <tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
@@ -1250,31 +1324,31 @@ Network Device
           <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part
                 1: Introduction and General Model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022</li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part
-                2: Security Functional Requirements</a>, CCMB-2022-11-002, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_238" href="#period_238">. </a></li> 
+                2: Security Functional Requirements</a>, CCMB-2022-11-002, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li> 
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R4.pdf">Part
-                3: Security Assurance Requirements</a>, CCMB-2022-11-003, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_239" href="#period_239">. </a></li>
+                3: Security Assurance Requirements</a>, CCMB-2022-11-003, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
-                4: Framework for the Specification of Evaluation Methods and Activities</a>, CCMB-2022-11-004, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_240" href="#period_240">. </a></li>
+                4: Framework for the Specification of Evaluation Methods and Activities</a>, CCMB-2022-11-004, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
           <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
-                5: Pre-defined Packages of Security Requirements</a>, CCMB-2022-11-004, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_241" href="#period_241">. </a></li>
+                5: Pre-defined Packages of Security Requirements</a>, CCMB-2022-11-004, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
           </ul></span></td></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part 1: 
-				Introduction and general model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_242" href="#period_242">. </a></li>
+				Introduction and general model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part 2: 
-				Security functional requirements</a>, CCMB-2022-11-002, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_243" href="#period_243">. </a></li>
+				Security functional requirements</a>, CCMB-2022-11-002, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART3R1.pdf">Part 3: 
-                Security assurance requirements</a>, CCMB-2022-11-003, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_244" href="#period_244">. </a></li>
+                Security assurance requirements</a>, CCMB-2022-11-003, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part 4: 
-                Framework for the specification of evaluation methods and activities</a>, CCMB-2022-11-004, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_245" href="#period_245">. </a></li>
+                Framework for the specification of evaluation methods and activities</a>, CCMB-2022-11-004, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART5R1.pdf">Part 5: 
-                 Pre-defined packages of security requirements</a>, CCMB-2022-11-005, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_246" href="#period_246">. </a></li>
+                 Pre-defined packages of security requirements</a>, CCMB-2022-11-005, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
           </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">
           <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">Common
-            Common Methodology for Information Technology Security Evaluation</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_247" href="#period_247">. </a></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
+            Common Methodology for Information Technology Security Evaluation</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">
-                 Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_248" href="#period_248">. </a></li>
+                 Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
           </ul></span></td></tr><tr><td><span id="bibOMB">[<abbr class="dyn-abbr"><a href="#abbr_OMB">OMB</a></abbr>]</span></td><td><span class="description">
           <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">
             Reporting Incidents Involving Personally Identifiable Information and Incorporating the
             Cost for Security in Agency Information Technology Investments</a>, <abbr class="dyn-abbr"><a href="#abbr_OMB">OMB</a></abbr> M-06-19, July
-          12, 2006<a id="period_249" href="#period_249">. </a></span></td></tr></table></body></html>
+          12, 2006.</span></td></tr></table></body></html>
