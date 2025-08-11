@@ -1036,8 +1036,12 @@ Network Device
            This does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it.
           </span></div></div></div>
         <div class="element"><div class="reqid" id="FDP_ACF.1.4"><a href="#FDP_ACF.1.4" class="abbr">FDP_ACF.1.4</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly deny access of subjects to objects based on the following additional
-            rules: [<i>no additional rules</i>].
-          </div></div>
+            rules: [<b>assignment</b>: 
+     <span class="assignable-content">rules, based on security attributes, that explicitly deny access of subjects
+              to objects</span>].
+          <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">The intent of this requirement is to give the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author the ability to define a denylist that takes priority over the rules defined in <a href="#FDP_ACF.1.2">FDP_ACF.1.2</a> and <a href="#FDP_ACF.1.3">FDP_ACF.1.3</a>. It may be the case that no explicit denylist is supported and the defined rules are followed in order with access being denied as a default condition if not otherwise specified by a rule. If this is the case, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may complete the assignment with "no additional rules."</span></div></div></div>
       
       </div>
       

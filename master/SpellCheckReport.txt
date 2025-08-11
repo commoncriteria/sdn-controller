@@ -31,6 +31,7 @@ output/sdn-controller-release-linkable.html: TODO
 output/sdn-controller-release-linkable.html: VMs
 output/sdn-controller-release-linkable.html: allowlisted
 output/sdn-controller-release-linkable.html: behaviour
+output/sdn-controller-release-linkable.html: denylist
 output/sdn-controller-release-linkable.html: sel
 output/sdn-controller-release.html: 0E
 output/sdn-controller-release.html: ITT
@@ -45,6 +46,7 @@ output/sdn-controller-release.html: TBD
 output/sdn-controller-release.html: VMs
 output/sdn-controller-release.html: allowlisted
 output/sdn-controller-release.html: behaviour
+output/sdn-controller-release.html: denylist
 output/sdn-controller-release.html: sel
 output/sdn-controller-sd.html: 0e
 output/sdn-controller-sd.html: AGD
@@ -68,4 +70,5 @@ output/sdn-controller.html: TODO
 output/sdn-controller.html: VMs
 output/sdn-controller.html: allowlisted
 output/sdn-controller.html: behaviour
+output/sdn-controller.html: denylist
 output/sdn-controller.html: sel

@@ -512,8 +512,10 @@
         </f-element>
         <f-element>
           <title>The TSF shall explicitly deny access of subjects to objects based on the following additional
-            rules: [<h:i>no additional rules</h:i>].
+            rules: <assignable>rules, based on security attributes, that explicitly deny access of subjects
+              to objects</assignable>.
           </title>
+          <note role="Application">The intent of this requirement is to give the ST author the ability to define a denylist that takes priority over the rules defined in FDP_ACF.1.2 and FDP_ACF.1.3. It may be the case that no explicit denylist is supported and the defined rules are followed in order with access being denied as a default condition if not otherwise specified by a rule. If this is the case, the ST author may complete the assignment with "no additional rules."</note>
         <aactivity>
           <no-tests/>
         </aactivity>  
