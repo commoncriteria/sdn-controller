@@ -300,7 +300,7 @@
           <description>
             Insecure application programming interfaces (APIs) and user interfaces can provide attackers with 
 			opportunities to inject malicious code to the TOE or to retrieve sensitive information from it. Executing
-			improper or unauthorized API functions or providing malicious input can compromise network services and sensitive
+			improper or unauthorized API functions or providing malicious input to achieve unintended or improper results from proper or authorized API functions can compromise network services and sensitive
 			data leakage can take place through insecure interfaces.  
             
             <comment><h:br/><h:br/>Recommendations above to adjust threat name for more specificity and clarify the 
