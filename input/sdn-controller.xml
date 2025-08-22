@@ -41,7 +41,7 @@
             This PP-Module is intended for use with the following Base-PP:
             
             <h:ul>
-              <h:li>collaborative Protection Profile for Network Devices (NDcPP), Version 3.0E</h:li>
+              <h:li>collaborative Protection Profile for Network Devices (NDcPP), Version 4.0</h:li>
             </h:ul>
             
             This Base-PP is valid because an SDN controller is a specific implementation of a network device. Specifically, an SDN controller is one of many components of an SDN networking architecture. Specifically, an SDN controller manages and distributes network policies, collects routing and payload information from the data plane, and interfaces with user applications in the management plane. Each of the planes in an SDN system is composed of multiple logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane. 
@@ -154,7 +154,7 @@
 	       Software that manages physical and logical resources and provides services for applications. The terms TOE and OS are interchangeable in this
 	       document. 
       </term>
-      <term abbr='OWASP' full="Open Worldwide Application Securtiy Project"/>
+      <term abbr='OWASP' full="Open Worldwide Application Security Project"/>
       <term abbr="PIN" full="Personal Identification Number">
 	       An authentication factor that is comprised of a set of numeric or alphabetic characters that may be used  in addition to a cryptographic token to provide a hybrid
 	       authentication factor. At this time it  is not considered as a stand-alone authentication mechanism. A PIN is distinct from a password in that the allowed character
@@ -236,7 +236,7 @@
             <h:li>If the TOE boundary is a single virtual machine, the hardware or firmware of the underlying platform.</h:li>
             <h:li>If the TOE boundary is a single virtual machine, the host operating system or runtime environment.</h:li>
             <h:li>Specific security functionality that is not global to all SDN controllers (e.g. firewall, load balancing).</h:li>
-            <h:li>Ohter objects belonging in the data plane.</h:li>
+            <h:li>Other objects belonging in the data plane.</h:li>
           </h:ul>
         </h:p>
       </sec:TOE_Boundary>
@@ -281,7 +281,8 @@
           <PP-cc-ref>Protection Profile for Certification Authorities, v3.0</PP-cc-ref>
         </cc-pp-conf>
         <cc-pp-config-with>
-          <Mod-cc-ref>collaborative Protection Profile Module for Stateful Traffic Filter Firewalls, version 1.4 + Errata 20200625</Mod-cc-ref>
+          <Mod-cc-ref>collaborative Protection Profile Module for Stateful Traffic Filter Firewalls,
+            version 2.0</Mod-cc-ref>
           <Mod-cc-ref>PP-Module for Authentication Servers, version 2.0</Mod-cc-ref>
           <Mod-cc-ref>PP-Module for MACsec Ethernet Encryption, version 2.0</Mod-cc-ref>
           <Mod-cc-ref>PP-Module for VPN Gateways, version 2.0</Mod-cc-ref>
@@ -377,8 +378,8 @@
     and “assignment:”. If text is italicized and does not include either of these, it means that the selection or
     assignment has already been completed in this PP-Module and the ST author must use the text as
     written. 
-    <base-pp name="Network Device" short="ND" id="ND" version="3.0e" product="Network Device" plural="Network Devices">
-      <url>https://old.niap-ccevs.org/MMO/PP/CPP_ND_V3.0E.pdf</url>
+    <base-pp name="Network Device" short="ND" id="ND" version="4.0" product="Network Device" plural="Network Devices">
+      <url>https://old.niap-ccevs.org/MMO/PP/CPP_ND_V4.0.pdf</url>
       <cPP/>
           
           <!-- 5.1.1 Modified SFRs -->      
