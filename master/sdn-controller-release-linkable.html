@@ -629,7 +629,7 @@ function showTarget(id){
           }
     </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br><a href="#Comment-2-">Comment: Comment-2-</a><br><a href="#Comment-3-">Comment: Comment-3-</a><br><a href="#Comment-4-">Comment: Comment-4-</a><br><a href="#Comment-5-">Comment: Comment-5-</a><br><a href="#Comment-6-">Comment: Comment-6-</a><br><a href="#Comment-7-">Comment: Comment-7-</a><br><a href="#Comment-8-">Comment: Comment-8-</a><br></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"><br>
       Version: 1.0<br>2024-10-31<br><b>National Information Assurance Partnership</b><br></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
-</table><h3>TDs Applied</h3><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-ND" style="text-indent:10px">5.1<span>Collaborative 
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-ND" style="text-indent:10px">5.1<span>Collaborative 
     Protection Profile for Network Devices
        Security Functional Requirements Direction
     </span></a><a href="#modsfr-ND" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#@id" style="text-indent:30px">5.1.1.1<span>Trusted Path/Channels (FTP)</span></a><a href="#man-sfrs" style="text-indent:10px">5.2<span>TOE Security Functional Requirements</span></a><a href="#man-fau" style="text-indent:20px">5.2.1<span>Security Audit (FAU)</span></a><a href="#man-fdp" style="text-indent:20px">5.2.2<span>User Data Protection (FDP)</span></a><a href="#man-fmt" style="text-indent:20px">5.2.3<span>Security Management (FMT)</span></a><a href="#obj-req-map" style="text-indent:10px">5.3<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-ND" style="text-indent:10px">6.1<span>Collaborative 
@@ -950,7 +950,11 @@ Network Device
             The auditable events for the 'not specified' level of audit is intended to communicate that this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not claim one of the pre-defined audit levels specified in <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2; this is inherently satisfied by demonstrating that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generates appropriate audit data for all events that are explicitly required by the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr><a id="period_162" href="#period_162">. </a>          </p>
           </span></div></div></div>
         
-      </div>
+      <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_GEN.1/SDN">FAU_GEN.1/SDN</a></div>
+          
+		TODO: You need to explain the lack of EAs for this component!!!!
+	
+          </div></div></div>
       
       
         
@@ -961,7 +965,11 @@ Network Device
       <div class="comp" id="FDP_ACC.1"><h4>FDP_ACC.1 Subset Access Control</h4>
         <div class="element"><div class="reqid" id="FDP_ACC.1.1"><a href="#FDP_ACC.1.1" class="abbr">FDP_ACC.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy</i>] on [<i>all APIs used to access the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></i>]<a id="period_163" href="#period_163">. </a></div></div>
         
-      </div>
+      <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_ACC.1">FDP_ACC.1</a></div>
+            
+		TODO: You need to explain the lack of EAs for this component!!!!
+	
+          </div></div></div>
       
       
       <div class="comp" id="FDP_ACF.1"><h4>FDP_ACF.1 Security Attribute-Based Access Control</h4>
@@ -990,7 +998,11 @@ Network Device
       Note:
     </span><span class="note">The intent of this requirement is to give the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author the ability to define a denylist that takes priority over the rules defined in <a href="#FDP_ACF.1.2">FDP_ACF.1.2</a> and <a href="#FDP_ACF.1.3">FDP_ACF.1.3</a><a id="period_172" href="#period_172">. </a>It may be the case that no explicit denylist is supported and the defined rules are followed in order with access being denied as a default condition if not otherwise specified by a rule<a id="period_173" href="#period_173">. </a>If this is the case, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may complete the assignment with "no additional rules."</span></div></div></div>
       
-      </div>
+      <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_ACF.1">FDP_ACF.1</a></div>
+          
+		TODO: You need to explain the lack of EAs for this component!!!!
+	
+        </div></div></div>
       
      
    
