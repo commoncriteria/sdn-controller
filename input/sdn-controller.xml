@@ -744,27 +744,7 @@
   <appendix id="biblio" title="Bibliography"></appendix>
   <bibliography>
           
-    <entry id="bibCC">
-        <tag>CC</tag>
-        <description> Common Criteria for Information Technology Security Evaluation - <h:ul>
-          <h:li><h:a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part
-                1: Introduction and General Model</h:a>, CCMB-2022-11-001, CC:2022, Revision 1, November 2022</h:li>
-          <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part
-                2: Security Functional Requirements</h:a>, CCMB-2022-11-002, CC:2022, Revision 1, November 2022.</h:li> 
-            <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R4.pdf">Part
-                3: Security Assurance Requirements</h:a>, CCMB-2022-11-003, CC:2022, Revision 1, November 2022.</h:li>
-          <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
-                4: Framework for the Specification of Evaluation Methods and Activities</h:a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022.</h:li>
-          <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part
-                5: Pre-defined Packages of Security Requirements</h:a>, CCMB-2022-11-004, CC:2022, Revision 1, November 2022.</h:li>
-          </h:ul></description>
-      </entry>
-      <entry id="bibCEM">
-        <tag>CEM</tag>
-        <description>
-          <h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">Common
-            Common Methodology for Information Technology Security Evaluation</h:a>, CCMB-2022-11-006, CC:2022, Revision 1, November 2022.</description>
-      </entry> 
+     
       <entry id="bibOMB">
         <tag>OMB</tag>
         <description>
