@@ -1,3 +1,4 @@
+output/sdn-controller-release-linkable.html: CEM
 output/sdn-controller-release-linkable.html: ITT
 output/sdn-controller-release-linkable.html: MACsec
 output/sdn-controller-release-linkable.html: NDcPP
@@ -17,6 +18,7 @@ output/sdn-controller-release-linkable.html: funtcion
 output/sdn-controller-release-linkable.html: identifed
 output/sdn-controller-release-linkable.html: maangement
 output/sdn-controller-release-linkable.html: sel
+output/sdn-controller-release.html: CEM
 output/sdn-controller-release.html: ITT
 output/sdn-controller-release.html: MACsec
 output/sdn-controller-release.html: NDcPP
@@ -30,6 +32,7 @@ output/sdn-controller-release.html: behaviour
 output/sdn-controller-release.html: denylist
 output/sdn-controller-release.html: sel
 output/sdn-controller-sd.html: AGD
+output/sdn-controller-sd.html: CEM
 output/sdn-controller-sd.html: NDcPP
 output/sdn-controller-sd.html: SPD
 output/sdn-controller-sd.html: allowlisted
@@ -43,6 +46,7 @@ output/sdn-controller-sd.html: funtcion
 output/sdn-controller-sd.html: identifed
 output/sdn-controller-sd.html: maangement
 output/sdn-controller-sd.html: pass’
+output/sdn-controller.html: CEM
 output/sdn-controller.html: ITT
 output/sdn-controller.html: MACsec
 output/sdn-controller.html: NDcPP
