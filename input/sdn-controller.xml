@@ -47,156 +47,59 @@
             This Base-PP is valid because an SDN controller is a specific implementation of a network device. Specifically, an SDN controller is one of many components of an SDN networking architecture. Specifically, an SDN controller manages and distributes network policies, collects routing and payload information from the data plane, and interfaces with user applications in the management plane. Each of the planes in an SDN system is composed of multiple logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane. 
     </sec:Overview>
     <tech-terms>
-      <term abbr='ABAC' full="Attribute-Based Access Control"/>
-      <term abbr='AES' full="Advanced Encryption Standard"/>
-      <term abbr='APT' full="Advanced Persistent Threats"/>
-      <term abbr='ANSI' full="American National Standards Institute"/>
-      <term full="Address Space Layout Randomization" abbr="ASLR">
-	       An anti-exploitation feature which loads memory mappings into unpredictable locations. ASLR makes it more difficult for an attacker to redirect control to code
-	       that they have introduced into the address space of a process.
-      </term>
+      <suppress>Functional Package,Extended Package</suppress>
       <term full="Administrator">
 	       An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system. This administrator
 	       could be acting remotely through a management server, from which the system receives configuration policies. An administrator can enforce settings on the system 
 	       which cannot be overridden by non-administrator users.
       </term>
-      <term full="Application" abbr="app">
+      <term full="Application">
 	       Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation. 
       </term>
       <term full="Application Programming Interface" abbr="API">
 	       A specification of routines, data structures, object classes, and variables that allows an application to make use of services provided by another software
 	       component, such as a library. APIs are often provided for a set of libraries included with the platform.
       </term>
-      <!-- <term full="Biometric Authentication Factor" abbr="BAF" plural="BAFs"> Authentication factor, which uses -->
-      <!--   biometric sample, matched to a biometric authentication template to help establish -->
-      <!--   identity.</term> -->
-      <term abbr='CESG' full="Communications-Electronics Security Group"/>
-      <term abbr='CLI' full="Command-Line Interface"/>
-      <term abbr='CMC' full="Certificate Management over CMS"/>
-      <term abbr='CMS' full="Cryptographic Message Syntax"/>
-      <term abbr='CN' full="Common Names"/>
-      <term full="Credential">
+     <term full="Credential">
 	       Data that establishes the identity of a user (e.g., a cryptographic key or password).
       </term>
-      <term abbr='CRL' full="Certificate Revocation List"/>
-      <term abbr='CRUD' full="Create, Read, Update, Delete"/>
-      <term abbr='CSA' full="Computer Security Act"/>
       <term full="Control Plane">
           A logical entity that receives instructions or requirements from the SDN application layer through its northbound interface and relays them to the data plane through
           its southbound interface. The controller extracts information about the network from the data plane and communicates back to the SDN application layer with an 
           abstract view of the network, including statistics and events about what is happening. 
       </term>
-      <term full="Critical Security Parameters" abbr="CSP">
-	       Information that is either user or system defined and is used to operate a cryptographic module in processing encryption functions including cryptographic keys and
-	       authentication data, such as passwords, the disclosure or modification of which can compromise the security of a cryptographic module or the security of the
-	       information protected by the module.
-      </term>
-      <term full="Data At Rest" abbr="DAR" />
-      <term full="DAR Protection">
-	       Countermeasures that prevent attackers, even those with physical access, from extracting data from non-volatile storage. Common techniques include data encryption
-	       and wiping.
-      </term>
-      <term full="Data Execution Prevention" abbr="DEP">
-	       An anti-exploitation feature of modern operating systems executing on modern computer hardware, which enforces a non-execute permission on pages of memory. DEP
-	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code.
-      </term>
+
       <term full="Data Plane">
         Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.
       </term>
-      <term abbr='DES' full="Data Encryption Standard"/>
-      <term full="Developer">
-	       An entity that writes OS software. For the purposes of this document, vendors and developers are the same.
-      </term>
-      <term abbr='DHE' full="Diffie-Hellman Ephemeral"/>
-      <term abbr='DNS' full="Domain Name System"/>
+     
       <term abbr='DRBG' full="Deterministic Random Bit Generator"/>
-      <term abbr='DSS' full="Digital Signature Standard"/>
-      <term abbr='DT' full="Date/Time Vector"/>
-      <term abbr='DTLS' full="Datagram Transport Layer Security"/>
-      <term abbr='EAP' full="Extensible Authentication Protocol"/>
-      <term abbr='ECDHE' full="Elliptic Curve Diffie-Hellman Ephemeral"/>
-      <term abbr='ECDSA' full="Elliptic Curve Digital Signature Algorithm"/>
-      <term abbr='ESR' full="Equivalent Series Resistance"/>
-      <term abbr='EST' full="Enrollment over Secure Transport"/>
-      <term abbr='FIPS' full="Federal Information Processing Standards"/>      
-      <term full="Hybrid Authentication">
-	       A hybrid authentication factor is one where a user has to submit a combination of a cryptographic token and a PIN or password and both must pass. If either factor
-	       fails, the entire attempt fails.
-      </term>
-      <term abbr='HMAC' full="Hash-based Message Authentication Code"/>
-      <term full="Host-based Firewall">
-	       A software-based firewall implementation running on the OS for filtering inbound and outbound network traffic to and from processes running on the OS.
-      </term>
+  
       <term abbr='HTTP'  full="Hypertext Transfer Protocol"/>
       <term abbr='HTTPS' full="Hypertext Transfer Protocol Secure"/>
-      <term abbr='IETF'  full="Internet Engineering Task Force"/>
       <term abbr='IP'    full="Internet Protocol"/>
-      <term abbr='ISO'   full="International Organization for Standardization"/>
       <term abbr='IT'    full="Information Technology"/>
-      <term abbr='ITSEF' full="Information Technology Security Evaluation Facility"/>
+
       <term full="Management Plane">
         Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs).
         In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes. These 
         applications could include networking management, analytics, or business applications used to run large data centers. For example, an analytics application might be
         built to recognize suspicious network activity for security purposes. This is sometimes also referred to as the Orchestration Layer.
       </term>
-      <term abbr='MFA' full="Multi-Factor Authentication"/>
-      <term abbr='MITM' full="Man-in-the-Middle"/>
-      <term abbr='NAT' full="Network Address Translation"/>
-      <term abbr='NFC' full="Near Field Communication"/>
-      <term abbr='NIAP' full="National Information Assurance Partnership"/>
-      <term abbr='NIST' full="National Institute of Standards and Technology"/>
       <term full="Northbound">Communications between an SDN and applications in the management plane.</term>
-      <term abbr='OCSP' full="Online Certificate Status Protocol"/>
-      <term abbr='OID' full="Object Identifier"/>
       <term abbr='OMB' full="Office of Management and Budget"/>
-      <term abbr="OS" full="Operating System">
-	       Software that manages physical and logical resources and provides services for applications. The terms TOE and OS are interchangeable in this
-	       document. 
-      </term>
-      <term abbr='OWASP' full="Open Worldwide Application Security Project"/>
-      <term abbr="PIN" full="Personal Identification Number">
-	       An authentication factor that is comprised of a set of numeric or alphabetic characters that may be used  in addition to a cryptographic token to provide a hybrid
-	       authentication factor. At this time it  is not considered as a stand-alone authentication mechanism. A PIN is distinct from a password in that the allowed character
-	       set and required length of a PIN is typically smaller than that of a password as it is designed to be input quickly.
-      </term>
-      <term abbr='PKI' full="Public Key Infrastructure"/>
-      <term abbr='PP' full="Protection Profile"/>
+      <term abbr="OS" full="Operating System"/> 
       <term abbr='RBAC' full="Role-Based Access Control"/>
       <term abbr='RBG' full="Random Bit Generator"/>
       <term abbr='REST' full="Representational State Transfer"/>
       <term abbr='RFC' full="Request for Comment"/>
-      <term abbr='RNG' full="Random Number Generator"/>
-      <!-- <term abbr='RNGVS' full="Random Number Generator Validation System"/> -->
-      <term full="Personally Identifiable Information" abbr="PII">
-	       Any information about an individual maintained by an agency, including, but not limited to, education, financial transactions, medical history, and criminal or
-	       employment history, and information which can be used to distinguish or trace an individual's identity, such as their name, social security number, date and place
-	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual.
-      </term>
-      <term abbr='SAN' full="Subject Alternative Name"/>
-      <term abbr='SAR' full="Security Assurance Requirements"/>
+
       <term abbr='SDN' full="Software Defined Networking"/>
-      <term abbr='SFR' full="Security Functional Requirements"/>
-      <term abbr='SHA' full="Secure Hash Algorithm"/>
-      <term abbr='S/MIME' full="Secure/Multi-purpose Internet Mail Extensions"/>
-      <term full="Sensitive Data">
-	       Sensitive data may include all user or enterprise data or may be specific application data such as PII, emails, messaging, documents, calendar items, and contacts.
-	       Sensitive data must minimally include credentials and keys. Sensitive data shall be identified in the OS's TSS by the ST author. 
-      </term>
-      <term abbr='SIP' full="Session Initiation Protocol"/>
       <term full="Southbound">Communications between an SDN and network devices in the data plane.</term>
-      <term abbr='SWID' full="Software Identification"/>
       <term abbr='TLS' full="Transport Layer Security"/>
-      <term abbr='URI' full="Uniform Resource Identifier"/>
-      <term abbr='URL' full="Uniform Resource Locator"/>
       <term abbr='USB' full="Universal Serial Bus"/>
-      <term full="User">
-	       A user is subject to configuration policies applied to the operating system by administrators.  On some systems, under certain configurations, a normal user can
-	       temporarily elevate privileges to that of an administrator. At that time, such a user should be considered an administrator.
-      </term>
-      <term abbr="VM" full="Virtual Machine"/>
-      <term abbr="VPN" full="Virtual Private Network"/>
-      <term abbr='XCCDF' full="eXtensible Configuration Checklist Description Format"/>
+      <term abbr='VM' full="Virtual Machine"/>
+      <term abbr='VPN' full="Virtual Private Network"/>
       <term abbr='XOR' full="Exclusive Or"/>
     </tech-terms>
     
@@ -204,7 +107,7 @@
       A conformant TOE decouples its data and control planes such that data traffic and control traffic are restricted
       to their respective planes. It also enforces centralization of control so that all components of the SDN environment
       are under its control. This can expand across multiple distributed controllers for large, complex, or geographically
-      dispersed networks. Compliant TOEs will implement necessary functionality in a "do no harm" manner with respect to network security. Specifically:
+      dispersed networks. Compliant TOEs will implement the following functionality:
       <h:ul>
         <h:li>They can be remotely managed in a secure manner.</h:li>
         <h:li>Any software/firmware updates are from a trusted source.</h:li>
@@ -224,7 +127,7 @@
           <h:li>All security functionality is contained and executed within the evaluation boundary of the SDN controller.</h:li>
         </h:ul>
       <h:p>  
-        The following figure shows the SDN controller sitting between the management and data planes within the SDN infrastructure. This is a simplified diagram of the TOE's position in an SDN deployment. Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown.
+        The following figure shows the logical position of the SDN Controller between the management and data planes within the SDN infrastructure. This is a simplified diagram of the TOE's position in an SDN deployment. Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown.
         <figure	entity="images/sdncontroller.png" title="High-Level SDN Representation" id="toe-as-apponos"/>
       </h:p>
         <h:p>
@@ -297,15 +200,10 @@
     <sec:Threats>
       <threats>
 
-        <threat name="T.INSECURE_API">
+        <threat name="T.INSECURE_NORTHBOUND_API">
           <description>
-            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with 
-			opportunities to inject malicious code to the TOE or to retrieve sensitive information from it. Executing
-			improper or unauthorized API functions or providing malicious input to achieve unintended or improper results from proper or authorized API functions can compromise network services and sensitive
-			data leakage can take place through insecure interfaces.  
+            A malicious user or process may invoke insecure application programming interfaces (APIs) to inject malicious code to the TOE on a northbound interface or to retrieve sensitive information from it. Executing improper or unauthorized API functions or providing malicious input to achieve unintended or improper results from proper or authorized API functions can compromise network services. This can also result in sensitive data leakage.
             
-            <comment><h:br/><h:br/>Recommendations above to adjust threat name for more specificity and clarify the 
-			description.</comment>
           </description>
           <addressed-by></addressed-by>
           <rationale></rationale>
@@ -314,16 +212,7 @@
           <addressed-by></addressed-by>
           <rationale></rationale>                  
         </threat>
-        <threat name="T.ATTACKER_ACCESS">
-          <description>
-          An attacker may attempt to exploit services and functionality to intercept communications and mount attacks 
-		  against machines in the network.
-          
-            <comment><h:br/><h:br/>Threat kept as-is but this seems unnecessary. Unless there are SDN-specific threat 
-			cases (such as the API threat listed above), this just seems like an extension of threats already defined in 
-			the NDcPP, and it should be fine for module SFRs to map back to threats from the base PP.</comment>
-          </description>
-        </threat>
+   
       </threats>
       
     </sec:Threats>
@@ -398,7 +287,7 @@
                   <h:p>This SFR has been modified from its definition in the NDcPP to define external interfaces to environmental entities that are particular to this specific technology type.</h:p>
                   <h:p>The text of the requirement is replaced with:</h:p>
                   <h:p>
-                  <h:b>FTP_ITC.1.1</h:b> The TSF shall be capable of using [<h:b>selection:</h:b><h:i> IPsec, SSH, TLS, DTLS, HTTPS</h:i>] to provide a trusted communication channel between itself and authorized IT entities supporting the following capabilities: audit server, <h:b>northbound components, southbound components,</h:b> [<h:b>selection:</h:b> <h:i>authentication server, external east/west components [<h:b>assignment:</h:b> other capabilities], no other capabilities</h:i>] that is logically distinct from other
+                    <h:b>FTP_ITC.1.1</h:b> The TSF shall be capable of using [<h:b>selection:</h:b><h:i>IPsec, SSH as defined in the Functional Package for SSH, TLS as defined in the Functional Package for TLS, DTLS as defined in the Functional Package for TLS, HTTPS</h:i>] to provide a trusted communication channel between itself and authorized IT entities supporting the following capabilities: audit server, <h:b>northbound components, southbound components,</h:b> [<h:b>selection:</h:b> <h:i>authentication server, external east/west components [<h:b>assignment:</h:b> other capabilities], no other capabilities</h:i>] that is logically distinct from other
                   communication channels and provides assured identification of its end points
                   and protection of the channel data from disclosure and detection of modification of the channel data.
                   </h:p>
@@ -741,7 +630,6 @@
       the entropy source. </section>
   </appendix>
 
-  <appendix id="biblio" title="Bibliography"></appendix>
   <bibliography>
           
      
