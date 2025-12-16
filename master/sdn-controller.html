@@ -629,7 +629,7 @@ function showTarget(id){
 	            img[src="images/collapsed.png"] { display:none;}
 
           }
-    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/><a href="#Comment-3-">Comment: Comment-3-</a><br/><a href="#Comment-4-">Comment: Comment-4-</a><br/><a href="#Comment-5-">Comment: Comment-5-</a><br/><a href="#Comment-6-">Comment: Comment-6-</a><br/><a href="#Comment-7-">Comment: Comment-7-</a><br/><a href="#Comment-8-">Comment: Comment-8-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
+    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/><a href="#Comment-3-">Comment: Comment-3-</a><br/><a href="#Comment-4-">Comment: Comment-4-</a><br/><a href="#Comment-5-">Comment: Comment-5-</a><br/><a href="#Comment-6-">Comment: Comment-6-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
       Version: 1.0<br/>2024-10-31<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
 </table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-ND" style="text-indent:10px">5.1<span>Collaborative 
     Protection Profile for Network Devices
@@ -647,7 +647,7 @@ function showTarget(id){
     </span></a><a href="#obj-sfrs" style="text-indent:10px">A.2<span>Objective Requirements
     </span></a><a href="#impl-dep-sfrs" style="text-indent:10px">A.3<span>Implementation-dependent Requirements
     </span></a><a href="#sel-sfrs" style="text-indent:0px">Appendix B - <span>Selection-based Requirements
-    </span></a><a href="#entropyappendix" style="text-indent:0px">Appendix C - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:10px">C.1<span>Design Description</span></a><a href="#entropyjustification" style="text-indent:10px">C.2<span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:10px">C.3<span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:10px">C.4<span>Health Testing</span></a><a href="#biblio" style="text-indent:0px">Appendix D - <span>Bibliography</span></a><a href="#acronyms" style="text-indent:0px">Appendix E - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix F - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
+    </span></a><a href="#entropyappendix" style="text-indent:0px">Appendix C - <span>Entropy Documentation and Assessment</span></a><a href="#entropydesign" style="text-indent:10px">C.1<span>Design Description</span></a><a href="#entropyjustification" style="text-indent:10px">C.2<span>Entropy Justification</span></a><a href="#entropyoperatingconditions" style="text-indent:10px">C.3<span>Operating Conditions</span></a><a href="#entropyhealthtesting" style="text-indent:10px">C.4<span>Health Testing</span></a><a href="#acronyms" style="text-indent:0px">Appendix D - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix E - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
     <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2>          
 
             The scope of this Protection Profile Module (<abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>) is to describe the security functionality of a software defined network (<abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>) controller in terms of  <a href="#bibCC">[CC]</a> and to define functional and assurance requirements for such
@@ -683,10 +683,6 @@ The following sections list Common Criteria and technology terms used in this do
 		for the TOE.
 	</td></tr>
 <tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole.</td></tr>
-<tr><td><div id="Extended_Package">Extended Package (EP)</div></td><td>A deprecated document form for collecting SFRs that implement a particular protocol, technology,
-	    or functionality. See Functional Packages.</td></tr>
-<tr><td><div id="Functional_Package">Functional Package (FP)</div></td><td>A document that collects SFRs for a particular protocol, technology,
-	    or functionality.</td></tr>
 <tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy.</td></tr>
 <tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products.</td></tr>
 <tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module.</td></tr>
@@ -697,16 +693,12 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><div id="Target_of_Evaluation">Target of Evaluation (TOE)</div></td><td>The product under evaluation. </td></tr>
 <tr><td><div id="TOE_Security_Functionality">TOE Security Functionality (TSF)</div></td><td>The security functionality of the product under evaluation.</td></tr>
 <tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST.</td></tr>
-</table><h3 id="tech-terms" class="indexable" data-level="3">1.2.2 Technical Terms</h3><table style="width: 100%"><tr><td><div id="Address_Space_Layout_Randomization">Address Space Layout Randomization (ASLR)</div></td><td>
-	       An anti-exploitation feature which loads memory mappings into unpredictable locations. ASLR makes it more difficult for an attacker to redirect control to code
-	       that they have introduced into the address space of a process.
-      </td></tr>
-<tr><td><div id="Administrator">Administrator</div></td><td>
+</table><h3 id="tech-terms" class="indexable" data-level="3">1.2.2 Technical Terms</h3><table style="width: 100%"><tr><td><div id="Administrator">Administrator</div></td><td>
 	       An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system. This administrator
 	       could be acting remotely through a management server, from which the system receives configuration policies. An administrator can enforce settings on the system 
 	       which cannot be overridden by non-administrator users.
       </td></tr>
-<tr><td><div id="Application">Application (app)</div></td><td>
+<tr><td><div id="Application">Application</div></td><td>
 	       Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation. 
       </td></tr>
 <tr><td><div id="Application_Programming_Interface">Application Programming Interface (API)</div></td><td>
@@ -721,31 +713,8 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><div id="Credential">Credential</div></td><td>
 	       Data that establishes the identity of a user (e.g., a cryptographic key or password).
       </td></tr>
-<tr><td><div id="Critical_Security_Parameters">Critical Security Parameters (CSP)</div></td><td>
-	       Information that is either user or system defined and is used to operate a cryptographic module in processing encryption functions including cryptographic keys and
-	       authentication data, such as passwords, the disclosure or modification of which can compromise the security of a cryptographic module or the security of the
-	       information protected by the module.
-      </td></tr>
-<tr><td><div id="DAR_Protection">DAR Protection</div></td><td>
-	       Countermeasures that prevent attackers, even those with physical access, from extracting data from non-volatile storage. Common techniques include data encryption
-	       and wiping.
-      </td></tr>
-<tr><td><div id="Data_Execution_Prevention">Data Execution Prevention (DEP)</div></td><td>
-	       An anti-exploitation feature of modern operating systems executing on modern computer hardware, which enforces a non-execute permission on pages of memory. DEP
-	       prevents pages of memory from containing both data and instructions, which makes it more difficult for an attacker to introduce and execute code.
-      </td></tr>
 <tr><td><div id="Data_Plane">Data Plane</div></td><td>
         Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.
-      </td></tr>
-<tr><td><div id="Developer">Developer</div></td><td>
-	       An entity that writes OS software. For the purposes of this document, vendors and developers are the same.
-      </td></tr>
-<tr><td><div id="Host-based_Firewall">Host-based Firewall</div></td><td>
-	       A software-based firewall implementation running on the OS for filtering inbound and outbound network traffic to and from processes running on the OS.
-      </td></tr>
-<tr><td><div id="Hybrid_Authentication">Hybrid Authentication</div></td><td>
-	       A hybrid authentication factor is one where a user has to submit a combination of a cryptographic token and a PIN or password and both must pass. If either factor
-	       fails, the entire attempt fails.
       </td></tr>
 <tr><td><div id="Management_Plane">Management Plane</div></td><td>
         Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs).
@@ -754,36 +723,14 @@ The following sections list Common Criteria and technology terms used in this do
         built to recognize suspicious network activity for security purposes. This is sometimes also referred to as the Orchestration Layer.
       </td></tr>
 <tr><td><div id="Northbound">Northbound</div></td><td>Communications between an SDN and applications in the management plane.</td></tr>
-<tr><td><div id="Operating_System">Operating System (OS)</div></td><td>
-	       Software that manages physical and logical resources and provides services for applications. The terms TOE and OS are interchangeable in this
-	       document. 
-      </td></tr>
-<tr><td><div id="Personal_Identification_Number">Personal Identification Number (PIN)</div></td><td>
-	       An authentication factor that is comprised of a set of numeric or alphabetic characters that may be used  in addition to a cryptographic token to provide a hybrid
-	       authentication factor. At this time it  is not considered as a stand-alone authentication mechanism. A PIN is distinct from a password in that the allowed character
-	       set and required length of a PIN is typically smaller than that of a password as it is designed to be input quickly.
-      </td></tr>
-<tr><td><div id="Personally_Identifiable_Information">Personally Identifiable Information (PII)</div></td><td>
-	       Any information about an individual maintained by an agency, including, but not limited to, education, financial transactions, medical history, and criminal or
-	       employment history, and information which can be used to distinguish or trace an individual's identity, such as their name, social security number, date and place
-	       of birth, mother's maiden name, biometric records, etc., including any other personal information which is linked or linkable to an individual.
-      </td></tr>
-<tr><td><div id="Sensitive_Data">Sensitive Data</div></td><td>
-	       Sensitive data may include all user or enterprise data or may be specific application data such as PII, emails, messaging, documents, calendar items, and contacts.
-	       Sensitive data must minimally include credentials and keys. Sensitive data shall be identified in the OS's TSS by the ST author. 
-      </td></tr>
 <tr><td><div id="Southbound">Southbound</div></td><td>Communications between an SDN and network devices in the data plane.</td></tr>
-<tr><td><div id="User">User</div></td><td>
-	       A user is subject to configuration policies applied to the operating system by administrators.  On some systems, under certain configurations, a normal user can
-	       temporarily elevate privileges to that of an administrator. At that time, such a user should be considered an administrator.
-      </td></tr>
 </table></div>
     
     <h2 class="indexable" data-level="2" id="Compliant_Targets_of_Evaluation">1.3 Compliant Targets of Evaluation</h2> 
       A conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> decouples its data and control planes such that data traffic and control traffic are restricted
       to their respective planes. It also enforces centralization of control so that all components of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> environment
       are under its control. This can expand across multiple distributed controllers for large, complex, or geographically
-      dispersed networks. Compliant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> will implement necessary functionality in a "do no harm" manner with respect to network security. Specifically:
+      dispersed networks. Compliant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> will implement the following functionality:
       <ul>
         <li>They can be remotely managed in a secure manner.</li>
         <li>Any software/firmware updates are from a trusted source.</li>
@@ -803,7 +750,7 @@ The following sections list Common Criteria and technology terms used in this do
           <li>All security functionality is contained and executed within the evaluation boundary of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller.</li>
         </ul>
       <p>  
-        The following figure shows the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller sitting between the management and data planes within the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> infrastructure. This is a simplified diagram of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s position in an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> deployment. Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown.
+        The following figure shows the logical position of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Controller between the management and data planes within the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> infrastructure. This is a simplified diagram of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s position in an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> deployment. Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown.
         <div class="figure" id="figure-toe-as-apponos"><img id="toe-as-apponos" src="images/sdncontroller.png" width="" height=""></img><br/><span class="ctr" data-myid="toe-as-apponos" data-counter-type="ct-figure">Figure <span class="counter">1</span></span>:
       High-Level <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> Representation</div>
       </p>
@@ -812,7 +759,7 @@ The following sections list Common Criteria and technology terms used in this do
           <ul>
             <li>Examination of data plane content, such as virus or email scanning.</li>
             <li>Intrusion detection or prevention capabilities.</li>
-            <li>Network Address Translation (<abbr class="dyn-abbr"><a href="#abbr_NAT">NAT</a></abbr>) as a security function.</li>
+            <li>Network Address Translation (NAT) as a security function.</li>
             <li>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is a single virtual machine, the hardware or firmware of the underlying platform.</li>
             <li>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is a single virtual machine, the host operating system or runtime environment.</li>
             <li>Specific security functionality that is not global to all <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controllers (e.g. firewall, load balancing).</li>
@@ -863,21 +810,9 @@ The following sections list Common Criteria and technology terms used in this do
 		The security problem is described in terms of the threats that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to address, assumptions about 
 		the operational environment, and any organizational security policies that the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is expected to enforce.
     <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
-      <dl><dt class="threat defined" id="T.INSECURE_API">T.INSECURE_API</dt><dd><span class="description">
-            Insecure application programming interfaces (APIs) and user interfaces can provide attackers with 
-			opportunities to inject malicious code to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or to retrieve sensitive information from it. Executing
-			improper or unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions or providing malicious input to achieve unintended or improper results from proper or authorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions can compromise network services and sensitive
-			data leakage can take place through insecure interfaces.  
+      <dl><dt class="threat defined" id="T.INSECURE_NORTHBOUND_API">T.INSECURE_NORTHBOUND_API</dt><dd><span class="description">
+            A malicious user or process may invoke insecure application programming interfaces (APIs) to inject malicious code to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> on a northbound interface or to retrieve sensitive information from it. Executing improper or unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions or providing malicious input to achieve unintended or improper results from proper or authorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions can compromise network services. This can also result in sensitive data leakage.
             
-            <span style="" class="comment " id="Comment-1-"><br/><br/>Recommendations above to adjust threat name for more specificity and clarify the 
-			description.</span>
-          </span></dd><dt class="threat defined" id="T.ATTACKER_ACCESS">T.ATTACKER_ACCESS</dt><dd><span class="description">
-          An attacker may attempt to exploit services and functionality to intercept communications and mount attacks 
-		  against machines in the network.
-          
-            <span style="" class="comment " id="Comment-2-"><br/><br/>Threat kept as-is but this seems unnecessary. Unless there are <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>-specific threat 
-			cases (such as the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> threat listed above), this just seems like an extension of threats already defined in 
-			the NDcPP, and it should be fine for module <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> to map back to threats from the base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</span>
           </span></dd></dl>
       
     
@@ -947,7 +882,7 @@ Network Device
                   <p>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> has been modified from its definition in the NDcPP to define external interfaces to environmental entities that are particular to this specific technology type.</p>
                   <p>The text of the requirement is replaced with:</p>
                   <p>
-                  <b>FTP_ITC.1.1</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of using [<b>selection:</b><i> IPsec, SSH, <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_DTLS">DTLS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_HTTPS">HTTPS</a></abbr></i>] to provide a trusted communication channel between itself and authorized <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities supporting the following capabilities: audit server, <b>northbound components, southbound components,</b> [<b>selection:</b> <i>authentication server, external east/west components [<b>assignment:</b> other capabilities], no other capabilities</i>] that is logically distinct from other
+                    <b>FTP_ITC.1.1</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of using [<b>selection:</b><i>IPsec, SSH as defined in the Functional Package for SSH, <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr> as defined in the Functional Package for <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr>, DTLS as defined in the Functional Package for <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_HTTPS">HTTPS</a></abbr></i>] to provide a trusted communication channel between itself and authorized <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities supporting the following capabilities: audit server, <b>northbound components, southbound components,</b> [<b>selection:</b> <i>authentication server, external east/west components [<b>assignment:</b> other capabilities], no other capabilities</i>] that is logically distinct from other
                   communication channels and provides assured identification of its end points
                   and protection of the channel data from disclosure and detection of modification of the channel data.
                   </p>
@@ -968,7 +903,7 @@ Network Device
       
       <div class="comp" id="FAU_GEN.1/SDN"><h4>FAU_GEN.1/SDN Audit Data Generation (SDN)</h4>
         <div class="element"><div class="reqid" id="FAU_GEN.1.1/SDN"><a href="#FAU_GEN.1.1/SDN" class="abbr">FAU_GEN.1.1/SDN</a></div><div class="reqdesc">
-            <span style="" class="comment " id="Comment-3-">The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have maximum auditing and logging of all unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage, especially <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage attempts from users that are not in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> roles.<br/><br/>This will be populated as needed by the audit events for other <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr><br/><br/></span>
+            <span style="" class="comment " id="Comment-1-">The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have maximum auditing and logging of all unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage, especially <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage attempts from users that are not in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> roles.<br/><br/>This will be populated as needed by the audit events for other <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr><br/><br/></span>
             
             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall implement functionality to generate audit data of the following <b><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr></b> auditable events:
             <ol type="a">
@@ -1032,7 +967,7 @@ Network Device
       
       <div class="comp" id="FDP_ACF.1"><h4>FDP_ACF.1 Security Attribute-Based Access Control</h4>
         <div class="element"><div class="reqid" id="FDP_ACF.1.1"><a href="#FDP_ACF.1.1" class="abbr">FDP_ACF.1.1</a></div><div class="reqdesc">
-            <span style="" class="comment " id="Comment-4-">
+            <span style="" class="comment " id="Comment-2-">
               <ol>
                 <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must perform validation of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls against the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates.</li>
                 <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must block <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that fail validation.</li>
@@ -1089,7 +1024,7 @@ Network Device
         
         <div class="comp" id="FMT_API_EXT.1"><h4>FMT_API_EXT.1 Management of API Behavior</h4>
           <div class="element"><div class="reqid" id="FMT_API_EXT.1.1"><a href="#FMT_API_EXT.1.1" class="abbr">FMT_API_EXT.1.1</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-5-">•<abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Call Templates: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that define how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls must be performed to access <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects.
+              <span style="" class="comment " id="Comment-3-">•<abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Call Templates: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that define how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls must be performed to access <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects.
                 <br/><br/>
               </span>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide the ability to define the following <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates [<b>assignment</b>: 
@@ -1119,7 +1054,7 @@ Network Device
         
         <div class="comp" id="FMT_MOF.1/SDN"><h4>FMT_MOF.1/SDN Management of Functions Behavior (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/SDN"><a href="#FMT_MOF.1.1/SDN" class="abbr">FMT_MOF.1.1/SDN</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-6-">Manipulation Control: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator specify how the allowed <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects can be manipulated.
+              <span style="" class="comment " id="Comment-4-">Manipulation Control: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator specify how the allowed <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects can be manipulated.
                 <br/><br/>
               </span>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to [<i>modify the behaviour of</i>] the functions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access function as defined by <a href="#FDP_ACC.1">FDP_ACC.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity function as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>] to [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator</i>].
@@ -1138,7 +1073,7 @@ Network Device
         
         <div class="comp" id="FMT_SMF.1/SDN"><h4>FMT_SMF.1/SDN Specification of Management Functions (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_SMF.1.1/SDN"><a href="#FMT_SMF.1.1/SDN" class="abbr">FMT_SMF.1.1/SDN</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-7-">Allowlisting: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator be able to allowlist <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates so that configuration attempts from all other APIs not in the allowlist is blocked.
+              <span style="" class="comment " id="Comment-5-">Allowlisting: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator be able to allowlist <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates so that configuration attempts from all other APIs not in the allowlist is blocked.
                 <br/><br/>
               </span>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of performing the following management functions: [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control as defined by <a href="#FDP_ACF.1">FDP_ACF.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>].
@@ -1155,7 +1090,7 @@ Network Device
         
         <div class="comp" id="FMT_SMR.2/SDN"><h4>FMT_SMR.2/SDN Restrictions on Security Roles (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_SMR.2.1/SDN"><a href="#FMT_SMR.2.1/SDN" class="abbr">FMT_SMR.2.1/SDN</a></div><div class="reqdesc">
-<span style="" class="comment " id="Comment-8-">This could also just be done as a Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to FMT_SMR.2 in the NDcPP but it may be cleaner just to do it as its own iteration here.<br/><br/>
+<span style="" class="comment " id="Comment-6-">This could also just be done as a Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to FMT_SMR.2 in the NDcPP but it may be cleaner just to do it as its own iteration here.<br/><br/>
   <ol>
     <li><abbr class="dyn-abbr"><a href="#abbr_RBAC">RBAC</a></abbr>: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must provide an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> user role and <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator role for role-based access control</li>
     <li><abbr class="dyn-abbr"><a href="#abbr_RBAC">RBAC</a></abbr>: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must require that only administrators in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator role can perform <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls.</li>
@@ -1177,7 +1112,7 @@ Network Device
 
 
     <h2 id="obj-req-map" class="indexable" data-level="2">5.3 TOE Security Functional Requirements Rationale</h2><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">1</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="3"><a href="#T.INSECURE_API">T.INSECURE_​API</a></td><td></td><td></td></tr>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">1</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="3"><a href="#T.INSECURE_NORTHBOUND_API">T.INSECURE_​NORTHBOUND_​API</a></td><td></td><td></td></tr>
 <tr><td></td><td></td></tr>
 <tr><td></td><td></td></tr>
 </table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-ND" class="indexable" data-level="2">6.1 Collaborative 
@@ -1191,7 +1126,7 @@ Network Device
       </h3>
         The threats defined by this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> (see section 3.1) supplement those defined in the NDcPP as follows:
       <table><caption><span class="ctr" data-myid="t-con-sec-prob-def" data-counter-type="ct-Table" id="t-con-sec-prob-def">Table <span class="counter">2</span></span>: Consistency of Security Problem Definition (NDcPP base)
-		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Threat, Assumption, OSP</th><th>Consistency Rationale</th></tr><tr><td><a href="#T.INSECURE_API">T.INSECURE_API</a></td><td></td></tr><tr><td><a href="#T.ATTACKER_ACCESS">T.ATTACKER_ACCESS</a></td><td></td></tr></table><h3 id="conobj-ND" class="indexable" data-level="3">6.1.3 
+		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Threat, Assumption, OSP</th><th>Consistency Rationale</th></tr><tr><td><a href="#T.INSECURE_NORTHBOUND_API">T.INSECURE_NORTHBOUND_API</a></td><td></td></tr></table><h3 id="conobj-ND" class="indexable" data-level="3">6.1.3 
 			Consistency of OE Objectives
 		</h3><p>
         TBD
@@ -1292,68 +1227,20 @@ Network Device
       continuously, or on-demand), the expected results for each health test, and rationale
       indicating why each test is believed to be appropriate for detecting one or more failures in
       the entropy source. 
-  <h1 id="biblio" class="indexable" data-level="A">Appendix D -  Bibliography</h1><h1 id="acronyms" class="indexable" data-level="A">Appendix E -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">4</span></span>: Acronyms
-		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_ABAC"><abbr class="dyn-abbr"><a href="#abbr_ABAC">ABAC</a></abbr></span></td><td><span id="long_abbr_ABAC">Attribute-Based Access Control</span></td></tr>
-<tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
-<tr><td><span class="term" id="abbr_ANSI"><abbr class="dyn-abbr"><a href="#abbr_ANSI">ANSI</a></abbr></span></td><td><span id="long_abbr_ANSI">American National Standards Institute</span></td></tr>
-<tr><td><span class="term" id="abbr_API"><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr></span></td><td><span id="long_abbr_API">Application Programming Interface</span></td></tr>
-<tr><td><span class="term" id="abbr_app"><abbr class="dyn-abbr"><a href="#abbr_app">app</a></abbr></span></td><td><span id="long_abbr_app">Application</span></td></tr>
-<tr><td><span class="term" id="abbr_APT"><abbr class="dyn-abbr"><a href="#abbr_APT">APT</a></abbr></span></td><td><span id="long_abbr_APT">Advanced Persistent Threats</span></td></tr>
-<tr><td><span class="term" id="abbr_ASLR"><abbr class="dyn-abbr"><a href="#abbr_ASLR">ASLR</a></abbr></span></td><td><span id="long_abbr_ASLR">Address Space Layout Randomization</span></td></tr>
+  <h1 id="acronyms" class="indexable" data-level="A">Appendix D -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">4</span></span>: Acronyms
+		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_API"><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr></span></td><td><span id="long_abbr_API">Application Programming Interface</span></td></tr>
 <tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
 <tr><td><span class="term" id="abbr_CEM"><abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr></span></td><td><span id="long_abbr_CEM">Common Evaluation Methodology</span></td></tr>
-<tr><td><span class="term" id="abbr_CESG"><abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr></span></td><td><span id="long_abbr_CESG">Communications-Electronics Security Group</span></td></tr>
-<tr><td><span class="term" id="abbr_CLI"><abbr class="dyn-abbr"><a href="#abbr_CLI">CLI</a></abbr></span></td><td><span id="long_abbr_CLI">Command-Line Interface</span></td></tr>
-<tr><td><span class="term" id="abbr_CMC"><abbr class="dyn-abbr"><a href="#abbr_CMC">CMC</a></abbr></span></td><td><span id="long_abbr_CMC">Certificate Management over <abbr class="dyn-abbr"><a href="#abbr_CMS">CMS</a></abbr></span></td></tr>
-<tr><td><span class="term" id="abbr_CMS"><abbr class="dyn-abbr"><a href="#abbr_CMS">CMS</a></abbr></span></td><td><span id="long_abbr_CMS">Cryptographic Message Syntax</span></td></tr>
-<tr><td><span class="term" id="abbr_CN"><abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr></span></td><td><span id="long_abbr_CN">Common Names</span></td></tr>
 <tr><td><span class="term" id="abbr_cPP" data-plural="cPPs"><abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></span></td><td><span id="long_abbr_cPP">Collaborative Protection Profile</span></td></tr>
-<tr><td><span class="term" id="abbr_CRL"><abbr class="dyn-abbr"><a href="#abbr_CRL">CRL</a></abbr></span></td><td><span id="long_abbr_CRL">Certificate Revocation List</span></td></tr>
-<tr><td><span class="term" id="abbr_CRUD"><abbr class="dyn-abbr"><a href="#abbr_CRUD">CRUD</a></abbr></span></td><td><span id="long_abbr_CRUD">Create, Read, Update, Delete</span></td></tr>
-<tr><td><span class="term" id="abbr_CSA"><abbr class="dyn-abbr"><a href="#abbr_CSA">CSA</a></abbr></span></td><td><span id="long_abbr_CSA">Computer Security Act</span></td></tr>
-<tr><td><span class="term" id="abbr_CSP"><abbr class="dyn-abbr"><a href="#abbr_CSP">CSP</a></abbr></span></td><td><span id="long_abbr_CSP">Critical Security Parameters</span></td></tr>
-<tr><td><span class="term" id="abbr_DAR"><abbr class="dyn-abbr"><a href="#abbr_DAR">DAR</a></abbr></span></td><td><span id="long_abbr_DAR">Data At Rest</span></td></tr>
-<tr><td><span class="term" id="abbr_DEP"><abbr class="dyn-abbr"><a href="#abbr_DEP">DEP</a></abbr></span></td><td><span id="long_abbr_DEP">Data Execution Prevention</span></td></tr>
-<tr><td><span class="term" id="abbr_DES"><abbr class="dyn-abbr"><a href="#abbr_DES">DES</a></abbr></span></td><td><span id="long_abbr_DES">Data Encryption Standard</span></td></tr>
-<tr><td><span class="term" id="abbr_DHE"><abbr class="dyn-abbr"><a href="#abbr_DHE">DHE</a></abbr></span></td><td><span id="long_abbr_DHE">Diffie-Hellman Ephemeral</span></td></tr>
-<tr><td><span class="term" id="abbr_DNS"><abbr class="dyn-abbr"><a href="#abbr_DNS">DNS</a></abbr></span></td><td><span id="long_abbr_DNS">Domain Name System</span></td></tr>
 <tr><td><span class="term" id="abbr_DRBG"><abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr></span></td><td><span id="long_abbr_DRBG">Deterministic Random Bit Generator</span></td></tr>
-<tr><td><span class="term" id="abbr_DSS"><abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr></span></td><td><span id="long_abbr_DSS">Digital Signature Standard</span></td></tr>
-<tr><td><span class="term" id="abbr_DT"><abbr class="dyn-abbr"><a href="#abbr_DT">DT</a></abbr></span></td><td><span id="long_abbr_DT">Date/Time Vector</span></td></tr>
-<tr><td><span class="term" id="abbr_DTLS"><abbr class="dyn-abbr"><a href="#abbr_DTLS">DTLS</a></abbr></span></td><td><span id="long_abbr_DTLS">Datagram Transport Layer Security</span></td></tr>
-<tr><td><span class="term" id="abbr_EAP"><abbr class="dyn-abbr"><a href="#abbr_EAP">EAP</a></abbr></span></td><td><span id="long_abbr_EAP">Extensible Authentication Protocol</span></td></tr>
-<tr><td><span class="term" id="abbr_ECDHE"><abbr class="dyn-abbr"><a href="#abbr_ECDHE">ECDHE</a></abbr></span></td><td><span id="long_abbr_ECDHE">Elliptic Curve Diffie-Hellman Ephemeral</span></td></tr>
-<tr><td><span class="term" id="abbr_ECDSA"><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></span></td><td><span id="long_abbr_ECDSA">Elliptic Curve Digital Signature Algorithm</span></td></tr>
-<tr><td><span class="term" id="abbr_EP"><abbr class="dyn-abbr"><a href="#abbr_EP">EP</a></abbr></span></td><td><span id="long_abbr_EP">Extended Package</span></td></tr>
-<tr><td><span class="term" id="abbr_ESR"><abbr class="dyn-abbr"><a href="#abbr_ESR">ESR</a></abbr></span></td><td><span id="long_abbr_ESR">Equivalent Series Resistance</span></td></tr>
-<tr><td><span class="term" id="abbr_EST"><abbr class="dyn-abbr"><a href="#abbr_EST">EST</a></abbr></span></td><td><span id="long_abbr_EST">Enrollment over Secure Transport</span></td></tr>
-<tr><td><span class="term" id="abbr_FIPS"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr></span></td><td><span id="long_abbr_FIPS">Federal Information Processing Standards</span></td></tr>
-<tr><td><span class="term" id="abbr_FP"><abbr class="dyn-abbr"><a href="#abbr_FP">FP</a></abbr></span></td><td><span id="long_abbr_FP">Functional Package</span></td></tr>
-<tr><td><span class="term" id="abbr_HMAC"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr></span></td><td><span id="long_abbr_HMAC">Hash-based Message Authentication Code</span></td></tr>
 <tr><td><span class="term" id="abbr_HTTP"><abbr class="dyn-abbr"><a href="#abbr_HTTP">HTTP</a></abbr></span></td><td><span id="long_abbr_HTTP">Hypertext Transfer Protocol</span></td></tr>
 <tr><td><span class="term" id="abbr_HTTPS"><abbr class="dyn-abbr"><a href="#abbr_HTTPS">HTTPS</a></abbr></span></td><td><span id="long_abbr_HTTPS">Hypertext Transfer Protocol Secure</span></td></tr>
-<tr><td><span class="term" id="abbr_IETF"><abbr class="dyn-abbr"><a href="#abbr_IETF">IETF</a></abbr></span></td><td><span id="long_abbr_IETF">Internet Engineering Task Force</span></td></tr>
 <tr><td><span class="term" id="abbr_IP"><abbr class="dyn-abbr"><a href="#abbr_IP">IP</a></abbr></span></td><td><span id="long_abbr_IP">Internet Protocol</span></td></tr>
-<tr><td><span class="term" id="abbr_ISO"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr></span></td><td><span id="long_abbr_ISO">International Organization for Standardization</span></td></tr>
 <tr><td><span class="term" id="abbr_IT"><abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr></span></td><td><span id="long_abbr_IT">Information Technology</span></td></tr>
-<tr><td><span class="term" id="abbr_ITSEF"><abbr class="dyn-abbr"><a href="#abbr_ITSEF">ITSEF</a></abbr></span></td><td><span id="long_abbr_ITSEF">Information Technology Security Evaluation Facility</span></td></tr>
-<tr><td><span class="term" id="abbr_MFA"><abbr class="dyn-abbr"><a href="#abbr_MFA">MFA</a></abbr></span></td><td><span id="long_abbr_MFA">Multi-Factor Authentication</span></td></tr>
-<tr><td><span class="term" id="abbr_MITM"><abbr class="dyn-abbr"><a href="#abbr_MITM">MITM</a></abbr></span></td><td><span id="long_abbr_MITM">Man-in-the-Middle</span></td></tr>
-<tr><td><span class="term" id="abbr_NAT"><abbr class="dyn-abbr"><a href="#abbr_NAT">NAT</a></abbr></span></td><td><span id="long_abbr_NAT">Network Address Translation</span></td></tr>
-<tr><td><span class="term" id="abbr_NFC"><abbr class="dyn-abbr"><a href="#abbr_NFC">NFC</a></abbr></span></td><td><span id="long_abbr_NFC">Near Field Communication</span></td></tr>
-<tr><td><span class="term" id="abbr_NIAP"><abbr class="dyn-abbr"><a href="#abbr_NIAP">NIAP</a></abbr></span></td><td><span id="long_abbr_NIAP">National Information Assurance Partnership</span></td></tr>
-<tr><td><span class="term" id="abbr_NIST"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr></span></td><td><span id="long_abbr_NIST">National Institute of Standards and Technology</span></td></tr>
-<tr><td><span class="term" id="abbr_OCSP"><abbr class="dyn-abbr"><a href="#abbr_OCSP">OCSP</a></abbr></span></td><td><span id="long_abbr_OCSP">Online Certificate Status Protocol</span></td></tr>
 <tr><td><span class="term" id="abbr_OE"><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr></span></td><td><span id="long_abbr_OE">Operational Environment</span></td></tr>
-<tr><td><span class="term" id="abbr_OID"><abbr class="dyn-abbr"><a href="#abbr_OID">OID</a></abbr></span></td><td><span id="long_abbr_OID">Object Identifier</span></td></tr>
 <tr><td><span class="term" id="abbr_OMB"><abbr class="dyn-abbr"><a href="#abbr_OMB">OMB</a></abbr></span></td><td><span id="long_abbr_OMB">Office of Management and Budget</span></td></tr>
 <tr><td><span class="term" id="abbr_OS"><abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr></span></td><td><span id="long_abbr_OS">Operating System</span></td></tr>
-<tr><td><span class="term" id="abbr_OWASP"><abbr class="dyn-abbr"><a href="#abbr_OWASP">OWASP</a></abbr></span></td><td><span id="long_abbr_OWASP">Open Worldwide Application Security Project</span></td></tr>
-<tr><td><span class="term" id="abbr_PII"><abbr class="dyn-abbr"><a href="#abbr_PII">PII</a></abbr></span></td><td><span id="long_abbr_PII">Personally Identifiable Information</span></td></tr>
-<tr><td><span class="term" id="abbr_PIN"><abbr class="dyn-abbr"><a href="#abbr_PIN">PIN</a></abbr></span></td><td><span id="long_abbr_PIN">Personal Identification Number</span></td></tr>
-<tr><td><span class="term" id="abbr_PKI"><abbr class="dyn-abbr"><a href="#abbr_PKI">PKI</a></abbr></span></td><td><span id="long_abbr_PKI">Public Key Infrastructure</span></td></tr>
-<tr><td><span class="term" id="abbr_PP"><abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr></span></td><td><span id="long_abbr_PP">Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_PP" data-plural="PPs"><abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr></span></td><td><span id="long_abbr_PP">Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_PP-Configuration"><abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr></span></td><td><span id="long_abbr_PP-Configuration">Protection Profile Configuration</span></td></tr>
 <tr><td><span class="term" id="abbr_PP-Module"><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr></span></td><td><span id="long_abbr_PP-Module">Protection Profile Module</span></td></tr>
@@ -1361,31 +1248,20 @@ Network Device
 <tr><td><span class="term" id="abbr_RBG"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr></span></td><td><span id="long_abbr_RBG">Random Bit Generator</span></td></tr>
 <tr><td><span class="term" id="abbr_REST"><abbr class="dyn-abbr"><a href="#abbr_REST">REST</a></abbr></span></td><td><span id="long_abbr_REST">Representational State Transfer</span></td></tr>
 <tr><td><span class="term" id="abbr_RFC"><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr></span></td><td><span id="long_abbr_RFC">Request for Comment</span></td></tr>
-<tr><td><span class="term" id="abbr_RNG"><abbr class="dyn-abbr"><a href="#abbr_RNG">RNG</a></abbr></span></td><td><span id="long_abbr_RNG">Random Number Generator</span></td></tr>
-<tr><td><span class="term" id="abbr_S/MIME"><abbr class="dyn-abbr"><a href="#abbr_S/MIME">S/MIME</a></abbr></span></td><td><span id="long_abbr_S/MIME">Secure/Multi-purpose Internet Mail Extensions</span></td></tr>
-<tr><td><span class="term" id="abbr_SAN"><abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr></span></td><td><span id="long_abbr_SAN">Subject Alternative Name</span></td></tr>
-<tr><td><span class="term" id="abbr_SAR"><abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr></span></td><td><span id="long_abbr_SAR">Security Assurance Requirements</span></td></tr>
 <tr><td><span class="term" id="abbr_SAR" data-plural="SARs"><abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr></span></td><td><span id="long_abbr_SAR">Security Assurance Requirement</span></td></tr>
 <tr><td><span class="term" id="abbr_SDN"><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr></span></td><td><span id="long_abbr_SDN">Software Defined Networking</span></td></tr>
-<tr><td><span class="term" id="abbr_SFR"><abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr></span></td><td><span id="long_abbr_SFR">Security Functional Requirements</span></td></tr>
 <tr><td><span class="term" id="abbr_SFR" data-plural="SFRs"><abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr></span></td><td><span id="long_abbr_SFR">Security Functional Requirement</span></td></tr>
-<tr><td><span class="term" id="abbr_SHA"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr></span></td><td><span id="long_abbr_SHA">Secure Hash Algorithm</span></td></tr>
-<tr><td><span class="term" id="abbr_SIP"><abbr class="dyn-abbr"><a href="#abbr_SIP">SIP</a></abbr></span></td><td><span id="long_abbr_SIP">Session Initiation Protocol</span></td></tr>
 <tr><td><span class="term" id="abbr_ST" data-plural="STs"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr></span></td><td><span id="long_abbr_ST">Security Target</span></td></tr>
-<tr><td><span class="term" id="abbr_SWID"><abbr class="dyn-abbr"><a href="#abbr_SWID">SWID</a></abbr></span></td><td><span id="long_abbr_SWID">Software Identification</span></td></tr>
 <tr><td><span class="term" id="abbr_TLS"><abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr></span></td><td><span id="long_abbr_TLS">Transport Layer Security</span></td></tr>
 <tr><td><span class="term" id="abbr_TOE" data-plural="TOEs"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr></span></td><td><span id="long_abbr_TOE">Target of Evaluation</span></td></tr>
 <tr><td><span class="term" id="abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span></td><td><span id="long_abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Security Functionality</span></td></tr>
 <tr><td><span class="term" id="abbr_TSFI" data-plural="TSFIs"><abbr class="dyn-abbr"><a href="#abbr_TSFI">TSFI</a></abbr></span></td><td><span id="long_abbr_TSFI"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> Interface</span></td></tr>
 <tr><td><span class="term" id="abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></span></td><td><span id="long_abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Summary Specification</span></td></tr>
-<tr><td><span class="term" id="abbr_URI"><abbr class="dyn-abbr"><a href="#abbr_URI">URI</a></abbr></span></td><td><span id="long_abbr_URI">Uniform Resource Identifier</span></td></tr>
-<tr><td><span class="term" id="abbr_URL"><abbr class="dyn-abbr"><a href="#abbr_URL">URL</a></abbr></span></td><td><span id="long_abbr_URL">Uniform Resource Locator</span></td></tr>
 <tr><td><span class="term" id="abbr_USB"><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr></span></td><td><span id="long_abbr_USB">Universal Serial Bus</span></td></tr>
 <tr><td><span class="term" id="abbr_VM"><abbr class="dyn-abbr"><a href="#abbr_VM">VM</a></abbr></span></td><td><span id="long_abbr_VM">Virtual Machine</span></td></tr>
 <tr><td><span class="term" id="abbr_VPN"><abbr class="dyn-abbr"><a href="#abbr_VPN">VPN</a></abbr></span></td><td><span id="long_abbr_VPN">Virtual Private Network</span></td></tr>
-<tr><td><span class="term" id="abbr_XCCDF"><abbr class="dyn-abbr"><a href="#abbr_XCCDF">XCCDF</a></abbr></span></td><td><span id="long_abbr_XCCDF">eXtensible Configuration Checklist Description Format</span></td></tr>
 <tr><td><span class="term" id="abbr_XOR"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></span></td><td><span id="long_abbr_XOR">Exclusive Or</span></td></tr>
-</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix F -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">5</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
+</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix E -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">5</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part 1: 
 				Introduction and general model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part 2: 
