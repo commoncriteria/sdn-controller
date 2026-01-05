@@ -150,19 +150,19 @@
         intentionally very broad, as many specific use cases exist for an SDN controller These use cases may also overlap with one another. An SDN controller's 
         functionality may even be effectively extended by privileged applications installed on it. However, these are out of scope of this PP.
       <usecases>
-        <usecase title="Standalone Physical Device" id="standalonephysdev">
+        <usecase title="Physical Device" id="standalonephysdev">
           <description>	          
-            The TOE is a single physical appliance that provides SDN controller functionality.             
+            The TOE is one or more physical appliances that provide SDN controller functionality. The TOE boundary includes the entire software and firmware running on these appliances; a software-only device where the boundary does not include the underlying operating system is not a valid use case.         
           </description>
         </usecase>
         <usecase title="Virtual Device" id="virtualdev">
           <description>
-            The TOE is a virtual machine that provides SDN controller functionality. The TOE boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the SDN controller. 
+            The TOE is a virtual machine that provides SDN controller functionality. The TOE boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the SDN controller. As with the physical device use case above, the TOE boundary for a virtual device must include an entire virtual machine and not just a collection of applications or services running on an environmental operating system. 
           </description>
         </usecase>
         <usecase title="Cluster (stand-alone or virtual)" id="standorvirtcluster">
           <description>
-            Regardless of whether the TOE is physical, virtual, or both, it includes multiple distinct instances that are combined into a distributed cluster.
+            Regardless of whether the TOE is physical, virtual, or both, it may include multiple distinct instances (i.e. multiple connected physical appliances or VMs) that are combined into a distributed cluster.
           </description>
         </usecase>
         <usecase title="Hyper-Converge" id="hypercov">
