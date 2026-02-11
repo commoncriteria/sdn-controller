@@ -165,11 +165,12 @@
             Regardless of whether the TOE is physical, virtual, or both, it may include multiple distinct instances (i.e. multiple connected physical appliances or VMs) that are combined into a distributed cluster.
           </description>
         </usecase>
+        <!--
         <usecase title="Hyper-Converge" id="hypercov">
           <description>
             The TOE amalgamates various computing resources into a single unit for storage-centric, server-centric, or hybrid (storage-server) workloads.
           </description>
-        </usecase>
+        </usecase> -->
       </usecases>
     </sec:Use_Cases>
   </sec:Introduction>
