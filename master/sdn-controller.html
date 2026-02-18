@@ -629,7 +629,7 @@ function showTarget(id){
 	            img[src="images/collapsed.png"] { display:none;}
 
           }
-    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/><a href="#Comment-3-">Comment: Comment-3-</a><br/><a href="#Comment-4-">Comment: Comment-4-</a><br/><a href="#Comment-5-">Comment: Comment-5-</a><br/><a href="#Comment-6-">Comment: Comment-6-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
+    </style></head><body onLoad="init()"><h1 class="title" style="page-break-before:auto;">PP-Module for Software Defined Networking Controllers</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
       Version: 1.0<br/>2024-10-31<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2024-10-31</td><td>First draft of version 1.0 for comment</td></tr>
 </table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#Compliant_Targets_of_Evaluation" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#Use_Cases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-ND" style="text-indent:10px">5.1<span>Collaborative 
     Protection Profile for Network Devices
@@ -901,7 +901,7 @@ Network Device
       
       <div class="comp" id="FAU_GEN.1/SDN"><h4>FAU_GEN.1/SDN Audit Data Generation (SDN)</h4>
         <div class="element"><div class="reqid" id="FAU_GEN.1.1/SDN"><a href="#FAU_GEN.1.1/SDN" class="abbr">FAU_GEN.1.1/SDN</a></div><div class="reqdesc">
-            <span style="" class="comment " id="Comment-1-">The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have maximum auditing and logging of all unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage, especially <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> usage attempts from users that are not in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> roles.<br/><br/>This will be populated as needed by the audit events for other <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr><br/><br/></span>
+            
             
             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall implement functionality to generate audit data of the following <b><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr></b> auditable events:
             <ol type="a">
@@ -965,14 +965,7 @@ Network Device
       
       <div class="comp" id="FDP_ACF.1"><h4>FDP_ACF.1 Security Attribute-Based Access Control</h4>
         <div class="element"><div class="reqid" id="FDP_ACF.1.1"><a href="#FDP_ACF.1.1" class="abbr">FDP_ACF.1.1</a></div><div class="reqdesc">
-            <span style="" class="comment " id="Comment-2-">
-              <ol>
-                <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must perform validation of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls against the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates.</li>
-                <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must block <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that fail validation.</li>
-                <li><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Validation: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must ensure that <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls conform to the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates, and block any <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that do not conform.</li>
-              </ol>
-              <br/><br/>
-            </span>
+            
             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy</i>] to objects based on the
             following: [<i>supported operations that can be performed on or by <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects, the validity of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call being issued, whether the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call is authorized based on the subject's role</i>].
           </div></div>
@@ -1022,9 +1015,7 @@ Network Device
         
         <div class="comp" id="FMT_API_EXT.1"><h4>FMT_API_EXT.1 Management of API Behavior</h4>
           <div class="element"><div class="reqid" id="FMT_API_EXT.1.1"><a href="#FMT_API_EXT.1.1" class="abbr">FMT_API_EXT.1.1</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-3-">•<abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Call Templates: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must have <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that define how <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls must be performed to access <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects.
-                <br/><br/>
-              </span>
+              
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide the ability to define the following <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates [<b>assignment</b>: 
      <span class="assignable-content">list of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates</span>] against the following <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects [<b>assignment</b>: 
      <span class="assignable-content">list of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects</span>].
@@ -1052,9 +1043,8 @@ Network Device
         
         <div class="comp" id="FMT_MOF.1/SDN"><h4>FMT_MOF.1/SDN Management of Functions Behavior (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/SDN"><a href="#FMT_MOF.1.1/SDN" class="abbr">FMT_MOF.1.1/SDN</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-4-">Manipulation Control: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator specify how the allowed <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects can be manipulated.
-                <br/><br/>
-              </span>
+              
+              
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to [<i>modify the behaviour of</i>] the functions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access function as defined by <a href="#FDP_ACC.1">FDP_ACC.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity function as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>] to [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator</i>].
             <div class="appnote"><span class="note-header">Application
       Note:
@@ -1071,9 +1061,8 @@ Network Device
         
         <div class="comp" id="FMT_SMF.1/SDN"><h4>FMT_SMF.1/SDN Specification of Management Functions (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_SMF.1.1/SDN"><a href="#FMT_SMF.1.1/SDN" class="abbr">FMT_SMF.1.1/SDN</a></div><div class="reqdesc">
-              <span style="" class="comment " id="Comment-5-">Allowlisting: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must let the administrator be able to allowlist <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates so that configuration attempts from all other APIs not in the allowlist is blocked.
-                <br/><br/>
-              </span>
+              
+              
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of performing the following management functions: [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control as defined by <a href="#FDP_ACF.1">FDP_ACF.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>].
             <div class="appnote"><span class="note-header">Application
       Note:
@@ -1088,17 +1077,12 @@ Network Device
         
         <div class="comp" id="FMT_SMR.2/SDN"><h4>FMT_SMR.2/SDN Restrictions on Security Roles (SDN)</h4>
           <div class="element"><div class="reqid" id="FMT_SMR.2.1/SDN"><a href="#FMT_SMR.2.1/SDN" class="abbr">FMT_SMR.2.1/SDN</a></div><div class="reqdesc">
-<span style="" class="comment " id="Comment-6-">This could also just be done as a Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to FMT_SMR.2 in the NDcPP but it may be cleaner just to do it as its own iteration here.<br/><br/>
-  <ol>
-    <li><abbr class="dyn-abbr"><a href="#abbr_RBAC">RBAC</a></abbr>: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must provide an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> user role and <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator role for role-based access control</li>
-    <li><abbr class="dyn-abbr"><a href="#abbr_RBAC">RBAC</a></abbr>: The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller must require that only administrators in the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator role can perform <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls.</li>
-  </ol>
-  <br/><br/>
-</span>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain the roles: [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator</i>].
             </div></div>
           <div class="element"><div class="reqid" id="FMT_SMR.2.2/SDN"><a href="#FMT_SMR.2.2/SDN" class="abbr">FMT_SMR.2.2/SDN</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to associate users with roles.</div></div>
-          <div class="element"><div class="reqid" id="FMT_SMR.2.3/SDN"><a href="#FMT_SMR.2.3/SDN" class="abbr">FMT_SMR.2.3/SDN</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall ensure that the conditions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User and <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator roles cannot be held simultaneously</i>] are satisfied.</div></div>
+          <div class="element"><div class="reqid" id="FMT_SMR.2.3/SDN"><a href="#FMT_SMR.2.3/SDN" class="abbr">FMT_SMR.2.3/SDN</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall ensure that the conditions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User and <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator roles cannot be held simultaneously</i>] are satisfied.<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">The <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> defines FMT_SMR.2 for the "Security Administrator" role that must be available on a network device in general. This iteration supplements that by making sure that <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> User and <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator roles exist for <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> functionality but are logically separated. The Security Administrator as defined by that <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> may also be an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> Administrator as defined by this iteration, or management of general security functionality may be separated from <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administration such that they are granted by different roles.</span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_SMR.2/SDN">FMT_SMR.2/SDN</a></div>
             
