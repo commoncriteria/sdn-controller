@@ -329,7 +329,10 @@
       <f-component id="fau-gen-1-sdn" cc-id="fau_gen.1" name="Audit Data Generation (SDN)" iteration="SDN">
         <f-element>
           <title>
-            <comment>The SDN controller must have maximum auditing and logging of all unauthorized API usage, especially API usage attempts from users that are not in the API roles.<h:br/><h:br/>This will be populated as needed by the audit events for other SFRs<h:br/><h:br/></comment>
+            <!-- 
+              ESRs:
+            The SDN controller must have maximum auditing and logging of all unauthorized API usage, especially API usage attempts from users that are not in the API roles.
+            -->
             
             The TSF shall implement functionality to generate audit data of the following <h:b>SDN</h:b> auditable events:
             <h:ol type="a">
@@ -400,14 +403,14 @@
       <f-component id="fdp-acf-1" cc-id="fdp_acf.1" name="Security Attribute-Based Access Control">
         <f-element>
           <title>
-            <comment>
+            <!-- ESRs
               <h:ol>
                 <h:li>API Validation: The SDN controller must perform validation of API calls against the API templates.</h:li>
                 <h:li>API Validation: The SDN controller must block API calls that fail validation.</h:li>
                 <h:li>API Validation: The SDN controller must ensure that API calls conform to the API templates, and block any API calls that do not conform.</h:li>
               </h:ol>
               <h:br/><h:br/>
-            </comment>
+            -->
             The TSF shall enforce the [<h:i>API access control policy</h:i>] to objects based on the
             following: [<h:i>supported operations that can be performed on or by API objects, the validity of the API call being issued, whether the API call is authorized based on the subject's role</h:i>].
           </title>
@@ -459,9 +462,9 @@
         <f-component id="fmt-api-ext-1" cc-id="fmt_api_ext.1" name="Management of API Behavior">
           <f-element>
             <title>
-              <comment>•API Call Templates: The SDN controller must have API templates that define how API calls must be performed to access API objects.
-                <h:br/><h:br/>
-              </comment>
+              <!--
+              API Call Templates: The SDN controller must have API templates that define how API calls must be performed to access API objects.
+                -->
               The TSF shall provide the ability to define the following API templates <assignable>list of API templates</assignable> against the following API objects <assignable>list of API objects</assignable>.
             </title>
           </f-element>
@@ -487,9 +490,10 @@
         <f-component id="fmt-mof-1-sdn" cc-id="fmt_mof.1" name="Management of Functions Behavior (SDN)" iteration="SDN">
           <f-element>
             <title>
-              <comment>Manipulation Control: The SDN controller must let the administrator specify how the allowed API objects can be manipulated.
-                <h:br/><h:br/>
-              </comment>
+              <!--
+              Manipulation Control: The SDN controller must let the administrator specify how the allowed API objects can be manipulated.
+                -->
+              
               The TSF shall restrict the ability to [<h:i>modify the behaviour of</h:i>] the functions [<h:i>API access function as defined by FDP_ACC.1, API validity function as defined by FMT_API_EXT.1</h:i>] to [<h:i>API Administrator</h:i>].
             </title>
             <note role="Application">
@@ -508,9 +512,10 @@
         <f-component id="fmt-smf-1-sdn" cc-id="fmt_smf.1" name="Specification of Management Functions (SDN)" iteration="SDN">
           <f-element>
             <title>
-              <comment>Allowlisting: The SDN controller must let the administrator be able to allowlist API templates so that configuration attempts from all other APIs not in the allowlist is blocked.
-                <h:br/><h:br/>
-              </comment>
+              <!--
+              Allowlisting: The SDN controller must let the administrator be able to allowlist API templates so that configuration attempts from all other APIs not in the allowlist is blocked.
+                -->
+              
               The TSF shall be capable of performing the following management functions: [<h:i>API access control as defined by FDP_ACF.1, API validity as defined by FMT_API_EXT.1</h:i>].
             </title>
             <note role="Application">API access control refers to configuring the allowlist for the permitted API templates. API validity refers to the ability to defining the templates for how API calls must be performed to access API objects. The intent of this requirement is for the TSF to have the ability to define both when and how a given API can be invoked.</note>
@@ -528,13 +533,6 @@
         <f-component id="fmt-smr-2-sdn" cc-id="fmt_smr.2" name="Restrictions on Security Roles (SDN)" iteration="SDN">
           <f-element>
             <title>
-<comment>This could also just be done as a Modified SFR to FMT_SMR.2 in the NDcPP but it may be cleaner just to do it as its own iteration here.<h:br/><h:br/>
-  <h:ol>
-    <h:li>RBAC: The SDN controller must provide an API user role and API administrator role for role-based access control</h:li>
-    <h:li>RBAC: The SDN controller must require that only administrators in the API administrator role can perform API calls.</h:li>
-  </h:ol>
-  <h:br/><h:br/>
-</comment>
               The TSF shall maintain the roles: [<h:i>API User, API Administrator</h:i>].
             </title>
           </f-element>
@@ -543,6 +541,7 @@
           </f-element>
           <f-element>
             <title>The TSF shall ensure that the conditions [<h:i>API User and API Administrator roles cannot be held simultaneously</h:i>] are satisfied.</title>
+            <note role="Application">The Base-PP defines FMT_SMR.2 for the "Security Administrator" role that must be available on a network device in general. This iteration supplements that by making sure that API User and API Administrator roles exist for SDN functionality but are logically separated. The Security Administrator as defined by that SFR may also be an API Administrator as defined by this iteration, or management of general security functionality may be separated from API administration such that they are granted by different roles.</note>
           <aactivity>
             <TSS>The evaluator shall verify that the TSS defines the roles available to subjects on the TOE, and that these may be categorized into API User and API Administrator roles. The TOE does not need to implement roles with these specified names, but based on the description of the TOE's privilege model it should be clear how the roles and permissions on the TOE map to the concept of an API User that may only execute functions and an API Administrator that has the ability to modify the behavior of those functions.</TSS>
             <Guidance>The evaluator shall verify that the operational guidance identifies the administrative roles available for subjects on the TOE and the mechanism by which subjects are associated with roles. The evaluator shall also verify that this identifies how the API User and API Administrator role cannot be held simultaneously (e.g., because a user may only have one role and these are defined as two separate roles; because write privilege and execute privilege cannot be held by the same subject for any given API).</Guidance>
