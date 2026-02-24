@@ -3,7 +3,6 @@ output/sdn-controller-release-linkable.html: FCS
 output/sdn-controller-release-linkable.html: ITT
 output/sdn-controller-release-linkable.html: MACsec
 output/sdn-controller-release-linkable.html: NDcPP
-output/sdn-controller-release-linkable.html: SDNC
 output/sdn-controller-release-linkable.html: SPD
 output/sdn-controller-release-linkable.html: Stateful
 output/sdn-controller-release-linkable.html: UNAUTHORISED
@@ -14,13 +13,11 @@ output/sdn-controller-release-linkable.html: denylist
 output/sdn-controller-release-linkable.html: denylisted
 output/sdn-controller-release-linkable.html: denylisting
 output/sdn-controller-release-linkable.html: sel
-output/sdn-controller-release-linkable.html: settins
 output/sdn-controller-release.html: CEM
 output/sdn-controller-release.html: FCS
 output/sdn-controller-release.html: ITT
 output/sdn-controller-release.html: MACsec
 output/sdn-controller-release.html: NDcPP
-output/sdn-controller-release.html: SDNC
 output/sdn-controller-release.html: SPD
 output/sdn-controller-release.html: Stateful
 output/sdn-controller-release.html: UNAUTHORISED
@@ -29,7 +26,6 @@ output/sdn-controller-release.html: allowlisted
 output/sdn-controller-release.html: behaviour
 output/sdn-controller-release.html: denylist
 output/sdn-controller-release.html: sel
-output/sdn-controller-release.html: settins
 output/sdn-controller-sd.html: AGD
 output/sdn-controller-sd.html: CEM
 output/sdn-controller-sd.html: NDcPP
@@ -45,7 +41,6 @@ output/sdn-controller.html: FCS
 output/sdn-controller.html: ITT
 output/sdn-controller.html: MACsec
 output/sdn-controller.html: NDcPP
-output/sdn-controller.html: SDNC
 output/sdn-controller.html: SPD
 output/sdn-controller.html: Stateful
 output/sdn-controller.html: UNAUTHORISED
@@ -56,4 +51,3 @@ output/sdn-controller.html: denylist
 output/sdn-controller.html: denylisted
 output/sdn-controller.html: denylisting
 output/sdn-controller.html: sel
-output/sdn-controller.html: settins
