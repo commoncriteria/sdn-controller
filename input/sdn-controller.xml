@@ -502,38 +502,40 @@
           </f-element>
           <f-element>
             <title>The TSF shall permit API templates to be defined if they meet the following specified rules: <assignable>rules determining allowable templates</assignable>.</title>
+            <note role="application">              
+              The tester shall test all API endpoints that the SDN controller exposes for administering the SDN controller itself, and for inducing the SDN
+              controller to administer the network devices that it manages. For example, API endpoints which correspond to SDN controller functions,including,
+              but not limited to the following shall be tested: <h:ul>
+                <h:li>Endpoints that modify the SDN controller's own configuration, including any changes to:<h:ul>
+                  <h:li>System settings</h:li>
+                  <h:li>Operational parameters</h:li>
+                </h:ul></h:li>
+                <h:li>Endpoints that cause the SDN controller to modify network configurations, such as:<h:ul>
+                  <h:li>Routing settings</h:li>
+                  <h:li>Switching settings</h:li>
+                </h:ul></h:li>
+                <h:li>Endpoints that change the SDN controller's power state, including:<h:ul>
+                  <h:li>Power on and off</h:li>
+                  <h:li>Reboot operations</h:li>
+                </h:ul></h:li>
+                <h:li>Endpoints that cause the SDN controller to change the power state of managed network devices, including:<h:ul>
+                  <h:li>Power on and off</h:li>
+                  <h:li>Reboot operations</h:li>
+                  <h:li>Endpoints that modify the SDN controller's security or hardening settins, including:<h:ul>
+                    <h:li>Security policies</h:li>
+                    <h:li>Hardening configurations</h:li>
+                  </h:ul></h:li>
+                </h:ul></h:li>
+                <h:li>Endpoints that cause the SDN controller to modify security or hardening settings on managed network devices.</h:li>
+                <h:li>Endpoints that change authentication or authorization controls on the SDN controller.</h:li>
+                <h:li>Endpoints that change authentication or authorization controls on managed network devices.</h:li>
+              </h:ul><h:br/><h:br/>
+              
+            </note>
             <aactivity>
               <TSS>The evaluator shall verify that the TSS identifies the API templates that can be applied to API objects, consistent with the claims made in FMT_API_EXT.1.1. The evaluator shall verify that the TSS describes any rules that are enforced on the definition of API templates.</TSS>
               <Guidance>The evaluator shall examine the operational guidance to verify that the guidance identifies the API templates that can be applied to API objects as well as the administrative permissions necessary on the TOE to apply these. If additional templates may be defined per FMT_API_EXT.1.2, the evaluator shall verify that the operational guidance specifies the rules that are applied to allowable templates, both in terms of syntax (i.e., what constitutes a valid template) and authorization (i.e., what role or other attribute permits an administrator to perform this function).</Guidance>
               <Tests>
-                <h:b>Test Notes</h:b><h:br/><h:br/>
-                The tester shall test all API endpoints that the SDN controller exposes for administering the SDN controller itself, and for inducing the SDN
-                controller to administer the network devices that it manages. For example, API endpoints which correspond to SDN controller functions,including,
-                but not limited to the following shall be tested: <h:ul>
-                  <h:li>Endpoints that modify the SDN controller's own configuration, including any changes to:<h:ul>
-                    <h:li>System settings</h:li>
-                    <h:li>Operational parameters</h:li>
-                  </h:ul></h:li>
-                  <h:li>Endpoints that cause the SDN controller to modify network configurations, such as:<h:ul>
-                    <h:li>Routing settings</h:li>
-                    <h:li>Switching settings</h:li>
-                  </h:ul></h:li>
-                  <h:li>Endpoints that change the SDN controller's power state, including:<h:ul>
-                    <h:li>Power on and off</h:li>
-                    <h:li>Reboot operations</h:li>
-                  </h:ul></h:li>
-                  <h:li>Endpoints that cause the SDN controller to change the power state of managed network devices, including:<h:ul>
-                    <h:li>Power on and off</h:li>
-                    <h:li>Reboot operations</h:li>
-                    <h:li>Endpoints that modify the SDN controller's security or hardening settins, including:<h:ul>
-                      <h:li>Security policies</h:li>
-                      <h:li>Hardening configurations</h:li>
-                    </h:ul></h:li>
-                  </h:ul></h:li>
-                  <h:li>Endpoints that cause the SDN controller to modify security or hardening settings on managed network devices.</h:li>
-                  <h:li>Endpoints that change authentication or authorization controls on the SDN controller.</h:li>
-                  <h:li>Endpoints that change authentication or authorization controls on managed network devices.</h:li>
-                </h:ul><h:br/><h:br/>
                 
                 The evaluator shall perform the following tests:
                 <testlist>
