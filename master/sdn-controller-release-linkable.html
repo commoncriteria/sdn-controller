@@ -983,41 +983,44 @@ Network Device
      <span class="assignable-content">list of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates</span>] against the following <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects [<b>assignment</b>: 
      <span class="assignable-content">list of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects</span>]<a id="period_170" href="#period_170">. </a>            </div></div>
           <div class="element"><div class="reqid" id="FMT_API_EXT.1.2"><a href="#FMT_API_EXT.1.2" class="abbr">FMT_API_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall permit <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates to be defined if they meet the following specified rules: [<b>assignment</b>: 
-     <span class="assignable-content">rules determining allowable templates</span>]<a id="period_171" href="#period_171">. </a></div></div>
+     <span class="assignable-content">rules determining allowable templates</span>]<a id="period_171" href="#period_171">. </a><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">              
+              The tester shall test all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints that the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller exposes for administering the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller itself, and for inducing the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>
+              controller to administer the network devices that it manages<a id="period_172" href="#period_172">. </a>For example, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints which correspond to <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functions,including,
+              but not limited to the following shall be tested: <ul>
+                <li>Endpoints that modify the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's own configuration, including any changes to:<ul>
+                  <li>System settings</li>
+                  <li>Operational parameters</li>
+                </ul></li>
+                <li>Endpoints that cause the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller to modify network configurations, such as:<ul>
+                  <li>Routing settings</li>
+                  <li>Switching settings</li>
+                </ul></li>
+                <li>Endpoints that change the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's power state, including:<ul>
+                  <li>Power on and off</li>
+                  <li>Reboot operations</li>
+                </ul></li>
+                <li>Endpoints that cause the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller to change the power state of managed network devices, including:<ul>
+                  <li>Power on and off</li>
+                  <li>Reboot operations</li>
+                  <li>Endpoints that modify the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's security or hardening settins, including:<ul>
+                    <li>Security policies</li>
+                    <li>Hardening configurations</li>
+                  </ul></li>
+                </ul></li>
+                <li>Endpoints that cause the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller to modify security or hardening settings on managed network devices<a id="period_173" href="#period_173">. </a></li>
+                <li>Endpoints that change authentication or authorization controls on the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller<a id="period_174" href="#period_174">. </a></li>
+                <li>Endpoints that change authentication or authorization controls on managed network devices<a id="period_175" href="#period_175">. </a></li>
+              </ul><br><br>
+              
+            </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></div>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that can be applied to <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects, consistent with the claims made in <a href="#FMT_API_EXT.1.1">FMT_API_EXT.1.1</a><a id="period_172" href="#period_172">. </a>The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes any rules that are enforced on the definition of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates<a id="period_173" href="#period_173">. </a></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall examine the operational guidance to verify that the guidance identifies the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that can be applied to <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects as well as the administrative permissions necessary on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to apply these<a id="period_174" href="#period_174">. </a>If additional templates may be defined per <a href="#FMT_API_EXT.1.2">FMT_API_EXT.1.2</a>, the evaluator shall verify that the operational guidance specifies the rules that are applied to allowable templates, both in terms of syntax (i.e., what constitutes a valid template) and authorization (i.e., what role or other attribute permits an administrator to perform this function)<a id="period_175" href="#period_175">. </a></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <b>Test Notes</b><br><br>
-                The tester shall test all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints that the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller exposes for administering the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller itself, and for inducing the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>
-                controller to administer the network devices that it manages<a id="period_176" href="#period_176">. </a>For example, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints which correspond to <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functions,including,
-                but not limited to the following shall be tested: <ul>
-                  <li>Endpoints that modify the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's own configuration, including any changes to:<ul>
-                    <li>System settings</li>
-                    <li>Operational parameters</li>
-                  </ul></li>
-                  <li>Endpoints that cause the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller to modify network configurations, such as:<ul>
-                    <li>Routing settings</li>
-                    <li>Switching settings</li>
-                  </ul></li>
-                  <li>Endpoints that change the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's power state, including:<ul>
-                    <li>Power on and off</li>
-                    <li>Reboot operations</li>
-                  </ul></li>
-                  <li>Endpoints that cause the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller to change the power state of managed network devices, including:<ul>
-                    <li>Power on and off</li>
-                    <li>Reboot operations</li>
-                    <li>Endpoints that modify the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's security or hardening settins, including:<ul>
-                      <li>Security policies</li>
-                      <li>Hardening configurations</li>
-                    </ul></li>
-                  </ul></li>
-                  <li>Endpoints that cause the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller to modify security or hardening settings on managed network devices<a id="period_177" href="#period_177">. </a></li>
-                  <li>Endpoints that change authentication or authorization controls on the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller<a id="period_178" href="#period_178">. </a></li>
-                  <li>Endpoints that change authentication or authorization controls on managed network devices<a id="period_179" href="#period_179">. </a></li>
-                </ul><br><br>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that can be applied to <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects, consistent with the claims made in <a href="#FMT_API_EXT.1.1">FMT_API_EXT.1.1</a><a id="period_176" href="#period_176">. </a>The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes any rules that are enforced on the definition of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates<a id="period_177" href="#period_177">. </a></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall examine the operational guidance to verify that the guidance identifies the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates that can be applied to <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects as well as the administrative permissions necessary on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to apply these<a id="period_178" href="#period_178">. </a>If additional templates may be defined per <a href="#FMT_API_EXT.1.2">FMT_API_EXT.1.2</a>, the evaluator shall verify that the operational guidance specifies the rules that are applied to allowable templates, both in terms of syntax (i.e., what constitutes a valid template) and authorization (i.e., what role or other attribute permits an administrator to perform this function)<a id="period_179" href="#period_179">. </a></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 
                 The evaluator shall perform the following tests:
                 <span class="testlist-"><ul>

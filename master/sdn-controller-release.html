@@ -999,7 +999,38 @@ Network Device
      <span class="assignable-content">list of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> objects</span>].
             </div></div>
           <div class="element"><div class="reqid" id="FMT_API_EXT.1.2"><a href="#FMT_API_EXT.1.2" class="abbr">FMT_API_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall permit <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates to be defined if they meet the following specified rules: [<b>assignment</b>: 
-     <span class="assignable-content">rules determining allowable templates</span>].</div></div>
+     <span class="assignable-content">rules determining allowable templates</span>].<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">              
+              The tester shall test all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints that the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller exposes for administering the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller itself, and for inducing the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>
+              controller to administer the network devices that it manages. For example, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints which correspond to <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functions,including,
+              but not limited to the following shall be tested: <ul>
+                <li>Endpoints that modify the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's own configuration, including any changes to:<ul>
+                  <li>System settings</li>
+                  <li>Operational parameters</li>
+                </ul></li>
+                <li>Endpoints that cause the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller to modify network configurations, such as:<ul>
+                  <li>Routing settings</li>
+                  <li>Switching settings</li>
+                </ul></li>
+                <li>Endpoints that change the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's power state, including:<ul>
+                  <li>Power on and off</li>
+                  <li>Reboot operations</li>
+                </ul></li>
+                <li>Endpoints that cause the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller to change the power state of managed network devices, including:<ul>
+                  <li>Power on and off</li>
+                  <li>Reboot operations</li>
+                  <li>Endpoints that modify the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's security or hardening settins, including:<ul>
+                    <li>Security policies</li>
+                    <li>Hardening configurations</li>
+                  </ul></li>
+                </ul></li>
+                <li>Endpoints that cause the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller to modify security or hardening settings on managed network devices.</li>
+                <li>Endpoints that change authentication or authorization controls on the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller.</li>
+                <li>Endpoints that change authentication or authorization controls on managed network devices.</li>
+              </ul><br/><br/>
+              
+            </span></div></div></div>
           
         </div>
         
