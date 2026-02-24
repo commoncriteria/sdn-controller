@@ -36,7 +36,7 @@
             products. 
             
             
-            An SDN Controller is a central component of an SDN system and is available as a logical or a physical device. An SDN Controller manages and distributes network policies, collects network routing and payload information from the control and data planes, and interfaces with user applications in the management plane for functions such as configuration and logging. Each of the planes in an SDN system is composed of multiple logical or physical components. The SDN Controller logically separates the data plane from the control plane and centralizes control which enhances network flexibility and scalability through more efficient network management.
+            An SDN controller is a central component of an SDN system and is available as a logical or a physical device. An SDN controller manages and distributes network policies, collects network routing and payload information from the control and data planes, and interfaces with user applications in the management plane for functions such as configuration and logging. Each of the planes in an SDN system is composed of multiple logical or physical components. The SDN controller logically separates the data plane from the control plane and centralizes control which enhances network flexibility and scalability through more efficient network management.
             
             This PP-Module is intended for use with the following Base-PP:
             
@@ -44,7 +44,7 @@
               <h:li>collaborative Protection Profile for Network Devices (NDcPP), Version 4.0</h:li>
             </h:ul>
             
-            This Base-PP is valid because an SDN controller is a specific implementation of a network device. Specifically, an SDN controller is one of many components of an SDN networking architecture. Specifically, an SDN controller manages and distributes network policies, collects routing and payload information from the data plane, and interfaces with user applications in the management plane. Each of the planes in an SDN system is composed of multiple logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane. 
+            This Base-PP is valid because an SDN controller is a specific implementation of a network device. Specifically, an SDN controller is one of many components of an SDN networking architecture. An SDN controller manages and distributes network policies, collects routing and payload information from the data plane, and interfaces with user applications in the management plane. Each of the planes in an SDN system is composed of multiple logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane. 
     </sec:Overview>
     <tech-terms>
       <suppress>Functional Package,Extended Package</suppress>
@@ -110,7 +110,7 @@
       dispersed networks. Compliant TOEs will implement the following functionality:
       <h:ul>
         <h:li>They can be remotely managed in a secure manner.</h:li>
-        <h:li>Any software/firmware updates are from a trusted source.</h:li>
+        <h:li>Any software or firmware updates are from a trusted source.</h:li>
         <h:li>Any interfaces to applications, VMs, and other devices are trusted (zone of trust).</h:li>
         <h:li>All security-relevant events are reported.</h:li>
         <h:li>The control plane and data plane are logically separated.</h:li>
@@ -127,7 +127,7 @@
           <h:li>All security functionality is contained and executed within the evaluation boundary of the SDN controller.</h:li>
         </h:ul>
       <h:p>  
-        The following figure shows the logical position of the SDN Controller between the management and data planes within the SDN infrastructure. This is a simplified diagram of the TOE's position in an SDN deployment. Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown.
+        The following figure shows the logical position of the SDN controller between the management and data planes within the SDN infrastructure. This is a simplified diagram of the TOE's position in an SDN deployment. Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown.
         <figure	entity="images/sdncontroller.png" title="High-Level SDN Representation" id="toe-as-apponos"/>
       </h:p>
         <h:p>
@@ -138,7 +138,7 @@
             <h:li>Network Address Translation (NAT) as a security function.</h:li>
             <h:li>If the TOE boundary is a single virtual machine, the hardware or firmware of the underlying platform.</h:li>
             <h:li>If the TOE boundary is a single virtual machine, the host operating system or runtime environment.</h:li>
-            <h:li>Specific security functionality that is not global to all SDN controllers (e.g. firewall, load balancing).</h:li>
+            <h:li>Specific security functionality that is not global to all SDN controllers (e.g., firewall, load balancing).</h:li>
             <h:li>Other objects belonging in the data plane.</h:li>
           </h:ul>
         </h:p>
@@ -162,7 +162,7 @@
         </usecase>
         <usecase title="Cluster (stand-alone or virtual)" id="standorvirtcluster">
           <description>
-            Regardless of whether the TOE is physical, virtual, or both, it may include multiple distinct instances (i.e. multiple connected physical appliances or VMs) that are combined into a distributed cluster.
+            Regardless of whether the TOE is physical, virtual, or both, it may include multiple distinct instances (i.e., multiple connected physical appliances or VMs) that are combined into a distributed cluster.
           </description>
         </usecase>
         <!--
@@ -203,15 +203,21 @@
 
         <threat name="T.INSECURE_NORTHBOUND_API">
           <description>
-            A malicious user or process may invoke insecure application programming interfaces (APIs) to inject malicious code to the TOE on a northbound interface or to retrieve sensitive information from it. Executing improper or unauthorized API functions or providing malicious input to achieve unintended or improper results from proper or authorized API functions can compromise network services. This can also result in sensitive data leakage.
+            A malicious user or process may invoke insecure application programming interfaces (APIs) to inject malicious code to the TOE on a northbound interface or to
+            retrieve sensitive information from it. Executing improper or unauthorized API functions or providing malicious input to achieve unintended or improper results from
+            proper or authorized API functions can compromise network services. This can also result in sensitive data leakage.
             
           </description>
-          <addressed-by></addressed-by>
-          <rationale></rationale>
-          <addressed-by></addressed-by>
-          <rationale></rationale>
-          <addressed-by></addressed-by>
-          <rationale></rationale>                  
+          <addressed-by>FTP_ITC.1 (Modified from Base-PP)</addressed-by><rationale>Mitigates the threat by defining the trusted communications channel used for SDN.</rationale>
+          <addressed-by>FAU_GEN.1/SDN</addressed-by><rationale>Mitigates the threat by generating audit records of management activities for the SDN.</rationale>
+          <addressed-by>FDP_ACC.1</addressed-by><rationale>Mitigates the threat by enforcing access control on all APIs used to access the TSF.</rationale>  
+          <addressed-by>FDP_ACF.1</addressed-by><rationale>Mitigates the threat by enforcing access control policies to subjects and objects that follow a set of defined
+            rules.</rationale>
+          <addressed-by>FMT_API_EXT.1</addressed-by><rationale>Mitigates the threat by allowing API templates to be defined against objects based on a set of defined 
+          rules.</rationale>
+          <addressed-by>FMT_MOF.1/SDN</addressed-by><rationale>Mitigates the threat by allowing only administrators to modify API functions.</rationale>
+          <addressed-by>FMT_SMF.1/SDN</addressed-by><rationale>Mitigates the threat by defining management functions for API access control and validity.</rationale>
+          <addressed-by>FMT_SMR.2/SDN</addressed-by><rationale>Mitigates the threat by defining specific functions for user and administrator roles.</rationale>
         </threat>
    
       </threats>
@@ -252,16 +258,16 @@
         text and <h:s>strikethrough</h:s> text for removed text. Refinements are only applied to significant technical
         changes to existing SFRs; minor presentation changes with no technical impact (such as British vs
         American spelling differences) are not marked as refinements. Refinements are also indicated when
-        an operation is added or substituted for an existing operation (e.g. the PP-Module completes an
+        an operation is added or substituted for an existing operation (e.g., the PP-Module completes an
         assignment in such a way that it introduces a selection into the assignment).<h:br/><h:br/>
         Note that for SFRs that are defined either in CC Part 2 or in this PP-Module’s Extended Components
         Definition, the refinement operation is used to indicate deviations from the defined component. For
         Base-PP SFRs that are modified by this PP-Module, the refinement operation is used to indicate
-        deviations from the Base-PP’s definition of the SFR (i.e. if the Base-PP refined an SFR and that
+        deviations from the Base-PP’s definition of the SFR (i.e., if the Base-PP refined an SFR and that
         change is not affected by this PP-Module, it is not shown here as a refinement).</h:li><h:br/>
       <h:li>Selections are indicated with <h:i>italicized</h:i> text.</h:li>
       <h:li>Iteration is indicated by appending the SFR name with a slash and unique identifier suggesting the
-        purpose of the iteration, e.g. ‘/SDN’ for an SFR relating to SDN functionality.</h:li>  
+        purpose of the iteration, e.g., ‘/SDN’ for an SFR relating to SDN functionality.</h:li>  
       <h:li>Extended SFRs are identified by having a label “EXT” after the SFR name.</h:li>
     </h:ul>
     Note that selections and assignments to be completed by the ST author are preceded with “selection:”
@@ -285,15 +291,21 @@
               <base-sfr-spec cc-id="ftp_itc.1" id="nd-ftp-itc-1" title="Inter-TSF Trusted Channel">
                 <consistency-rationale>This PP-Module expands the Base-PP SFR to define additional entities for trusted channels.</consistency-rationale>
                 <description>
-                  <h:p>This SFR has been modified from its definition in the NDcPP to define external interfaces to environmental entities that are particular to this specific technology type.</h:p>
+                  <h:p>This SFR has been modified from its definition in the NDcPP to define external interfaces to environmental entities that are particular to this specific
+                    technology type.</h:p>
                   <h:p>The text of the requirement is replaced with:</h:p>
                   <h:p>
-                    <h:b>FTP_ITC.1.1</h:b> The TSF shall be capable of using [<h:b>selection:</h:b><h:i>IPsec, SSH as defined in the Functional Package for SSH, TLS as defined in the Functional Package for TLS, DTLS as defined in the Functional Package for TLS, HTTPS</h:i>] to provide a trusted communication channel between itself and authorized IT entities supporting the following capabilities: audit server, <h:b>northbound components, southbound components,</h:b> [<h:b>selection:</h:b> <h:i>authentication server, external east/west components [<h:b>assignment:</h:b> other capabilities], no other capabilities</h:i>] that is logically distinct from other
-                  communication channels and provides assured identification of its end points
+                    <h:b>FTP_ITC.1.1</h:b> The TSF shall be capable of using [<h:b>selection:</h:b><h:i> IPsec, SSH as defined in the Functional Package for SSH, TLS as defined
+                      in the Functional Package for TLS, DTLS as defined in the Functional Package for TLS, HTTPS</h:i>] to provide a trusted communication channel between
+                    itself and authorized IT entities supporting the following capabilities: audit server, <h:b>northbound components, southbound components,</h:b>
+                    [<h:b>selection:</h:b> <h:i>authentication server, <h:b>external east/west components</h:b> [<h:b>assignment:</h:b> other capabilities], no other
+                      capabilities</h:i>] that is logically distinct from other
+                  communication channels and provides assured identification of its endpoints
                   and protection of the channel data from disclosure and detection of modification of the channel data.
                   </h:p>
                   <h:p>
-                    <h:b>FTP_ITC.1.2</h:b> The TSF shall permit [<h:b>selection:</h:b><h:i> the TSF, the authorized IT entities</h:i>] to initiate communication via the trusted channel.
+                    <h:b>FTP_ITC.1.2</h:b> The TSF shall <h:b>permit</h:b> [<h:b>selection:</h:b><h:i> the TSF, the authorized IT entities</h:i>] <h:b>to</h:b> initiate
+                    communication via the trusted channel.
                   </h:p>
                   <h:p>
                     <h:b>FTP_ITC.1.3</h:b> The TSF shall initiate communication via the trusted channel for
@@ -308,6 +320,7 @@
       </modified-sfrs>
     
       <additional-sfrs/>
+
       <con-toe>
         When this PP-Module is used to extend the NDcPP, the TOE type for the overall TOE is still a network device. The TOE boundary is simply extended to 
         include SDN controller functionality that is provided by the network device. 
@@ -315,11 +328,20 @@
       <con-sec-prob>
         The threats defined by this PP-Module (see section 3.1) supplement those defined in the NDcPP as follows:
       </con-sec-prob>
-      <con-op-en>
-        TBD
-      </con-op-en>
-      <con-mod ref=""></con-mod>
+      <con-obj/>
+      <con-op-en/>       
+     
+      <con-mod ref="T.INSECURE_NORTHBOUND_API">This threat represents the same attack scenario as T.UNAUTHORISED_ADMINISTRATOR_ACCESS and T.UNTRUSTED_COMMUNICATION_CHANNELS, but
+        applies to the north-south interface that is outside the scope originally defined by the Base-PP.</con-mod>
       
+      <con-mod ref="nd-ftp-itc-1">This SFR modifies the Base-PP to define external interfaces particular to SDN controllers.</con-mod>
+      <con-mod ref="fau-gen-1-sdn">This SFR iterates the Base-PP to account for if the SDN controller has a different logging mechanism from the Base-PP use.</con-mod>
+      <con-mod ref="fdp-acc-1">This SFR defines access control policies that are specific to the PP-Module.</con-mod>
+      <con-mod ref="fdp-acf-1">This SFR defines access control policies to subjects and objects based on a set of rules and is specific to the PP-Module.</con-mod>
+      <con-mod ref="fmt-api-ext-1">This SFR defines API templates and the set of rules they must follow, which is specific to this PP-Module. </con-mod>
+      <con-mod ref="fmt-mof-1-sdn">This SFR iterates the Base-PP to add specific abilities of the API administrator to modify API function behavior.</con-mod>
+      <con-mod ref="fmt-smf-1-sdn">This SFR iterates the Base-PP to add management functions for API access control and validity, which is not defined in the Base-PP.</con-mod>
+      <con-mod ref="fmt-smr-2-sdn">This SFR iterates the Base-PP to define specific roles for API user and administrator, which is not defined in the Base-PP.</con-mod>    
 
     </base-pp>
     
@@ -334,17 +356,17 @@
             The SDN controller must have maximum auditing and logging of all unauthorized API usage, especially API usage attempts from users that are not in the API roles.
             -->
             
-            The TSF shall implement functionality to generate audit data of the following <h:b>SDN</h:b> auditable events:
+            The TSF shall <h:b>implement functionality</h:b> to generate audit data of the following <h:b>SDN</h:b> auditable events:
             <h:ol type="a">
-              <h:li>Startup and shutdown of the audit functions;</h:li>
-              <h:li>All auditable events for [<h:i>not specified</h:i>] level of audit;</h:li>
+              <h:li>Start-up and shutdown of the audit functions;</h:li>
+              <h:li>All auditable events for [<h:i>not specified</h:i>] level of audit;</h:li>[<h:i>
               <h:li>All unauthorized usage of all API endpoints, including create, read, update, and delete.</h:li>
               <h:li>All authorized usage of all API endpoints, including create, read, update, and delete.</h:li>
               <h:li>Full HTTP REST request parameters and values of any API requests sent to the SDNC controller API.</h:li>
               <h:li>All HTTP Response Codes returned from any HTTP API requests sent to the SDNC controller API.</h:li>
               <h:li>All error codes and error messages from usage of the API.</h:li>
               <h:li>[<h:i>all auditable events for mandatory SFRs specified in <xref g="t-audit-mandatory"/>, 
-                selected SFRs in <xref g="t-audit-sel-based"/></h:i>].</h:li>
+                selected SFRs in <xref g="t-audit-sel-based"/></h:i>].</h:li></h:i>]
             </h:ol>
           </title>
         </f-element>
@@ -354,24 +376,24 @@
               <h:li>Date and time of the event, type of event, subject identity, (if relevant) the outcome 
                 (success or failure) of the event; and</h:li>         
               <h:li>For each audit event type, based on the auditable event definitions of the functional components 
-                included in the PP<h:b>-Module</h:b>/ST, [<h:i>Additional Audit Record Contents as specified in 
+                included in the PP, PP-Module, functional package, or ST, [<h:i>Additional Audit Record Contents as specified in 
                   <xref g="t-audit-mandatory"/>, <xref g="t-audit-sel-based"/></h:i>].</h:li>
             </h:ol>
           </title>
-          <note role="Application"><h:p>This SFR mandates that audit data be generated for startup and shutdown of the audit functions, which is a duplicate of FAU_GEN.1.1 in the Base-PP. If the TOE has one single audit mechanism, then the events used to conform to the Base-PP requirement also suffice here. Startup and shutdown of the audit functions in the context of the SDN controller portion of the TOE only need to be logged separately if the SDN controller has a different logging mechanism from what the Base-PP uses. Note also that in many cases the startup and shutdown of the audit functions cannot be forced on its own because the audit functions may be operational by default. In this case, logging for startup and shutdown of the TOE itself is sufficient. The purpose of this part of the requirement is to ensure that a malicious user cannot disable auditing to evade detection of other malicious use of the TOE.
+          <note role="Application"><h:p>This SFR mandates that audit data be generated for start-up and shutdown of the audit functions, which is a duplicate of FAU_GEN.1.1 in the Base-PP. If the TOE has one single audit mechanism, then the events used to conform to the Base-PP requirement also suffice here. Start-up and shutdown of the audit functions in the context of the SDN controller portion of the TOE only need to be logged separately if the SDN controller has a different logging mechanism from what the Base-PP uses. Note also that in many cases the start-up and shutdown of the audit functions cannot be forced on its own because the audit functions may be operational by default. In this case, logging for start-up and shutdown of the TOE itself is sufficient. The purpose of this part of the requirement is to ensure that a malicious user cannot disable auditing to evade detection of other malicious use of the TOE.
           </h:p><h:p>
             The auditable events for the 'not specified' level of audit is intended to communicate that this PP-Module does not claim one of the pre-defined audit levels specified in CC Part 2; this is inherently satisfied by demonstrating that the TSF generates appropriate audit data for all events that are explicitly required by the PP-Module.
           </h:p>
           </note>
           <aactivity>
-          <TSS><h:p>>The evaluator shall verify that the TSS identifies the auditable events generated by the TOE, and that they include the auditable events specified in this SFR along with the required audit data. The evaluator shall also verify that the TSS identifies the mechanism used for generating audit events such that it can be determined whether the auditable events required by this PP-Module use the same audit mechanism as what the Base-PP requires for FAU_GEN.1 or whether there are alternate mechanisms that are used.
+          <TSS><h:p>The evaluator shall verify that the TSS identifies the auditable events generated by the TOE, and that they include the auditable events specified in this SFR along with the required audit data. The evaluator shall also verify that the TSS identifies the mechanism used for generating audit events such that it can be determined whether the auditable events required by this PP-Module use the same audit mechanism as what the Base-PP requires for FAU_GEN.1 or whether there are alternate mechanisms that are used.
           </h:p>
           <h:p>The requirement in the Base-PP to ensure that all auditable events can be transmitted to the operational environment via a secure channel is applicable to the entire TOE, even when PP-Modules are claimed. Therefore, if the TSF does have any audit mechanisms that are used specifically to generate audit records for this PP-Module's auditable events, the evaluator shall ensure that these mechanisms are discussed in the context of the Base-PP's requirements for protection of audit data in transit, and at rest if applicable.
           </h:p>
           </TSS>
           <Guidance>The evaluator shall verify that the operational guidance identifies the auditable events that are generated by the TOE in support of this SFR and includes representative audit records of each event to demonstrate the format of each record. The evaluator shall verify that each sample audit record includes the fields required for each auditable event per FAU_GEN.1.2/SDN.
           </Guidance>
-          <Tests>For each auditable event, the evaluator shall perform actions that are intended to cause a record of the event to be generated and verify that this occurs and that the required fields are present and accurate. If the audit mechanism used to generate any event differs from the mechanism(s) claimed in the Base-PP for FAU_GEN.1, the evaluator shall also perform the associated test activities for other claimed FAU class requirements to verify that the audit data is transferred to an external entity over the claimed trusted channel and that if audit data is stored locally, that it has the appropriate data at rest protections applied.
+          <Tests>For each auditable event, the evaluator shall perform actions that are intended to cause a record of the event to be generated and verify that this occurs and that the required fields are present and accurate. If the audit mechanism used to generate any event differs from the mechanisms claimed in the Base-PP for FAU_GEN.1, the evaluator shall also perform the associated test activities for other claimed FAU class requirements to verify that the audit data is transferred to an external entity over the claimed trusted channel and that if audit data is stored locally, that it has the appropriate data at rest protections applied.
           </Tests>
           </aactivity>
         </f-element>
@@ -437,7 +459,7 @@
         <aactivity>
           <TSS>The evaluator shall verify that the TSS describes the TOE's API access control policy in sufficient detail to conclude, for each API, the operations that can be performed on or by the API, and the authorization required to perform those operations. If the TOE implements explicit allowlisting or denylisting to override any default or configurable policy rules, the evaluator shall verify that these are described. In cases where multiple contradictory rules exist to define authorizations, the evaluator shall verify that the TSS describes the precedence in which these rules are prioritized.
           </TSS>
-          <Guidance><h:p>For each API, the evaluator shall verify that the operational guidance identifies, for each API, the mechanism that exist to control access to that API, and how to perform such configuration. The evaluator shall also verify that the operational guidance defines any default policy rules that may exist. The evaluator shall also verify that the operational guidance describes the ordering of rule processing such that it is clear what behavior is followed in the event that multiple contradictory rules exist.  If this is configurable (e.g. because rules are enforced in a configurable priority order), the evaluator shall verify that the operational guidance provides instructions on how to perform this configuration.
+          <Guidance><h:p>The evaluator shall verify that the operational guidance identifies, for each API, the mechanism that exist to control access to that API, and how to perform such configuration. The evaluator shall also verify that the operational guidance defines any default policy rules that may exist. The evaluator shall also verify that the operational guidance describes the ordering of rule processing such that it is clear what behavior is followed in the event that multiple contradictory rules exist.  If this is configurable (e.g., because rules are enforced in a configurable priority order), the evaluator shall verify that the operational guidance provides instructions on how to perform this configuration.
           </h:p><h:p>Additionally, the evaluator shall verify that each API is defined in terms of the operations that can be performed by or against them and the valid parameters for these operations. 
           </h:p>
           </Guidance>
@@ -445,8 +467,8 @@
             <testlist>
               <test>Default policy test: the evaluator shall review the operational guidance to determine what default policy rules (if any) are enforced by the TOE. For each such rule, the evaluator shall attempt to access the TOE's APIs in a manner prohibited by the default policy rule and verify that access is prohibited as expected. The evaluator shall then access these APIs as a subject with sufficient authorization and verify that the requested access is permitted.
               </test>
-              <test>Configured policy test: For each API policy element that is configurable (e.g., by determining what users or groups are authorized to access a particular API), the evaluator shall follow the instructions in the operational guidance to configure positive and negative test scenarios where access is allowed and rejected. The evaluator shall then access the TOE as subjects that are and are not authorized to access the particular API and verify that the TSF allows or rejects the access as configured.</test>
-              <test>Contradictory policy test: For each situation identified in the ST where contradictory rules may exist (e.g. an operation is both allowlisted and denylisted), the evaluator shall apply these contradictory rules to the API, attempt to access the API in such a way that their authorization to do so is ambiguous (i.e. one rule permits the action and one rejects it), and verify that whether or not the attempt is authorized resolves in the manner specified in the TSS. If this functionality is configurable (e.g., the rules are enforced in a set order), the evaluator shall follow the steps necessary to change the priority of their enforcement, re-attempt the same access, and verify that the attempt resolves in the manner specified by the new configuration.</test>
+              <test>Configured policy test: For each API policy element that is configurable (e.g., by determining what users or groups are authorized to access a particular API), the evaluator shall follow the instructions in the operational guidance to configure positive and negative test scenarios where access is allowed and rejected. The evaluator shall then access the TOE as subjects that are and are not authorized to access the particular API, and verify that the TSF allows or rejects the access as configured.</test>
+              <test>Contradictory policy test: For each situation identified in the ST where contradictory rules may exist (e.g., an operation is both allowlisted and denylisted), the evaluator shall apply these contradictory rules to the API, attempt to access the API in such a way that their authorization to do so is ambiguous (i.e., one rule permits the action and one rejects it), and verify that whether or not the attempt is authorized resolves in the manner specified in the TSS. If this functionality is configurable (e.g., the rules are enforced in a set order), the evaluator shall follow the steps necessary to change the priority of their enforcement, re-attempt the same access, and verify that the attempt resolves in the manner specified by the new configuration.</test>
               <test>Validity test: For each API, the evaluator shall connect a network traffic generator to the API and configure it to inject bad data into API requests that follow operations to legitimately assume a role that is authorized to invoke the API (in other words, attempt to perform an invalid operation as a valid subject). "Bad data" in this case is determined by the operational guidance's definition for what values are acceptable for the parameters of a particular API. In all cases, attempts to invoke an API using invalid data shall fail.</test>
             </testlist>
           </Tests>
@@ -455,11 +477,21 @@
       <audit-event/>
       </f-component>
     </section>  
-     
    
       <section title="Security Management (FMT)" id="man-fmt">
         <!-- FMT_API_EXT.1 -->
+       <ext-comp-def fam-id="FMT_API_EXT" title="Management of API Behavior">
+        <fam-behavior>This family defines requirements for management of API behavior.
+        </fam-behavior>
+      </ext-comp-def>
+        
         <f-component id="fmt-api-ext-1" cc-id="fmt_api_ext.1" name="Management of API Behavior">
+          <consistency-rationale/>
+          <comp-lev>requires the TSF to define API templates and determine whether they meet specified rules.</comp-lev>
+          <management>There are no management activities seen.</management>
+          <audit>The following actions should be auditable if FAU_GEN Security audit data generation is included in the PP, PP-Module, functional package, or ST:<comment>This needs to be completed after auditable events are defined.</comment></audit>
+          <dependencies><h:br/>FCS_CKM.6 Timing and Event of Cryptographic Key Destruction</dependencies>
+          
           <f-element>
             <title>
               <!--
@@ -473,12 +505,42 @@
             <aactivity>
               <TSS>The evaluator shall verify that the TSS identifies the API templates that can be applied to API objects, consistent with the claims made in FMT_API_EXT.1.1. The evaluator shall verify that the TSS describes any rules that are enforced on the definition of API templates.</TSS>
               <Guidance>The evaluator shall examine the operational guidance to verify that the guidance identifies the API templates that can be applied to API objects as well as the administrative permissions necessary on the TOE to apply these. If additional templates may be defined per FMT_API_EXT.1.2, the evaluator shall verify that the operational guidance specifies the rules that are applied to allowable templates, both in terms of syntax (i.e., what constitutes a valid template) and authorization (i.e., what role or other attribute permits an administrator to perform this function).</Guidance>
-              <Tests>The evaluator shall perform the following tests:
+              <Tests>
+                <h:b>Test Notes</h:b><h:br/><h:br/>
+                The tester shall test all API endpoints that the SDN controller exposes for administering the SDN controller itself, and for inducing the SDN
+                controller to administer the network devices that it manages. For example, API endpoints which correspond to SDN controller functions,including,
+                but not limited to the following shall be tested: <h:ul>
+                  <h:li>Endpoints that modify the SDN controller's own configuration, including any changes to:<h:ul>
+                    <h:li>System settings</h:li>
+                    <h:li>Operational parameters</h:li>
+                  </h:ul></h:li>
+                  <h:li>Endpoints that cause the SDN controller to modify network configurations, such as:<h:ul>
+                    <h:li>Routing settings</h:li>
+                    <h:li>Switching settings</h:li>
+                  </h:ul></h:li>
+                  <h:li>Endpoints that change the SDN controller's power state, including:<h:ul>
+                    <h:li>Power on and off</h:li>
+                    <h:li>Reboot operations</h:li>
+                  </h:ul></h:li>
+                  <h:li>Endpoints that cause the SDN controller to change the power state of managed network devices, including:<h:ul>
+                    <h:li>Power on and off</h:li>
+                    <h:li>Reboot operations</h:li>
+                    <h:li>Endpoints that modify the SDN controller's security or hardening settins, including:<h:ul>
+                      <h:li>Security policies</h:li>
+                      <h:li>Hardening configurations</h:li>
+                    </h:ul></h:li>
+                  </h:ul></h:li>
+                  <h:li>Endpoints that cause the SDN controller to modify security or hardening settings on managed network devices.</h:li>
+                  <h:li>Endpoints that change authentication or authorization controls on the SDN controller.</h:li>
+                  <h:li>Endpoints that change authentication or authorization controls on managed network devices.</h:li>
+                </h:ul><h:br/><h:br/>
+                
+                The evaluator shall perform the following tests:
                 <testlist>
                 <test>For each API template that can be applied to API objects, the evaluator shall verify that a sufficiently privileged administrator on the TOE is able to apply the template to the supported objects.</test>
-                  <test>[Conditional: the TOE supports the definition of additional templates] The evaluator shall follow the operational guidance to define a new API template that is consistent with the defined rules for both syntax and authorization and verify that the template is successfully defined.</test>
-                  <test>[Conditional: the TOE supports the definition of additional templates] If the ability to define additional templates is restricted based on administrative role or other attribute, the evaluator shall access the TOE as an insufficiently privileged administrator to define new API templates and verify that there is no mechanism by which a new template can be defined.</test>
-                  <test>[Conditional: the TOE supports the definition of additional templates] The evaluator shall access the TOE with an administrator account that is sufficiently privileged to define additional API templates and verify that a template is not created if it is invalid with respect to its syntax or composition.</test>
+                  <test>[Conditional: The TOE supports the definition of additional templates] The evaluator shall follow the operational guidance to define a new API template that is consistent with the defined rules for both syntax and authorization and verify that the template is successfully defined.</test>
+                  <test>[Conditional: The TOE supports the definition of additional templates] If the ability to define additional templates is restricted based on administrative role or other attribute, the evaluator shall access the TOE as an insufficiently privileged administrator to define new API templates and verify that there is no mechanism by which a new template can be defined.</test>
+                  <test>[Conditional: The TOE supports the definition of additional templates] The evaluator shall access the TOE with an administrator account that is sufficiently privileged to define additional API templates and verify that a template is not created if it is invalid with respect to its syntax or composition.</test>
                 </testlist>
               </Tests>
             </aactivity>
@@ -494,13 +556,13 @@
               Manipulation Control: The SDN controller must let the administrator specify how the allowed API objects can be manipulated.
                 -->
               
-              The TSF shall restrict the ability to [<h:i>modify the behaviour of</h:i>] the functions [<h:i>API access function as defined by FDP_ACC.1, API validity function as defined by FMT_API_EXT.1</h:i>] to [<h:i>API Administrator</h:i>].
+              The TSF shall restrict the ability to [<h:i>modify the behaviour of</h:i>] the functions [<h:i>API access function as defined by FDP_ACC.1, API validity function as defined by FMT_API_EXT.1</h:i>] to [<h:i>API administrator</h:i>].
             </title>
             <note role="Application">
-              The restriction of modifying API access and validity functions to the API Administrator is intended to imply that the API User does not have the ability to modify API functions. The API User role having read-only access to these functions is not precluded by this requirement, as this requirement only relates to the ability to modify the behavior of the API.  
+              The restriction of modifying API access and validity functions to the API administrator is intended to imply that the API user does not have the ability to modify API functions. The API user role having read-only access to these functions is not precluded by this requirement, as this requirement only relates to the ability to modify the behavior of the API.  
             </note>
             <aactivity>
-              <TSS>The evaluator shall examine the TSS to verify that it identifies the API access and API validity functions provided by the TOE and verify that an API Administrator is the only subject that is authorized to modify the behavior of these functions (e.g., by determining the subjects that are authorized to access a particular function). Note that the "API Administrator" role is a necessary but not sufficient condition to be authorized to perform management functions; if the TSF implements more granular controls (e.g., different API Administrators have access to different sets of functions based on role or other subject attribute), the evaluator shall verify that the TSS includes sufficient data to determine that it fully describes the authorizations needed to perform management functions against the TOE's APIs.</TSS>
+              <TSS>The evaluator shall examine the TSS to verify that it identifies the API access and API validity functions provided by the TOE and verify that an API administrator is the only subject that is authorized to modify the behavior of these functions (e.g., by determining the subjects that are authorized to access a particular function). Note that the "API administrator" role is a necessary but not sufficient condition to be authorized to perform management functions; if the TSF implements more granular controls (e.g., different API administrators have access to different sets of functions based on role or other subject attribute), the evaluator shall verify that the TSS includes sufficient data to determine that it fully describes the authorizations needed to perform management functions against the TOE's APIs.</TSS>
               <Guidance>The evaluator shall examine the operational guidance to verify that it describes the TOE's claimed management functions and the privileges required to execute those functions.</Guidance>
               <Tests>For each claimed management function, the evaluator shall access the TOE as a legitimate user that lacks privileges to perform the function, attempt to perform the function, and verify that it fails (or that there is no mechanism by which an attempt can even be made). If multiple conditions define the ability to perform the function, the evaluator shall repeat this activity as needed to verify that the absence of each condition is sufficient to prevent the execution of the function. The evaluator shall then access the TOE with all necessary authorities to perform the function and verify that it is successful.</Tests>
             </aactivity>
@@ -520,8 +582,8 @@
             </title>
             <note role="Application">API access control refers to configuring the allowlist for the permitted API templates. API validity refers to the ability to defining the templates for how API calls must be performed to access API objects. The intent of this requirement is for the TSF to have the ability to define both when and how a given API can be invoked.</note>
             <aactivity>
-              <TSS>The evaluator shall verify that the TSS identifies each management function that can be performed by the TOE, whether that is to execute a given function as defined by FDP_ACC.1, or to modify the behavior of how the function is executed as defined by FMT_MOF.1/SDN.</TSS>
-              <Guidance>The evaluator shall examine the operational guidance to verify that it provides instructions on how to perform each management specified in this SFR.</Guidance>
+              <TSS>The evaluator shall verify that the TSS identifies each management function that can be performed by the TOE, whether that is to execute a given function as defined by FDP_ACC.1 or to modify the behavior of how the function is executed as defined by FMT_MOF.1/SDN.</TSS>
+              <Guidance>The evaluator shall examine the operational guidance to verify that it provides instructions on how to perform each management function specified in this SFR.</Guidance>
               <Tests>For each specified management function, the evaluator shall access the TOE as a subject that is sufficiently privileged to perform the function, execute the function, and verify that executing the function has the intended effect.</Tests>
             </aactivity>
           </f-element>
@@ -533,19 +595,19 @@
         <f-component id="fmt-smr-2-sdn" cc-id="fmt_smr.2" name="Restrictions on Security Roles (SDN)" iteration="SDN">
           <f-element>
             <title>
-              The TSF shall maintain the roles: [<h:i>API User, API Administrator</h:i>].
+              The TSF shall maintain the roles: [<h:i>API user, API administrator</h:i>].
             </title>
           </f-element>
           <f-element>
             <title>The TSF shall be able to associate users with roles.</title>
           </f-element>
           <f-element>
-            <title>The TSF shall ensure that the conditions [<h:i>API User and API Administrator roles cannot be held simultaneously</h:i>] are satisfied.</title>
-            <note role="Application">The Base-PP defines FMT_SMR.2 for the "Security Administrator" role that must be available on a network device in general. This iteration supplements that by making sure that API User and API Administrator roles exist for SDN functionality but are logically separated. The Security Administrator as defined by that SFR may also be an API Administrator as defined by this iteration, or management of general security functionality may be separated from API administration such that they are granted by different roles.</note>
+            <title>The TSF shall ensure that the conditions [<h:i>API user and API administrator roles cannot be held simultaneously</h:i>] are satisfied.</title>
+            <note role="Application">The Base-PP defines FMT_SMR.2 for the "Security Administrator" role that must be available on a network device in general. This iteration supplements that by making sure that API user and API administrator roles exist for SDN functionality but are logically separated. The security administrator as defined by that SFR may also be an API administrator as defined by this iteration, or management of general security functionality may be separated from API administration such that they are granted by different roles.</note>
           <aactivity>
-            <TSS>The evaluator shall verify that the TSS defines the roles available to subjects on the TOE, and that these may be categorized into API User and API Administrator roles. The TOE does not need to implement roles with these specified names, but based on the description of the TOE's privilege model it should be clear how the roles and permissions on the TOE map to the concept of an API User that may only execute functions and an API Administrator that has the ability to modify the behavior of those functions.</TSS>
-            <Guidance>The evaluator shall verify that the operational guidance identifies the administrative roles available for subjects on the TOE and the mechanism by which subjects are associated with roles. The evaluator shall also verify that this identifies how the API User and API Administrator role cannot be held simultaneously (e.g., because a user may only have one role and these are defined as two separate roles; because write privilege and execute privilege cannot be held by the same subject for any given API).</Guidance>
-            <Tests>The evaluator shall follow the operational guidance to associate subjects with the roles defined by the TOE to verify that subjects may be given an API User role or an API Administrator role. The evaluator shall attempt to assign a subject to both roles and verify that this fails or that no mechanism exists to attempt this.</Tests>
+            <TSS>The evaluator shall verify that the TSS defines the roles available to subjects on the TOE, and that these may be categorized into API user and API administrator roles. The TOE does not need to implement roles with these specified names, but based on the description of the TOE's privilege model it should be clear how the roles and permissions on the TOE map to the concept of an API user that may only execute functions and an API administrator that has the ability to modify the behavior of those functions.</TSS>
+            <Guidance>The evaluator shall verify that the operational guidance identifies the administrative roles available for subjects on the TOE and the mechanism by which subjects are associated with roles. The evaluator shall also verify that this identifies how the API user and API administrator role cannot be held simultaneously (e.g., because a user may only have one role and these are defined as two separate roles; because write privilege and execute privilege cannot be held by the same subject for any given API).</Guidance>
+            <Tests>The evaluator shall follow the operational guidance to associate subjects with the roles defined by the TOE to verify that subjects may be given an API user role or an API administrator role. The evaluator shall attempt to assign a subject to both roles and verify that this fails or that no mechanism exists to attempt this.</Tests>
           </aactivity>
           </f-element>
           <audit-event/>
@@ -590,7 +652,7 @@
       argument for where the unpredictability in the source comes from and why there is confidence
       in the entropy source delivering sufficient entropy for the uses made of the RBG output (by
       this particular OS). This argument will include a description of the expected min-entropy
-      rate (i.e. the minimum entropy (in bits) per bit or byte of source data) and explain that
+      rate (i.e., the minimum entropy (in bits) per bit or byte of source data) and explain that
       sufficient entropy is going into the OS randomizer seeding process. This discussion will be
       part of a justification for why the entropy source can be relied upon to produce bits with
       entropy. <h:br/> The amount of information necessary to justify the expected min-entropy rate
