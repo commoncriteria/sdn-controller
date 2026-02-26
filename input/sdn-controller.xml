@@ -16,7 +16,7 @@
     <ReferenceTable>
       <PPVersion>1.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
-      <PPPubDate>2024-10-31</PPPubDate>
+      <PPPubDate>2026-02-27</PPPubDate>
       <Keywords>SDN; software defined networking</Keywords>      
     </ReferenceTable>
   </PPReference>
@@ -24,8 +24,8 @@
   <RevisionHistory>
     <entry>
       <version>1.0</version>
-      <date>2024-10-31</date>
-      <subject>First draft of version 1.0 for comment</subject>
+      <date>2026-02-27</date>
+      <subject>Initial release</subject>
     </entry>
   </RevisionHistory>  
   
@@ -109,29 +109,28 @@
       are under its control. This can expand across multiple distributed controllers for large, complex, or geographically
       dispersed networks. Compliant TOEs will implement the following functionality:
       <h:ul>
-        <h:li>They can be remotely managed in a secure manner.</h:li>
-        <h:li>Any software or firmware updates are from a trusted source.</h:li>
-        <h:li>Any interfaces to applications, VMs, and other devices are trusted (zone of trust).</h:li>
-        <h:li>All security-relevant events are reported.</h:li>
-        <h:li>The control plane and data plane are logically separated.</h:li>
-        <h:li>The control plane and management plane are logically separated.</h:li>
-        <h:li>Data that is collected by the control plane and distributed to the data plane, such as flow tables and configurations, is protected.</h:li>
-        <h:li>Data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics, is protected.</h:li>
-        <h:li>Data that is collected, distributed, and shared within the control plane, such as when multiple SDN controllers exist in the architecture, is protected.</h:li>
+        <h:li>Ability to support secure remote administration.</h:li>
+        <h:li>Ability to apply software or firmware updates from a trusted source.</h:li>
+        <h:li>Secure interfaces to remote entities such as applications, VMs, and other devices (zone of trust).</h:li>
+        <h:li>Reporting of all security-relevant events.</h:li>
+        <h:li>Logical separateion of the management plane, control plane, and data plane.</h:li>
+        <h:li>Protection of data that is collected by the control plane and distributed to the data plane, such as flow tables and configuration.</h:li>
+        <h:li>Protection of data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics.</h:li>
+        <h:li>Protection of data that is collected, distributed, and shared within the control plane, such as when multiple SDN controllers exist in the architecture.</h:li>
       </h:ul>
       <sec:TOE_Boundary>
         The TOE boundary for an SDN controller is one or more physical or virtual devices. An SDN controller may be a distributed TOE, as defined by the Base-PP.
         <h:ul>
           <h:li>In a physical standalone SDN controller device, the device's hardware, firmware, and software define the evaluation boundary.</h:li>
-          <h:li>In a virtual SDN controller, the software of the Virtual Machine (VM) defines the evaluation boundary.</h:li>
+          <h:li>In a virtual SDN controller, the software of the Virtual Machine (VM) defines the evaluation boundary. The Base-PP includes guidance on whether the evaluation boundary includes the virtualization system on which the VM runs.</h:li>
           <h:li>All security functionality is contained and executed within the evaluation boundary of the SDN controller.</h:li>
         </h:ul>
       <h:p>  
         The following figure shows the logical position of the SDN controller between the management and data planes within the SDN infrastructure. This is a simplified diagram of the TOE's position in an SDN deployment. Other dependencies that are necessary to meet security requirements, such as an audit server, remote management interface, or source of certificate revocation information are not shown.
-        <figure	entity="images/sdncontroller.png" title="High-Level SDN Representation" id="toe-as-apponos"/>
+        <figure	entity="images/sdncontroller.png" title="High-Level SDN Representation" id="sdn-toe"/>
       </h:p>
         <h:p>
-          The following elements of an SDN controller are outside the scope of this PP-Module and are therefore considered to be non-interfering with respect to security, even if they are included as part of a compliant product:
+          The following elements of an SDN controller are outside the scope of this PP-Module and are therefore considered to be non-interfering with respect to its security, even if they are included as part of a compliant product:
           <h:ul>
             <h:li>Examination of data plane content, such as virus or email scanning.</h:li>
             <h:li>Intrusion detection or prevention capabilities.</h:li>
@@ -141,6 +140,8 @@
             <h:li>Specific security functionality that is not global to all SDN controllers (e.g., firewall, load balancing).</h:li>
             <h:li>Other objects belonging in the data plane.</h:li>
           </h:ul>
+        </h:p><h:p>
+          Other PP-Modules may exist to allow for other functions such as these to be defined as part of the TOE boundary.
         </h:p>
       </sec:TOE_Boundary>
     
@@ -157,7 +158,7 @@
         </usecase>
         <usecase title="Virtual Device" id="virtualdev">
           <description>
-            The TOE is a virtual machine that provides SDN controller functionality. The TOE boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the SDN controller. As with the physical device use case above, the TOE boundary for a virtual device must include an entire virtual machine and not just a collection of applications or services running on an environmental operating system. 
+            The TOE is a virtual machine that provides SDN controller functionality. The TOE boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the SDN controller or if the hypervisor itself includes functionality necessary for the TOE to implement the required security functionality. As with the physical device use case above, the TOE boundary for a virtual device must include an entire virtual machine and not just a collection of applications or services running on an environmental operating system. 
           </description>
         </usecase>
         <usecase title="Cluster (stand-alone or virtual)" id="standorvirtcluster">
@@ -182,7 +183,7 @@
         <cc-pt2-conf>extended</cc-pt2-conf>
         <cc-pt3-conf>conformant</cc-pt3-conf>
         <cc-pp-conf>
-          <PP-cc-ref>Protection Profile for Certification Authorities, v3.0</PP-cc-ref>
+          <PP-cc-ref>collaborative Protection Profile for Newtork Device, v4.0</PP-cc-ref>
         </cc-pp-conf>
         <cc-pp-config-with>
           <Mod-cc-ref>collaborative Protection Profile Module for Stateful Traffic Filter Firewalls,
@@ -208,16 +209,15 @@
             proper or authorized API functions can compromise network services. This can also result in sensitive data leakage.
             
           </description>
-          <addressed-by>FTP_ITC.1 (Modified from Base-PP)</addressed-by><rationale>Mitigates the threat by defining the trusted communications channel used for SDN.</rationale>
-          <addressed-by>FAU_GEN.1/SDN</addressed-by><rationale>Mitigates the threat by generating audit records of management activities for the SDN.</rationale>
-          <addressed-by>FDP_ACC.1</addressed-by><rationale>Mitigates the threat by enforcing access control on all APIs used to access the TSF.</rationale>  
-          <addressed-by>FDP_ACF.1</addressed-by><rationale>Mitigates the threat by enforcing access control policies to subjects and objects that follow a set of defined
-            rules.</rationale>
+          <addressed-by>FTP_ITC.1 (Modified from Base-PP)</addressed-by><rationale>Mitigates the threat by defining the trusted communications channel used for SDN functionality.</rationale>
+          <addressed-by>FAU_GEN.1/SDN</addressed-by><rationale>Mitigates the threat by generating audit records of activities performed on or by the TSF that could affect the northbound interface.</rationale>
+          <addressed-by>FDP_ACC.1</addressed-by><rationale>Mitigates the threat by enforcing access control on the APIs offered by the TOE.</rationale>  
+          <addressed-by>FDP_ACF.1</addressed-by><rationale>Mitigates the threat by defining the mechanism for how API access control is enforced.</rationale>
           <addressed-by>FMT_API_EXT.1</addressed-by><rationale>Mitigates the threat by allowing API templates to be defined against objects based on a set of defined 
           rules.</rationale>
-          <addressed-by>FMT_MOF.1/SDN</addressed-by><rationale>Mitigates the threat by allowing only administrators to modify API functions.</rationale>
-          <addressed-by>FMT_SMF.1/SDN</addressed-by><rationale>Mitigates the threat by defining management functions for API access control and validity.</rationale>
-          <addressed-by>FMT_SMR.2/SDN</addressed-by><rationale>Mitigates the threat by defining specific functions for user and administrator roles.</rationale>
+          <addressed-by>FMT_MOF.1/SDN</addressed-by><rationale>Mitigates the threat by limiting the ability to modify API functions.</rationale>
+          <addressed-by>FMT_SMF.1/SDN</addressed-by><rationale>Mitigates the threat by identifying the management functions subject to access restrictions.</rationale>
+          <addressed-by>FMT_SMR.2/SDN</addressed-by><rationale>Mitigates the threat by defining a role separation mechanism for administrators to enforce least privilege.</rationale>
         </threat>
    
       </threats>
@@ -346,6 +346,11 @@
     </base-pp>
     
     <man-sfrs>
+      
+      <section id="ss-audit-table" title="Auditable Events for Mandatory SFRs">
+        <audit-table id="at-mandatory" table="mandatory"/>
+      </section>
+      
       <section title="Security Audit (FAU)" id="man-fau">
       <!-- FAU_GEN.1/SDN -->
       <f-component id="fau-gen-1-sdn" cc-id="fau_gen.1" name="Audit Data Generation (SDN)" iteration="SDN">
@@ -409,6 +414,7 @@
       <f-component id="fdp-acc-1" cc-id="fdp_acc.1" name="Subset Access Control">
         <f-element>
           <title>The TSF shall enforce the [<h:i>API access control policy</h:i>] on [<h:i>all APIs used to access the TSF</h:i>].</title>
+          <note role="Application">The intent of this requirement is for the TOE to have a means to enforce access control on the invocation of APIs. The specific rules that comprise the policy itself are defined in FDP_ACF.1 below. It is not expected that the TOE have a construct explicitly called the "API access control policy," only that enforcement mechanisms exist to construct such a policy.</note>
           <aactivity>
             <TSS>The evaluator shall examine the TSS to verify that it defines the TOE's API access control policy in terms of subjects (the users, groups, or machine entities that interact with APIs), objects (the APIs used to access the TSF, operations (invocation, modification, or some other function that can be done against the object), and any attributes that may govern the enforcement of the policy. Operations may also include the ability to limit the scope of particular API access; for example, a user may be authorized to invoke an API to configure one segment of a network but may be prohibited from configuring a different one.
             </TSS>
@@ -436,6 +442,7 @@
             The TSF shall enforce the [<h:i>API access control policy</h:i>] to objects based on the
             following: [<h:i>supported operations that can be performed on or by API objects, the validity of the API call being issued, whether the API call is authorized based on the subject's role</h:i>].
           </title>
+          <note role="Application">The purpose of the API access control policy is to identify the API objects that are controlled by the TOE, the various types of access that can be performed against this object, and whether that access is permitted based on either the validity of the request itself or the entity requesting that access.</note>
         </f-element>
         <f-element>
           <title>The TSF shall enforce the following rules to determine if an operation among controlled
@@ -447,7 +454,7 @@
             additional rules: [<h:i>an allowlist explicitly authorizes the API request</h:i>].
           </title>
           <note role="Application">
-           This does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it.
+            The purpose of this requirement is to define an override mechanism where an allowlist may explicitly authorize some API access that would not otherwise be permitted by the API access control policy. This does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it. In other words, the purpose of the allowlist is to explicitly permit a valid request, not to permit an explicitly invalid one. 
           </note>
         </f-element>
         <f-element>
@@ -489,7 +496,10 @@
           <consistency-rationale/>
           <comp-lev>requires the TSF to define API templates and determine whether they meet specified rules.</comp-lev>
           <management>There are no management activities foreseen.</management>
-          <audit>The following actions should be auditable if FAU_GEN Security audit data generation is included in the PP, PP-Module, functional package, or ST:<comment>This needs to be completed after auditable events are defined.</comment></audit>
+          <audit>The following actions should be auditable if FAU_GEN Security audit data generation is included in the PP, PP-Module, functional package, or ST: <h:ul>
+            <h:li>Successful and failed definition of API template.</h:li>
+          </h:ul>
+          </audit>
           <dependencies>FCS_CKM.6 Timing and Event of Cryptographic Key Destruction</dependencies>
           
           <f-element>
@@ -503,9 +513,8 @@
           <f-element>
             <title>The TSF shall permit API templates to be defined if they meet the following specified rules: <assignable>rules determining allowable templates</assignable>.</title>
             <note role="application">              
-              The tester shall test all API endpoints that the SDN controller exposes for administering the SDN controller itself, and for inducing the SDN
-              controller to administer the network devices that it manages. For example, API endpoints which correspond to SDN controller functions, including,
-              but not limited to the following shall be tested: <h:ul>
+              The intent of this requirement is to require the ST to define API endpoints that the SDN controller exposes for administering the SDN controller itself, and for inducing the SDN
+              controller to administer the network devices that it manages. This could include, but is not limited to, APIs for the following behavior: <h:ul>
                 <h:li>Endpoints that modify the SDN controller's own configuration, including any changes to:<h:ul>
                   <h:li>System settings</h:li>
                   <h:li>Operational parameters</h:li>
@@ -547,7 +556,10 @@
               </Tests>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Successful and failed definition or modification of API template</audit-event-descr>
+            <audit-event-info>Identification of template (if successful)</audit-event-info>
+          </audit-event>
         </f-component>
         
         <!-- FMT_MOF.1/SDN -->
@@ -612,7 +624,10 @@
             <Tests>The evaluator shall follow the operational guidance to associate subjects with the roles defined by the TOE to verify that subjects may be given an API user role or an API administrator role. The evaluator shall attempt to assign a subject to both roles and verify that this fails or that no mechanism exists to attempt this.</Tests>
           </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Assignment of user to role</audit-event-descr>
+            <audit-event-info>Identification of subject and assigned role</audit-event-info>
+          </audit-event>
         </f-component>
         
       </section>
@@ -625,87 +640,17 @@
     <impl-dep-sfrs/>
 
   </sec:Security_Requirements>
-    
-  <!-- Remove this section if an Entropy Assessment is not needed -->
-  <appendix title="Entropy Documentation and Assessment" id="entropyappendix"> This appendix
-    describes the required supplementary information for the entropy source used by the OS. <h:br/>
-    The documentation of the entropy source should be detailed enough that, after reading, the
-    evaluator will thoroughly understand the entropy source and why it can be relied on to provide
-    sufficient entropy. This documentation should include multiple detailed sections: design
-    description, entropy justification, operating conditions, and health testing. This documentation
-    is not required to be part of the TSS. 
-    <section id="entropydesign" title="Design Description">
-      Documentation will include the design of the entropy source as a whole, including the
-      interaction of all entropy source components. Any information that can be shared regarding the
-      design should also be included for any third-party entropy sources that are included in the
-      product. <h:br/> The documentation will describe the operation of the entropy source to include,
-      how entropy is produced, and how unprocessed (raw) data can be obtained from within the
-      entropy source for testing purposes. The documentation should walk through the entropy source
-      design indicating where the entropy comes from, where the entropy output is passed next, any
-      post-processing of the raw outputs (hash, XOR, etc.), if and where it is stored, and finally, how
-      it is output from the entropy source. Any conditions placed on the process (e.g., blocking)
-      should also be described in the entropy source design. Diagrams and examples are encouraged.
-      <h:br/> This design must also include a description of the content of the security boundary of
-      the entropy source and a description of how the security boundary ensures that an adversary
-      outside the boundary cannot affect the entropy rate. <h:br/> If implemented, the design
-      description shall include a description of how third-party applications can add entropy to the
-      RBG. A description of any RBG state saving between power-off and power-on shall be included. </section>
-    <section id="entropyjustification" title="Entropy Justification"> There should be a technical
-      argument for where the unpredictability in the source comes from and why there is confidence
-      in the entropy source delivering sufficient entropy for the uses made of the RBG output (by
-      this particular OS). This argument will include a description of the expected min-entropy
-      rate (i.e., the minimum entropy (in bits) per bit or byte of source data) and explain that
-      sufficient entropy is going into the OS randomizer seeding process. This discussion will be
-      part of a justification for why the entropy source can be relied upon to produce bits with
-      entropy. <h:br/> The amount of information necessary to justify the expected min-entropy rate
-      depends on the type of entropy source included in the product. <h:br/> For developer-provided
-      entropy sources, in order to justify the min-entropy rate, it is expected that a large number
-      of raw source bits will be collected, statistical tests will be performed, and the min-entropy
-      rate determined from the statistical tests. While no particular statistical tests are required
-      at this time, it is expected that some testing is necessary in order to determine the amount
-      of min-entropy in each output. <h:br/> For third-party-provided entropy sources, in which the
-      OS vendor has limited access to the design and raw entropy data of the source, the
-      documentation will indicate an estimate of the amount of min-entropy obtained from this
-      third-party source. It is acceptable for the vendor to 'assume' an amount of min-entropy,
-      however, this assumption must be clearly stated in the documentation provided. In particular,
-      the min-entropy estimate must be specified and the assumption included in the ST. <h:br/>
-      Regardless of type of entropy source, the justification will also include how the DRBG is
-      initialized with the entropy stated in the ST, for example by verifying that the min-entropy
-      rate is multiplied by the amount of source data used to seed the DRBG or that the rate of
-      entropy expected based on the amount of source data is explicitly stated and compared to the
-      statistical rate. If the amount of source data used to seed the DRBG is not clear or the
-      calculated rate is not explicitly related to the seed, the documentation will not be
-      considered complete. <h:br/> The entropy justification shall not include any data added from any
-      third-party application or from any state saving between restarts. </section>
-    <section id="entropyoperatingconditions" title="Operating Conditions"> The entropy rate may be
-      affected by conditions outside the control of the entropy source itself. For example, voltage,
-      frequency, temperature, and elapsed time after power-on are just a few of the factors that may
-      affect the operation of the entropy source. As such, documentation will also include the range
-      of operating conditions under which the entropy source is expected to generate random data. It
-      will clearly describe the measures that have been taken in the system design to ensure the
-      entropy source continues to operate under those conditions. Similarly, documentation shall
-      describe the conditions under which the entropy source is known to malfunction or become
-      inconsistent. Methods used to detect failure or degradation of the source shall be included. </section>
-    <section id="entropyhealthtesting" title="Health Testing"> More specifically, all entropy source
-      health tests and their rationale will be documented. This includes a description of the health
-      tests, the rate and conditions under which each health test is performed (e.g., at start,
-      continuously, or on-demand), the expected results for each health test, and rationale
-      indicating why each test is believed to be appropriate for detecting one or more failures in
-      the entropy source. </section>
-  </appendix>
+   
 
   <bibliography>
-          
-     
-      <entry id="bibOMB">
-        <tag>OMB</tag>
-        <description>
-          <h:a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">
-            Reporting Incidents Involving Personally Identifiable Information and Incorporating the
-            Cost for Security in Agency Information Technology Investments</h:a>, OMB M-06-19, July
-          12, 2006.</description>
-      </entry>
-    
+    <cc-entry/>
+    <entry id="bibNDcPP">
+      <tag>NDcPP</tag>
+      <description>
+        <h:a href="https://www.niap-ccevs.org/protectionprofiles/524">
+          collaborative Protection Profile for Network Devices, Version 4.0, December 22, 2025</h:a>
+      </description>
+    </entry>
   </bibliography>
   
 </Module>
