@@ -370,7 +370,7 @@
               <h:li>Full HTTP REST request parameters and values of any API requests sent to the SDN controller API.</h:li>
               <h:li>All HTTP Response Codes returned from any HTTP API requests sent to the SDN controller API.</h:li>
               <h:li>All error codes and error messages from usage of the API.</h:li>
-              <h:li>All auditable events for mandatory SFRs specified in <xref to="at-mandatory"/></h:li>]</h:i>
+              <h:li>All auditable events for mandatory SFRs specified in <xref to="at-mandatory"/></h:li></h:i>].
             </h:ol>
           </title>
         </f-element>
