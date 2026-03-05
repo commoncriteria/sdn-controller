@@ -328,10 +328,10 @@
       <con-sec-prob>
         The threats defined by this PP-Module (see section 3.1) supplement those defined in the NDcPP as follows:
       </con-sec-prob>
-      <con-obj>
+      <con-obj/>
+      <con-op-en>
         This PP-Module does not define any environmental objectives beyond those already defined in the NDcPP.
-      </con-obj>
-      <con-op-en/>       
+      </con-op-en>       
      
       <con-mod ref="T.INSECURE_NORTHBOUND_API">This threat represents the same attack scenario as T.UNAUTHORISED_ADMINISTRATOR_ACCESS and T.UNTRUSTED_COMMUNICATION_CHANNELS, but
         applies to the north-south interface that is outside the scope originally defined by the Base-PP.</con-mod>
