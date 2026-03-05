@@ -997,7 +997,11 @@ Network Device
           <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-            The purpose of this requirement is to define an override mechanism where an allowlist may explicitly authorize some <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access that would not otherwise be permitted by the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy. It may be the case that no explicit denylist is supported and the policy as defined in <a href="#FDP_ACF.1.2">FDP_ACF.1.2</a> always defines what is allowed and denied with no exceptions. If this is the case, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may complete the assignment with "no additional rules." This is intended to support the potential for operations that may be authorized on the basis of permissions; it is not intended to authorize <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that are invalid regardless of permissions.
+            <p>
+            The purpose of this requirement is to define an override mechanism where an allowlist may explicitly authorize some <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access that would not otherwise be permitted by the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy. It may be the case that no explicit denylist is supported and the policy as defined in <a href="#FDP_ACF.1.2">FDP_ACF.1.2</a> always defines what is allowed and denied with no exceptions. If this is the case, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may complete the assignment with "no additional rules." 
+            </p><p>
+            This is intended to support the potential for operations that may be authorized on the basis of permissions; it is not intended to authorize <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that are invalid regardless of permissions.
+            </p>
           </span></div></div></div>
         <div class="element"><div class="reqid" id="FDP_ACF.1.4"><a href="#FDP_ACF.1.4" class="abbr">FDP_ACF.1.4</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly deny access of subjects to objects based on the following additional
             rules: [<b>assignment</b>: 
