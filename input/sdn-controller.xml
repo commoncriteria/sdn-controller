@@ -328,7 +328,9 @@
       <con-sec-prob>
         The threats defined by this PP-Module (see section 3.1) supplement those defined in the NDcPP as follows:
       </con-sec-prob>
-      <con-obj/>
+      <con-obj>
+        This PP-Module does not define any environmental objectives beyond those already defined in the NDcPP.
+      </con-obj>
       <con-op-en/>       
      
       <con-mod ref="T.INSECURE_NORTHBOUND_API">This threat represents the same attack scenario as T.UNAUTHORISED_ADMINISTRATOR_ACCESS and T.UNTRUSTED_COMMUNICATION_CHANNELS, but
@@ -380,8 +382,7 @@
               <h:li>Date and time of the event, type of event, subject identity, (if relevant) the outcome 
                 (success or failure) of the event; and</h:li>         
               <h:li>For each audit event type, based on the auditable event definitions of the functional components 
-                included in the PP, PP-Module, functional package, or ST, [<h:i>Additional Audit Record Contents as specified in 
-                  <xref g="t-audit-mandatory"/>, <xref g="t-audit-sel-based"/></h:i>].</h:li>
+                included in the PP, PP-Module, functional package, or ST, [<h:i>Additional Audit Record Contents as specified in <xref to="at-mandatory"/></h:i>].</h:li>
             </h:ol>
           </title>
           <note role="Application"><h:p>This SFR mandates that audit data be generated for start-up and shutdown of the audit functions, which is a duplicate of FAU_GEN.1.1 in the Base-PP. If the TOE has one single audit mechanism, then the events used to conform to the Base-PP requirement also suffice here. Start-up and shutdown of the audit functions in the context of the SDN controller portion of the TOE only need to be logged separately if the SDN controller has a different logging mechanism from what the Base-PP uses. 
@@ -452,10 +453,11 @@
         </f-element>
         <f-element>
           <title>The TSF shall explicitly authorize access of subjects to objects based on the following
-            additional rules: [<h:i>an allowlist explicitly authorizes the API request</h:i>].
+            additional rules: <assignable>rules, based on security attributes, that explicitly allow access of subjects
+              to objects</assignable>.
           </title>
           <note role="Application">
-            The purpose of this requirement is to define an override mechanism where an allowlist may explicitly authorize some API access that would not otherwise be permitted by the API access control policy. This does not explicitly assert that the request is valid with respect to the template, nor does it explicitly assert that the object being accessed can have the desired action performed on it. In other words, the purpose of the allowlist is to explicitly permit a valid request, not to permit an explicitly invalid one. 
+            The purpose of this requirement is to define an override mechanism where an allowlist may explicitly authorize some API access that would not otherwise be permitted by the API access control policy. It may be the case that no explicit denylist is supported and the policy as defined in FDP_ACF.1.2 always defines what is allowed and denied with no exceptions. If this is the case, the ST author may complete the assignment with "no additional rules." This is intended to support the potential for operations that may be authorized on the basis of permissions; it is not intended to authorize API calls that are invalid regardless of permissions.
           </note>
         </f-element>
         <f-element>
@@ -463,7 +465,7 @@
             rules: <assignable>rules, based on security attributes, that explicitly deny access of subjects
               to objects</assignable>.
           </title>
-          <note role="Application">The intent of this requirement is to give the ST author the ability to define a denylist that takes priority over the rules defined in FDP_ACF.1.2 and FDP_ACF.1.3. It may be the case that no explicit denylist is supported and the defined rules are followed in order with access being denied as a default condition if not otherwise specified by a rule. If this is the case, the ST author may complete the assignment with "no additional rules."</note>
+          <note role="Application">The purpose of this requirement is to define an override mechanism where a denlylist may explicitly prohibit some API access that would not otherwise be permitted by the API access control policy. It may be the case that no explicit denylist is supported and the policy as defined in FDP_ACF.1.2 always defines what is allowed and denied with no exceptions. If this is the case, the ST author may complete the assignment with "no additional rules."</note>
         <aactivity>
           <TSS>The evaluator shall verify that the TSS describes the TOE's API access control policy in sufficient detail to conclude, for each API, the operations that can be performed on or by the API, and the authorization required to perform those operations. If the TOE implements explicit allowlisting or denylisting to override any default or configurable policy rules, the evaluator shall verify that these are described. In cases where multiple contradictory rules exist to define authorizations, the evaluator shall verify that the TSS describes the precedence in which these rules are prioritized.
           </TSS>
