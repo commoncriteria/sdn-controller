@@ -457,7 +457,11 @@
               to objects</assignable>.
           </title>
           <note role="Application">
-            The purpose of this requirement is to define an override mechanism where an allowlist may explicitly authorize some API access that would not otherwise be permitted by the API access control policy. It may be the case that no explicit denylist is supported and the policy as defined in FDP_ACF.1.2 always defines what is allowed and denied with no exceptions. If this is the case, the ST author may complete the assignment with "no additional rules." This is intended to support the potential for operations that may be authorized on the basis of permissions; it is not intended to authorize API calls that are invalid regardless of permissions.
+            <h:p>
+            The purpose of this requirement is to define an override mechanism where an allowlist may explicitly authorize some API access that would not otherwise be permitted by the API access control policy. It may be the case that no explicit denylist is supported and the policy as defined in FDP_ACF.1.2 always defines what is allowed and denied with no exceptions. If this is the case, the ST author may complete the assignment with "no additional rules." 
+            </h:p><h:p>
+            This is intended to support the potential for operations that may be authorized on the basis of permissions; it is not intended to authorize API calls that are invalid regardless of permissions.
+            </h:p>
           </note>
         </f-element>
         <f-element>
