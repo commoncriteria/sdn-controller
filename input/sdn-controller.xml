@@ -5,8 +5,8 @@
 
 
 <Module boilerplate="yes"
-  target-product="Software Defined Networking Controller"
-  name="PP-Module for Software Defined Networking Controller"
+  target-product="Software-Defined Networking Controller"
+  name="PP-Module for Software-Defined Networking Controller"
   xmlns="https://niap-ccevs.org/cc/v1"
   xmlns:sec="https://niap-ccevs.org/cc/v1/section"
   xmlns:h="http://www.w3.org/1999/xhtml">
@@ -17,7 +17,7 @@
       <PPVersion>1.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
       <PPPubDate>2026-02-27</PPPubDate>
-      <Keywords>SDN; software defined networking</Keywords>      
+      <Keywords>SDN; software-defined networking</Keywords>      
     </ReferenceTable>
   </PPReference>
 
@@ -32,16 +32,18 @@
   <sec:Introduction>
     <sec:Overview>          
 
-            The scope of this Protection Profile Module (PP-Module) is to describe the security functionality of a software defined network (SDN) controller in terms of  <xref g="CC"/> and to define functional and assurance requirements for such
-            products. 
+            The scope of this Protection Profile Module (PP-Module) is to describe the security functionality of a software-defined network (SDN) controller in terms of  <xref
+            g="CC"/> and to define functional and assurance requirements for such products.<h:p/>            
             
+            An SDN controller is a central component of an SDN system and is available as a logical or physical device. An SDN controller manages and distributes network
+            policies, collects network routing and payload information from the control and data planes, and interfaces with user applications in the management plane for
+            functions such as configuration and logging. Each of the planes in an SDN system is composed of multiple logical or physical components. The SDN controller logically
+            separates the data plane from the control plane and centralizes control which enhances network flexibility and scalability through more efficient network management.
+            <h:p/>
             
-            An SDN controller is a central component of an SDN system and is available as a logical or a physical device. An SDN controller manages and distributes network policies, collects network routing and payload information from the control and data planes, and interfaces with user applications in the management plane for functions such as configuration and logging. Each of the planes in an SDN system is composed of multiple logical or physical components. The SDN controller logically separates the data plane from the control plane and centralizes control which enhances network flexibility and scalability through more efficient network management.
-            
-            This PP-Module is intended for use with the following Base-PP:
-            
+            This PP-Module is intended for use with the following Base-PP.            
             <h:ul>
-              <h:li>collaborative Protection Profile for Network Devices (NDcPP), Version 4.0</h:li>
+              <h:li>collaborative Protection Profile for Network Devices, Version 4.0</h:li>
             </h:ul>
             
             This Base-PP is valid because an SDN controller is a specific implementation of a network device. Specifically, an SDN controller is one of many components of an SDN networking architecture. An SDN controller manages and distributes network policies, collects routing and payload information from the data plane, and interfaces with user applications in the management plane. Each of the planes in an SDN system is composed of multiple logical or physical components. SDN controllers logically centralize the network intelligence and state in the control plane. 
@@ -81,7 +83,7 @@
       <term abbr='IT'    full="Information Technology"/>
 
       <term full="Management Plane">
-        Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs).
+        Composed of programs that communicate behaviors and needed resources with the SDN controller via APIs.
         In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes. These 
         applications could include networking management, analytics, or business applications used to run large data centers. For example, an analytics application might be
         built to recognize suspicious network activity for security purposes. This is sometimes also referred to as the Orchestration Layer.
@@ -94,7 +96,7 @@
       <term abbr='REST' full="Representational State Transfer"/>
       <term abbr='RFC' full="Request for Comment"/>
 
-      <term abbr='SDN' full="Software Defined Networking"/>
+      <term abbr='SDN' full="Software-Defined Networking"/>
       <term full="Southbound">Communications between an SDN and network devices in the data plane.</term>
       <term abbr='TLS' full="Transport Layer Security"/>
       <term abbr='USB' full="Universal Serial Bus"/>
@@ -107,13 +109,13 @@
       A conformant TOE decouples its data and control planes such that data traffic and control traffic are restricted
       to their respective planes. It also enforces centralization of control so that all components of the SDN environment
       are under its control. This can expand across multiple distributed controllers for large, complex, or geographically
-      dispersed networks. Compliant TOEs will implement the following functionality:
+      dispersed networks. Compliant TOEs will implement the following functionality.
       <h:ul>
         <h:li>Ability to support secure remote administration.</h:li>
         <h:li>Ability to apply software or firmware updates from a trusted source.</h:li>
         <h:li>Secure interfaces to remote entities such as applications, VMs, and other devices (zone of trust).</h:li>
         <h:li>Reporting of all security-relevant events.</h:li>
-        <h:li>Logical separateion of the management plane, control plane, and data plane.</h:li>
+        <h:li>Logical separation of the management, control, and data planes.</h:li>
         <h:li>Protection of data that is collected by the control plane and distributed to the data plane, such as flow tables and configuration.</h:li>
         <h:li>Protection of data that is collected by the control plane and distributed to the management plane, such as auditable events and traffic or packet statistics.</h:li>
         <h:li>Protection of data that is collected, distributed, and shared within the control plane, such as when multiple SDN controllers exist in the architecture.</h:li>
@@ -130,13 +132,13 @@
         <figure	entity="images/sdncontroller.png" title="High-Level SDN Representation" id="sdn-toe"/>
       </h:p>
         <h:p>
-          The following elements of an SDN controller are outside the scope of this PP-Module and are therefore considered to be non-interfering with respect to its security, even if they are included as part of a compliant product:
+          The following elements of an SDN controller are outside the scope of this PP-Module and are therefore considered to be non-interfering with respect to its security, even if they are included as part of a compliant product.
           <h:ul>
             <h:li>Examination of data plane content, such as virus or email scanning.</h:li>
             <h:li>Intrusion detection or prevention capabilities.</h:li>
             <h:li>Network Address Translation (NAT) as a security function.</h:li>
-            <h:li>If the TOE boundary is a single virtual machine, the hardware or firmware of the underlying platform.</h:li>
-            <h:li>If the TOE boundary is a single virtual machine, the host operating system or runtime environment.</h:li>
+            <h:li>If the TOE boundary is a standalone virtual machine, the hardware or firmware of the underlying platform.</h:li>
+            <h:li>If the TOE boundary is a standalone virtual machine, the host operating system or runtime environment.</h:li>
             <h:li>Specific security functionality that is not global to all SDN controllers (e.g., firewall, load balancing).</h:li>
             <h:li>Other objects belonging in the data plane.</h:li>
           </h:ul>
@@ -148,8 +150,8 @@
     </sec:Compliant_Targets_of_Evaluation>
         <!-- Information needs to be added here. -->  
     <sec:Use_Cases>Requirements in this PP-Module are designed to address the security problems in at least the following use cases. These use cases are 
-        intentionally very broad, as many specific use cases exist for an SDN controller These use cases may also overlap with one another. An SDN controller's 
-        functionality may even be effectively extended by privileged applications installed on it. However, these are out of scope of this PP.
+        intentionally very broad, as many specific use cases exist for an SDN controller. These use cases may also overlap with one another. An SDN controller's 
+        functionality may even be effectively extended by privileged applications installed on it. However, these are out of scope of this PP-Module.
       <usecases>
         <usecase title="Physical Device" id="standalonephysdev">
           <description>	          
@@ -183,7 +185,7 @@
         <cc-pt2-conf>extended</cc-pt2-conf>
         <cc-pt3-conf>conformant</cc-pt3-conf>
         <cc-pp-conf>
-          <PP-cc-ref>collaborative Protection Profile for Newtork Device, v4.0</PP-cc-ref>
+          <PP-cc-ref>collaborative Protection Profile for Network Devices, v4.0</PP-cc-ref>
         </cc-pp-conf>
         <cc-pp-config-with>
           <Mod-cc-ref>collaborative Protection Profile Module for Stateful Traffic Filter Firewalls,
@@ -304,7 +306,7 @@
                   and protection of the channel data from disclosure and detection of modification of the channel data.
                   </h:p>
                   <h:p>
-                    <h:b>FTP_ITC.1.2</h:b> The TSF shall <h:b>permit</h:b> [<h:b>selection:</h:b><h:i> the TSF, the authorized IT entities</h:i>] <h:b>to</h:b> initiate
+                    <h:b>FTP_ITC.1.2</h:b> The TSF shall permit [<h:b>selection:</h:b><h:i> the TSF, the authorized IT entities</h:i>] to initiate
                     communication via the trusted channel.
                   </h:p>
                   <h:p>
@@ -379,9 +381,9 @@
         <f-element>
           <title>The TSF shall record within the <h:b>SDN</h:b> audit data at
             least the following information: <h:ol type="a">
-              <h:li>Date and time of the event, type of event, subject identity, (if relevant) the outcome 
-                (success or failure) of the event; and</h:li>         
-              <h:li>For each audit event type, based on the auditable event definitions of the functional components 
+              <h:li>Date and time of the event, type of event, subject identity, (if applicable) the outcome 
+                (success or failure) of the event;</h:li>         
+              <h:li>For each auditable event type, based on the auditable event definitions of the functional components 
                 included in the PP, PP-Module, functional package, or ST, [<h:i>Additional Audit Record Contents as specified in <xref to="at-mandatory"/></h:i>].</h:li>
             </h:ol>
           </title>
@@ -393,9 +395,9 @@
           </h:p>
           </note>
           <aactivity>
-          <TSS><h:p>The evaluator shall verify that the TSS identifies the auditable events generated by the TOE, and that they include the auditable events specified in this SFR along with the required audit data. The evaluator shall also verify that the TSS identifies the mechanism used for generating audit events such that it can be determined whether the auditable events required by this PP-Module use the same audit mechanism as what the Base-PP requires for FAU_GEN.1 or whether there are alternate mechanisms that are used.
+          <TSS><h:p>The evaluator shall verify that the TSS identifies the auditable events generated by the TOE, and that they include the auditable events specified in this SFR along with the required audit data. The evaluator shall also verify that the TSS identifies the mechanism used for generating audit events such that it can be determined whether the auditable events required by this PP-Module use the same audit mechanism as what the Base-PP requires for FAU_GEN.1 or there are alternate mechanisms that are used.
           </h:p>
-          <h:p>The requirement in the Base-PP to ensure that all auditable events can be transmitted to the operational environment via a secure channel is applicable to the entire TOE, even when PP-Modules are claimed. Therefore, if the TSF does have any audit mechanisms that are used specifically to generate audit records for this PP-Module's auditable events, the evaluator shall ensure that these mechanisms are discussed in the context of the Base-PP's requirements for protection of audit data in transit, and at rest if applicable.
+          <h:p>The evaluator shall check that the requirement in the Base-PP to ensure that all auditable events can be transmitted to the operational environment via a secure channel is applicable to the entire TOE, even when PP-Modules are claimed. Therefore, if the TSF does have any audit mechanisms that are used specifically to generate audit records for this PP-Module's auditable events, the evaluator shall ensure that these mechanisms are discussed in the context of the Base-PP's requirements for protection of audit data in transit, and at rest if applicable.
           </h:p>
           </TSS>
           <Guidance>The evaluator shall verify that the operational guidance identifies the auditable events that are generated by the TOE in support of this SFR and includes representative audit records of each event to demonstrate the format of each record. The evaluator shall verify that each sample audit record includes the fields required for each auditable event per FAU_GEN.1.2/SDN.
@@ -583,7 +585,7 @@
               The restriction of modifying API access and validity functions to the API administrator is intended to imply that the API user does not have the ability to modify API functions. The API user role having read-only access to these functions is not precluded by this requirement, as this requirement only relates to the ability to modify the behavior of the API.  
             </note>
             <aactivity>
-              <TSS>The evaluator shall examine the TSS to verify that it identifies the API access and API validity functions provided by the TOE and verify that an API administrator is the only subject that is authorized to modify the behavior of these functions (e.g., by determining the subjects that are authorized to access a particular function). Note that the "API administrator" role is a necessary but not sufficient condition to be authorized to perform management functions; if the TSF implements more granular controls (e.g., different API administrators have access to different sets of functions based on role or other subject attribute), the evaluator shall verify that the TSS includes sufficient data to determine that it fully describes the authorizations needed to perform management functions against the TOE's APIs.</TSS>
+              <TSS>The evaluator shall examine the TSS to verify that it identifies the API access and API validity functions provided by the TOE and verify that an API administrator is the only subject that is authorized to modify the behavior of these functions (e.g., by determining the subjects that are authorized to access a particular function). Note that the "API administrator" role is a necessary but not sufficient condition to be authorized to perform management functions. If the TSF implements more granular controls (e.g., different API administrators have access to different sets of functions based on role or other subject attribute), the evaluator shall verify that the TSS includes sufficient data to determine that it fully describes the authorizations needed to perform management functions against the TOE's APIs.</TSS>
               <Guidance>The evaluator shall examine the operational guidance to verify that it describes the TOE's claimed management functions and the privileges required to execute those functions.</Guidance>
               <Tests>For each claimed management function, the evaluator shall access the TOE as a legitimate user that lacks privileges to perform the function, attempt to perform the function, and verify that it fails (or that there is no mechanism by which an attempt can even be made). If multiple conditions define the ability to perform the function, the evaluator shall repeat this activity as needed to verify that the absence of each condition is sufficient to prevent the execution of the function. The evaluator shall then access the TOE with all necessary authorities to perform the function and verify that it is successful.</Tests>
             </aactivity>
