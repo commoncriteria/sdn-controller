@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html><head><title>Supporting Document - 
-    PP-Module for Software Defined Networking Controllers</title><style type="text/css">
+    PP-Module for Software-Defined Networking Controllers</title><style type="text/css">
     #toc a{
         display: block;
     }
@@ -273,7 +273,7 @@
    
    </style></head><body><div style="text-align: center; margin-left: auto; margin-right: auto;"><h1 class="title" style="page-break-before:auto;">Supporting Document<br/>
         Mandatory Technical Document</h1><img src="images/niaplogo.png" alt="NIAP Logo"></img><hr width="50%"></hr><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><br/>
-    PP-Module for Software Defined Networking Controllers<br/>
+    PP-Module for Software-Defined Networking Controllers<br/>
       Version: 1.0<br/>2026-02-27<br/><b>National Information Assurance Partnership</b></div><div class="foreword"><h1 style="text-align: center">Foreword</h1><p>This is a Supporting Document (SD), intended to complement the Common Criteria version 3
       and the associated Common Evaluation Methodology for
       Information Technology Security Evaluation.</p><p>SDs may be “Guidance Documents”, that highlight specific approaches 
@@ -286,18 +286,18 @@
       National Information Assurance Partnership (NIAP)
       </p><p><b style="page-break-before:always;">Document history:</b><table><tr class="header"><th>Version</th><th>Date</th><th style="align:left;">Comment</th></tr><tr><td>1.0</td><td>2026-02-27</td><td>Initial release</td></tr></table></p><p><b>General Purpose:</b><br/>
       The purpose of this SD is to define evaluation methods for the functional behavior of
-      Software Defined Networking Controller      
+      Software-Defined Networking Controller      
       products.
       </p><p><b>Acknowledgments:</b><br/>
       This SD was developed with support from NIAP 
-      Software Defined Networking Controllers
+      Software-Defined Networking Controllers
       Technical Community members, with representatives from industry, government 
       agencies, Common Criteria Test Laboratories, and members of academia.
       </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#aa-ND" style="text-indent:10px">2.1<span>Network Device</span></a><a href="#qq-sfrs-ND-Modified" style="text-indent:20px">2.1.1<span>Modified SFRs
         </span></a><a href="#man-sfrs" style="text-indent:10px">2.2<span>TOE SFR Evaluation Activities</span></a><a href="#man-fau" style="text-indent:20px">2.2.1<span>Security Audit (FAU)</span></a><a href="#man-fdp" style="text-indent:20px">2.2.2<span>User Data Protection (FDP)</span></a><a href="#man-fmt" style="text-indent:20px">2.2.3<span>Security Management (FMT)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#obj-sfrs" style="text-indent:10px">2.5<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.6<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the 
-    PP-Module for Software Defined Networking Controllers is
+    PP-Module for Software-Defined Networking Controllers is
     to describe the security functionality of 
-    Software Defined Networking Controllers
+    Software-Defined Networking Controllers
     products in terms of 
     [CC] and to define functional and assurance requirements for them.
 
@@ -305,7 +305,7 @@
     The PP-Module is intended for use with the following Base-PP:
         <ul><li>Network Device, version 4.0.</li></ul><br/>
     This SD is mandatory for evaluations of TOEs that claim conformance to a PP-Configuration that includes the PP-Module for :
-    <ul><li>Software Defined Networking Controllers, Version 1.0</li></ul>
+    <ul><li>Software-Defined Networking Controllers, Version 1.0</li></ul>
     As such it defines Evaluation Activities for the functionality described in the PP-Module as well as any impacts to the Evaluation Activities to the Base-PP(s) it modifies.
     </p><p> 
 Although Evaluation Activities are defined mainly for the evaluators to follow, in general they also help developers to prepare for evaluation by identifying specific requirements for their TOE.
@@ -383,7 +383,7 @@ The following sections list Common Criteria and technology terms used in this do
         Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.
       </td></tr>
 <tr><td><div id="Management_Plane">Management Plane</div></td><td>
-        Composed of programs that communicate behaviors and needed resources with the SDN controller via application programming interfaces (APIs).
+        Composed of programs that communicate behaviors and needed resources with the SDN controller via APIs.
         In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes. These 
         applications could include networking management, analytics, or business applications used to run large data centers. For example, an analytics application might be
         built to recognize suspicious network activity for security purposes. This is sometimes also referred to as the Orchestration Layer.
@@ -423,9 +423,9 @@ The following sections list Common Criteria and technology terms used in this do
           
           
           
-          <div class="eacategory">TSS</div><div class="ea"><div class="ea"><p>The evaluator shall verify that the TSS identifies the auditable events generated by the TOE, and that they include the auditable events specified in this SFR along with the required audit data. The evaluator shall also verify that the TSS identifies the mechanism used for generating audit events such that it can be determined whether the auditable events required by this PP-Module use the same audit mechanism as what the Base-PP requires for FAU_GEN.1 or whether there are alternate mechanisms that are used.
+          <div class="eacategory">TSS</div><div class="ea"><div class="ea"><p>The evaluator shall verify that the TSS identifies the auditable events generated by the TOE, and that they include the auditable events specified in this SFR along with the required audit data. The evaluator shall also verify that the TSS identifies the mechanism used for generating audit events such that it can be determined whether the auditable events required by this PP-Module use the same audit mechanism as what the Base-PP requires for FAU_GEN.1 or there are alternate mechanisms that are used.
           </p>
-          <p>The requirement in the Base-PP to ensure that all auditable events can be transmitted to the operational environment via a secure channel is applicable to the entire TOE, even when PP-Modules are claimed. Therefore, if the TSF does have any audit mechanisms that are used specifically to generate audit records for this PP-Module's auditable events, the evaluator shall ensure that these mechanisms are discussed in the context of the Base-PP's requirements for protection of audit data in transit, and at rest if applicable.
+          <p>The evaluator shall check that the requirement in the Base-PP to ensure that all auditable events can be transmitted to the operational environment via a secure channel is applicable to the entire TOE, even when PP-Modules are claimed. Therefore, if the TSF does have any audit mechanisms that are used specifically to generate audit records for this PP-Module's auditable events, the evaluator shall ensure that these mechanisms are discussed in the context of the Base-PP's requirements for protection of audit data in transit, and at rest if applicable.
           </p>
           </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the operational guidance identifies the auditable events that are generated by the TOE in support of this SFR and includes representative audit records of each event to demonstrate the format of each record. The evaluator shall verify that each sample audit record includes the fields required for each auditable event per FAU_GEN.1.2/SDN.
           </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">For each auditable event, the evaluator shall perform actions that are intended to cause a record of the event to be generated and verify that this occurs and that the required fields are present and accurate. If the audit mechanism used to generate any event differs from the mechanisms claimed in the Base-PP for FAU_GEN.1, the evaluator shall also perform the associated test activities for other claimed FAU class requirements to verify that the audit data is transferred to an external entity over the claimed trusted channel and that if audit data is stored locally, that it has the appropriate data at rest protections applied.
@@ -477,7 +477,7 @@ The following sections list Common Criteria and technology terms used in this do
               
               
               
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall examine the TSS to verify that it identifies the API access and API validity functions provided by the TOE and verify that an API administrator is the only subject that is authorized to modify the behavior of these functions (e.g., by determining the subjects that are authorized to access a particular function). Note that the "API administrator" role is a necessary but not sufficient condition to be authorized to perform management functions; if the TSF implements more granular controls (e.g., different API administrators have access to different sets of functions based on role or other subject attribute), the evaluator shall verify that the TSS includes sufficient data to determine that it fully describes the authorizations needed to perform management functions against the TOE's APIs.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall examine the operational guidance to verify that it describes the TOE's claimed management functions and the privileges required to execute those functions.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">For each claimed management function, the evaluator shall access the TOE as a legitimate user that lacks privileges to perform the function, attempt to perform the function, and verify that it fails (or that there is no mechanism by which an attempt can even be made). If multiple conditions define the ability to perform the function, the evaluator shall repeat this activity as needed to verify that the absence of each condition is sufficient to prevent the execution of the function. The evaluator shall then access the TOE with all necessary authorities to perform the function and verify that it is successful.</div></div></span></div><div class="comp" id="FMT-SMF-1-SDN"><h4>FMT_SMF.1/SDN Specification of Management Functions (SDN)</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_SMF.1/SDN</div>
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall examine the TSS to verify that it identifies the API access and API validity functions provided by the TOE and verify that an API administrator is the only subject that is authorized to modify the behavior of these functions (e.g., by determining the subjects that are authorized to access a particular function). Note that the "API administrator" role is a necessary but not sufficient condition to be authorized to perform management functions. If the TSF implements more granular controls (e.g., different API administrators have access to different sets of functions based on role or other subject attribute), the evaluator shall verify that the TSS includes sufficient data to determine that it fully describes the authorizations needed to perform management functions against the TOE's APIs.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall examine the operational guidance to verify that it describes the TOE's claimed management functions and the privileges required to execute those functions.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">For each claimed management function, the evaluator shall access the TOE as a legitimate user that lacks privileges to perform the function, attempt to perform the function, and verify that it fails (or that there is no mechanism by which an attempt can even be made). If multiple conditions define the ability to perform the function, the evaluator shall repeat this activity as needed to verify that the absence of each condition is sufficient to prevent the execution of the function. The evaluator shall then access the TOE with all necessary authorities to perform the function and verify that it is successful.</div></div></span></div><div class="comp" id="FMT-SMF-1-SDN"><h4>FMT_SMF.1/SDN Specification of Management Functions (SDN)</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_SMF.1/SDN</div>
               
               
               
