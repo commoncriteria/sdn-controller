@@ -289,7 +289,7 @@
         functionality required by the VPN client in order for it to conform to this PP-Module.  
 -->        
             <!-- 5.1.1.1  -->
-            <section title="Trusted Path/Channels (FTP)" id="nd-m-ftp">
+            <section title="Class FTP: Trusted Path/Channels" id="nd-m-ftp">
               <base-sfr-spec cc-id="ftp_itc.1" id="nd-ftp-itc-1" title="Inter-TSF Trusted Channel">
                 <consistency-rationale>This PP-Module expands the Base-PP SFR to define additional entities for trusted channels.</consistency-rationale>
                 <description>
@@ -355,7 +355,7 @@
         <audit-table id="at-mandatory" table="mandatory"/>
       </section>
       
-      <section title="Security Audit (FAU)" id="man-fau">
+      <section title="Class FAU: Security Audit" id="man-fau">
       <!-- FAU_GEN.1/SDN -->
       <f-component id="fau-gen-1-sdn" cc-id="fau_gen.1" name="Audit Data Generation (SDN)" iteration="SDN">
         <f-element>
@@ -413,7 +413,7 @@
         
       </section>
       
-      <section title="User Data Protection (FDP)" id="man-fdp">
+      <section title="Class FDP: User Data Protection" id="man-fdp">
       <!-- FDP_ACC.1 -->
       <f-component id="fdp-acc-1" cc-id="fdp_acc.1" name="Subset Access Control">
         <f-element>
@@ -494,7 +494,7 @@
       </f-component>
     </section>  
    
-      <section title="Security Management (FMT)" id="man-fmt">
+      <section title="Class FMT: Security Management" id="man-fmt">
         <!-- FMT_API_EXT.1 -->
        <ext-comp-def fam-id="FMT_API_EXT" title="Management of API Behavior">
         <fam-behavior>This family defines requirements for management of API behavior.
