@@ -194,7 +194,10 @@
           <Mod-cc-ref>PP-Module for MACsec Ethernet Encryption, version 2.0</Mod-cc-ref>
           <Mod-cc-ref>PP-Module for VPN Gateways, version 2.0</Mod-cc-ref>
         </cc-pp-config-with>
-        <cc-pkg-claim/>
+        <cc-pkg-claim>
+        	<FP-cc-ref conf="conformant">Functional Package for TLS, version 2.1</FP-cc-ref>
+        	<FP-cc-ref conf="conformant">Functional Package for Secure Shell, version 2.0</FP-cc-ref>
+      </cc-pkg-claim>
       </CClaimsInfo>
     </sec:Conformance_Claims>      
   
