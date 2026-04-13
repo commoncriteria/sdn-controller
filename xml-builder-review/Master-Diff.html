@@ -10,10 +10,10 @@
         <div class="diff-topbar">
             <table class="diffpage-html-firstlast">
                 <tr>
-                    <td style="text-align: left;"><a class="diffpage-html-a" onclick="scrollToEvent(event)" id="first-diff" href="#" next=""><img class="diff-icon" src="images/diff-first.gif" title="Go to first change."></a><a class="diffpage-html-a" onclick="scrollToEvent(event)" href="#">&nbsp;first</a></td><td style="text-align: center; font-size: 140%;"><a style="font-size: 100%;" class="diffpage-html-a" href="http://code.google.com/p/daisydiff/">Daisy Diff</a> compare report.
+                    <td style="text-align: left;"><a class="diffpage-html-a" onclick="scrollToEvent(event)" id="first-diff" href="#changed-diff-0" next="changed-diff-0"><img class="diff-icon" src="images/diff-first.gif" title="Go to first change."></a><a class="diffpage-html-a" onclick="scrollToEvent(event)" href="#changed-diff-0">&nbsp;first</a></td><td style="text-align: center; font-size: 140%;"><a style="font-size: 100%;" class="diffpage-html-a" href="http://code.google.com/p/daisydiff/">Daisy Diff</a> compare report.
                         <br>
-                        <span style="font-style: italic; font-size: 70%;">Click on the changed parts for a detailed description. Use the left and right arrow keys to walk through the modifications.</span></td><td style="text-align: right;"><a class="diffpage-html-a" onclick="scrollToEvent(event)" href="#">
-              last&nbsp;</a><a class="diffpage-html-a" onclick="scrollToEvent(event)" id="last-diff" href="#" previous=""><img class="diff-icon" src="images/diff-last.gif" title="Go to last change."></a></td>
+                        <span style="font-style: italic; font-size: 70%;">Click on the changed parts for a detailed description. Use the left and right arrow keys to walk through the modifications.</span></td><td style="text-align: right;"><a class="diffpage-html-a" onclick="scrollToEvent(event)" href="#changed-diff-2">
+              last&nbsp;</a><a class="diffpage-html-a" onclick="scrollToEvent(event)" id="last-diff" href="#changed-diff-2" previous="changed-diff-2"><img class="diff-icon" src="images/diff-last.gif" title="Go to last change."></a></td>
                 </tr>
             </table>
         </div>
@@ -24,7 +24,7 @@
             <br>
              Version: 1.0
             <br>
-            2026-02-27
+            2026-04-20
             <br>
             <b>National Information Assurance Partnership</b>
             <br>
@@ -35,7 +35,7 @@
                 <th>Version</th><th>Date</th><th>Comment</th>
             </tr>
             <tr>
-                <td>1.0</td><td>2026-02-27</td><td>Initial release</td>
+                <td>1.0</td><td>2026-04-20</td><td>Initial release</td>
             </tr>
         </table>
         <h2>Contents</h2>
@@ -44,7 +44,7 @@
         </div>
         <h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
         <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2>
-         The scope of this Protection Profile Module (<abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>) is to describe the security functionality of a software-defined network (<abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>) controller in terms of <a href="#bibCC">[CC]</a> and to define functional and assurance requirements for such products.
+         The scope of this Protection Profile Module (<abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>) is to describe the security functionality of a software-defined network (<abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr>) controller in terms of <a href="#bibCC">[CC]</a> and to define functional and assurance requirements for such products. 
         <p></p>
          An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller is a central component of an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> system and is available as a logical or physical device. An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller manages and distributes network policies, collects network routing and payload information from the control and data planes, and interfaces with user applications in the management plane for functions such as configuration and logging. Each of the planes in an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> system is composed of multiple logical or physical components. The <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller logically separates the data plane from the control plane and centralizes control which enhances network flexibility and scalability through more efficient network management. 
         <p></p>
@@ -154,37 +154,37 @@
                 <tr>
                     <td>
                         <div id="Administrator">Administrator</div>
-                    </td><td> An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system. This administrator could be acting remotely through a management server, from which the system receives configuration policies. An administrator can enforce settings on the system which cannot be overridden by non-administrator users. </td>
+                    </td><td>An administrator is responsible for management activities, including setting policies that are applied by the enterprise on the operating system. This administrator could be acting remotely through a management server, from which the system receives configuration policies. An administrator can enforce settings on the system which cannot be overridden by non-administrator users.</td>
                 </tr>
                 <tr>
                     <td>
                         <div id="Application">Application</div>
-                    </td><td> Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation. </td>
+                    </td><td>Software that runs on a platform and performs tasks on behalf of the user or owner of the platform, as well as its supporting documentation.</td>
                 </tr>
                 <tr>
                     <td>
                         <div id="Application_Programming_Interface">Application Programming Interface (API)</div>
-                    </td><td> A specification of routines, data structures, object classes, and variables that allows an application to make use of services provided by another software component, such as a library. APIs are often provided for a set of libraries included with the platform. </td>
+                    </td><td>A specification of routines, data structures, object classes, and variables that allows an application to make use of services provided by another software component, such as a library. APIs are often provided for a set of libraries included with the platform.</td>
                 </tr>
                 <tr>
                     <td>
                         <div id="Control_Plane">Control Plane</div>
-                    </td><td> A logical entity that receives instructions or requirements from the SDN application layer through its northbound interface and relays them to the data plane through its southbound interface. The controller extracts information about the network from the data plane and communicates back to the SDN application layer with an abstract view of the network, including statistics and events about what is happening. </td>
+                    </td><td>A logical entity that receives instructions or requirements from the SDN application layer through its northbound interface and relays them to the data plane through its southbound interface. The controller extracts information about the network from the data plane and communicates back to the SDN application layer with an abstract view of the network, including statistics and events about what is happening.</td>
                 </tr>
                 <tr>
                     <td>
                         <div id="Credential">Credential</div>
-                    </td><td> Data that establishes the identity of a user (e.g., a cryptographic key or password). </td>
+                    </td><td>Data that establishes the identity of a user (e.g., a cryptographic key or password).</td>
                 </tr>
                 <tr>
                     <td>
                         <div id="Data_Plane">Data Plane</div>
-                    </td><td> Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path. </td>
+                    </td><td>Controls the forwarding and data processing capabilities for the network. This includes forwarding and processing of the data path.</td>
                 </tr>
                 <tr>
                     <td>
                         <div id="Management_Plane">Management Plane</div>
-                    </td><td> Composed of programs that communicate behaviors and needed resources with the SDN controller via APIs. In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes. These applications could include networking management, analytics, or business applications used to run large data centers. For example, an analytics application might be built to recognize suspicious network activity for security purposes. This is sometimes also referred to as the Orchestration Layer. </td>
+                    </td><td>Composed of programs that communicate behaviors and needed resources with the SDN controller via APIs. In addition, the applications can build an abstracted view of the network by collecting information from the controller for decision-making purposes. These applications could include networking management, analytics, or business applications used to run large data centers. For example, an analytics application might be built to recognize suspicious network activity for security purposes. This is sometimes also referred to as the Orchestration Layer.</td>
                 </tr>
                 <tr>
                     <td>
@@ -253,22 +253,22 @@
             </ul>
         </p>
         <p>
-             Other <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules may exist to allow for other functions such as these to be defined as part of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary. 
+            Other <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules may exist to allow for other functions such as these to be defined as part of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary.
         </p>
         <h2 class="indexable" data-level="2" id="Use_Cases">1.4 Use Cases</h2>
-        Requirements in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> are designed to address the security problems in at least the following use cases. These use cases are intentionally very broad, as many specific use cases exist for an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller. These use cases may also overlap with one another. An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's functionality may even be effectively extended by privileged applications installed on it. However, these are out of scope of this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>. 
+         Requirements in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> are designed to address the security problems in at least the following use cases. These use cases are intentionally very broad, as many specific use cases exist for an <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller. These use cases may also overlap with one another. An <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller's functionality may even be effectively extended by privileged applications installed on it. However, these are out of scope of this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>. 
         <dl>
             <dt id="standalonephysdev"> [USE CASE 1] Physical Device</dt>
             <dd>
-                <span class="description"> The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is one or more physical appliances that provide <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary includes the entire software and firmware running on these appliances; a software-only device where the boundary does not include the underlying operating system is not a valid use case. </span>
+                <span class="description">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is one or more physical appliances that provide <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary includes the entire software and firmware running on these appliances; a software-only device where the boundary does not include the underlying operating system is not a valid use case.</span>
             </dd>
             <dt id="virtualdev"> [USE CASE 2] Virtual Device</dt>
             <dd>
-                <span class="description"> The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is a virtual machine that provides <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller or if the hypervisor itself includes functionality necessary for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to implement the required security functionality. As with the physical device use case above, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary for a virtual device must include an entire virtual machine and not just a collection of applications or services running on an environmental operating system. </span>
+                <span class="description">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is a virtual machine that provides <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is either limited to the virtual machine or includes the hypervisor and underlying physical hardware, depending on whether or not the hypervisor may include virtual machines that are not part of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller or if the hypervisor itself includes functionality necessary for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to implement the required security functionality. As with the physical device use case above, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary for a virtual device must include an entire virtual machine and not just a collection of applications or services running on an environmental operating system.</span>
             </dd>
             <dt id="standorvirtcluster"> [USE CASE 3] Cluster (stand-alone or virtual)</dt>
             <dd>
-                <span class="description"> Regardless of whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is physical, virtual, or both, it may include multiple distinct instances (i.e., multiple connected physical appliances or VMs) that are combined into a distributed cluster. </span>
+                <span class="description">Regardless of whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is physical, virtual, or both, it may include multiple distinct instances (i.e., multiple connected physical appliances or VMs) that are combined into a distributed cluster.</span>
             </dd>
         </dl>
          
@@ -341,7 +341,7 @@
         <dl>
             <dt class="threat defined" id="T.INSECURE_NORTHBOUND_API">T.INSECURE_NORTHBOUND_API</dt>
             <dd>
-                <span class="description"> A malicious user or process may invoke insecure application programming interfaces (APIs) to inject malicious code to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> on a northbound interface or to retrieve sensitive information from it. Executing improper or unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions or providing malicious input to achieve unintended or improper results from proper or authorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions can compromise network services. This can also result in sensitive data leakage. </span>
+                <span class="description">A malicious user or process may invoke insecure application programming interfaces (APIs) to inject malicious code to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> on a northbound interface or to retrieve sensitive information from it. Executing improper or unauthorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions or providing malicious input to achieve unintended or improper results from proper or authorized <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions can compromise network services. This can also result in sensitive data leakage.</span>
             </dd>
         </dl>
          
@@ -354,7 +354,7 @@
          This document does not define any additional OSPs. 
         <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
         <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_Operational_Environment">4.1 Security Objectives for the Operational Environment</h2>
-         All environmental security objectives from the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> also apply to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>&rsquo;s environment when it includes this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module in its conformance claims. 
+        All environmental security objectives from the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> also apply to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>&rsquo;s environment when it includes this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module in its conformance claims. 
         <h1 id="Security_Requirements" class="indexable" data-level="1">5 Security Requirements</h1>
          This chapter describes the security requirements which have to be fulfilled by the product under evaluation. Those requirements comprise functional components from Part 2 and assurance components from Part 3 of <a href="#bibCC">[CC]</a>. The following conventions are used for the completion of operations: 
         <ul>
@@ -384,10 +384,10 @@
                 </p>
                 <p>The text of the requirement is replaced with:</p>
                 <p>
-                     <b>FTP_ITC.1.1</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of using [<b>selection:</b><i> IPsec, SSH as defined in the Functional Package for SSH, <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr> as defined in the Functional Package for <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr>, DTLS as defined in the Functional Package for <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_HTTPS">HTTPS</a></abbr></i>] to provide a trusted communication channel between itself and authorized <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities supporting the following capabilities: audit server, <b>northbound components, southbound components,</b> [<b>selection:</b> <i>authentication server, <b>external east/west components</b> [<b>assignment:</b> other capabilities], no other capabilities</i>] that is logically distinct from other communication channels and provides assured identification of its endpoints and protection of the channel data from disclosure and detection of modification of the channel data. 
+                     <b>FTP_ITC.1.1</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of using [<b>selection:</b> <i>IPsec, SSH as defined in the Functional Package for SSH, <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr> as defined in the Functional Package for <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr>, DTLS as defined in the Functional Package for <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_HTTPS">HTTPS</a></abbr></i>] to provide a trusted communication channel between itself and authorized <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities supporting the following capabilities: audit server, <b>northbound components, southbound components,</b> [<b>selection:</b> <i> authentication server, <b>external east/west components</b> [<b>assignment:</b> other capabilities], no other capabilities </i>] that is logically distinct from other communication channels and provides assured identification of its endpoints and protection of the channel data from disclosure and detection of modification of the channel data. 
                 </p>
                 <p>
-                     <b>FTP_ITC.1.2</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall permit [<b>selection:</b><i> the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, the authorized <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities</i>] to initiate communication via the trusted channel. 
+                     <b>FTP_ITC.1.2</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall permit [<b>selection:</b> <i> the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, the authorized <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities</i>] to initiate communication via the trusted channel. 
                 </p>
                 <p>
                      <b>FTP_ITC.1.3</b> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall initiate communication via the trusted channel for [<b>assignment:</b> <i>list of services for which the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> is able to initiate communications</i>]. 
@@ -464,8 +464,8 @@
             <tr style="display:none;" data-sortkey="FMT_SMR.2/SDN#">
                 <td></td>
             </tr>
-            <tr data-sortkey="FMT_SMR.2/SDN.3">
-                <td>Assignment of user to role</td><td>Identification of subject and assigned role</td>
+            <tr data-sortkey="FMT_SMR.2/SDN.4">
+                <td><span class="diff-html-changed" id="changed-diff-0" changes="<ul class='changelist'><li>Moved out of a <b>row</b> with data-sortkey FMT_SMR.2/SDN.3.</li><li>Moved to a <b>row</b> with data-sortkey FMT_SMR.2/SDN.4.</li></ul>" previous="first-diff" changeId="changed-diff-0" next="changed-diff-1" onclick="return tipC(constructToolTipC(this));">Assignment of user to role</span></td><td><span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>row</b> with data-sortkey FMT_SMR.2/SDN.3.</li><li>Moved to a <b>row</b> with data-sortkey FMT_SMR.2/SDN.4.</li></ul>" previous="first-diff" changeId="changed-diff-0" next="changed-diff-1" onclick="return tipC(constructToolTipC(this));">Identification of subject and assigned role</span></td>
             </tr>
         </table>
         <h3 id="man-fau" class="indexable" data-level="3">5.2.2 Class FAU: Security Audit</h3>
@@ -482,7 +482,7 @@
                         <li>
                             All auditable events for [<i>not specified</i>] level of audit;
                         </li>
-                        [<i></i>
+                         [<i></i>
                         <li>
                             <i>All unauthorized usage of all <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> endpoints, including create, read, update, and delete.</i>
                         </li>
@@ -501,7 +501,7 @@
                         <li>
                             All auditable events for mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> specified in <a href="#at-mandatory" class="at-mandatory-ref">Table <span class="counter">1</span></a>
                         </li>
-                        ]. 
+                         ]. 
                     </ol>
                 </div>
             </div>
@@ -510,23 +510,23 @@
                     <a href="#FAU_GEN.1.2/SDN" class="abbr">FAU_GEN.1.2/SDN</a>
                 </div>
                 <div class="reqdesc">
-                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall record within the <b><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr></b> audit data at least the following information: 
+                     The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall record within the <b><abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr></b> audit data at least the following information: 
                     <ol type="a">
                         <li>Date and time of the event, type of event, subject identity, (if applicable) the outcome (success or failure) of the event;</li>
                         <li>
-                            For each auditable event type, based on the auditable event definitions of the functional components included in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>, functional package, or <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, [<i>Additional Audit Record Contents as specified in <a href="#at-mandatory" class="at-mandatory-ref">Table <span class="counter">1</span></a></i>].
+                             For each auditable event type, based on the auditable event definitions of the functional components included in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>, functional package, or <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, [<i>Additional Audit Record Contents as specified in <a href="#at-mandatory" class="at-mandatory-ref">Table <span class="counter">1</span></a></i>]. 
                         </li>
                     </ol>
                     <div class="appnote">
                         <span class="note-header">Application Note: </span><span class="note">
                             <p>
-                                This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> mandates that audit data be generated for start-up and shutdown of the audit functions, which is a duplicate of FAU_GEN.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has one single audit mechanism, then the events used to conform to the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> requirement also suffice here. Start-up and shutdown of the audit functions in the context of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller portion of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> only need to be logged separately if the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller has a different logging mechanism from what the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> uses. 
+                                This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> mandates that audit data be generated for start-up and shutdown of the audit functions, which is a duplicate of FAU_GEN.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has one single audit mechanism, then the events used to conform to the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> requirement also suffice here. Start-up and shutdown of the audit functions in the context of the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller portion of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> only need to be logged separately if the <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller has a different logging mechanism from what the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> uses.
                             </p>
                             <p>
-                                 Note also that in many cases the start-up and shutdown of the audit functions cannot be forced on its own because the audit functions may be operational by default. In this case, logging for start-up and shutdown of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself is sufficient. The purpose of this part of the requirement is to ensure that a malicious user cannot disable auditing to evade detection of other malicious use of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. 
+                                Note also that in many cases the start-up and shutdown of the audit functions cannot be forced on its own because the audit functions may be operational by default. In this case, logging for start-up and shutdown of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself is sufficient. The purpose of this part of the requirement is to ensure that a malicious user cannot disable auditing to evade detection of other malicious use of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
                             </p>
                             <p>
-                                 The auditable events for the 'not specified' level of audit is intended to communicate that this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not claim one of the pre-defined audit levels specified in <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2; this is inherently satisfied by demonstrating that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generates appropriate audit data for all events that are explicitly required by the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>. 
+                                The auditable events for the 'not specified' level of audit is intended to communicate that this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not claim one of the pre-defined audit levels specified in <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2; this is inherently satisfied by demonstrating that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generates appropriate audit data for all events that are explicitly required by the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.
                             </p>
                         </span>
                     </div>
@@ -546,23 +546,23 @@
                     <div class="ea">
                         <div class="ea">
                             <p>
-                                The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the auditable events generated by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, and that they include the auditable events specified in this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> along with the required audit data. The evaluator shall also verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the mechanism used for generating audit events such that it can be determined whether the auditable events required by this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> use the same audit mechanism as what the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> requires for FAU_GEN.1 or there are alternate mechanisms that are used. 
+                                The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the auditable events generated by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, and that they include the auditable events specified in this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> along with the required audit data. The evaluator shall also verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the mechanism used for generating audit events such that it can be determined whether the auditable events required by this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> use the same audit mechanism as what the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> requires for FAU_GEN.1 or there are alternate mechanisms that are used.
                             </p>
                             <p>
-                                The evaluator shall check that the requirement in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> to ensure that all auditable events can be transmitted to the operational environment via a secure channel is applicable to the entire <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, even when <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules are claimed. Therefore, if the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> does have any audit mechanisms that are used specifically to generate audit records for this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>'s auditable events, the evaluator shall ensure that these mechanisms are discussed in the context of the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>'s requirements for protection of audit data in transit, and at rest if applicable. 
+                                The evaluator shall check that the requirement in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> to ensure that all auditable events can be transmitted to the operational environment via a secure channel is applicable to the entire <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, even when <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules are claimed. Therefore, if the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> does have any audit mechanisms that are used specifically to generate audit records for this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>'s auditable events, the evaluator shall ensure that these mechanisms are discussed in the context of the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>'s requirements for protection of audit data in transit, and at rest if applicable.
                             </p>
                         </div>
                     </div>
                     <div class="eacategory">Guidance</div>
                     <div class="ea">
                         <div class="ea">
-                            The evaluator shall verify that the operational guidance identifies the auditable events that are generated by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in support of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> and includes representative audit records of each event to demonstrate the format of each record. The evaluator shall verify that each sample audit record includes the fields required for each auditable event per <a href="#FAU_GEN.1.2/SDN">FAU_GEN.1.2/SDN</a>. 
+                            The evaluator shall verify that the operational guidance identifies the auditable events that are generated by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in support of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> and includes representative audit records of each event to demonstrate the format of each record. The evaluator shall verify that each sample audit record includes the fields required for each auditable event per <a href="#FAU_GEN.1.2/SDN">FAU_GEN.1.2/SDN</a>.
                         </div>
                     </div>
                     <div class="eacategory">Tests</div>
                     <div class="ea">
                         <div class="ea">
-                            For each auditable event, the evaluator shall perform actions that are intended to cause a record of the event to be generated and verify that this occurs and that the required fields are present and accurate. If the audit mechanism used to generate any event differs from the mechanisms claimed in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> for FAU_GEN.1, the evaluator shall also perform the associated test activities for other claimed FAU class requirements to verify that the audit data is transferred to an external entity over the claimed trusted channel and that if audit data is stored locally, that it has the appropriate data at rest protections applied. 
+                            For each auditable event, the evaluator shall perform actions that are intended to cause a record of the event to be generated and verify that this occurs and that the required fields are present and accurate. If the audit mechanism used to generate any event differs from the mechanisms claimed in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> for FAU_GEN.1, the evaluator shall also perform the associated test activities for other claimed FAU class requirements to verify that the audit data is transferred to an external entity over the claimed trusted channel and that if audit data is stored locally, that it has the appropriate data at rest protections applied.
                         </div>
                     </div>
                 </div>
@@ -595,18 +595,18 @@
                     </div>
                     <div class="ea">
                         <div class="ea">
-                            The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that it defines the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy in terms of subjects (the users, groups, or machine entities that interact with APIs), objects (the APIs used to access the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, operations (invocation, modification, or some other function that can be done against the object), and any attributes that may govern the enforcement of the policy. Operations may also include the ability to limit the scope of particular <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access; for example, a user may be authorized to invoke an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> to configure one segment of a network but may be prohibited from configuring a different one. 
+                            The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that it defines the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy in terms of subjects (the users, groups, or machine entities that interact with APIs), objects (the APIs used to access the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, operations (invocation, modification, or some other function that can be done against the object), and any attributes that may govern the enforcement of the policy. Operations may also include the ability to limit the scope of particular <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access; for example, a user may be authorized to invoke an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> to configure one segment of a network but may be prohibited from configuring a different one.
                         </div>
                     </div>
                     <div class="eacategory">Guidance</div>
                     <div class="ea">
                         <div class="ea">
-                            The evaluator shall review the operational guidance to verify that it describes the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy in terms of the subjects, objects, operations, and attributes specified in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, as well as which elements of this policy are enforced by default versus being configurable options. For any configurable elements of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy, the evaluator shall verify that the operational guidance describes how to perform this configuration. 
+                            The evaluator shall review the operational guidance to verify that it describes the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy in terms of the subjects, objects, operations, and attributes specified in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, as well as which elements of this policy are enforced by default versus being configurable options. For any configurable elements of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy, the evaluator shall verify that the operational guidance describes how to perform this configuration.
                         </div>
                     </div>
                     <div class="eacategory">Tests</div>
                     <div class="ea">
-                        <div class="ea">There are no test activities for this component. </div>
+                        <div class="ea">There are no test activities for this component.</div>
                     </div>
                 </div>
             </div>
@@ -629,7 +629,7 @@
                     <a href="#FDP_ACF.1.2" class="abbr">FDP_ACF.1.2</a>
                 </div>
                 <div class="reqdesc">
-                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the following rules to determine if an operation among controlled subjects and controlled objects is allowed: [<i>an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call that is valid with respect to an allowlisted <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> template can manipulate an object if allowing this manipulation has been configured</i>]. 
+                     The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the following rules to determine if an operation among controlled subjects and controlled objects is allowed: [<i>an <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> call that is valid with respect to an allowlisted <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> template can manipulate an object if allowing this manipulation has been configured</i>]. 
                 </div>
             </div>
             <div class="element">
@@ -637,14 +637,14 @@
                     <a href="#FDP_ACF.1.3" class="abbr">FDP_ACF.1.3</a>
                 </div>
                 <div class="reqdesc">
-                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly authorize access of subjects to objects based on the following additional rules: [<b>assignment</b>: <span class="assignable-content">rules, based on security attributes, that explicitly allow access of subjects to objects</span>]. 
+                     The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly authorize access of subjects to objects based on the following additional rules: [<b>assignment</b>: <span class="assignable-content">rules, based on security attributes, that explicitly allow access of subjects to objects</span>]. 
                     <div class="appnote">
                         <span class="note-header">Application Note: </span><span class="note">
                             <p>
-                                 The purpose of this requirement is to define an override mechanism where an allowlist may explicitly authorize some <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access that would not otherwise be permitted by the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy. It may be the case that no explicit denylist is supported and the policy as defined in <a href="#FDP_ACF.1.2">FDP_ACF.1.2</a> always defines what is allowed and denied with no exceptions. If this is the case, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may complete the assignment with "no additional rules." 
+                                The purpose of this requirement is to define an override mechanism where an allowlist may explicitly authorize some <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access that would not otherwise be permitted by the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy. It may be the case that no explicit denylist is supported and the policy as defined in <a href="#FDP_ACF.1.2">FDP_ACF.1.2</a> always defines what is allowed and denied with no exceptions. If this is the case, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may complete the assignment with "no additional rules."
                             </p>
                             <p>
-                                 This is intended to support the potential for operations that may be authorized on the basis of permissions; it is not intended to authorize <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that are invalid regardless of permissions. 
+                                This is intended to support the potential for operations that may be authorized on the basis of permissions; it is not intended to authorize <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> calls that are invalid regardless of permissions.
                             </p>
                         </span>
                     </div>
@@ -655,7 +655,7 @@
                     <a href="#FDP_ACF.1.4" class="abbr">FDP_ACF.1.4</a>
                 </div>
                 <div class="reqdesc">
-                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly deny access of subjects to objects based on the following additional rules: [<b>assignment</b>: <span class="assignable-content">rules, based on security attributes, that explicitly deny access of subjects to objects</span>]. 
+                     The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall explicitly deny access of subjects to objects based on the following additional rules: [<b>assignment</b>: <span class="assignable-content">rules, based on security attributes, that explicitly deny access of subjects to objects</span>]. 
                     <div class="appnote">
                         <span class="note-header">Application Note: </span><span class="note">The purpose of this requirement is to define an override mechanism where a denylist may explicitly prohibit some <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access that would not otherwise be permitted by the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy. It may be the case that no explicit denylist is supported and the policy as defined in <a href="#FDP_ACF.1.2">FDP_ACF.1.2</a> always defines what is allowed and denied with no exceptions. If this is the case, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may complete the assignment with "no additional rules."</span>
                     </div>
@@ -674,27 +674,27 @@
                     </div>
                     <div class="ea">
                         <div class="ea">
-                            The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy in sufficient detail to conclude, for each <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>, the operations that can be performed on or by the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>, and the authorization required to perform those operations. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements explicit allowlisting or denylisting to override any default or configurable policy rules, the evaluator shall verify that these are described. In cases where multiple contradictory rules exist to define authorizations, the evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the precedence in which these rules are prioritized. 
+                            The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access control policy in sufficient detail to conclude, for each <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>, the operations that can be performed on or by the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>, and the authorization required to perform those operations. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements explicit allowlisting or denylisting to override any default or configurable policy rules, the evaluator shall verify that these are described. In cases where multiple contradictory rules exist to define authorizations, the evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the precedence in which these rules are prioritized.
                         </div>
                     </div>
                     <div class="eacategory">Guidance</div>
                     <div class="ea">
                         <div class="ea">
                             <p>
-                                The evaluator shall verify that the operational guidance identifies, for each <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>, the mechanism that exist to control access to that <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>, and how to perform such configuration. The evaluator shall also verify that the operational guidance defines any default policy rules that may exist. The evaluator shall also verify that the operational guidance describes the ordering of rule processing such that it is clear what behavior is followed in the event that multiple contradictory rules exist. If this is configurable (e.g., because rules are enforced in a configurable priority order), the evaluator shall verify that the operational guidance provides instructions on how to perform this configuration. 
+                                The evaluator shall verify that the operational guidance identifies, for each <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>, the mechanism that exist to control access to that <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>, and how to perform such configuration. The evaluator shall also verify that the operational guidance defines any default policy rules that may exist. The evaluator shall also verify that the operational guidance describes the ordering of rule processing such that it is clear what behavior is followed in the event that multiple contradictory rules exist. If this is configurable (e.g., because rules are enforced in a configurable priority order), the evaluator shall verify that the operational guidance provides instructions on how to perform this configuration.
                             </p>
                             <p>
-                                Additionally, the evaluator shall verify that each <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> is defined in terms of the operations that can be performed by or against them and the valid parameters for these operations. 
+                                Additionally, the evaluator shall verify that each <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> is defined in terms of the operations that can be performed by or against them and the valid parameters for these operations.
                             </p>
                         </div>
                     </div>
                     <div class="eacategory">Tests</div>
                     <div class="ea">
                         <div class="ea">
-                            The evaluator shall perform the following tests: <span class="testlist-">
+                             The evaluator shall perform the following tests: <span class="testlist-">
                                 <ul>
                                     <li class="test-">
-                                        <a id="_t_1" class="defined" href="#_t_1">Test FDP_ACF.1:1</a>: Default policy test: The evaluator shall review the operational guidance to determine what default policy rules (if any) are enforced by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. For each such rule, the evaluator shall attempt to access the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s APIs in a manner prohibited by the default policy rule and verify that access is prohibited as expected. The evaluator shall then access these APIs as a subject with sufficient authorization and verify that the requested access is permitted. 
+                                        <a id="_t_1" class="defined" href="#_t_1">Test FDP_ACF.1:1</a>: Default policy test: The evaluator shall review the operational guidance to determine what default policy rules (if any) are enforced by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. For each such rule, the evaluator shall attempt to access the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s APIs in a manner prohibited by the default policy rule and verify that access is prohibited as expected. The evaluator shall then access these APIs as a subject with sufficient authorization and verify that the requested access is permitted.
                                     </li>
                                     <li class="test-">
                                         <a id="_t_2" class="defined" href="#_t_2">Test FDP_ACF.1:2</a>: Configured policy test: For each <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> policy element that is configurable (e.g., by determining what users or groups are authorized to access a particular <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>), the evaluator shall follow the instructions in the operational guidance to configure positive and negative test scenarios where access is allowed and rejected. The evaluator shall then access the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as subjects that are and are not authorized to access the particular <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>, and verify that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> allows or rejects the access as configured.
@@ -836,7 +836,7 @@
                 <div class="reqdesc">
                      The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to [<i>modify the behaviour of</i>] the functions [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access function as defined by <a href="#FDP_ACC.1">FDP_ACC.1</a>, <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> validity function as defined by <a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></i>] to [<i><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator</i>]. 
                     <div class="appnote">
-                        <span class="note-header">Application Note: </span><span class="note"> The restriction of modifying <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access and validity functions to the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator is intended to imply that the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> user does not have the ability to modify <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions. The <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> user role having read-only access to these functions is not precluded by this requirement, as this requirement only relates to the ability to modify the behavior of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>. </span>
+                        <span class="note-header">Application Note: </span><span class="note">The restriction of modifying <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> access and validity functions to the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator is intended to imply that the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> user does not have the ability to modify <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> functions. The <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> user role having read-only access to these functions is not precluded by this requirement, as this requirement only relates to the ability to modify the behavior of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr>.</span>
                     </div>
                 </div>
             </div>
@@ -987,10 +987,7 @@
                     <th>Threat</th><th>Addressed by</th><th>Rationale</th>
                 </tr>
                 <tr class="major-row">
-                    <td rowspan="8"><a href="#T.INSECURE_NORTHBOUND_API">T.INSECURE_​NORTHBOUND_​API</a></td><td>FTP_ITC.1 (Modified from <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>)</td><td>Mitigates the threat by defining the trusted communications channel used for <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> functionality.</td>
-                </tr>
-                <tr>
-                    <td><a href="#FAU_GEN.1/SDN">FAU_GEN.1/SDN</a></td><td>Mitigates the threat by generating audit records of activities performed on or by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> that could affect the northbound interface.</td>
+                    <td rowspan="7"><a href="#T.INSECURE_NORTHBOUND_API"><span class="diff-html-changed" id="changed-diff-1" changes="<ul class='changelist'><li>Moved out of a <b>cell</b> with rowspan 8.</li><li>Moved to a <b>cell</b> with rowspan 7.</li></ul>" previous="changed-diff-0" changeId="changed-diff-1" next="removed-diff-0" onclick="return tipC(constructToolTipC(this));">T.INSECURE_​NORTHBOUND_​API</span></a><span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>cell</b> with rowspan 8.</li><li>Moved to a <b>cell</b> with rowspan 7.</li></ul>" previous="changed-diff-0" changeId="changed-diff-1" next="removed-diff-0" onclick="return tipC(constructToolTipC(this));"></span></td><td><span class="diff-html-removed" id="removed-diff-0" previous="changed-diff-1" changeId="removed-diff-0" next="changed-diff-2" onclick="return tipR(constructToolTipR(this));">FTP_ITC.1 (Modified from </span><abbr class="dyn-abbr"><a href="#abbr_Base-PP"><span class="diff-html-removed" previous="changed-diff-1" changeId="removed-diff-0" next="changed-diff-2" onclick="return tipR(constructToolTipR(this));">Base-PP</span></a></abbr><span class="diff-html-removed" previous="changed-diff-1" changeId="removed-diff-0" next="changed-diff-2" onclick="return tipR(constructToolTipR(this));">)</span></td><td><span class="diff-html-removed" previous="changed-diff-1" changeId="removed-diff-0" next="changed-diff-2" onclick="return tipR(constructToolTipR(this));">Mitigates the threat by defining the trusted communications channel used for </span><abbr class="dyn-abbr"><a href="#abbr_SDN"><span class="diff-html-removed" previous="changed-diff-1" changeId="removed-diff-0" next="changed-diff-2" onclick="return tipR(constructToolTipR(this));">SDN</span></a></abbr><span class="diff-html-removed" previous="changed-diff-1" changeId="removed-diff-0" next="changed-diff-2" onclick="return tipR(constructToolTipR(this));"> functionality.</span></td><td><a href="#FAU_GEN.1/SDN"><span class="diff-html-changed" id="changed-diff-2" changes="<ul class='changelist'><li>Moved out of a <b>row</b>.</li><li>Moved to a <b>row</b> with class major-row.</li></ul>" previous="removed-diff-0" changeId="changed-diff-2" next="last-diff" onclick="return tipC(constructToolTipC(this));">FAU_GEN.1/SDN</span></a><span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>row</b>.</li><li>Moved to a <b>row</b> with class major-row.</li></ul>" previous="removed-diff-0" changeId="changed-diff-2" next="last-diff" onclick="return tipC(constructToolTipC(this));"></span></td><td><span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>row</b>.</li><li>Moved to a <b>row</b> with class major-row.</li></ul>" previous="removed-diff-0" changeId="changed-diff-2" next="last-diff" onclick="return tipC(constructToolTipC(this));">Mitigates the threat by generating audit records of activities performed on or by the </span><abbr class="dyn-abbr"><a href="#abbr_TSF"><span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>row</b>.</li><li>Moved to a <b>row</b> with class major-row.</li></ul>" previous="removed-diff-0" changeId="changed-diff-2" next="last-diff" onclick="return tipC(constructToolTipC(this));">TSF</span></a></abbr><span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>row</b>.</li><li>Moved to a <b>row</b> with class major-row.</li></ul>" previous="removed-diff-0" changeId="changed-diff-2" next="last-diff" onclick="return tipC(constructToolTipC(this));"> that could affect the northbound interface.</span></td>
                 </tr>
                 <tr>
                     <td><a href="#FDP_ACC.1">FDP_ACC.1</a></td><td>Mitigates the threat by enforcing access control on the APIs offered by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td>
@@ -1015,9 +1012,9 @@
         <h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1>
         <h2 id="conrat-ND" class="indexable" data-level="2">6.1 Collaborative Protection Profile for Network Devices</h2>
         <h3 id="contoe-ND" class="indexable" data-level="3">6.1.1 Consistency of TOE Type </h3>
-         When this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is used to extend the NDcPP, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> type for the overall <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is still a network device. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is simply extended to include <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality that is provided by the network device. 
+        When this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is used to extend the NDcPP, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> type for the overall <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is still a network device. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary is simply extended to include <abbr class="dyn-abbr"><a href="#abbr_SDN">SDN</a></abbr> controller functionality that is provided by the network device.
         <h3 id="consecprob-ND" class="indexable" data-level="3">6.1.2 Consistency of Security Problem Definition </h3>
-         The threats defined by this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> (see section 3.1) supplement those defined in the NDcPP as follows: 
+        The threats defined by this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> (see section 3.1) supplement those defined in the NDcPP as follows:
         <table>
             <caption>
                 <span class="ctr" data-myid="t-con-sec-prob-def" data-counter-type="ct-Table" id="t-con-sec-prob-def">Table <span class="counter">3</span></span>: Consistency of Security Problem Definition (NDcPP base) 
@@ -1031,7 +1028,7 @@
         </table>
         <h3 id="conobj-ND" class="indexable" data-level="3">6.1.3 Consistency of OE Objectives </h3>
         <p>
-             This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any environmental objectives beyond those already defined in the NDcPP. 
+            This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any environmental objectives beyond those already defined in the NDcPP.
         </p>
         <h3 id="conreq-ND" class="indexable" data-level="3">6.1.4 Consistency of Requirements </h3>
          This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> identifies several <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> from the NDcPP that are needed to support Software-Defined Networking Controller functionality. This is considered to be consistent because the functionality provided by the NDcPP is being used for its intended purpose. The rationale for why this does not conflict with the claims defined by the NDcPP are as follows: 
@@ -1067,7 +1064,7 @@
                 <td><a href="#FDP_ACF.1">FDP_ACF.1</a></td><td>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines access control policies to subjects and objects based on a set of rules and is specific to the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</td>
             </tr>
             <tr>
-                <td><a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></td><td>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates and the set of rules they must follow, which is specific to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>. </td>
+                <td><a href="#FMT_API_EXT.1">FMT_API_EXT.1</a></td><td>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> templates and the set of rules they must follow, which is specific to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</td>
             </tr>
             <tr>
                 <td><a href="#FMT_MOF.1/SDN">FMT_MOF.1/SDN</a></td><td>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> iterates the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr> to add specific abilities of the <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> administrator to modify <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> function behavior.</td>
@@ -1145,7 +1142,7 @@
                 <div style="margin-left: 1em;">
                     <h4>Family Behavior</h4>
                     <div>
-                        This family defines requirements for management of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> behavior. 
+                        This family defines requirements for management of <abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr> behavior.
                     </div>
                     <h4>Component Leveling</h4>
                     <svg style="max-height: 30px;">
@@ -1333,7 +1330,7 @@
                     </span></td>
             </tr>
             <tr>
-                <td><span id="bibNDcPP">[NDcPP]</span></td><td><span class="description"> <a href="https://www.niap-ccevs.org/protectionprofiles/524"> collaborative Protection Profile for Network Devices, Version 4.0, December 22, 2025</a> </span></td>
+                <td><span id="bibNDcPP">[NDcPP]</span></td><td><span class="description"> <a href="https://www.niap-ccevs.org/protectionprofiles/524">collaborative Protection Profile for Network Devices, Version 4.0, December 22, 2025</a> </span></td>
             </tr>
         </table>
     </body>
