@@ -16,7 +16,7 @@
     <ReferenceTable>
       <PPVersion>1.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
-      <PPPubDate>2026-02-27</PPPubDate>
+      <PPPubDate>2026-04-20</PPPubDate>
       <Keywords>SDN; software-defined networking</Keywords>      
     </ReferenceTable>
   </PPReference>
@@ -24,7 +24,7 @@
   <RevisionHistory>
     <entry>
       <version>1.0</version>
-      <date>2026-02-27</date>
+      <date>2026-04-20</date>
       <subject>Initial release</subject>
     </entry>
   </RevisionHistory>  
