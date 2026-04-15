@@ -214,7 +214,7 @@
             proper or authorized API functions can compromise network services. This can also result in sensitive data leakage.
             
           </description>
-          <addressed-by>FTP_ITC.1 (Modified from Base-PP)</addressed-by><rationale>Mitigates the threat by defining the trusted communications channel used for SDN functionality.</rationale>
+          <addressed-by>FTP_ITC.1 (modified from ND PP)</addressed-by><rationale>Mitigates the threat by defining the trusted communications channel used for SDN functionality.</rationale>
           <addressed-by>FAU_GEN.1/SDN</addressed-by><rationale>Mitigates the threat by generating audit records of activities performed on or by the TSF that could affect the northbound interface.</rationale>
           <addressed-by>FDP_ACC.1</addressed-by><rationale>Mitigates the threat by enforcing access control on the APIs offered by the TOE.</rationale>  
           <addressed-by>FDP_ACF.1</addressed-by><rationale>Mitigates the threat by defining the mechanism for how API access control is enforced.</rationale>
