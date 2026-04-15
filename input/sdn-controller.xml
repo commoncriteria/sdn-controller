@@ -178,6 +178,8 @@
           <rationale>Mitigates the threat by identifying the management functions subject to access restrictions.</rationale>
           <addressed-by>FMT_SMR.2/SDN</addressed-by>
           <rationale>Mitigates the threat by defining a role separation mechanism for administrators to enforce least privilege.</rationale>
+          <addressed-by>FTP_ITC.1 (modified from ND PP)</addressed-by>
+          <rationale>Mitigates the threat by defining the trusted communications channel used for SDN functionality.</rationale>
         </threat>
       </threats>
     </sec:Threats>
