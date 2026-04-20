@@ -522,6 +522,7 @@
         </f-component>
       </section>
     </man-sfrs>
+    <mod-sars/>
     <opt-sfrs/>
     <sel-sfrs/>
     <obj-sfrs/>
