@@ -50,7 +50,7 @@ for SDN-Controller] (pdf)
 
 === Release Version
 
-* https://commoncriteria.github.io/sdn-controller/release-1.0/sdn-controller.html[PP-Module for SDN-Controller v2.0]
+* https://commoncriteria.github.io/sdn-controller/release-1.0/sdn-controller.html[PP-Module for SDN-Controller v1.0]
 
 Quickstart
 ----------
