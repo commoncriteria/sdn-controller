@@ -137,18 +137,84 @@
       <cc-pt2-conf>extended</cc-pt2-conf>
       <cc-pt3-conf>conformant</cc-pt3-conf>
       <cc-pp-conf>
-        <PP-cc-ref>collaborative Protection Profile for Network Devices, v4.0</PP-cc-ref>
+        <PP-cc-ref>
+			<!-- Network Device collaborative Protection Profile Version 4.0 -->
+			<cc-doc-ref id="ndcpp" 
+				name="Network Device collaborative Protection Profile"      
+				version="4.0"                            
+				short="ND"                             
+				product="network device"     
+				plural="network devices"
+                doctype="cPP">     
+				<url>https://www.niap-ccevs.org/protectionprofiles/524</url>
+			</cc-doc-ref>
+		</PP-cc-ref>
       </cc-pp-conf>
       <cc-pp-config-with>
-        <Mod-cc-ref>collaborative Protection Profile Module for Stateful Traffic Filter Firewalls,
-            version 2.0</Mod-cc-ref>
-        <Mod-cc-ref>PP-Module for Authentication Servers, version 2.0</Mod-cc-ref>
-        <Mod-cc-ref>PP-Module for MACsec Ethernet Encryption, version 2.0</Mod-cc-ref>
-        <Mod-cc-ref>PP-Module for VPN Gateways, version 2.0</Mod-cc-ref>
+        <Mod-cc-ref>
+			<!-- collaborative Protection Profile Module for Stateful Traffic Filter Firewalls v2.0 -->
+			<cc-doc-ref id="stffw" 
+				name="collarborative Protection Profile Module for Stateful Traffic Filter Firewalls"      
+				version="2.0"                            
+				short="STFFW"                             
+				product="firewall"     
+				plural="firewalls"
+                doctype="PP-Module">     
+				<url>https://www.niap-ccevs.org/protectionprofiles/540</url>
+			</cc-doc-ref>
+		</Mod-cc-ref>
+        <Mod-cc-ref>
+			<!-- PP-Module for Authentication Servers, version 2.0  -->
+			<cc-doc-ref id="authserver">
+				<git>
+					<url>https://github.com/commoncriteria/authserver</url>
+					<branch>release-2.0</branch>
+				</git>
+				<url>https://www.niap-ccevs.org/protectionprofiles/534</url>
+			</cc-doc-ref>
+		</Mod-cc-ref> 
+        <Mod-cc-ref>
+			<!-- PP-Module for MACsec Ethernet Encryption, version 2.0 -->
+			<cc-doc-ref id="MACsec">
+				<git>
+					<url>https://github.com/commoncriteria/MACsec</url>
+					<branch>release-2.0</branch>
+				</git>
+				<url>https://www.niap-ccevs.org/protectionprofiles/541</url>
+			</cc-doc-ref>
+		</Mod-cc-ref>
+        <Mod-cc-ref>
+			<!-- PP-Module for Virtual Private Network (VPN) Gateways, Version 2.0 -->
+			<cc-doc-ref id="vpngw">
+				<git>
+					<url>https://github.com/commoncriteria/vpngw</url>
+					<branch>release-2.0</branch>
+				</git>
+				<url>https://www.niap-ccevs.org/protectionprofiles/527</url>
+			</cc-doc-ref>		
+		</Mod-cc-ref>
       </cc-pp-config-with>
       <cc-pkg-claim>
-        <FP-cc-ref conf="conformant">Functional Package for TLS, version 2.1</FP-cc-ref>
-        <FP-cc-ref conf="conformant">Functional Package for Secure Shell, version 2.0</FP-cc-ref>
+        <FP-cc-ref conf="conformant">
+			<!-- Functional Package for TLS Version 2.1 -->
+			<cc-doc-ref id="tls">
+				<git>
+					<url>https://github.com/commoncriteria/tls</url>
+					<branch>release-2.1</branch>
+				</git>
+				<url>https://www.niap-ccevs.org/protectionprofiles/519</url>
+			</cc-doc-ref>
+		</FP-cc-ref>
+        <FP-cc-ref conf="conformant">
+			<!-- Functional Package for SSH Version 2.0 -->
+			<cc-doc-ref id="ssh">
+				<git>
+					<url>https://github.com/commoncriteria/ssh</url>
+					<branch>release-2.0</branch>
+				</git>
+				<url>https://www.niap-ccevs.org/protectionprofiles/515</url>
+			</cc-doc-ref>
+		</FP-cc-ref>
       </cc-pkg-claim>
     </CClaimsInfo>
   </sec:Conformance_Claims>
@@ -206,8 +272,7 @@
   <!-- 5.0 Security Requirements -->
   <sec:Security_Requirements title="Security Requirements">
     <!-- 5.1 ND PP Security Functional Requirements Direction -->
-    <base-pp id="ND" name="Network Device" product="Network Device" short="ND" version="4.0" plural="Network Devices">
-      <url>https://old.niap-ccevs.org/MMO/PP/CPP_ND_V4.0.pdf</url>
+    <base-pp ref="ndcpp">
       <cPP/>
       <!-- 5.1.1 Modified SFRs -->
       <modified-sfrs>
